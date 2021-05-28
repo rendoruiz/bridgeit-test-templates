@@ -1,0 +1,52 @@
+:root {
+  --nav-height: 8vh;
+  --content-height: 92vh;
+  --brand-primary: #3863cb;
+  --brand-secondary-1: #94bbff;
+  --brand-secondary-2: #bfd6ff;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-grey: #bcb9b9
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+nav {
+  height: var(--nav-height);
+  background: var(--brand-primary);
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav a {
+  color: var(--brand-secondary-2);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-left: 50px;
+}
+
+main {
+  height: var(--content-height);
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+section {
+  height: inherit;
+  scroll-snap-align: start;
+  background: var(--color);
+}
