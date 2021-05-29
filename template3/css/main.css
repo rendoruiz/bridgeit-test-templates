@@ -1,42 +1,93 @@
+@font-face {
+  font-family: 'Arial Rounded MT';
+  src: url('../assets/fonts/arlrdbd-webfont.woff2') format('woff2'),
+       url('../assets/fonts/arlrdbd-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  --nav-height: 8vh;
-  --content-height: 92vh;
+  --font-primary: 'Arial Rounded MT', sans-serif;
+  --font-secondary: 'Arial', sans-serif;
+
   --brand-primary: #3863cb;
   --brand-secondary-1: #94bbff;
   --brand-secondary-2: #bfd6ff;
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-grey: #bcb9b9
+  --color-grey: #bcb9b9;
+
+  --box-shadow: 1px 1px 4px 1px rgba(30, 30, 30, 0.3);
+  --text-shadow: 1px 2px 4px rgba(30, 30, 30, 0.65);
+
+  --nav-height: 70px;
+  --content-height: calc(100vh - var(--nav-height));
+  --content-width-clamp: clamp(var(--min-width), 80%, var(--max-width));
+
+  --min-width: 300px;
+  --max-width: 1600px;
+
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
   border: 0;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: var(--font-secondary);
+}
+
+h1, h2, nav a {
+  font-family: var(--font-primary);
 }
 
 body {
   height: 100vh;
 }
 
-nav {
+.content {
+  width: 100%;
+  min-width: var(--min-width);
+  max-width: var(--max-width);
+  height: inherit;
+  margin: 0 auto;
+  padding: 0 5vw;
+  background-color: rgba(30, 30, 30, 0.65);
+  font-size: clamp(0.8rem, 3vw, 1.2rem);
+}
+
+header {
   height: var(--nav-height);
   background: var(--brand-primary);
   position: sticky;
+  display: grid;
+}
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-nav ul {
-  display: flex;
-  list-style: none;
+.brand-logo {
+  background: var(--color-white);
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
 }
-nav a {
-  color: var(--brand-secondary-2);
+.brand-logo span {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  color: var(--brand-primary);
+}
+
+.menu-panel {
+  list-style: none;
+  display: none;
+}
+.menu-panel a {
+  color: var(--color-white);
   text-transform: uppercase;
   text-decoration: none;
-  margin-left: 50px;
 }
 
 main {
@@ -44,9 +95,73 @@ main {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
-
 section {
   height: inherit;
   scroll-snap-align: start;
   background: var(--color);
+}
+.home .content {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 10px;
+  color: var(--color-white);
+  text-shadow: var(--text-shadow);
+  /* position: relative; */
+}
+/* .home::after {
+  transform: rotate(250deg);
+  z-index: -1000;
+  position: absolute;
+  content: ' ';
+  width: 100%;
+  height: inherit;
+  background: url('../assets/images/figure-laptop.png') no-repeat bottom 5vh left 5vw/25vh, no-repeat center/110vh url('../assets/images/bg-blob.svg');
+} */
+.home h1,
+.home .greeting {
+  font-size: clamp(2rem, 8vw, 5rem);
+}
+.home .greeting {
+  margin-bottom: -10px;
+  font-stretch: 50%;
+}
+.home .occupation {
+  margin: -5px 0 15px;
+  font-size: clamp(0.8rem, 3vw, 1.5rem);
+}
+
+.link-button {
+  padding: 10px 30px;
+  border-radius: 50px;
+  background: var(--brand-primary);
+  box-shadow: var(--box-shadow);
+  font-family: var(--font-primary);
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  line-height: 1;
+  color: var(--color-white);
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: unset;
+  transition: transform ease-in-out 0.025s;
+}
+.link-button:visited,
+.link-button:hover {
+  color: var(--color-white);
+}
+.link-button:active {
+  transform: scale(90%);
+}
+
+
+
+@media (min-width: 800px) {
+  .menu-panel {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 25px;
+  }
+  .menu-button {
+    display: none;
+  }
 }

@@ -10,41 +10,55 @@
 </head>
 <body>
 
-  <nav>
-    <div></div>
-    <ul>
-      <li><a href="#" data-scroll-to="home">Home</a></li>
-      <li><a href="#" data-scroll-to="about">Skills</a></li>
-      <li><a href="#" data-scroll-to="portfolio">Portfolio</a></li>
-      <li><a href="#" data-scroll-to="contact">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav class="content">
+      <div class="brand-logo"><span>JS</span></div>
+      <span class="menu-button">🍔</span>
+      <ul class="menu-panel">
+        <li><a href="#" class="scroller" data-scroll-to="home">Home</a></li>
+        <li><a href="#" class="scroller" data-scroll-to="about">Skills</a></li>
+        <li><a href="#" class="scroller" data-scroll-to="portfolio">Portfolio</a></li>
+        <li><a href="#" class="scroller" data-scroll-to="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <section class="home" style="--color: hsl(20, 50%, 50%)">
-      <span>Hello!</span>
-      <h1>I'm Jason Smith.</h1>
-      <span class="occupation">Project lead & developer</span>
-      <a href="#" data-scroll-to="contact" class="link-button">Hire Me</a>
+      <div class="content">
+        <!-- <img src="./assets/images/bg-blob.svg" alt=""> -->
+        <span class="greeting">Hello!</span>
+        <h1>I'm Jason Smith.</h1>
+        <span class="occupation">Project lead & developer</span>
+        <button data-scroll-to="contact" class="link-button scroller">Hire Me</button>
+      </div>
     </section>
   
     <section class="about" style="--color: hsl(40, 50%, 50%)">
-      <h2>About Me.</h2>
-      <p>My name is Jason Smith and I have a masters degree in business specializing in project management & development. My experience spans across a wide array of industries including tech, construction and real estate.</p>
-      <p>When I am not busy working with clients, I am at home hanging out with my cat Kate. Have you heard about her emporium? You should check her out!</p>
-      <a href="#" data-scroll-to="portfolio" class="link-button">Portfolio</a>
+      <div class="content">
+        <h2>About Me.</h2>
+        <p>My name is Jason Smith and I have a masters degree in business specializing in project management & development. My experience spans across a wide array of industries including tech, construction and real estate.</p>
+        <p>When I am not busy working with clients, I am at home hanging out with my cat Kate. Have you heard about her emporium? You should check her out!</p>
+        <button data-scroll-to="portfolio" class="link-button scroller">Portfolio</button>
+      </div>
     </section>
   
     <section class="teams" style="--color: hsl(60, 50%, 50%)">
-      <h2>Teams I've worked with.</h2>
+      <div class="content">
+        <h2>Teams I've worked with.</h2>
+      </div>
     </section>
   
     <section class="portfolio" style="--color: hsl(80, 50%, 50%)">
-      <h2>Portfolio.</h2>
+      <div class="content">
+        <h2>Portfolio.</h2>
+      </div>
     </section>
   
     <section class="contact" style="--color: hsl(100, 50%, 50%)">
-      <h2>Say Hello.</h2>
+      <div class="content">
+        <h2>Say Hello.</h2>
+      </div>
     </section>
   </main>
 
