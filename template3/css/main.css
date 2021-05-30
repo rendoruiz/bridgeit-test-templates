@@ -44,6 +44,8 @@ h1, h2, nav a {
 }
 h2 {
   font-size: 4rem;
+  color: var(--color-white);
+  text-shadow: var(--text-shadow);
 }
 p {
   line-height: 1.3;
@@ -191,19 +193,18 @@ section {
 .about .content > *:not(.link-button) {
   font-family: var(--font-primary);
   color: var(--brand-primary);
+  text-shadow: none;
 }
 .about .bg-image.accent {
-  bottom: -20vh;
-  right: -10vh;
   height: 80%;
-  width: auto;
+  bottom: -18vh;
+  right: 0;
   opacity: 0.5;
 }
 .about .bg-image.figure {
   height: 75vmin;
-  width: auto;
-  justify-self: end;
-  align-self: end;
+  right: 8vw;
+  bottom: 0;
   transform: scale(-1, 1);
 }
 
@@ -217,10 +218,6 @@ section {
   place-items: center;
   grid-gap: 5vh;
   width: 70%;
-}
-.teams h2 {
-  color: var(--color-white);
-  text-shadow: var(--text-shadow);
 }
 .teams .team-list {
   display: grid;
@@ -246,6 +243,40 @@ section {
 }
 
 
+.portfolio .content {
+ display: grid;
+ align-content: center;
+ grid-gap: 10vh;
+ text-align: center;
+ justify-items: center;
+ align-items: center;
+}
+.portfolio .carousel-item {
+  border: 2px solid var(--brand-primary);
+  border-radius: 50px;
+  padding: 3vh;
+  background: var(--color-white);
+  color: var(--color-black);
+}
+.portfolio h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.portfolio p {
+  text-align: justify;
+}
+.portfolio img {
+  margin-top: 2vh;
+  width: 50px;
+  height: auto;
+}
+.portfolio .bg-image.accent {
+  height: 110%;
+  width: auto;
+}
+
+
+
 .contact .content {
   display: grid;
   gap: 1.5vh;
@@ -259,10 +290,6 @@ section {
 }
 .contact .link-button {
   margin-top: 1vw;
-}
-.contact h2 {
-  color: var(--color-white);
-  text-shadow: var(--text-shadow);
 }
 .contact form {
   width: 90%;
