@@ -62,7 +62,7 @@ p:not(:only-of-type):not(:last-of-type) {
   /* background-color: rgba(30, 30, 30, 0.65); */
   font-size: clamp(0.8rem, 3vw, 1.2rem);
   position: relative;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .link-button {
