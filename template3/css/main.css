@@ -283,7 +283,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   place-content: center;
   justify-items: start;
-  padding: 0 15vw;
+  padding: 0 10vw;
 }
 .contact .content > * {
   grid-column: 1;
@@ -327,7 +327,7 @@ section {
   bottom: -70vh;
   justify-self: end;
   align-self: end;
-  padding-right: 15vw;
+  padding-right: 5vw;
 }
 
 
