@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Arial Rounded MT';
+  src: url('../assets/fonts/arlrdbd-webfont.woff2') format('woff2'),
+       url('../assets/fonts/arlrdbd-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
