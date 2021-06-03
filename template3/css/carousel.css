@@ -8,6 +8,7 @@
   grid-template-columns: repeat(var(--item-count), var(--item-width));
   grid-auto-flow: column;
   overflow: clip visible;
+  justify-content: center;
 }
 .carousel-item {
   position: relative;
@@ -39,4 +40,11 @@
 }
 .carousel-item.selected::before {
   display: none;
+}
+
+@media (max-width: 700px) {
+  .carousel {
+    --display-count: 1;
+    --item-width: 70%;
+  }
 }
