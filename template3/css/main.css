@@ -19,6 +19,8 @@
   --min-width: 300px;
   --max-width: 1600px;
   --nav-panel-width: 80%;
+
+  --base-font-size: 1rem;
 }
 
 *, *::before, *::after {
@@ -30,6 +32,7 @@
 body {
   height: 100vh;
   font-family: var(--font-secondary);
+  font-size: var(--base-font-size);
 }
 
 h1, h2, nav a {
@@ -54,18 +57,18 @@ p:not(:only-of-type):not(:last-of-type) {
   height: inherit;
   margin: 0 auto;
   padding: 0 10vw;
-  font-size: clamp(0.8rem, 3vw, 1.2rem);
+  font-size: var(--base-font-size);
   position: relative;
   overflow: hidden;
 }
 
 .link-button {
-  padding: 15px 20px;
+  padding: 15px 30px;
   border-radius: 50px;
   background: var(--brand-primary);
   box-shadow: var(--box-shadow);
   font-family: var(--font-primary);
-  font-size: (0.8rem);
+  font-size: 1rem;
   line-height: 1;
   color: var(--color-white);
   text-decoration: none;
@@ -117,7 +120,7 @@ header .content {
 
 /* navigation menu mobile default */
 .nav-toggle {
-  margin-right: 1vw;
+  margin-right: 0.5vw;
   font-size: 1.5rem;
   color: var(--color-white);
 }
@@ -202,7 +205,7 @@ section {
 }
 .home .occupation {
   margin-bottom: 5vh;
-  font-size: 1rem;
+  font-size: var(--base-font-size);
 }
 .home .bg-image.accent {
   place-self: center;
@@ -219,9 +222,6 @@ section {
 }
 .about .content > * {
   grid-column: 1;
-}
-.about p {
-  font-size: 1rem;
 }
 .about .link-button {
   margin-top: 1vw;
@@ -289,7 +289,6 @@ section {
 }
 .portfolio p {
   text-align: justify;
-  font-size: 1rem;
 }
 .portfolio p:last-of-type {
   display: none;
@@ -421,7 +420,7 @@ section {
     width: 60%;
   }
   .teams img {
-    width: 80px;
+    width: 120px;
     height: auto;
   }
   .teams .bg-image.accent {
@@ -457,6 +456,7 @@ section {
     top: -10vh;
     left: -50vmin;
     height: 120%;
+    width: auto;
   }
   .contact .bg-image.figure {
     height: 135vh;
@@ -465,10 +465,83 @@ section {
     align-self: end;
     padding-right: 5vw;
   }
-  
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 1024px) {
+  :root {
+    --base-font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+
+
+  .about .content {
+    gap: 2vh;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about .bg-image.accent {
+    width: 50vw;
+    height: auto;
+    bottom: -20vh;
+  }
+  .about .bg-image.figure {
+    height: 75vmin;
+    right: 6vw;
+  }
+
+
+  .teams article {
+    grid-gap: 5vh;
+    width: 70%;
+  }
+  .teams img {
+    width: 150px;
+  }
+  .teams .bg-image.figure {
+    height: 75vmin;
+  }
+
+
+  .contact .content {
+    gap: 1.5vh;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact input[type="text"] {
+    width: 70%;
+  }
+  .contact .bg-image.accent {
+    left: -20vw;
+  }
+  .contact .bg-image.figure {
+    height: 150vh;
+    bottom: -70vh;
+    justify-self: end;
+    align-self: end;
+    padding-right: 5vw;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --base-font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+
+  .home h1,
+  .home .greeting {
+    font-size: 5rem;
+  }
+
   
+  .contact .bg-image.accent {
+    left: -5vw;
+  }
+  .contact .bg-image.figure {
+    padding-right: 10vw;
+  }
 }
