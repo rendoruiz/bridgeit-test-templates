@@ -1,0 +1,145 @@
+:root {
+  --color-primary: rgb(15, 51, 43);
+  --color-secondary: rgb(38, 109, 92);
+  --color-black: rgb(0, 0, 0);
+  --color-white: rgb(255, 255, 255);
+  --color-border-darker: rgb(49, 49, 49);
+  --color-border-dark: rgb(100, 100, 100);
+
+  --box-shadow: 1px 1px 4px 1px rgba(30, 30, 30, 0.3);
+  --text-shadow: 1px 2px 4px rgba(30, 30, 30, 0.65);
+  --transition-timing: 0.5s ease-in-out;
+
+  
+  --nav-panel-width: 70vw;
+  --nav-height: 60px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.heading {
+  font-family: serif;
+  font-weight: 700;
+}
+.heading1 {
+  font-size: 2.5rem;
+}
+.heading2 {
+  
+}
+.heading3 {
+
+}
+.heading-subtitle {
+  font-size: 1.7rem;
+}
+.body1 {
+
+}
+
+.link-button {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-white);
+  background: var(--color-primary);
+  /* padding: 15px 30px; */
+  padding: 6px 20px 5px;
+  border-radius: 30px;
+}
+.link-button:hover {
+  background: var(--color-secondary);
+}
+
+.content {
+  padding: 0 10px;
+}
+
+header {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  background: url('https://cdn.pixabay.com/photo/2014/06/10/15/47/pizza-366111_1280.jpg');
+}
+
+/* mobile/default nav */
+.nav-container {
+  position: fixed;
+  height: var(--nav-height);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+}
+.nav-container .content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.main-nav ul {
+  list-style: none;
+  padding: 10px 0;
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  right: 0;
+  width: var(--nav-panel-width);
+  height: 100vh;
+  display: grid;
+  align-content: flex-start;
+  justify-items: stretch;
+  transform: translateX(120%);
+  transition: box-shadow var(--transition-timing), transform var(--transition-timing);
+  pointer-events: none;
+  background: rgba(235, 235, 235, 0.95);
+}
+.main-nav a {
+  padding: 20px 20px;
+  display: flex;
+  color: var(--color-black);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  pointer-events: auto;
+}
+
+/* nav toggled */
+body.menu-visible {
+  overflow: hidden;
+  pointer-events: none;
+}
+.menu-visible .main-nav {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: calc(100vw - var(--nav-panel-width));
+  height: 100vh;
+  pointer-events: all;
+}
+.menu-visible .main-nav ul {
+  overflow-y: scroll;
+  transform: none;
+  box-shadow: 0 0 200px 100px rgb(30,30,30);
+}
+
+
+.header-text {
+  grid-row: 2;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  text-align: center;
+}
+.header-text .link-button {
+  margin-top: 20px;
+}

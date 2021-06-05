@@ -1,0 +1,50 @@
+.carousel {
+  --item-count: 5;
+  --display-count: 3;
+  --container-width: 100%;
+  --item-width: calc(var(--container-width) / var(--display-count));
+  justify-self: stretch;
+  display: grid;
+  grid-template-columns: repeat(var(--item-count), var(--item-width));
+  grid-auto-flow: column;
+  overflow: clip visible;
+  justify-content: center;
+}
+.carousel-item {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  background: #666;
+  position: relative;
+}
+.carousel-item::before {
+  border-radius: inherit;
+  position: absolute;
+  content: ' ';
+  top: -2px;
+  bottom: -2px;
+  right: -2px;
+  left: -2px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.carousel-item > * {
+  user-select: none;
+  pointer-events: none;
+}
+.carousel-item.selected {
+  box-shadow: 1px 1px 20px 10px rgba(30, 30, 30, 0.3);
+  z-index: 100;
+  background: #999;
+  transform: scale(1.15) translateY(-5%);
+}
+.carousel-item.selected::before {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .carousel {
+    --display-count: 1;
+    --item-width: 70%;
+  }
+}
