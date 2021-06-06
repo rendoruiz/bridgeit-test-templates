@@ -2,7 +2,7 @@
   --carousel-item-count: 3;
   --carousel-display-count: 1;
   --carousel-container-width: 100%;
-  --carousel-container-height: 350px;
+  --carousel-container-height: 320px;
   --carousel-item-width: calc(var(--carousel-container-width) / var(--carousel-display-count));
   --carousel-scale-x: 1.15;
   --carousel-item-height: calc(var(--carousel-container-height) - 15% - 5%);

@@ -346,9 +346,6 @@ body.menu-visible {
   border-bottom: var(--border-frame);
   border-right: var(--border-frame);
 }
-
-
-
 .parties article {
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(2px);
@@ -360,7 +357,30 @@ body.menu-visible {
 }
 
 
-
+.food {
+  background: center / cover no-repeat url('../assets/images/bg-marble.jpg');
+  padding-bottom: 40px;
+}
+.food .content {
+  padding: 30px 15px 80px;
+  border-top: var(--border-frame);
+  border-bottom: var(--border-frame);
+  position: relative;
+  display: grid;
+}
+.food .content::before,
+.food .content::after {
+  justify-self: center;
+  content: ' ';
+  bottom: 50px;
+  width: 70%;
+  position: absolute;
+  border-color: var(--color-border-dark);
+  border-bottom: var(--border-frame);
+}
+.food .content::after {
+  bottom: 40px;
+}
 
 
 
