@@ -51,6 +51,9 @@ body {
 .body1 {
 
 }
+.body2 {
+
+}
 
 .link-button {
   text-transform: uppercase;
@@ -194,6 +197,9 @@ body.menu-visible {
   padding: 20px 20px;
   margin: calc(calc(var(--border-margin) * 2 * -1) - var(--border-width));
   background: rgba(255, 255, 255, 0.5);
+
+  display: grid;
+  gap: 20px;
 }
 .about .context-content::before,
 .about .context-content::after {
@@ -296,6 +302,16 @@ body.menu-visible {
 }
 .about .images .img2 img {
   object-position: bottom;
+}
+.about .social-icons {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 15px;
+}
+.about .social-icon {
+  width: 30px;
+  height: 30px;
 }
 
 
