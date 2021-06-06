@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <header>
+  <header class="home">
     <div class="bg-image">
       <img src="./assets/images/chef-1.jpg" alt="" aria-hidden="true" role="none">
     </div>
@@ -24,11 +24,11 @@
         <div class="brand-logo"><span>AK</span></div>
         <nav class="main-nav">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">My Food</a></li>
-            <li><a href="#">Parties</a></li>
-            <li><a href="#">Booking</a></li>
+            <li><a href="#home" class="scroller">Home</a></li>
+            <li><a href="#about" class="scroller">About</a></li>
+            <li><a href="#parties" class="scroller">Parties</a></li>
+            <li><a href="#food" class="scroller">My Food</a></li>
+            <li><a href="#banking" class="scroller">Booking</a></li>
           </ul>
         </nav>
         <span class="nav-toggle"><i class="fas fa-ellipsis-v"></i></span>
@@ -64,9 +64,51 @@
         </div>
       </div>
     </section>
-  </main>
 
-  <main>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi odit, quae esse culpa in veniam quibusdam doloribus exercitationem temporibus earum aliquam magni tenetur magnam ab sequi, eaque corporis necessitatibus dolore sunt cum? Placeat doloremque illum tempore nobis quam aspernatur, harum blanditiis aperiam dignissimos magni consequuntur eum unde amet ex? Reprehenderit, tenetur adipisci. Reiciendis eos, vel corrupti porro excepturi maiores est deserunt. Saepe alias optio nobis, fuga officia quasi eaque beatae est aliquam necessitatibus neque repellat eveniet et odio delectus inventore sunt mollitia corrupti quam incidunt dolore provident tempore error suscipit. Autem voluptas itaque aliquid aliquam quo nulla, eveniet cumque consequatur natus corrupti ex placeat nostrum, architecto tempore laborum! Cupiditate assumenda vitae, molestias, dicta eius molestiae earum itaque enim dolores nulla nostrum non ratione laborum. Corporis optio, alias blanditiis quibusdam qui eveniet eos dolorum aperiam consequuntur totam atque nostrum numquam sed tenetur tempore dolorem exercitationem rerum voluptatem ad magni explicabo, veniam quia? At cupiditate similique nulla nemo, doloribus ipsa perspiciatis ad aut reprehenderit laborum veritatis minima nesciunt delectus, soluta magni maxime libero. Voluptate iure esse ipsum molestiae, eaque reprehenderit placeat repudiandae quisquam unde voluptatibus totam sit eius quis saepe dolore, repellat itaque aut tenetur a harum animi facilis fugiat. Minima, iste?</main>
+    <section class="parties">
+      <div class="content">
+        <div class="header-container">
+          <div class="bg-blur" aria-hidden="true" role="none"></div>
+          <h2 class="heading heading2">Custom Dinner Parties.</h2>
+        </div>
+        <article>
+          <h3 class="heading heading3">Indoor.</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, nam. Aliquam eligendi, explicabo corporis vel repudiandae et aut tempora! Officia veniam ipsa iste consequatur. Laudantium officiis sit nulla? Unde, ipsum.</p>
+          <a href="#" class="link-button">Book</a>
+        </article>
+        <article>
+          <h3 class="heading heading3">Outdoor.</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, nam. Aliquam eligendi, explicabo corporis vel repudiandae et aut tempora! Officia veniam ipsa iste consequatur. Laudantium officiis sit nulla? Unde, ipsum.</p>
+          <a href="#" class="link-button">Book</a>
+        </article>
+        <article>
+          <h3 class="heading heading3">Event.</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, nam. Aliquam eligendi, explicabo corporis vel repudiandae et aut tempora! Officia veniam ipsa iste consequatur. Laudantium officiis sit nulla? Unde, ipsum.</p>
+          <a href="#" class="link-button">Book</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="food">
+      <div class="content">
+        <h2>My Food.</h2>
+      </div>
+    </section>
+
+    <section class="booking">
+      <div class="content">
+        <div>
+          <h2>Book your party.</h2>
+          <p>Want to know more? Send us a message and we will get back to you within 24 hours.</p>
+          <form action="">
+            <input type="text" name="" id="">
+            <input type="text" name="" id="">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- <header>
     <div class="content">
@@ -182,6 +224,7 @@
 
 
   <script src="js/nav-menu.js"></script>
+  <script src="js/smooth-page-jump.js"></script>
   <!-- <script src="js/carousel.js"></script> -->
   <script src="js/main.js"></script>
 </body>

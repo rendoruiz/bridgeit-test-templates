@@ -15,7 +15,7 @@
   --nav-height: 60px;
 
   --border-gap: -20px;
-  --border-width: 1px;
+  --border-width: 2px;
   --border-frame: var(--border-width) solid var(--color-border-darker);
 }
 
@@ -182,6 +182,7 @@ body.menu-visible {
 
 .about {
   background: center / cover no-repeat url('../assets/images/bg-marble.jpg');
+  scroll-margin-bottom: calc(var(--nav-height) * -1);
 }
 .about .content {
   padding: 35px 20px;
@@ -211,7 +212,7 @@ body.menu-visible {
 }
 .about .content-frame {
   border: 2px solid var(--color-border-dark);
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 .about .content-frame::after {
   content: ' ';
@@ -219,7 +220,7 @@ body.menu-visible {
   left: 0;
   width: 100vw;
   border-top: 2px solid var(--color-border-dark);
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .about .images {
@@ -295,3 +296,82 @@ body.menu-visible {
   object-position: bottom;
 }
 
+
+
+.parties {
+  background: top / contain no-repeat url('../assets/images/bg-dinner.jpg'), center / cover no-repeat url('../assets/images/bg-marble.jpg');
+  scroll-margin-bottom: -350px;
+}
+.parties .content {
+  padding: 80px 40px 40px;
+  display: grid;
+  gap: 15px;
+}
+
+.parties .header-container {
+  display: grid;
+  position: relative;
+  place-items: center;
+  margin-bottom: 20px;
+}
+.parties .header-container > *{
+  grid-row: 1;
+  grid-column: 1;
+  position: relative;
+
+}
+.parties .header-container .bg-blur {
+  place-self: stretch;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 35px 10px;
+}
+.parties .header-container::before,
+.parties .header-container::after {
+  content: ' ';
+  position: absolute;
+  z-index: 50;
+  width: 40px;
+  height: 40px;
+}
+.parties .header-container::before {
+  left: 10px;
+  top: 10px;
+  border-top: var(--border-frame);
+  border-left:  var(--border-frame);
+}
+.parties .header-container::after {
+  bottom: 10px;
+  right: 10px;
+  border-bottom: var(--border-frame);
+  border-right: var(--border-frame);
+}
+
+
+
+.parties article {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2px);
+  text-align: center;
+  padding: 30px 10px 40px;
+}
+.parties article p {
+  margin: 10px 0 40px;
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 1024px) {
+  
+}
+
+@media (min-width: 1200px) {
+
+}
