@@ -13,7 +13,7 @@
   display: grid;
   grid-template-columns: repeat(var(--carousel-item-count), var(--carousel-item-width));
   grid-auto-flow: column;
-  overflow: clip visible;
+  overflow: hidden visible;
   justify-content: center;
   height: var(--carousel-container-height);
   position: relative;
@@ -41,6 +41,9 @@
   background: rgba(30, 30, 30, 0.7);
 }
 .carousel-item > * {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   pointer-events: none;
 }
