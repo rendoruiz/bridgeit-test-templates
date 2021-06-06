@@ -122,6 +122,7 @@ img {
 
 .home {
   height: 100vh;
+  min-height: 500px;
   display: grid;
   grid-template-rows: auto 1fr 1fr;
 }
@@ -518,8 +519,6 @@ body.menu-visible {
   top: 15px;
   width: 50%;
 }
-
-
 
 
 
