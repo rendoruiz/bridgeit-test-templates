@@ -1,16 +1,22 @@
 .carousel {
-  --item-count: 5;
-  --display-count: 3;
-  --container-width: 100%;
-  --item-width: calc(var(--container-width) / var(--display-count));
+  --carousel-item-count: 3;
+  --carousel-display-count: 1;
+  --carousel-container-width: 100%;
+  --carousel-container-height: 350px;
+  --carousel-item-width: calc(var(--carousel-container-width) / var(--carousel-display-count));
+  --carousel-scale-x: 1.15;
+  --carousel-item-height: calc(var(--carousel-container-height) - 15% - 5%);
   justify-self: stretch;
+  align-items: center;
   display: grid;
-  grid-template-columns: repeat(var(--item-count), var(--item-width));
+  grid-template-columns: repeat(var(--carousel-item-count), var(--carousel-item-width));
   grid-auto-flow: column;
   overflow: clip visible;
   justify-content: center;
+  height: var(--carousel-container-height);
 }
 .carousel-item {
+  height: var(--carousel-item-height);
   position: relative;
   z-index: 10;
   cursor: pointer;
@@ -33,10 +39,10 @@
   pointer-events: none;
 }
 .carousel-item.selected {
-  box-shadow: 1px 1px 20px 10px rgba(30, 30, 30, 0.3);
+  box-shadow: 1px 1px 10px 5px rgba(30, 30, 30, 0.3);
   z-index: 100;
   background: #999;
-  transform: scale(1.15) translateY(-5%);
+  transform: scale(var(--carousel-scale-x));
 }
 .carousel-item.selected::before {
   display: none;
@@ -44,7 +50,7 @@
 
 @media (max-width: 700px) {
   .carousel {
-    --display-count: 1;
-    --item-width: 70%;
+    --carousel-display-count: 1;
+    --carousel-item-width: 70%;
   }
 }

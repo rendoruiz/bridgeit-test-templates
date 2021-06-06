@@ -1,5 +1,5 @@
 const selectedItemFlag = 'selected';
-const selectedItemTransformStyle = 'scale(1.15) translateY(-5%)';
+const selectedItemTransformStyle = 'scale(1.15)';
 let carouselList = document.querySelectorAll('.carousel > .carousel-item');
 let currentSelectedItem = document.querySelector(`.carousel-item.${selectedItemFlag}`);
 const initialIndex = [...carouselList].indexOf(currentSelectedItem);
