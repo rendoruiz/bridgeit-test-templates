@@ -27,6 +27,8 @@
 
 body {
   font-family: sans-serif;
+  position: relative;
+  z-index: -1;
 }
 
 .heading {
@@ -362,7 +364,7 @@ body.menu-visible {
   padding-bottom: 40px;
 }
 .food .content {
-  padding: 30px 15px 80px;
+  padding: 50px 15px 60px;
   border-top: var(--border-frame);
   border-bottom: var(--border-frame);
   position: relative;
@@ -380,6 +382,9 @@ body.menu-visible {
 }
 .food .content::after {
   bottom: 40px;
+}
+.food .carousel {
+  color: var(--color-white)
 }
 
 

@@ -1,4 +1,5 @@
 .carousel {
+  --carousel-z-index: 5;
   --carousel-item-count: 3;
   --carousel-display-count: 1;
   --carousel-container-width: 100%;
@@ -7,6 +8,7 @@
   --carousel-scale-x: 1.15;
   --carousel-item-height: calc(var(--carousel-container-height) - 15% - 5%);
   justify-self: stretch;
+  align-content: center;
   align-items: center;
   display: grid;
   grid-template-columns: repeat(var(--carousel-item-count), var(--carousel-item-width));
@@ -14,11 +16,13 @@
   overflow: clip visible;
   justify-content: center;
   height: var(--carousel-container-height);
+  position: relative;
+  z-index: var(--carousel-z-index);
 }
 .carousel-item {
-  height: var(--carousel-item-height);
   position: relative;
-  z-index: 10;
+  z-index: calc(var(--carousel-z-index) * 10);
+  height: var(--carousel-item-height);
   cursor: pointer;
   transition: all 0.3s ease-out;
   background: #666;
@@ -28,24 +32,37 @@
   border-radius: inherit;
   position: absolute;
   content: ' ';
-  top: -2px;
-  bottom: -2px;
-  right: -2px;
-  left: -2px;
-  background-color: rgba(255, 255, 255, 0.7);
+  top: -1px;
+  bottom: -1px;
+  right: -1px;
+  left: -1px;
+  background-color: rgba(30, 30, 30, 0.7);
 }
 .carousel-item > * {
   user-select: none;
   pointer-events: none;
 }
 .carousel-item.selected {
+  z-index: calc(var(--carousel-z-index) * 20);
   box-shadow: 1px 1px 10px 5px rgba(30, 30, 30, 0.3);
-  z-index: 100;
   background: #999;
   transform: scale(var(--carousel-scale-x));
 }
 .carousel-item.selected::before {
   display: none;
+}
+
+.carousel-nav {
+  position: absolute;
+  z-index: calc(var(--carousel-z-index) * 30);
+  align-self: center;
+  justify-self: start;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: inherit;
+}
+.carousel-nav.next {
+  justify-self: end;
 }
 
 @media (max-width: 700px) {
