@@ -901,6 +901,9 @@ body.menu-visible {
     grid-row: 2;
     display: block;
   }
+  .booking > .blur-auto::after {
+    background: rgba(255, 255, 255, 0.15);
+  }
   .booking .images .img2,
   .booking .context::before,
   .booking .images .img1.offset-shape::before,
