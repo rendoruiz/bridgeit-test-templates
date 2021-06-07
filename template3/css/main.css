@@ -480,6 +480,7 @@ section {
   .about .content {
     gap: 2vh;
     grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 0;
   }
   .about .bg-image.accent {
     width: 50vw;

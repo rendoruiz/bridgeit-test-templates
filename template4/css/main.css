@@ -33,6 +33,16 @@ body {
   z-index: -1;
 }
 
+.contained-img {
+  position: relative;
+}
+.contained-img > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 img {
   max-width: 100%;
   max-height: 100%;
@@ -478,6 +488,9 @@ body.menu-visible {
   height: 100px;
   resize: none;
 }
+.booking > .blur-auto {
+  display: none;
+}
 
 /* full-width horizonal line above .context */
 .booking .context.offset-shape::before {
@@ -566,6 +579,7 @@ body.menu-visible {
   
   .section {
     height: 100vh;
+    min-height: 700px;
   }
   .section .content {
     height: 100%;
@@ -712,14 +726,6 @@ body.menu-visible {
     "a a e" .2fr
     "b c e" .8fr / 1fr 1fr 2fr;
   }
-  .image-grid > * {
-    position: relative;
-  }
-  .image-grid > * img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
   .image-grid .img1 {
     grid-area: a;
     background: black;
@@ -765,6 +771,71 @@ body.menu-visible {
     left: -20px;
     border-bottom: var(--border-darker);
     border-left: var(--border-darker);
+  }
+
+  .booking {
+    display: grid;
+    grid-template-rows: 9fr 1fr;
+    gap: 3vh
+  }
+  .booking .content {
+    padding-bottom: 0;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 4.8fr 5.2fr;
+  }
+  .booking .images {
+    display: block;
+  }
+  .booking .images .img1 {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .booking .images .img1 img {
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .booking .context {
+    grid-row: 1;
+    grid-column: 2;
+    align-self: center;
+    /* margin-top: var(--nav-height); */
+    padding: 40px;
+    text-align: left;
+  }
+  .booking .context .heading {
+    text-align: inherit;
+  }
+  .booking input[type="text"],
+  .booking textarea {
+    border: var(--border-black);
+    padding: 15px 10px;
+  }
+  .booking input[type="text"] {
+    width: 70%;
+  }
+  .booking textarea {
+    height: 150px;
+  }
+
+  .booking > .blur-auto {
+    grid-row: 2;
+    display: block;
+  }
+  .booking .images .img2,
+  .booking .context::before,
+  .booking .images .img1.offset-shape::before,
+  .booking .images .img1.offset-shape::after,
+  .booking .images.offset-shape::before,
+  .booking .images.offset-shape::after {
+    display: none;
   }
 }
 
