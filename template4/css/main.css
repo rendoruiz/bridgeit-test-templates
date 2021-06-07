@@ -627,16 +627,18 @@ body.menu-visible {
 
   .about .content {
     padding: 5vh 10vw;
+    align-items: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px
   }
   .about .context-container {
     margin: 0;
-    box-shadow: 0 0 1px 1px black;
+    position: relative;
   }
   .about .context-container .context {
-    border: var(-border);
+    margin: 15px;
+    border: var(--border-width) solid rgba(200, 200, 200, 0.5);
   }
   .about .images {
     display: flex;
@@ -652,9 +654,63 @@ body.menu-visible {
   }
   .about .offset-shape::before,
   .about .offset-shape::after {
+    padding: 0;
+    margin: 0;
     display: none;
-    content: none;
   }
+  .about .context-container {
+    margin: 0;
+  }
+
+  .about .context-container.offset-shape::before {
+    display: inline-block;
+    /* background: blue; */
+    width: 30%;
+    height: 100%;
+    top: -24px;
+    right: -24px;
+    border-top: var(--border-dark);
+    border-right: var(--border-dark);
+  }
+
+
+  /* img1 outer bottom-left corner line */
+  .about .images.offset-shape::before {
+    margin: 0;
+    display: inline-block;
+    width: 50%;
+    height: 90%;
+    border-top: none;
+    border-bottom: var(--border-dark);
+    border-left: var(--border-dark);
+    left: -40px;
+    bottom: -40px;
+  }
+  /* img1 inner corner lines */
+  .about .images .img1.offset-shape::before,
+  .about .images .img1.offset-shape::after {
+    --about-img2-inner-corner-margin: -20px;
+    display: inline-block;
+    width: 20%;
+    height: 15%;
+    left: unset;
+    border-left: unset;
+  }
+  /* top-right corner */
+  .about .images .img1.offset-shape::before {
+    border-top: var(--border-darker);
+    border-right: var(--border-darker);
+    top: var(--about-img2-inner-corner-margin);
+    right: var(--about-img2-inner-corner-margin);
+  }
+  /* bottom-left corner */
+  .about .images .img1.offset-shape::after {
+    border-bottom: var(--border-darker);
+    border-left: var(--border-darker);
+    bottom: var(--about-img2-inner-corner-margin);
+    left: var(--about-img2-inner-corner-margin);
+  }
+
 
   .parties {
     background: center / cover no-repeat url('../assets/images/bg-dinner.jpg');
