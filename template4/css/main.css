@@ -16,9 +16,11 @@
 
   --border-gap: -20px;
   --border-width: 2px;
+  --border-width-thin: 1px;
   --border-dark: var(--border-width) solid var(--color-border-dark);
   --border-darker: var(--border-width) solid var(--color-border-darker);
   --border-black: var(--border-width) solid var(--color-black);
+  --border-dark-thin: var(--border-width-thin) solid var(--color-border-dark);
 }
 
 *, *::before, *::after {
@@ -262,7 +264,7 @@ body.menu-visible {
   left: 0;
   width: 100vw;
   padding-bottom: 30px;
-  border-bottom: var(--border-dark);
+  border-bottom: var(--border-dark-thin);
 }
 /* top-right & bottom-left corner lines */
 .about .context.offset-shape::before,
@@ -323,13 +325,6 @@ body.menu-visible {
   border-top: var(--border-darker);
   border-left: var(--border-darker);
 }
-/* .images bottom full-width line */
-.about .images.offset-shape::after {
-  left: -20px;
-  bottom: 0;
-  width: 100vw;
-  border-bottom: var(--border-dark);
-}
 /* two vertical lines beside the left image */
 .about .images .img1.offset-shape::before,
 .about .images .img1.offset-shape::after {
@@ -349,7 +344,13 @@ body.menu-visible {
   border-top: var(--border-darker);
   border-right: var(--border-darker);
 }
-
+/* about bottom horizonal line */
+.about.offset-shape::after {
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  border-bottom: var(--border-dark-thin);
+}
 
 
 .parties {
@@ -405,11 +406,26 @@ body.menu-visible {
   background: center / cover no-repeat url('../assets/images/bg-marble.jpg');
   padding-bottom: 40px;
 }
+
 .food .content {
   padding: 50px 15px 60px;
-  border-top: var(--border-dark);
-  border-bottom: var(--border-dark);
+  /* border-top: var(--border-dark);
+  border-bottom: var(--border-dark); */
   display: grid;
+}
+/* food top & bottom horizonal line */
+.food.offset-shape::before,
+.food.offset-shape::after {
+  left: 0;
+  right: 0;
+}
+.food.offset-shape::before {
+  top: 30px;
+  border-top: var(--border-dark-thin);
+}
+.food.offset-shape::after {
+  bottom: 30px;
+  border-bottom: var(--border-dark-thin);
 }
 /* two lines below the carousel */
 .food .content.offset-shape::before,
@@ -625,6 +641,8 @@ body.menu-visible {
     place-items: center;
   }
 
+
+
   .about .content {
     padding: 5vh 10vw;
     align-items: center;
@@ -662,9 +680,9 @@ body.menu-visible {
     margin: 0;
   }
 
+  /* about context top-right corner line */
   .about .context-container.offset-shape::before {
     display: inline-block;
-    /* background: blue; */
     width: 30%;
     height: 100%;
     top: -24px;
@@ -672,8 +690,6 @@ body.menu-visible {
     border-top: var(--border-dark);
     border-right: var(--border-dark);
   }
-
-
   /* img1 outer bottom-left corner line */
   .about .images.offset-shape::before {
     margin: 0;
