@@ -3,8 +3,8 @@
   --carousel-item-count: 3;
   --carousel-display-count: 1;
   --carousel-container-width: 100%;
-  --carousel-container-height: 320px;
-  --carousel-item-width: calc(var(--carousel-container-width) / var(--carousel-display-count));
+  --carousel-container-height: 300px;
+  --carousel-item-width: 70%;
   --carousel-scale-x: 1.15;
   --carousel-item-height: calc(var(--carousel-container-height) - 15% - 5%);
   justify-self: stretch;
@@ -70,9 +70,10 @@
   justify-self: end;
 }
 
-@media (max-width: 700px) {
+@media (min-width: 768px) {
   .carousel {
-    --carousel-display-count: 1;
-    --carousel-item-width: 70%;
+    /* --carousel-display-count: 3; */
+    /* --carousel-item-width: calc(var(--carousel-container-width) / var(--carousel-display-count)); */
+    --carousel-container-height: 60vw;
   }
 }

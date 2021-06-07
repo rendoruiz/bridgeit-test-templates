@@ -523,7 +523,24 @@ body.menu-visible {
 
 
 @media (min-width: 768px) {
+  .nav-container .content,
+  .section .content {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    max-width: 1200px;
+  }
 
+  .about .images .img1,
+  .booking .images .img1 {
+    height: 70vw;
+    padding-top: 30px;
+    margin-bottom: 50px;
+  }
+  .about .images .img2,
+  .booking .images .img2 {
+    height: 40vw;
+    width: 40vw;
+  }
 }
 
 @media (min-width: 1024px) {
