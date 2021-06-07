@@ -524,8 +524,8 @@ body.menu-visible {
 
 @media (min-width: 768px) {
   .content {
-    min-width: none;
-    max-width: none;
+    min-width: unset;
+    max-width: unset;
   }
   .nav-container .content,
   .section .content {
@@ -550,6 +550,18 @@ body.menu-visible {
 @media (min-width: 1024px) {
   .heading1 {
     font-size: 3rem;
+  }
+  .heading2 {
+    font-size: 2.5rem;
+  }
+  .heading3 {
+    font-size: 2rem;
+  }
+
+  
+  .section .content {
+    height: 100vh;
+    padding: calc(5vh + var(--nav-height)) 5vh 5vw;
   }
 
   
@@ -589,6 +601,88 @@ body.menu-visible {
     grid-column: 1 / 3;
     place-self: center;
     place-items: center;
+  }
+
+  .about .content {
+    padding: 5vh 10vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px
+  }
+  .about .context-container {
+    margin: 0;
+    box-shadow: 0 0 1px 1px black;
+  }
+  .about .context-container .context {
+    border: var(-border);
+  }
+  .about .images {
+    display: flex;
+    padding: 0;
+  }
+  .about .images .img1 {
+    padding: 0;
+    margin: 0;
+    height: 70vh;
+  }
+  .about .images .img2 {
+    display: none;
+  }
+  .about .offset-shape::before,
+  .about .offset-shape::after {
+    display: none;
+    content: none;
+  }
+
+  .parties {
+    background: center / cover no-repeat url('../assets/images/bg-dinner.jpg');
+  }
+  .parties .content {
+    grid-template-columns: repeat(3, 1fr);
+    align-content: center;
+    gap: 30px
+  }
+  .parties .header-container {
+    grid-column: 1 / 4;
+    justify-self: center;
+  }
+  .parties .header-container .heading {
+    padding: 20px 60px;
+    border: 1px solid var(--color-black);
+    margin: 20px;
+  }
+  .parties .blur-auto::after,
+  .parties .blur-target-bg {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  .parties article {
+    padding: 40px 30px 60px;
+  }
+  .parties article p {
+    margin: 20px 0 50px;
+  }
+
+  .parties .header-container.offset-shape::before,
+  .parties .header-container.offset-shape::after {
+    width: 15%;
+    height: 45%;
+  }
+  .parties .header-container.offset-shape::before {
+    left: unset;
+    border-left: unset;
+    top: 10px;
+    right: 10px;
+    border-top: var(--border-darker);
+    border-right:  var(--border-darker);
+  }
+  .parties .header-container.offset-shape::after {
+    right: unset;
+    border-right: unset;
+    bottom: 10px;
+    left: 10px;
+    border-bottom: var(--border-darker);
+    border-left: var(--border-darker);
   }
 }
 
