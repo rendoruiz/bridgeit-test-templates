@@ -1,3 +1,36 @@
+@font-face {
+  font-family: 'Poppins Extra Light';
+  src: url('../fonts/poppins-extralight-webfont.woff2') format('woff2'),
+       url('../fonts/poppins-extralight-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins-regular-webfont.woff2') format('woff2'),
+       url('../fonts/poppins-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url('../fonts/poppins-bold-webfont.woff2') format('woff2'),
+       url('../fonts/poppins-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+       url('../fonts/roboto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 *, *::before, *::after {
   box-sizing: border-box;
   border: 0;
@@ -10,6 +43,8 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
+  line-height: 1.25;
+  letter-spacing: 1px;
 }
 p, span, a {
   font-family: 'Roboto', sans-serif;
@@ -41,9 +76,23 @@ section {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   text-align: center;
-
-  
+  padding: 0 50px;
 }
+.nav-next {
+  display: grid;
+  margin-top: 25px;
+  transition: color ease-in-out 0.25s;
+}
+.nav-next:hover,
+.nav-next:active {
+  color: #A13A6D;
+}
+.nav-next .glyph {
+  margin: -5px auto;
+  font-size: 1.5rem;
+}
+
+
 h1, h2 {
   font-size: 2rem;
 }
@@ -72,6 +121,10 @@ h1, h2 {
   gap: 40px;
   font-size: 1.5rem;
 }
+.social-links a:hover,
+.social-links a:active {
+  color: #A13A6D;
+}
 .btn {
   background: #84BADB;
   color: #00020C;
@@ -80,6 +133,10 @@ h1, h2 {
   border: none;
   border-radius: 4px;
   font-size: 0.8rem;
+}
+.btn:hover,
+.btn:active {
+  background: rgb(191, 231, 255);
 }
 
 .contact {
@@ -101,13 +158,16 @@ h1, h2 {
   height: 100%;
   background: rgba(0, 0, 0, 0.50);
   display: grid;
-  padding: 50px;
+  padding: 50px 60px;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   align-content: center;
 }
 .contact .notice > div > span {
   margin: 20px 0 50px;
+}
+.contact .notice h2 {
+  font-family: 'Poppins Extra Light';
 }
 
 form {
