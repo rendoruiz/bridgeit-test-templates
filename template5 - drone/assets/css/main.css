@@ -57,7 +57,7 @@ h1, h2 {
 
 
 .landing {
-  background: center / cover no-repeat url('../img/bg-landing.png');
+  background: center / cover no-repeat url('../img/bg-landing.jpg');
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -153,7 +153,7 @@ h1, h2 {
   linear-gradient(270deg, var(--blurred-edge-background-gradient)),
   linear-gradient(0deg, var(--blurred-edge-background-gradient)),
   linear-gradient(90deg, var(--blurred-edge-background-gradient));
-  background: var(--blurred-edge-background), center / cover no-repeat url('../img/bg-contact.png');
+  background: var(--blurred-edge-background), center / cover no-repeat url('../img/bg-contact.jpg');
   display: flex;
 }
 .contact .notice > div {
