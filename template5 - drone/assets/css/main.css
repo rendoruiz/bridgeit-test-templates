@@ -22,6 +22,14 @@
   font-style: normal;
 }
 
+:root {
+  --blurred-edge-background-gradient: rgba(23,23,23,1) 0%, rgba(0,0,0,1) 1%, rgba(255,255,255,0) 2%;
+  --blurred-edge-background: linear-gradient(180deg, var(--blurred-edge-background-gradient)),
+  linear-gradient(270deg, var(--blurred-edge-background-gradient)),
+  linear-gradient(0deg, var(--blurred-edge-background-gradient)),
+  linear-gradient(90deg, var(--blurred-edge-background-gradient));
+}
+
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -30,6 +38,7 @@
 }
 
 body {
+  background: black;
   color: white;
   font-family: sans-serif;
 }
@@ -47,7 +56,7 @@ a {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   background: black;
 }
 
@@ -148,11 +157,6 @@ h1, h2 {
   grid-template-columns: repeat(2, 1fr);
 }
 .contact .notice {
-  --blurred-edge-background-gradient: rgba(23,23,23,1) 0%, rgba(0,0,0,1) 1%, rgba(255,255,255,0) 2%;
-  --blurred-edge-background: linear-gradient(180deg, var(--blurred-edge-background-gradient)),
-  linear-gradient(270deg, var(--blurred-edge-background-gradient)),
-  linear-gradient(0deg, var(--blurred-edge-background-gradient)),
-  linear-gradient(90deg, var(--blurred-edge-background-gradient));
   background: var(--blurred-edge-background), center / cover no-repeat url('../img/bg-contact.jpg');
   display: flex;
 }
@@ -223,25 +227,48 @@ textarea {
 }
 
 
-@media (max-width: 500px) {
-  section {
-    height: unset;
-    min-height: 100vh;
+@media (max-width: 700px) {
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+  p, span, a {
+    font-size: 0.9rem;
   }
 
   .landing {
+    background: none;
     grid-template-columns: none;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 4fr 6fr;
   }
-  .title,
-  .social {
-    height: 100vh;
+  .title {
+    grid-row: 2;
+    background: rgba(0, 0, 0, 1);
+  }
+  .media {
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 15%), center / cover no-repeat url('../img/bg-landing.jpg');
   }
 
+  
   .contact > div {
     grid-template-columns: none;
-    grid-template-rows: repeat(2, 1fr);
+  }
+  .contact .notice {
+    background: center / cover no-repeat url('../img/bg-contact.jpg');
+  }
+  .contact .notice > div {
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 120px 50px 20px;
+  }
+  .contact .notice > div > span {
+    margin: 20px 0 100px;
   }
 
+  form {
+    display: grid;
+    justify-items: flex-start;
+    padding: 80px 40px;
+  }
 
 }
