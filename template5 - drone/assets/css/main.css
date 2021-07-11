@@ -23,7 +23,7 @@
 }
 
 :root {
-  --blurred-edge-background-gradient: rgba(23,23,23,1) 0%, rgba(0,0,0,1) 1%, rgba(255,255,255,0) 2%;
+  --blurred-edge-background-gradient: rgba(0,0,0,1) 0%, rgba(0,0,0,1) 1%, rgba(255,255,255,0) 2%;
   --blurred-edge-background: linear-gradient(180deg, var(--blurred-edge-background-gradient)),
   linear-gradient(270deg, var(--blurred-edge-background-gradient)),
   linear-gradient(0deg, var(--blurred-edge-background-gradient)),
