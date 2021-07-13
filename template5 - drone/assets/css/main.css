@@ -81,8 +81,12 @@ h1, h2 {
   text-align: center;
   padding: 0 50px;
 }
+.title span {
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
 .title .nav-next {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .nav-next svg {
   transition: all ease-in-out 0.25s;
@@ -93,10 +97,6 @@ h1, h2 {
 .nav-next:active svg {
   fill: #A13A6D;
   stroke: #A13A6D;
-}
-.title span {
-  margin-top: 15px;
-  margin-bottom: 25px;
 }
 
 .btn {
