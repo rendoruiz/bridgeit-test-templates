@@ -1,0 +1,105 @@
+body.modal-open  {
+  overflow: hidden;
+}
+
+#modal-container {
+  position: fixed;
+  z-index: -10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(30, 30, 30, 0.9);
+  opacity: 0;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+body.modal-open #modal-container {
+  opacity: 1;
+  z-index: 10000;
+  animation-name: modal-container-open;
+}
+
+body.modal-close #modal-container {
+  opacity: 0;
+  z-index: -10000;
+  animation-name: modal-container-close;
+}
+
+@keyframes modal-container-open {
+  from {
+    z-index: -10000;
+    opacity: 0;
+  }
+  to {
+    z-index: 10000;
+    opacity: 1;
+  }
+}
+
+@keyframes modal-container-close {
+  from {
+    z-index: 10000;
+    opacity: 1;
+  }
+  to {
+    z-index: -10000;
+    opacity: 0;
+  }
+}
+
+
+
+#modal-object {
+  border-radius: 10px;
+  height: max(300px, 80%);
+  width: clamp(200px, 80%, 800px);
+  background: black;
+  display: none;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+body.modal-init #modal-object {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+body.modal-close #modal-object {
+  animation-name: modal-object-close;
+  pointer-events: none;
+}
+body.modal-open #modal-object {
+  animation-name: modal-object-open;
+  pointer-events: all;
+}
+
+@keyframes modal-object-close {
+  from {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  90% {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes modal-object-open {
+  from {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
