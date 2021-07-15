@@ -168,7 +168,9 @@ h1, h2 {
   padding: 50px 60px;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
+  justify-items: center;
   align-content: center;
+  text-align: center;
 }
 .contact .notice > div > span {
   margin: 20px 0 50px;
@@ -273,9 +275,6 @@ textarea {
     background: center / cover no-repeat url('../img/bg-contact.jpg');
   }
   .contact .notice > div {
-    justify-items: center;
-    align-content: center;
-    text-align: center;
     padding: 120px 50px 20px;
   }
   .contact .notice > div > span {
