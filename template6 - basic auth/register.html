@@ -12,7 +12,8 @@
 <body>
   <main class="auth">
     <form id="register-form" action="landing.html">
-      <h5>Personal Info</h5>
+      <h5>Name</h5>
+
       <input type="text" 
         name="first-name" 
         id="first-name"
@@ -27,19 +28,26 @@
         autocomplete="family-name"
         required
       >
-      <input type="date" 
-        name="birthdate" 
-        id="birthdate"
-        placeholder="Date of Birth"
-        autocomplete="bday"
-      >
+      <h5>Date of Birth</h5>
+      <div class="birthday">
+        <select name="bdayMonth" id="bdayMonth" autocomplete="bday-month">
+          <option value="">Month</option>
+        </select>
+        <select name="bdayDay" id="bdayDay" autocomplete="bday-day">
+          <option value="">Day</option>
+        </select>
+        <select name="bdayYear" id="bdayYear" autocomplete="bday-year">
+          <option value="">Year</option>
+        </select>
+      </div>
+      <h5>Location</h5>
       <input type="text" 
         name="Province" 
         id="Province"
         placeholder="Province"
       >
 
-      <h5>Account Info</h5>
+      <h5>Email</h5>
       <input type="email" 
         name="email" 
         id="email" 
@@ -47,6 +55,8 @@
         autocomplete="email"
         required
       >
+
+      <h5>Password</h5>
       <input type="password" 
         name="password" 
         id="password" 
