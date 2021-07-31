@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'VI Hai Duong';
+  src: url('../fonts/haiduo1t-webfont.woff2') format('woff2'),
+       url('../fonts/haiduo1t-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: sans-serif;
+}
+
+:root {
+  --color-primary: #0046FF;
+  --color-secondary: #FF3169;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  min-height: max(500px, 100vh);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.container {
+  min-width: 300px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+header {
+  height: 70px;
+  display: grid;
+  justify-items: center;
+  
+  background: var(--color-primary);
+}
+
+header .container {
+  height: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+header .branding {
+  display: grid;
+  place-items: center;
+  font-family: 'VI Hai Duong', sans-serif;
+}
+
+.main-nav {
+  display: grid;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.main-nav ul {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+}
+.main-nav li {
+  display: grid;
+}
+.main-nav a,
+.main-nav a:visited {
+  text-decoration: none;
+  display: grid;
+  place-items: center;
+  padding: 0 15px;
+  margin: 10px 0;
+  border-radius: 4px;
+  color: white;
+  transition: all 0.15s ease-in-out;
+}
+.main-nav a:hover,
+.main-nav a:active {
+  color: white;
+  background: var(--color-secondary);
+}
+.main-nav a:active {
+  transform: scale(0.95);
+}
+
+
+
+
+
+main {
+  display: grid;
+  justify-items: center;
+
+  background: center / 120% no-repeat url('../img/home-bg.svg');
+}
+
+main > .container {
+  display: grid;
+  place-items: center;
+  padding: 20px 0;
+}
+
+.card {
+  --padding: 80px 30px 50px;
+  max-width: 700px;
+  margin: 0 10px;
+  padding: var(--padding);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  text-align: center;
+
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+}
+
+.heading1 {
+  font-family: 'VI Hai Duong', sans-serif;
+  font-size: clamp(3rem, 50vw, 2rem);
+  color: var(--color-primary);
+}
+.heading2 {
+  font-size: clamp(1.75rem, 30vw, 1.2rem);
+  color: var(--color-primary);
+}
+
+.btn,
+.btn:visited {
+  background: var(--color-secondary);
+  border-radius: 16px;
+  color: white;
+  padding: 12px 32px;
+  transition: all 0.25s ease-in-out;
+  font-weight: bold;
+}
+.btn:hover,
+.btn:active {
+  background: rgb(255, 145, 175)
+}
+.btn:active {
+  transform: scale(0.95);
+}
