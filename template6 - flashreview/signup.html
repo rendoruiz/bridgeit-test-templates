@@ -21,15 +21,74 @@
       </nav>
     </div>
   </header>
-  
+
   <main>
     <div class="container">
-      <div class="card" style="--padding: 80px 30px 50px">
-        <h1 class="heading1">Are you ready to enhance your learning?</h1>
-        <span class="heading2">Create custom cards and study with friends.</span>
-        <a href="signup.html" class="btn">Sign Up</a>
-        <span class="heading2" style="color: var(--color-secondary); margin-top: 50px;">Already studying? Click below to sign in!</span>
-        <a href="login.html" class="btn">Login</a>
+      <div class="card" style="--padding: 50px 40px;">
+        <h2 class="heading2 font-primary">Start studying for free!</h2>
+        <form id="register-form" action="">
+          <section>
+            <h3 class="heading3">Name</h3>
+            <div class="input-group">
+              <label for="firstName" class="sr-only">First Name</label>
+              <input 
+                type="text" 
+                name="first-name" 
+                id="firstName" 
+                placeholder="First Name" 
+                autocomplete="given-name"
+              >
+            </div>
+            <div class="input-group">
+              <label for="lastName" class="sr-only">Last Name</label>
+              <input 
+                type="text" 
+                name="last-name" 
+                id="lastName" 
+                placeholder="Last Name" 
+                autocomplete="family-name"
+              >
+            </div>
+          </section>
+          <section>
+            <h3 class="heading3">Email</h3>
+            <div class="input-group">
+              <label for="email" class="sr-only">Email</label>
+              <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                placeholder="Email" 
+                autocomplete="email"
+                class="input-invalid"
+              >
+              <span class="server-response">Email is already in use.</span>
+            </div>
+          </section>
+          <section>
+            <h3 class="heading3">Password</h3>
+            <div class="input-group">
+              <label for="password" class="sr-only">Password</label>
+              <input 
+                type="password" 
+                name="password" 
+                id="password" 
+                placeholder="Password" 
+              >
+            </div>
+            <div class="input-group">
+              <label for="passwordConfirm" class="sr-only">Confirm Password</label>
+              <input 
+                type="password" 
+                name="password-confirm" 
+                id="passwordConfirm" 
+                placeholder="Confirm Password" 
+              >
+            </div>
+          </section>
+          <input type="submit" class="btn" value="Sign Up">
+        </form>
+        <a href="login.html" class="link-back">Already have an account? Login.</a>
       </div>
     </div>
   </main>
