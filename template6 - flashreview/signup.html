@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="assets/css/navigation-menu.css">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body>
+<body class="bg-1">
   <header>
     <div class="container">
       <a href="index.html" class="branding"><img src="assets/img/logo-full.svg" alt=""></a>
@@ -48,6 +48,25 @@
                 placeholder="Last Name" 
                 autocomplete="family-name"
               >
+            </div>
+          </section>
+          <section>
+            <h3 class="heading3">Birth Date</h3>
+            <div class="custom-input select-group">
+              <div class="select-item">
+                <label for="bdayYear" class="sr-only">Birthday Year</label>
+                <select name="bdayYear" id="bdayYear" autocomplete="bday-year"></select>
+              </div>
+              <span class="item-separator">/</span>
+              <div class="select-item">
+                <label for="bdayMonth" class="sr-only">Birthday Month</label>
+                <select name="bdayMonth" id="bdayMonth" autocomplete="bday-month"></select>
+              </div>
+              <span class="item-separator">/</span>
+              <div class="select-item">
+                <label for="bdayDay" class="sr-only">Birthday Day</label>
+                <select name="bdayDay" id="bdayDay" autocomplete="bday-day"></select>
+              </div>
             </div>
           </section>
           <section>

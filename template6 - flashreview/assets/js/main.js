@@ -41,44 +41,58 @@ canadianProvinces.forEach((province) => {
 })
 
 // // birthday variables
-// const currentDate = new Date();
-// const currentYear = currentDate.getFullYear();
+const currentDate = new Date();
+const currentDateYear = currentDate.getFullYear();
 
-// // generate birthday years
-// const bdayYear = document.getElementById('bdayYear');
-// for (let year = currentYear; year >= currentYear - 100; year -= 1) {
-//   const yearOption = document.createElement('option');
-//   yearOption.innerText = year;
-//   yearOption.value = year;
-//   bdayYear.append(yearOption);
-// }
+// generate birthday years
 
-// // generate birthday months
-// const shortMonthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-// const bdayMonth = document.getElementById('bdayMonth');
-// shortMonthNames.forEach((monthName, index) => {
-//   const monthOption = document.createElement('option');
-//   monthOption.innerText = monthName;
-//   monthOption.value = index + 1;
-//   bdayMonth.append(monthOption);
-// });
+for (let year = currentDateYear; year >= currentDateYear - 100; year -= 1) {
+  document.getElementById('bdayYear').append(
+    createNewOption(year, year)
+  );
+}
 
-// // generate birthday days based on the value of month
-// bdayMonth.addEventListener('change', (e) => {
-//   const daysInMonth = new Date(currentYear, e.target.value + 1, 0).getDate();
-//   const bdayDay = document.getElementById('bdayDay');
+// generate birthday months
+const englishMonths = [
+  { initial: 'Jan', full: 'January', value: '1' },
+  { initial: 'Feb', full: 'February', value: '2' },
+  { initial: 'Mar', full: 'March', value: '3' },
+  { initial: 'Apr', full: 'April', value: '4' },
+  { initial: 'May', full: 'May', value: '5' },
+  { initial: 'Jun', full: 'June', value: '6' },
+  { initial: 'Jul', full: 'July', value: '7' },
+  { initial: 'Aug', full: 'August', value: '8' },
+  { initial: 'Sep', full: 'September', value: '9' },
+  { initial: 'Oct', full: 'October', value: '10' },
+  { initial: 'Nov', full: 'November', value: '11' },
+  { initial: 'Dec', full: 'December', value: '12' }
+]
+const bdayMonth = document.getElementById('bdayMonth');
+englishMonths.forEach((month) => {
+  bdayMonth.append(
+    createNewOption(month.value, month.full)
+  );
+});
 
-//   // remove all options in day filed
-//   [...bdayDay.children].forEach((day) => {
-//     bdayDay.remove(day);
-//   });
+const generateDaysInMonth = (monthDropdown) => {
+  const daysInMonth = new Date(currentDateYear, monthDropdown.value + 1, 0).getDate();
+  const bdayDay = document.getElementById('bdayDay');
 
-//   // add days in month
-//   for (let day = 1; day <= daysInMonth; day += 1) {
-//     const dayOption = document.createElement('option');
-//     dayOption.innerText = day;
-//     dayOption.value = day;
-//     bdayDay.append(dayOption);
-//     console.log('added', dayOption);
-//   }
-// });
+  // remove all options in day filed
+  [...bdayDay.children].forEach((day) => {
+    bdayDay.remove(day);
+  });
+
+  // add days in month
+  for (let day = 1; day <= daysInMonth; day += 1) {
+    bdayDay.append(
+      createNewOption(day, day)
+    );
+  }
+}
+generateDaysInMonth(bdayMonth);
+
+// generate birthday days based on the value of month
+bdayMonth.addEventListener('change', (e) => {
+  generateDaysInMonth(bdayMonth);
+});
