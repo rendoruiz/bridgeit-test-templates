@@ -42,8 +42,13 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-a {
+a,
+a:visited {
   text-decoration: none;
+}
+a:hover,
+a:active {
+  text-decoration: underline;
 }
 body {
   min-height: max(500px, 100vh);
