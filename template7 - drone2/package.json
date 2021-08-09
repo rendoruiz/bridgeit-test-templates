@@ -6,10 +6,11 @@
   "scripts": {
     "install:babel": "npm install --save-dev @babel/core @babel/cli @babel/preset-env babel-preset-minify",
     "install:postcss": "npm install --save-dev postcss postcss-cli postcss-preset-env cssnano",
-    "build:js": "npx babel js/src/ --out-dir js/dist/",
-    "watch:js": "npx babel js/src/ --out-dir js/dist/ --watch",
+    "build:js": "npx babel js/src/ --out-dir js/dist/ --no-comments",
+    "watch:js": "npx babel js/src/ --out-dir js/dist/ --no-comments --watch",
     "build:css": "postcss css/src/*.css* -o css/dist/styles.css ",
-    "watch:css": "postcss css/src/*.css* -o css/dist/styles.css  --watch"
+    "watch:css": "postcss css/src/*.css* -o css/dist/styles.css  --watch",
+    "build:all": "npm run build:js && npm run build:css"
   },
   "author": "Rendo Ruiz",
   "license": "ISC",
