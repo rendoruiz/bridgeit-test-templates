@@ -1,26 +1,24 @@
+/* box model */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+
+/* CSS variables */
 :root {
   --color-dark: #00020C;
   --color-white: #FFFFFF;
   --color-primary: #D43737;
   --color-secondary: #FFAEAE;
 
-  --color-shadow: rgba(0,0,0,0.10196);
+  --rgb-shade: 0, 0, 0;
   --header-height: 60px;
 }
 
-.container {
-  max-width: 1200px;
 
-  font-family: 'Roboto', sans-serif;
-}
-
-
+/* override default styles */
 a,
 a:visited {
   color: inherit;
@@ -31,10 +29,55 @@ a:active {
   color: #D43737;
   color: var(--color-primary);
 }
-
 ul {
   list-style: none;
 }
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+
+/* max content width */
+.container {
+  max-width: 1200px;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+/* button */
+.btn {
+  padding: 5px 30px 5px 40px;
+  border: 3px solid #D43737;
+  border: 3px solid var(--color-primary);
+  border-radius: 26px;
+  background: #D43737;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  color: var(--color-white);
+  font-size: 1.1rem;
+  transition: background 200ms, color 200ms, transform 100ms
+}
+.btn:hover {
+    background: transparent;
+    color: #D43737;
+    color: var(--color-primary);
+  }
+.btn:active {
+    transform: scale(0.975);
+  }
+.btn .fa-angle-right {
+    margin-left: 5px;
+  }
+
+/* shade */
+.shade {
+  background: rgba(0, 0, 0, 0.6);
+  background: rgba(var(--rgb-shade), 0.6);
+}
+
 
 body {
   background: #00020C;
@@ -84,6 +127,42 @@ header > .container .social-links {
     }
 
 /* site content */
-main {
+main .spotlight {
+    height: clamp(700px, 80vh, 900px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+  }
+main .spotlight > * {
+      grid-row: 1;
+    }
+main .spotlight .spotlight-image {
+      grid-column: 1 / -1;
+      width: 100%;
+      height: inherit;
+    }
+main .spotlight .shade {
+      grid-column: 1;
+      color: #FFFFFF;
+      color: var(--color-white);
+      display: grid;
+      align-items: center;
+      justify-items: center;
+      place-items: center
+    }
+main .spotlight .shade .spotlight-text {
+        border-left: 2px solid #FFFFFF;
+        border-left: 2px solid var(--color-white);
+        padding: 55px 0 50px 30px;
+        display: grid;
+        justify-items: flex-start;
+        grid-gap: 40px;
+        gap: 40px
+      }
+main .spotlight .shade .spotlight-text span {
+          max-width: 450px;
+          font-size: 2.25rem;
+          font-weight: bold;
+          letter-spacing: 1px;
+          line-height: 1.5;
 
-}
+        }
