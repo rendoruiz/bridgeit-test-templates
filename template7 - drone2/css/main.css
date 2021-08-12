@@ -171,8 +171,8 @@ main.home {
   & section.about {
     margin: 250px 0 200px;
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 100px;
 
     & > img {
       height: 600px;
@@ -180,6 +180,7 @@ main.home {
     }
 
     & .section-text {
+      margin-left: 100px;
       max-width: calc(var(--max-content-width) / 2);
       display: grid;
       justify-items: flex-start;
@@ -195,7 +196,12 @@ main.home {
       }
 
       & h3 {
+        margin-top: 20px;
         font-size: 1.5rem;
+      }
+
+      & .btn {
+        margin-top: 10px;
       }
     }
   }

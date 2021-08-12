@@ -179,16 +179,15 @@ main.home section.spotlight .shade .spotlight-text span {
 main.home section.about {
     margin: 250px 0 200px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 100px;
-    -moz-column-gap: 100px;
-         column-gap: 100px
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr)
   }
 main.home section.about > img {
       height: 600px;
       width: 100%;
     }
 main.home section.about .section-text {
+      margin-left: 100px;
       max-width: calc(1200px / 2);
       max-width: calc(var(--max-content-width) / 2);
       display: grid;
@@ -204,5 +203,9 @@ main.home section.about .section-text p {
         line-height: 1.5;
       }
 main.home section.about .section-text h3 {
+        margin-top: 20px;
         font-size: 1.5rem;
+      }
+main.home section.about .section-text .btn {
+        margin-top: 10px;
       }
