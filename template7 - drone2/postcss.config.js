@@ -6,8 +6,8 @@ module.exports = {
         'nesting-rules': true
       }
     }),
-    require('cssnano')({
-        preset: 'default',
-    }),
+    // require('cssnano')({
+    //     preset: 'default',
+    // }),
   ],
 };
