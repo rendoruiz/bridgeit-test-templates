@@ -15,6 +15,7 @@
 
   --rgb-shade: 0, 0, 0;
   --header-height: 60px;
+  --max-content-width: 1200px;
 }
 
 
@@ -43,6 +44,7 @@ img {
 /* max content width */
 .container {
   max-width: 1200px;
+  max-width: var(--max-content-width);
 
   font-family: 'Roboto', sans-serif;
 }
@@ -133,29 +135,31 @@ header > .container .social-links {
     }
 
 /* site content */
-main .spotlight {
+main.home {
+  color: #FFFFFF;
+  color: var(--color-white)
+}
+main.home section.spotlight {
     height: clamp(700px, 80vh, 900px);
     display: grid;
     grid-template-columns: repeat(2, 1fr)
   }
-main .spotlight > * {
+main.home section.spotlight > * {
       grid-row: 1;
     }
-main .spotlight .spotlight-image {
+main.home section.spotlight .spotlight-image {
       grid-column: 1 / -1;
       width: 100%;
       height: inherit;
     }
-main .spotlight .shade {
+main.home section.spotlight .shade {
       grid-column: 1;
-      color: #FFFFFF;
-      color: var(--color-white);
       display: grid;
       align-items: center;
       justify-items: center;
       place-items: center
     }
-main .spotlight .shade .spotlight-text {
+main.home section.spotlight .shade .spotlight-text {
         border-left: 2px solid #FFFFFF;
         border-left: 2px solid var(--color-white);
         padding: 55px 0 50px 30px;
@@ -164,7 +168,7 @@ main .spotlight .shade .spotlight-text {
         grid-gap: 40px;
         gap: 40px
       }
-main .spotlight .shade .spotlight-text span {
+main.home section.spotlight .shade .spotlight-text span {
           max-width: 450px;
           font-size: 2.25rem;
           font-weight: bold;
@@ -172,3 +176,33 @@ main .spotlight .shade .spotlight-text span {
           line-height: 1.5;
 
         }
+main.home section.about {
+    margin: 250px 0 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 100px;
+    -moz-column-gap: 100px;
+         column-gap: 100px
+  }
+main.home section.about > img {
+      height: 600px;
+      width: 100%;
+    }
+main.home section.about .section-text {
+      max-width: calc(1200px / 2);
+      max-width: calc(var(--max-content-width) / 2);
+      display: grid;
+      justify-items: flex-start;
+      align-content: center;
+      grid-row-gap: 20px;
+      row-gap: 20px
+    }
+main.home section.about .section-text h2 {
+        font-size: 2.25rem;
+      }
+main.home section.about .section-text p {
+        line-height: 1.5;
+      }
+main.home section.about .section-text h3 {
+        font-size: 1.5rem;
+      }
