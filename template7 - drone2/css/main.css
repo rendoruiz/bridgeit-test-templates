@@ -103,6 +103,11 @@ header {
   
     & ul {
       display: flex;
+
+      & li {
+        display: grid;
+        place-items: center
+      }
     }
 
     & .site-links {

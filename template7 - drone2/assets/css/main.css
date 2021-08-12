@@ -111,8 +111,14 @@ header > .container {
     padding: 0 20px
   }
 header > .container ul {
-      display: flex;
+      display: flex
     }
+header > .container ul li {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        place-items: center
+      }
 header > .container .site-links {
       justify-content: center;
       font-size: max(12px, 0.9rem);
