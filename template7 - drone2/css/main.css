@@ -53,6 +53,7 @@ footer {
   }
 }
 
+/* site header */
 header {
 
   & > .container {
@@ -61,6 +62,7 @@ header {
     grid-template-columns: auto 1fr auto;
     align-content: center;
     text-transform: uppercase;
+    padding: 0 20px;
   
     & ul {
       display: flex;
@@ -70,12 +72,18 @@ header {
       justify-content: center;
       font-size: max(12px, 0.9rem);
       font-weight: bold;
-      gap: 25px;
+      gap: 30px;
+    }
+
+    & .social-links {
+      font-size: 20px;
+      gap: 20px
     }
   }
   
 }
 
+/* site content */
 main {
 
 }

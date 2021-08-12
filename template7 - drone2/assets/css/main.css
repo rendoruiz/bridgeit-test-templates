@@ -57,27 +57,33 @@ header > .container, footer > .container {
     margin: 0 auto;
   }
 
+/* site header */
 header > .container {
     height: 60px;
     height: var(--header-height);
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-content: center;
-    text-transform: uppercase
+    text-transform: uppercase;
+    padding: 0 20px
   }
-
 header > .container ul {
       display: flex;
     }
-
 header > .container .site-links {
       justify-content: center;
       font-size: max(12px, 0.9rem);
       font-weight: bold;
-      grid-gap: 25px;
-      gap: 25px;
+      grid-gap: 30px;
+      gap: 30px;
+    }
+header > .container .social-links {
+      font-size: 20px;
+      grid-gap: 20px;
+      gap: 20px
     }
 
+/* site content */
 main {
 
 }
