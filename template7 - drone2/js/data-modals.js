@@ -63,18 +63,17 @@ else {
         logMessages(errorList);
       }
       else {
+        // set all modals to closed by default
+        item.setAttribute(modalStatusIndicatorAttribute, modalClosedIndicator);
+
         itemActivators.forEach(activator => {
           activator.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
 
-            body.style.paddingRight = `${browserScrollbarWidth}px`;
+            // stop stutter due to browser scrollbar visibility
+            body.style.setProperty('padding-right', `${browserScrollbarWidth}px`);
             modalGroup.style.setProperty('--scrollbar-width', 'unset');
-            // set data-modal-active for current item and clear for others
-            const modalActiveIndicatorAttribute = 'data-modal-active';
-            const otherModals = modalItems.filter(i => i !== itemInstance);
-            otherModals.forEach(i => i.removeAttribute(modalActiveIndicatorAttribute));
-            item.setAttribute(modalActiveIndicatorAttribute, 'true');
 
             // set modal-item and body status to open
             body.setAttribute(modalStatusIndicatorAttribute, modalOpenedIndicator);
@@ -89,8 +88,10 @@ else {
             e.preventDefault();
             e.stopPropagation();
 
-            body.style.paddingRight = 'unset';
+            // stop stutter due to browser scrollbar visibility
+            body.style.setProperty('padding-right', 'unset');
             modalGroup.style.setProperty('--scrollbar-width', `-${browserScrollbarWidth}px`);
+
             // set modal-item and body status to close
             body.setAttribute(modalStatusIndicatorAttribute, modalClosedIndicator);
             item.setAttribute(modalStatusIndicatorAttribute, modalClosedIndicator);
@@ -113,8 +114,10 @@ else {
       body.dataset.modalStatus === 'open') {
       const activeModal = document.querySelector(`.modal-item[${modalStatusIndicatorAttribute}="open"]`);
       if (activeModal) {
+        // stop stutter due to browser scrollbar visibility
         body.style.paddingRight = 'unset';
         modalGroup.style.setProperty('--scrollbar-width', `-${browserScrollbarWidth}px`);
+
         // set modal-item and body status to close
         body.setAttribute(modalStatusIndicatorAttribute, modalClosedIndicator);
         activeModal.setAttribute(modalStatusIndicatorAttribute, modalClosedIndicator);
@@ -138,7 +141,6 @@ const stopVideoIframe = (iframeObject) => {
     iframeObject.src = iframeSource;
   }, 200);
 }
-
 
 // https://stackoverflow.com/a/13382873
 function getScrollbarWidth() {
