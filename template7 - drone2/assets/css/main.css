@@ -72,7 +72,7 @@ span {
 
 /* button */
 .btn {
-  padding: 5px 30px 5px 40px;
+  padding: 2px 30px 5px 40px;
   border: 3px solid #D43737;
   border: var(--button-border);
   border-radius: 26px;
@@ -80,6 +80,7 @@ span {
   background: var(--color-primary);
   color: #FFFFFF;
   color: var(--color-white);
+  font-family: 'neue-haas-unica', 'Roboto', sans-serif;
   font-size: 1.1rem;
   transition: background 200ms, color 200ms, transform 100ms;
   cursor: pointer
@@ -294,7 +295,8 @@ main.home section.spotlight .shade .spotlight-text {
       }
 main.home section.spotlight .shade .spotlight-text h2 {
           max-width: 450px;
-          font-weight: bold;
+          font-family: neue-haas-unica;
+          font-weight: 600;
           letter-spacing: 1px;
           line-height: 1.5;
         }
@@ -675,7 +677,7 @@ main.home section.contact div.contact-form > form .input-group textarea {
           }
 main.home section.contact div.contact-form > form .input-group {
 
-          /* input with icon */
+          /* input with */
         }
 main.home section.contact div.contact-form > form .input-group.input-icon {
             grid-template-columns: 1fr auto

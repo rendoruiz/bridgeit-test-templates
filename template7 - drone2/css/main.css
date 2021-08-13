@@ -68,11 +68,12 @@ span {
 
 /* button */
 .btn {
-  padding: 5px 30px 5px 40px;
+  padding: 2px 30px 5px 40px;
   border: var(--button-border);
   border-radius: 26px;
   background: var(--color-primary);
   color: var(--color-white);
+  font-family: 'neue-haas-unica', 'Roboto', sans-serif;
   font-size: 1.1rem;
   transition: background 200ms, color 200ms, transform 100ms;
   cursor: pointer;
@@ -279,7 +280,8 @@ main.home {
 
         & h2 {
           max-width: 450px;
-          font-weight: bold;
+          font-family: neue-haas-unica;
+          font-weight: 600;
           letter-spacing: 1px;
           line-height: 1.5;
         }
@@ -661,7 +663,7 @@ main.home {
             resize: none;
           }
 
-          /* input with icon */
+          /* input with */
           &.input-icon {
             grid-template-columns: 1fr auto;
 
