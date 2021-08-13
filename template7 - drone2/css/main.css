@@ -23,6 +23,10 @@ body {
   --max-content-width: 1200px;
   --item-container-border-radius: 10px;
   --button-border: 3px solid var(--color-primary);
+
+  --viewport-md: 768px;
+  --viewport-lg: 1024px;
+  --viewport-xl: 1200px;
 }
 
 
@@ -94,6 +98,48 @@ span {
 /* shade */
 .shade {
   background: var(--color-shade);
+}
+
+/* modals */
+.modal-group {
+  --iframe-width: 270px;
+
+  & .modal-item.video-modal {
+    width: unset;
+    padding: 20px 10px;
+
+    & [data-modal-close] {
+      padding: 5px;
+      justify-self: flex-end;
+      font-size: 50px;
+      color: var(--color-white);
+      transition: color 200ms;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+    & iframe {
+      width: var(--iframe-width);
+      height: calc(var(--iframe-width)/1.77);
+    }
+  }
+
+  @media screen and (min-width: 425px) {
+    --iframe-width: 390px;
+  }
+
+  @media screen and (min-width: 768px) {
+    --iframe-width: 750px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    --iframe-width: 980px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --iframe-width: 1100px;
+  }
 }
 
 
