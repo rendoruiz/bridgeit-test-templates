@@ -344,13 +344,18 @@ main.home {
       
       & > h2 {
         flex: 0 0 100%;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
       }
 
       & .equipment-item {
         display: grid;
+        grid-template-rows: 230px auto;
+        width: 220px;
 
         &:hover {
+          & img {
+            transform: translateY(-40px);
+          }
           & .equipment-text {
             box-shadow: 0 3px 10px rgba(var(--rgb-shade), 0.3);
             
@@ -360,8 +365,13 @@ main.home {
           }
         }
 
+        & img {
+          align-self: flex-end;
+          width: 100%;
+          transition: transform 300ms;
+        }
         & .equipment-text {
-          width: 220px;
+          /* width: inherit; */
           margin: 5px;
           padding: 15px 10px 15px 20px;
           border-radius: var(--item-container-border-radius);

@@ -354,11 +354,16 @@ main.home section.equipment .container {
     }
 main.home section.equipment .container > h2 {
         flex: 0 0 100%;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
       }
 main.home section.equipment .container .equipment-item {
-        display: grid
+        display: grid;
+        grid-template-rows: 230px auto;
+        width: 220px
       }
+main.home section.equipment .container .equipment-item:hover img {
+            transform: translateY(-40px);
+          }
 main.home section.equipment .container .equipment-item:hover .equipment-text {
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
             box-shadow: 0 3px 10px rgba(var(--rgb-shade), 0.3)
@@ -366,8 +371,13 @@ main.home section.equipment .container .equipment-item:hover .equipment-text {
 main.home section.equipment .container .equipment-item:hover .equipment-text a {
               transform: translateX(3px);
             }
+main.home section.equipment .container .equipment-item img {
+          align-self: flex-end;
+          width: 100%;
+          transition: transform 300ms;
+        }
 main.home section.equipment .container .equipment-item .equipment-text {
-          width: 220px;
+          /* width: inherit; */
           margin: 5px;
           padding: 15px 10px 15px 20px;
           border-radius: 10px;
