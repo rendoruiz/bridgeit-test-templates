@@ -131,9 +131,11 @@ else {
 }
 
 const stopVideoIframe = (iframeObject) => {
-  const iframeSource = iframeObject.src;
-  iframeObject.src = '';
-  iframeObject.src = iframeSource;
+  setTimeout(() => {
+    const iframeSource = iframeObject.src;
+    iframeObject.src = '';
+    iframeObject.src = iframeSource;
+  }, 200);
 }
 
 
