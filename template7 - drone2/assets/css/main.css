@@ -12,7 +12,7 @@ body {
 
 /* CSS variables */
 :root {
-  --color-dark: #00020C;
+  --color-dark: #060505;
   --color-white: #FFFFFF;
   --color-primary: #D43737;
   --color-secondary: #FFAEAE;
@@ -72,7 +72,7 @@ span {
 
 /* button */
 .btn {
-  padding: 5px 30px 5px 40px;
+  padding: 2px 30px 5px 40px;
   border: 3px solid #D43737;
   border: var(--button-border);
   border-radius: 26px;
@@ -80,6 +80,7 @@ span {
   background: var(--color-primary);
   color: #FFFFFF;
   color: var(--color-white);
+  font-family: 'neue-haas-unica', 'Roboto', sans-serif;
   font-size: 1.1rem;
   transition: background 200ms, color 200ms, transform 100ms;
   cursor: pointer
@@ -166,7 +167,7 @@ header.site-header,
 footer.site-footer {
   background-color: #FFFFFF;
   background-color: var(--color-white);
-  color: #00020C;
+  color: #060505;
   color: var(--color-dark)
 }
 
@@ -258,7 +259,7 @@ main.home {
   color: var(--color-white)
 }
 main.home > section {
-    background: #00020C;
+    background: #060505;
     background: var(--color-dark);
   }
 main.home section.spotlight {
@@ -294,7 +295,8 @@ main.home section.spotlight .shade .spotlight-text {
       }
 main.home section.spotlight .shade .spotlight-text h2 {
           max-width: 450px;
-          font-weight: bold;
+          font-family: neue-haas-unica;
+          font-weight: 600;
           letter-spacing: 1px;
           line-height: 1.5;
         }
@@ -322,17 +324,26 @@ main.home section.about .section-text p {
         line-height: 1.5;
       }
 main.home section.about .section-text h3 {
-        margin-top: 20px;
-      }
-main.home section.about .section-text .btn {
         margin-top: 10px;
+      }
+main.home section.about .section-text .logo-group {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        justify-items: center
+      }
+main.home section.about .section-text .logo-group img:nth-of-type(3) {
+          margin-left: 14px;
+        }
+main.home section.about .section-text .btn {
+        margin-top: 15px;
       }
 main.home section.equipment {
     padding: 70px 0;
     display: grid;
     background: #FFFFFF;
     background: var(--color-white);
-    color: #00020C;
+    color: #060505;
     color: var(--color-dark)
   }
 main.home section.equipment .container {
@@ -343,11 +354,16 @@ main.home section.equipment .container {
     }
 main.home section.equipment .container > h2 {
         flex: 0 0 100%;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
       }
 main.home section.equipment .container .equipment-item {
-        display: grid
+        display: grid;
+        grid-template-rows: 230px auto;
+        width: 220px
       }
+main.home section.equipment .container .equipment-item:hover img {
+            transform: translateY(-40px);
+          }
 main.home section.equipment .container .equipment-item:hover .equipment-text {
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
             box-shadow: 0 3px 10px rgba(var(--rgb-shade), 0.3)
@@ -355,8 +371,13 @@ main.home section.equipment .container .equipment-item:hover .equipment-text {
 main.home section.equipment .container .equipment-item:hover .equipment-text a {
               transform: translateX(3px);
             }
+main.home section.equipment .container .equipment-item img {
+          align-self: flex-end;
+          width: 100%;
+          transition: transform 300ms;
+        }
 main.home section.equipment .container .equipment-item .equipment-text {
-          width: 220px;
+          /* width: inherit; */
           margin: 5px;
           padding: 15px 10px 15px 20px;
           border-radius: 10px;
@@ -493,6 +514,9 @@ main.home section.services > .container .service-item:nth-of-type(n+1):nth-of-ty
           -moz-column-gap: 20px;  
                column-gap: 20px
         }
+main.home section.services > .container .service-item:nth-of-type(n+1):nth-of-type(-n+2) > .service-item-text h3 {
+            font-size: 1.75rem;
+          }
 main.home section.services > .container .service-item:nth-of-type(n+1):nth-of-type(-n+2) > .service-item-text > .fas {
             grid-row: 1 / 3;
             grid-column: 2;
@@ -635,7 +659,6 @@ main.home section.contact div.contact-form > form h2 {
         }
 main.home section.contact div.contact-form > form .input-group {
           display: grid;
-          grid-template-columns: 1fr auto;
           align-items: center;
           grid-row-gap: 10px;
           row-gap: 10px
@@ -649,19 +672,20 @@ main.home section.contact div.contact-form > form .input-group input,
             border: 3px solid var(--color-white);
             border-radius: 10px;
             border-radius: var(--item-container-border-radius);
-            padding: 8px 40px 8px 10px;
-            transition: border 200ms
+            padding: 8px 10px;
+            transition: border 200ms;
+            font-family: inherit
           }
 main.home section.contact div.contact-form > form .input-group input::-moz-placeholder, main.home section.contact div.contact-form > form .input-group textarea::-moz-placeholder {
-              color: #00020C;
+              color: #060505;
               color: var(--color-dark);
             }
 main.home section.contact div.contact-form > form .input-group input:-ms-input-placeholder, main.home section.contact div.contact-form > form .input-group textarea:-ms-input-placeholder {
-              color: #00020C;
+              color: #060505;
               color: var(--color-dark);
             }
 main.home section.contact div.contact-form > form .input-group input::placeholder, main.home section.contact div.contact-form > form .input-group textarea::placeholder {
-              color: #00020C;
+              color: #060505;
               color: var(--color-dark);
             }
 main.home section.contact div.contact-form > form .input-group input:focus, main.home section.contact div.contact-form > form .input-group textarea:focus {
@@ -675,27 +699,30 @@ main.home section.contact div.contact-form > form .input-group textarea {
           }
 main.home section.contact div.contact-form > form .input-group {
 
-          /* fontawesome */
+          /* input with */
         }
-main.home section.contact div.contact-form > form .input-group input, 
-          main.home section.contact div.contact-form > form .input-group input + .fas, 
-          main.home section.contact div.contact-form > form .input-group textarea {
-            grid-row: 2;
+main.home section.contact div.contact-form > form .input-group.input-icon {
+            grid-template-columns: 1fr auto
           }
-main.home section.contact div.contact-form > form .input-group input,
-          main.home section.contact div.contact-form > form .input-group textarea {
-            grid-column: 1 / 3;
-            font-family: inherit;
-          }
-main.home section.contact div.contact-form > form .input-group input + .fas {
-            margin-right: 10px;
-            width: 30px;
-            text-align: center;
-            grid-column: 2;
-            color: #D43737;
-            color: var(--color-primary);
-            font-size: 20px;
-          }
+main.home section.contact div.contact-form > form .input-group.input-icon input, 
+            main.home section.contact div.contact-form > form .input-group.input-icon input + .fas, 
+            main.home section.contact div.contact-form > form .input-group.input-icon textarea {
+              grid-row: 2;
+            }
+main.home section.contact div.contact-form > form .input-group.input-icon input,
+            main.home section.contact div.contact-form > form .input-group.input-icon textarea {
+              grid-column: 1 / 3;
+              padding: 8px 40px 8px 10px;
+            }
+main.home section.contact div.contact-form > form .input-group.input-icon input + .fas {
+              margin-right: 10px;
+              width: 30px;
+              text-align: center;
+              grid-column: 2;
+              color: #D43737;
+              color: var(--color-primary);
+              font-size: 20px;
+            }
 main.home section.contact div.contact-form > form button.btn {
           margin-top: 10px;
           justify-self: flex-start;
