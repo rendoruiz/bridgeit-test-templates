@@ -6,13 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Alberta Drone Specialists</title>
 
+  <!-- fontawesome -->
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/css/brands.min.css">
+  <link rel="stylesheet" href="assets/css/solid.min.css">
+
+  <!-- rendo web components -->
+  <link rel="stylesheet" href="assets/css/data-modals.css">
+
+  <!-- site styles -->
   <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="container">
       <a class="home-link link-item" href="index.html">ADS</a>
       <ul class="site-links link-group">
@@ -23,22 +30,250 @@
         <li><a href="">Contact</a></li>
       </ul>
       <ul class="social-links link-group">
-        <li><a href="youtube.com"><i class="fab fa-youtube"></i></a></li>
-        <li><a href="facebook.com">F</a></li>
-        <li><a href="instagram.com">I</a></li>
+        <li><a href="https://www.youtube.com/channel/UCz8CmyohSEjXX0vGBF4YapQ"><i class="fab fa-youtube"></i></a></li>
+        <li><a href="https://www.facebook.com/Alberta-Drone-Specialists-108741628175831"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/abdronespecialists/"><i class="fab fa-instagram"></i></a></li>
       </ul>
     </div>
   </header>
-  <main>
-    <section class="spotlight">
 
+  <main class="home">
+    <section class="spotlight">
+      <img class="spotlight-image" src="https://cdn.pixabay.com/photo/2016/11/29/09/16/architecture-1868667_1280.jpg" alt="">
+      <div class="shade">
+        <div class="spotlight-text">
+          <h2>Quality drone services from experienced pilots.</h2>
+          <button class="btn" data-modal-open="home-sl1">
+            View Reel
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
     </section>
 
+    <section class="about">
+      <img src="https://cdn.pixabay.com/photo/2015/09/12/00/46/buildings-936589_1280.jpg" alt="">
+      <div class="section-text">
+        <h2>Why Choose Us?</h2>
+        <p>We are fully certified and able to accomplish any project you have in mind. Our Inspire 2 systems are equipped with a ballistic parachute system granting us approvals from Transport Canada to operate in dense urban environments. Additionally, all Alberta Drone Specialists’ pilots hold advanced RPAS licenses.</p>
+        <p><strong>Don't know how to obtain proper permits and approvals?</strong> Let us handle it! We coordinate with Nav Canada for all flights in control zones near major airports and have experience coordinating drone operations and flight plans with National & Provincial Parks, Transport Canada, and Municipalities.</p>
+        <h3>Trusted By:</h3>
+        <a class="btn" href="portfolio.html">
+          Portfolio
+          <i class="fas fa-angle-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <section class="equipment">
+      <div class="container">
+        <h2>Our Equipment</h2>
+        <div class="equipment-item">
+          <div class="equipment-text">
+            <h3>DJI Inspire 2</h3>
+            <span>Image quality, power and intelligence to meet the needs of professional filmmakers and enterprises around the globe.</span>
+            <a href=""><i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+        <div class="equipment-item">
+          <div class="equipment-text">
+            <h3>Zenmuse X7</h3>
+            <span>The Zenmuse X7 is a compact Super 35 camera with an integrated gimbal made for high-end filmmaking.</span>
+            <a href=""><i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+        <div class="equipment-item">
+          <div class="equipment-text">
+            <h3>Indemnis Nexus</h3>
+            <span>The Nexus by Indemnis is the first UAV recovery system to be proven reliable in any failure situation.</span>
+            <a href=""><i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+        <div class="equipment-item">
+          <div class="equipment-text">
+            <h3>Outdoor FPV</h3>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae quia suscipit ratione repellendus facilis.</span>
+            <a href=""><i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+        <div class="equipment-item">
+          <div class="equipment-text">
+            <h3>Indoor FPV</h3>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae quia suscipit ratione repellendus facilis.</span>
+            <a href=""><i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <h2>Services</h2>
+        <a class="service-item" href="">
+          <img src="https://cdn.pixabay.com/photo/2018/04/25/09/26/eiffel-tower-3349075_1280.jpg" alt="">
+          <div class="service-item-text">
+            <h3>Film/TV</h3>
+            <span>Short catchy blurb.</span>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </a>
+        <a class="service-item" href="">
+          <img src="https://cdn.pixabay.com/photo/2015/12/08/00/32/london-1081820_1280.jpg" alt="">
+          <div class="service-item-text">
+            <h3>FPV</h3>
+            <span>Indoor and outdoor precision filming.</span>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </a>
+        <a class="service-item" href="">
+          <img src="https://cdn.pixabay.com/photo/2017/03/29/15/18/tianjin-2185510_1280.jpg" alt="">
+          <div class="service-item-text">
+            <h3>Construction</h3>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </a>
+        <a class="service-item" href="">
+          <img src="https://cdn.pixabay.com/photo/2017/01/18/16/46/hong-kong-1990268_1280.jpg" alt="">
+          <div class="service-item-text">
+            <h3>Industrial</h3>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </a>
+        <a class="service-item" href="">
+          <img src="https://cdn.pixabay.com/photo/2015/03/26/09/48/buildings-690364_1280.jpg" alt="">
+          <div class="service-item-text">
+            <h3>Real Estate</h3>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <div class="container">
+        <h2>Highlights</h2>
+        <div class="highlight-item" data-modal-open="home-hl1">
+          <img src="https://cdn.pixabay.com/photo/2017/11/20/20/12/helicopter-2966569_1280.jpg" alt="">
+          <div class="overlay">
+            <i class="fas fa-play"></i>
+          </div>
+        </div>
+        <div class="highlight-item" data-modal-open="home-hl2">
+          <img src="https://cdn.pixabay.com/photo/2016/08/09/21/54/lake-1581879_1280.jpg" alt="">
+          <div class="overlay">
+            <i class="fas fa-play"></i>
+          </div>
+        </div>
+        <div class="highlight-item" data-modal-open="home-hl3">
+          <img src="https://cdn.pixabay.com/photo/2012/08/27/14/19/mountains-55067_1280.png" alt="">
+          <div class="overlay">
+            <i class="fas fa-play"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <aside class="contact-text">
+        <img src="https://cdn.pixabay.com/photo/2016/11/22/23/44/porsche-1851246_1280.jpg" alt="">
+        <div class="shade">
+          <div>
+            <span class="heading2">We're always ready<br> to take on new projects.</span>
+            <p>Send us a quick message and we will get back to you within 24 hours. Thank you for choosing Alberta Drone Specialists.</p>
+          </div>
+        </div>
+      </aside>
+      <div class="contact-form">
+        <form action="">
+          <h2>Send us a message.</h2>
+          <div class="input-group">
+            <label for="name">First & Last Name</label>
+            <input type="text" name="name" id="name"
+              placeholder="First & Last Name" 
+              autocapitalize="words" autocomplete="name" 
+            >
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email"
+              placeholder="Email"
+              autocomplete="email"
+            >
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="input-group">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" id="subject"
+              placeholder="Subject"
+            >
+          </div>
+          <div class="input-group">
+            <label for="message">Message</label>
+            <textarea name="message" id="message"
+              placeholder="Tell us about your project!"></textarea>
+          </div>
+          <button class="btn btn-sm">
+            Send
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </form>
+      </div>
+    </section>
   </main>
-  <footer>
+
+  <footer class="site-footer">
     <div class="container">
-      footer
+      <div class="contact">
+        <span>Start a Project</span>
+        <span>We are ready for the challenge</span>
+        <a href="mailto:">info@abdronespecialists.ca</a>
+      </div>
+      <div class="credits">
+        <span>&copy; Alberta Drone Specialicts Ltd. 2021 All Rights Reserved</span>
+        <span>Designed & Developed by <a href="https://bridgeittech.ca/">BridgeIT Tech</a></span>
+      </div>
+      <ul class="social-links link-group">
+        <li><a href="https://www.youtube.com/channel/UCz8CmyohSEjXX0vGBF4YapQ"><i class="fab fa-youtube"></i></a></li>
+        <li><a href="https://www.facebook.com/Alberta-Drone-Specialists-108741628175831"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/abdronespecialists/"><i class="fab fa-instagram"></i></a></li>
+      </ul>
     </div>
   </footer>
+
+  <!-- modals -->
+  <div class="modal-group">
+    <div 
+      class="modal-item video-modal container" 
+      data-modal-id="home-sl1"
+    >
+      <i class="fas fa-times" data-modal-close="home-sl1"></i>
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VcwPtXNjqbE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div 
+      class="modal-item video-modal container" 
+      data-modal-id="home-hl1"
+    >
+      <i class="fas fa-times" data-modal-close="home-hl1"></i>
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VcwPtXNjqbE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div 
+      class="modal-item video-modal container" 
+      data-modal-id="home-hl2"
+    >
+      <i class="fas fa-times" data-modal-close="home-hl2"></i>
+      <iframe src="https://www.youtube-nocookie.com/embed/VcwPtXNjqbE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div 
+      class="modal-item video-modal container" 
+      data-modal-id="home-hl3"
+    >
+      <i class="fas fa-times" data-modal-close="home-hl3"></i>
+      <iframe src="https://www.youtube-nocookie.com/embed/VcwPtXNjqbE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- site-wide scripts -->
+  <script src="assets/js/data-modals.js" type="module"></script>
 </body>
 </html>
