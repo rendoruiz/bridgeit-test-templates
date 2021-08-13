@@ -50,6 +50,9 @@ h2, .heading2 {
 h3 {
   font-size: 1.5rem;
 }
+span {
+  display: inline-block;
+}
 
 
 /* max content width */
@@ -101,25 +104,14 @@ body {
   font-family: sans-serif;
 }
 
-header,
-footer {
+header.site-header,
+footer.site-footer {
   background-color: var(--color-white);
   color: var(--color-dark);
 
   & > .container {
     margin: 0 auto;
-  }
-}
 
-/* site header */
-header {
-  & > .container {
-    height: var(--header-height);
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-content: center;
-    text-transform: uppercase;
-  
     & ul {
       display: flex;
 
@@ -128,21 +120,68 @@ header {
         place-items: center;
       }
     }
-
-    & a {
-      transition: color 200ms;
-    }
-
     & .site-links {
       justify-content: center;
       font-size: max(12px, 0.9rem);
       font-weight: bold;
       gap: 30px;
     }
-
     & .social-links {
       font-size: 20px;
-      gap: 20px
+      gap: 20px;
+    }
+    & a {
+      transition: color 200ms;
+    }
+  }
+}
+
+/* site header */
+header.site-header {
+  & > .container {
+    height: var(--header-height);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-content: center;
+    text-transform: uppercase;
+  }
+}
+
+/* site footer */
+footer.site-footer {
+  padding: 40px 0 70px;
+  font-size: max(12px, 0.9rem);
+
+  & .container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+
+    & > * {
+      grid-row: 1;
+    }
+
+    & > div {
+      display: grid;
+      align-content: flex-start;
+      row-gap: 10px;
+
+      &.contact {
+        grid-column: 1;
+        & > span:first-of-type {
+          text-transform: uppercase;
+        }
+      }
+      &.credits {
+        grid-column: 1 / 4;
+        text-align: center;
+      }
+    }
+    & .social-links {
+      grid-column: 3;
+
+      & li {
+        align-items: flex-start;
+      }
     }
   }
 }
@@ -548,10 +587,15 @@ main.home {
           & textarea {
             border: 3px solid var(--color-white);
             border-radius: var(--item-container-border-radius);
-            padding: 8px 40px 8px 10px ;
+            padding: 8px 40px 8px 10px;
+            transition: border 200ms;
 
             &::placeholder {
               color: var(--color-dark);
+            }
+
+            &:focus {
+              border-color: var(--color-primary);
             }
           }
           & textarea {

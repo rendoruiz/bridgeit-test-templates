@@ -53,6 +53,9 @@ h2, .heading2 {
 h3 {
   font-size: 1.5rem;
 }
+span {
+  display: inline-block;
+}
 
 
 /* max content width */
@@ -107,51 +110,91 @@ body {
   font-family: sans-serif;
 }
 
-header,
-footer {
+header.site-header,
+footer.site-footer {
   background-color: #FFFFFF;
   background-color: var(--color-white);
   color: #00020C;
   color: var(--color-dark)
 }
 
-header > .container, footer > .container {
-    margin: 0 auto;
+header.site-header > .container, footer.site-footer > .container {
+    margin: 0 auto
   }
 
-/* site header */
-header > .container {
-    height: 60px;
-    height: var(--header-height);
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-content: center;
-    text-transform: uppercase
-  }
-header > .container ul {
+header.site-header > .container ul, footer.site-footer > .container ul {
       display: flex
     }
-header > .container ul li {
+
+header.site-header > .container ul li, footer.site-footer > .container ul li {
         display: grid;
         align-items: center;
         justify-items: center;
         place-items: center;
       }
-header > .container a {
-      transition: color 200ms;
-    }
-header > .container .site-links {
+
+header.site-header > .container .site-links, footer.site-footer > .container .site-links {
       justify-content: center;
       font-size: max(12px, 0.9rem);
       font-weight: bold;
       grid-gap: 30px;
       gap: 30px;
     }
-header > .container .social-links {
+
+header.site-header > .container .social-links, footer.site-footer > .container .social-links {
       font-size: 20px;
       grid-gap: 20px;
-      gap: 20px
+      gap: 20px;
     }
+
+header.site-header > .container a, footer.site-footer > .container a {
+      transition: color 200ms;
+    }
+
+/* site header */
+header.site-header > .container {
+    height: 60px;
+    height: var(--header-height);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-content: center;
+    text-transform: uppercase;
+  }
+
+/* site footer */
+footer.site-footer {
+  padding: 40px 0 70px;
+  font-size: max(12px, 0.9rem)
+}
+footer.site-footer .container {
+    display: grid;
+    grid-template-columns: auto 1fr auto
+  }
+footer.site-footer .container > * {
+      grid-row: 1;
+    }
+footer.site-footer .container > div {
+      display: grid;
+      align-content: flex-start;
+      grid-row-gap: 10px;
+      row-gap: 10px
+    }
+footer.site-footer .container > div.contact {
+        grid-column: 1
+      }
+footer.site-footer .container > div.contact > span:first-of-type {
+          text-transform: uppercase;
+        }
+footer.site-footer .container > div.credits {
+        grid-column: 1 / 4;
+        text-align: center;
+      }
+footer.site-footer .container .social-links {
+      grid-column: 3
+    }
+footer.site-footer .container .social-links li {
+        align-items: flex-start;
+      }
 
 /* site content */
 main.home {
@@ -544,7 +587,8 @@ main.home section.contact div.contact-form > form .input-group input,
             border: 3px solid var(--color-white);
             border-radius: 10px;
             border-radius: var(--item-container-border-radius);
-            padding: 8px 40px 8px 10px 
+            padding: 8px 40px 8px 10px;
+            transition: border 200ms
           }
 main.home section.contact div.contact-form > form .input-group input::-moz-placeholder, main.home section.contact div.contact-form > form .input-group textarea::-moz-placeholder {
               color: #00020C;
@@ -557,6 +601,10 @@ main.home section.contact div.contact-form > form .input-group input:-ms-input-p
 main.home section.contact div.contact-form > form .input-group input::placeholder, main.home section.contact div.contact-form > form .input-group textarea::placeholder {
               color: #00020C;
               color: var(--color-dark);
+            }
+main.home section.contact div.contact-form > form .input-group input:focus, main.home section.contact div.contact-form > form .input-group textarea:focus {
+              border-color: #D43737;
+              border-color: var(--color-primary);
             }
 main.home section.contact div.contact-form > form .input-group textarea {
             min-width: 360px;
