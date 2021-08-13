@@ -635,7 +635,6 @@ main.home section.contact div.contact-form > form h2 {
         }
 main.home section.contact div.contact-form > form .input-group {
           display: grid;
-          grid-template-columns: 1fr auto;
           align-items: center;
           grid-row-gap: 10px;
           row-gap: 10px
@@ -649,8 +648,9 @@ main.home section.contact div.contact-form > form .input-group input,
             border: 3px solid var(--color-white);
             border-radius: 10px;
             border-radius: var(--item-container-border-radius);
-            padding: 8px 40px 8px 10px;
-            transition: border 200ms
+            padding: 8px 10px;
+            transition: border 200ms;
+            font-family: inherit
           }
 main.home section.contact div.contact-form > form .input-group input::-moz-placeholder, main.home section.contact div.contact-form > form .input-group textarea::-moz-placeholder {
               color: #00020C;
@@ -675,27 +675,30 @@ main.home section.contact div.contact-form > form .input-group textarea {
           }
 main.home section.contact div.contact-form > form .input-group {
 
-          /* fontawesome */
+          /* input with icon */
         }
-main.home section.contact div.contact-form > form .input-group input, 
-          main.home section.contact div.contact-form > form .input-group input + .fas, 
-          main.home section.contact div.contact-form > form .input-group textarea {
-            grid-row: 2;
+main.home section.contact div.contact-form > form .input-group.input-icon {
+            grid-template-columns: 1fr auto
           }
-main.home section.contact div.contact-form > form .input-group input,
-          main.home section.contact div.contact-form > form .input-group textarea {
-            grid-column: 1 / 3;
-            font-family: inherit;
-          }
-main.home section.contact div.contact-form > form .input-group input + .fas {
-            margin-right: 10px;
-            width: 30px;
-            text-align: center;
-            grid-column: 2;
-            color: #D43737;
-            color: var(--color-primary);
-            font-size: 20px;
-          }
+main.home section.contact div.contact-form > form .input-group.input-icon input, 
+            main.home section.contact div.contact-form > form .input-group.input-icon input + .fas, 
+            main.home section.contact div.contact-form > form .input-group.input-icon textarea {
+              grid-row: 2;
+            }
+main.home section.contact div.contact-form > form .input-group.input-icon input,
+            main.home section.contact div.contact-form > form .input-group.input-icon textarea {
+              grid-column: 1 / 3;
+              padding: 8px 40px 8px 10px;
+            }
+main.home section.contact div.contact-form > form .input-group.input-icon input + .fas {
+              margin-right: 10px;
+              width: 30px;
+              text-align: center;
+              grid-column: 2;
+              color: #D43737;
+              color: var(--color-primary);
+              font-size: 20px;
+            }
 main.home section.contact div.contact-form > form button.btn {
           margin-top: 10px;
           justify-self: flex-start;
