@@ -652,7 +652,8 @@ main.home section.contact div.contact-form {
 main.home section.contact div.contact-form > form {
         display: grid;
         grid-row-gap: 20px;
-        row-gap: 20px
+        row-gap: 20px;
+        align-content: center
       }
 main.home section.contact div.contact-form > form h2 {
           margin-bottom: 30px;

@@ -647,6 +647,7 @@ main.home {
       & > form {
         display: grid;
         row-gap: 20px;
+        align-content: center;
 
         & h2 {
           margin-bottom: 30px;
