@@ -39,6 +39,9 @@ else {
   const modalClosedIndicator = 'close';
 
   modalItems.forEach(item => {
+    // iframe
+    const iframe = item.querySelector('iframe');
+
     const modalId = item.getAttribute(modalIdAttribute);
     // check if modal item id is unique
     const itemInstance = modalItems.filter(i => i.hasAttribute(modalIdAttribute) === modalId);
@@ -92,6 +95,11 @@ else {
             body.setAttribute(modalStatusIndicatorAttribute, modalClosedIndicator);
             item.setAttribute(modalStatusIndicatorAttribute, modalClosedIndicator);
 
+            // stop iframe object
+            if (iframe) {
+              stopVideoIframe(iframe);
+            }
+
             logMessages(`[id=${modalId}] modal closed by a deactivator`, false);
           });
         });
@@ -110,10 +118,22 @@ else {
         body.setAttribute(modalStatusIndicatorAttribute, modalClosedIndicator);
         activeModal.setAttribute(modalStatusIndicatorAttribute, modalClosedIndicator);
 
+        // stop iframe object
+        const iframe = activeModal.querySelector('iframe');
+        if (iframe) {
+          stopVideoIframe(iframe);
+        }
+
         logMessages(`[id=${activeModal.getAttribute(modalIdAttribute)}] modal closed by modal-group`, false);
       }
     }
   })
+}
+
+const stopVideoIframe = (iframeObject) => {
+  const iframeSource = iframeObject.src;
+  iframeObject.src = '';
+  iframeObject.src = iframeSource;
 }
 
 
