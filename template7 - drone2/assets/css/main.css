@@ -120,11 +120,14 @@ span {
       font-size: 50px;
       color: #FFFFFF;
       color: var(--color-white);
-      transition: color 200ms
+      transition: color 200ms, transform 200ms
     }
 .modal-group .modal-item.video-modal [data-modal-close]:hover {
         color: #D43737;
         color: var(--color-primary);
+      }
+.modal-group .modal-item.video-modal [data-modal-close]:active {
+        transform: scale(0.90);
       }
 .modal-group .modal-item.video-modal iframe {
       width: var(--iframe-width);
@@ -197,8 +200,12 @@ header.site-header > .container .social-links, footer.site-footer > .container .
     }
 
 header.site-header > .container a, footer.site-footer > .container a {
-      transition: color 200ms;
+      transition: color 200ms, transform 200ms
     }
+
+header.site-header > .container a:active, footer.site-footer > .container a:active {
+        transform: scale(0.90);
+      }
 
 /* site header */
 header.site-header > .container {
@@ -419,6 +426,9 @@ main.home section.services > .container .service-item:hover .service-item-text >
               color: #D43737;
               color: var(--color-primary);
             }
+main.home section.services > .container .service-item:active .service-item-text .fas {
+          transform: scale(0.90);
+        }
 main.home section.services > .container .service-item img {
           border-radius: inherit;
           height: 100%;
@@ -455,7 +465,7 @@ main.home section.services > .container .service-item .service-item-text .fas {
             place-items: center;
             width: 35px;
             height: 35px;
-            transition: background 200ms, color 200ms;
+            transition: background 200ms, color 200ms, transform 200ms;
           }
 main.home section.services > .container .service-item > * {
           grid-row: 1;
@@ -532,6 +542,9 @@ main.home section.highlights > .container .highlight-item:hover .overlay > .fas 
               color: #D43737;
               color: var(--color-primary);
             }
+main.home section.highlights > .container .highlight-item:active .fas {
+          transform: scale(0.90);
+        }
 main.home section.highlights > .container .highlight-item > * {
           grid-row: 1;
           grid-column: 1;
@@ -560,7 +573,7 @@ main.home section.highlights > .container .highlight-item .overlay .fas {
             place-items: center;
             width: 40px;
             height: 40px;
-            transition: background 200ms, color 200ms;
+            transition: background 200ms, color 200ms, transform 200ms;
           }
 main.home section.contact {
     display: grid;
