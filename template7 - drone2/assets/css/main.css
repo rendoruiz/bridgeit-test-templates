@@ -129,8 +129,11 @@ header > .container ul li {
         display: grid;
         align-items: center;
         justify-items: center;
-        place-items: center
+        place-items: center;
       }
+header > .container a {
+      transition: color 200ms;
+    }
 header > .container .site-links {
       justify-content: center;
       font-size: max(12px, 0.9rem);
@@ -311,14 +314,13 @@ main.home section.services > .container .service-item:hover {
         }
 main.home section.services > .container .service-item:hover .service-item-text {
             background: rgba(0, 0, 0, 0.6);
-            background: rgba(var(--rgb-shade), 0.6);
-
-            $ > .fas {
+            background: rgba(var(--rgb-shade), 0.6)
+          }
+main.home section.services > .container .service-item:hover .service-item-text > .fas {
               background: transparent;
               color: #D43737;
               color: var(--color-primary);
             }
-          }
 main.home section.services > .container .service-item img {
           border-radius: inherit;
           height: 100%;
@@ -397,9 +399,67 @@ main.home section.services > .container .service-item:nth-of-type(n+3):nth-of-ty
           }
 main.home section.highlights {
     margin: 50px 0;
-    padding: 60px 0 90px;
+    padding: 70px 0 90px;
     display: grid
   }
 main.home section.highlights > .container {
       justify-self: center;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 40px;
+      row-gap: 40px;
+      grid-column-gap: 50px;
+      -moz-column-gap: 50px;
+           column-gap: 50px
     }
+main.home section.highlights > .container h2 {
+        grid-column: 1 / -1;
+      }
+main.home section.highlights > .container .highlight-item {
+        cursor: pointer;
+        border-radius: 10px;
+        border-radius: var(--item-container-border-radius);
+        display: grid;
+        justify-content: center;
+        align-content: center
+        
+      }
+main.home section.highlights > .container .highlight-item:hover .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            background: rgba(var(--rgb-shade), 0.6)
+          }
+main.home section.highlights > .container .highlight-item:hover .overlay > .fas {
+              background: transparent;
+              color: #D43737;
+              color: var(--color-primary);
+            }
+main.home section.highlights > .container .highlight-item > * {
+          grid-row: 1;
+          grid-column: 1;
+        }
+main.home section.highlights > .container .highlight-item img {
+          border-radius: inherit;
+          height: 280px;
+          width: 100%;
+        }
+main.home section.highlights > .container .highlight-item .overlay {
+          display: grid;
+          align-items: center;
+          justify-items: center;
+          place-items: center;
+          transition: background 250ms
+        }
+main.home section.highlights > .container .highlight-item .overlay .fas {
+            border: 3px solid #D43737;
+            border: var(--button-border);
+            border-radius: 100%;
+            background: #D43737;
+            background: var(--color-primary);
+            display: inline-grid;
+            align-items: center;
+            justify-items: center;
+            place-items: center;
+            width: 40px;
+            height: 40px;
+            transition: background 200ms, color 200ms;
+          }
