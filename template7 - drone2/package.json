@@ -7,7 +7,7 @@
     "install:babel": "npm install --save-dev @babel/core @babel/cli @babel/preset-env babel-preset-minify",
     "install:postcss": "npm install --save-dev postcss postcss-cli postcss-preset-env cssnano",
     "build:js": "npx babel js/ --out-dir assets/js/ --no-comments",
-    "build:css": "postcss css/*.css* -o assets/css/",
+    "build:css": "postcss css/*.css* --dir assets/css/",
     "build:all": "npm run build:js && npm run build:css",
     "watch:js": "npx babel js/ --out-dir assets/js/ --no-comments --watch",
     "watch:css": "postcss css/*.css* --dir assets/css/ --watch"
