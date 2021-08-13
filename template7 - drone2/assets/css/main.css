@@ -12,7 +12,7 @@ body {
 
 /* CSS variables */
 :root {
-  --color-dark: #00020C;
+  --color-dark: #060505;
   --color-white: #FFFFFF;
   --color-primary: #D43737;
   --color-secondary: #FFAEAE;
@@ -166,7 +166,7 @@ header.site-header,
 footer.site-footer {
   background-color: #FFFFFF;
   background-color: var(--color-white);
-  color: #00020C;
+  color: #060505;
   color: var(--color-dark)
 }
 
@@ -258,7 +258,7 @@ main.home {
   color: var(--color-white)
 }
 main.home > section {
-    background: #00020C;
+    background: #060505;
     background: var(--color-dark);
   }
 main.home section.spotlight {
@@ -332,7 +332,7 @@ main.home section.equipment {
     display: grid;
     background: #FFFFFF;
     background: var(--color-white);
-    color: #00020C;
+    color: #060505;
     color: var(--color-dark)
   }
 main.home section.equipment .container {
@@ -653,15 +653,15 @@ main.home section.contact div.contact-form > form .input-group input,
             font-family: inherit
           }
 main.home section.contact div.contact-form > form .input-group input::-moz-placeholder, main.home section.contact div.contact-form > form .input-group textarea::-moz-placeholder {
-              color: #00020C;
+              color: #060505;
               color: var(--color-dark);
             }
 main.home section.contact div.contact-form > form .input-group input:-ms-input-placeholder, main.home section.contact div.contact-form > form .input-group textarea:-ms-input-placeholder {
-              color: #00020C;
+              color: #060505;
               color: var(--color-dark);
             }
 main.home section.contact div.contact-form > form .input-group input::placeholder, main.home section.contact div.contact-form > form .input-group textarea::placeholder {
-              color: #00020C;
+              color: #060505;
               color: var(--color-dark);
             }
 main.home section.contact div.contact-form > form .input-group input:focus, main.home section.contact div.contact-form > form .input-group textarea:focus {

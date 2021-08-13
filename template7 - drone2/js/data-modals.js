@@ -75,6 +75,12 @@ else {
             body.style.setProperty('padding-right', `${browserScrollbarWidth}px`);
             modalGroup.style.setProperty('--scrollbar-width', 'unset');
 
+            // set data-modal-active for current item and clear for others
+            const modalActiveIndicatorAttribute = 'data-modal-active';
+            const otherModals = modalItems.filter(i => i !== itemInstance);
+            otherModals.forEach(i => i.removeAttribute(modalActiveIndicatorAttribute));
+            item.setAttribute(modalActiveIndicatorAttribute, 'true');
+
             // set modal-item and body status to open
             body.setAttribute(modalStatusIndicatorAttribute, modalOpenedIndicator);
             item.setAttribute(modalStatusIndicatorAttribute, modalOpenedIndicator);
