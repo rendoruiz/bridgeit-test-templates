@@ -193,7 +193,7 @@ header.site-header > .container .site-links, footer.site-footer > .container .si
       gap: 30px;
     }
 
-header.site-header > .container .social-links, footer.site-footer > .container .social-links {
+header.site-header > .container .media-links, footer.site-footer > .container .media-links {
       font-size: 20px;
       grid-gap: 20px;
       gap: 20px;
@@ -245,10 +245,10 @@ footer.site-footer .container > div.credits {
         grid-column: 1 / 4;
         text-align: center;
       }
-footer.site-footer .container .social-links {
+footer.site-footer .container .media-links {
       grid-column: 3
     }
-footer.site-footer .container .social-links li {
+footer.site-footer .container .media-links li {
         align-items: flex-start;
       }
 
