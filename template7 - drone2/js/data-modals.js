@@ -113,6 +113,7 @@ else {
       body.dataset.modalStatus === 'open') {
       const activeModal = document.querySelector(`.modal-item[${modalStatusIndicatorAttribute}="open"]`);
       if (activeModal) {
+        body.style.paddingRight = 'unset';
         modalGroup.style.setProperty('--scrollbar-width', `-${browserScrollbarWidth}px`);
         // set modal-item and body status to close
         body.setAttribute(modalStatusIndicatorAttribute, modalClosedIndicator);
