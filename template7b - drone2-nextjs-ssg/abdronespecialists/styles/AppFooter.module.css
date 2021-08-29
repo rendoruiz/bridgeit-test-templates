@@ -1,0 +1,3 @@
+.appFooter {
+  composes: themeLight from "./_shared.module.css";
+}

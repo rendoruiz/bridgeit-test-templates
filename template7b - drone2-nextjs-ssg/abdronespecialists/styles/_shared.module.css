@@ -1,0 +1,11 @@
+@value color-dark, color-light from "./_variables.css";
+
+.themeDark {
+  background: color-dark;
+  color: color-light;
+}
+
+.themeLight {
+  background: color-light;
+  color: color-dark;
+}
