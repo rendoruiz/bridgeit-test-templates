@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from '../styles/Video.module.css';
 
 const Video = ({ prefix, className}) => {
   const [videoResolution, setVideoResolution] = useState(null);
@@ -12,16 +13,17 @@ const Video = ({ prefix, className}) => {
     } else {
       setVideoResolution("480p");
     }
-    console.log(windowWidth);
+    // console.log(windowWidth);
   }, [videoResolution])
 
   return (!prefix || !videoResolution) ? null : ( 
     <video 
       autoPlay 
       loop 
-      muted 
-      width="100%" 
-      onLoadedData={(e) => { console.log(e.target.currentSrc)}}
+      muted
+      poster={`/images/video-placeholders/${prefix}-placeholder-${videoResolution}.jpg`}
+      className={className ?? styles.video}
+      // onLoadedData={(e) => { console.log(e.target.currentSrc)}}
     >
       <source src={`/videos/${prefix}-${videoResolution}.webm`} type="video/webm" />
       <source src={`/videos/${prefix}-${videoResolution}.mp4`} type="video/mp4" />
