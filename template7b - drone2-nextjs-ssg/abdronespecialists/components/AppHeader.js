@@ -4,10 +4,14 @@ import { useState } from 'react';
 import styles from '../styles/AppHeader.module.css';
 
 const AppHeader = () => { 
-  const [isNavigationOpen, setIsNavigationOpen] = useState(false);
+  const [isNavigationOpen, setIsNavigationOpen] = useState(null);
 
   const toggleNavigation = () => {
-    setIsNavigationOpen(!isNavigationOpen);
+    if (isNavigationOpen === null) {
+      setIsNavigationOpen(true);
+    } else {
+      setIsNavigationOpen(!isNavigationOpen);
+    }
   }
 
   return ( 
@@ -15,7 +19,9 @@ const AppHeader = () => {
       <div className={styles.logo}>ADS</div>
       <FontAwesomeIcon icon={faBars} className={styles.menuButton} onClick={toggleNavigation} />
 
-      <nav className={isNavigationOpen ? styles.menuPanelActive : styles.menuPanel}>
+      <nav 
+        style={isNavigationOpen !== null ? { animationDuration: '200ms' } : null}
+        className={isNavigationOpen ? styles.menuPanelActive : styles.menuPanel} onClick={toggleNavigation}>
         <a href="#" className={styles.navigationItem}>
           <FontAwesomeIcon icon={faHome} className={styles.navigationIcon} />
           Home

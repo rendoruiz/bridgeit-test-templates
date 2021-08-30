@@ -29,8 +29,8 @@
   left: 0;
   display: grid;
   align-content: flex-start;
-
-  animation-duration: 200ms;
+  
+  animation-name: menu-default;
   animation-fill-mode: both;
 }
 .menuPanelActive {
@@ -39,6 +39,18 @@
 }
 .menuPanelActive .navigationItem {
   transform: unset;
+}
+@keyframes menu-default {
+  from {
+    display: grid;
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  to {
+    display: none;
+  }
 }
 @keyframes menu-active {
   from {
