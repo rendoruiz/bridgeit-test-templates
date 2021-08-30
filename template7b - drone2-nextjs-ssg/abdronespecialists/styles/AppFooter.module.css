@@ -1,3 +1,25 @@
+@value color-dark, color-light, color-secondary, color-shade, content-padding from "./_variables.css";
+
 .appFooter {
   composes: themeLight from "./_shared.module.css";
+  padding: 15px content-padding;
+  font-size: 0.65rem;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  row-gap: 8px;
+}
+
+.blurb {
+  letter-spacing: 1px;
+}
+
+.externalLinks {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.icon {
+  width: auto;
+  height: 16px;
 }
