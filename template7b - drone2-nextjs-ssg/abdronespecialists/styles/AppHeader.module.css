@@ -1,4 +1,4 @@
-@value color-dark, color-light, color-secondary, color-shade, content-padding from "./_variables.css";
+@value color-dark, color-light, color-primary, color-secondary, color-shade, content-padding from "./_variables.css";
 @value header-height: 50px;
 
 .appHeader {
@@ -9,6 +9,18 @@
   justify-content: space-between;
   align-items: center;
 }
+.appHeaderNavActive {
+  composes: appHeader;
+}
+.appHeaderNavActive .menuButton {
+  color: color-primary;
+}
+.appHeaderNavActive .menuPanel {
+  animation-name: menu-active;
+}
+.appHeaderNavActive .navigationItem  {
+  transform: unset;
+}
 
 .logo {
   font-size: 18px;
@@ -17,6 +29,7 @@
 
 .menuButton {
   height: 18px;
+  transition: color 100ms ease-out;
 }
 .menuPanel {
   opacity: 0;
@@ -32,13 +45,6 @@
   
   animation-name: menu-default;
   animation-fill-mode: forwards;
-}
-.menuPanelActive {
-  composes: menuPanel;
-  animation-name: menu-active;
-}
-.menuPanelActive .navigationItem {
-  transform: unset;
 }
 @keyframes menu-default {
   from { display: grid; opacity: 1; }
@@ -76,3 +82,4 @@
   width: 20px;
   color: color-secondary;
 }
+

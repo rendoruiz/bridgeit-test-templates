@@ -15,13 +15,18 @@ const AppHeader = () => {
   }
 
   return ( 
-    <header className={styles.appHeader}>
+    <header className={!isNavigationOpen ? styles.appHeader : styles.appHeaderNavActive}>
       <div className={styles.logo}>ADS</div>
-      <FontAwesomeIcon icon={faBars} className={styles.menuButton} onClick={toggleNavigation} />
+      <FontAwesomeIcon 
+        icon={faBars} 
+        className={styles.menuButton} onClick={toggleNavigation} 
+      />
 
       <nav 
-        style={isNavigationOpen !== null ? { animationDuration: '200ms' } : null}
-        className={isNavigationOpen ? styles.menuPanelActive : styles.menuPanel} onClick={toggleNavigation}>
+        style={isNavigationOpen !== null ? { animationDuration: '300ms' } : null}
+        className={styles.menuPanel} 
+        onClick={toggleNavigation}
+      >
         <a href="#" className={styles.navigationItem}>
           <FontAwesomeIcon icon={faHome} className={styles.navigationIcon} />
           Home
