@@ -1,3 +1,15 @@
+@value content-padding from "./_variables.css";
+
 .appHeader {
   composes: themeLight from "./_shared.module.css";
+  padding: 0 content-padding;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 900;
 }

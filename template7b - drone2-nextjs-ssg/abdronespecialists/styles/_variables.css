@@ -1,2 +1,9 @@
-@value color-light: #fff;
-@value color-dark: #000;
+@value color-dark: #060505;
+@value color-light: #FFFFFF;
+@value color-primary: #D43737;
+@value color-secondary: #FFAEAE;
+
+@value color-dark-subtitle: #00020C0F;
+@value color-light-subtitle: #FCFCFC;
+
+@value content-padding: 20px;
