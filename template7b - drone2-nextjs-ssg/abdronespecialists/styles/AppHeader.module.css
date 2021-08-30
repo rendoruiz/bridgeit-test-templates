@@ -1,9 +1,10 @@
-@value content-padding from "./_variables.css";
+@value color-dark, color-light, color-secondary, color-shade, content-padding from "./_variables.css";
+@value header-height: 50px;
 
 .appHeader {
   composes: themeLight from "./_shared.module.css";
   padding: 0 content-padding;
-  height: 50px;
+  height: header-height;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,4 +13,68 @@
 .logo {
   font-size: 18px;
   font-weight: 900;
+}
+
+.menuButton {
+  height: 18px;
+}
+.menuPanel {
+  opacity: 0;
+  background: color-shade;
+  overflow: hidden;
+  position: absolute;
+  top: header-height;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  align-content: flex-start;
+
+  animation-duration: 200ms;
+  animation-fill-mode: both;
+}
+.menuPanelActive {
+  composes: menuPanel;
+  animation-name: menu-active;
+}
+.menuPanelActive .navigationItem {
+  transform: unset;
+}
+@keyframes menu-active {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: grid;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navigationItem {
+  padding: 10px content-padding;
+  background: color-dark;
+  font-weight: bold;
+  color: color-light;
+  transform: translateY(-20px);
+  transition: transform 200ms ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navigationItem:visited {
+  color: color-light;
+}
+.navigationItem:first-of-type {
+  padding-top: content-padding;
+}
+.navigationItem:last-of-type {
+  padding-bottom: content-padding;
+}
+.navigationIcon {
+  height: 14px;
+  width: 20px;
+  color: color-secondary;
 }
