@@ -31,7 +31,7 @@
   align-content: flex-start;
   
   animation-name: menu-default;
-  animation-fill-mode: both;
+  animation-fill-mode: forwards;
 }
 .menuPanelActive {
   composes: menuPanel;
@@ -41,28 +41,14 @@
   transform: unset;
 }
 @keyframes menu-default {
-  from {
-    display: grid;
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-  }
-  to {
-    display: none;
-  }
+  from { display: grid; opacity: 1; }
+  99% { opacity: 0; }
+  to { display: none; z-index: -1000; }
 }
 @keyframes menu-active {
-  from {
-    display: none;
-    opacity: 0;
-  }
-  1% {
-    display: grid;
-  }
-  to {
-    opacity: 1;
-  }
+  from { display: none; opacity: 0; }
+  1% { display: grid; }
+  to { opacity: 1; z-index: 1; }
 }
 
 .navigationItem {
