@@ -19,7 +19,8 @@ const AppHeader = () => {
       <div className={styles.logo}>ADS</div>
       <FontAwesomeIcon 
         icon={faBars} 
-        className={styles.menuButton} onClick={toggleNavigation} 
+        className={styles.menuButton} 
+        onClick={toggleNavigation} 
       />
 
       <nav 
