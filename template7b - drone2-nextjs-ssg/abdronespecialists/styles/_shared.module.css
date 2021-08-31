@@ -28,16 +28,19 @@
 .textTitle {
   font-family: 'neue-haas-unica', 'Roboto', sans-serif;
   font-weight: bold;
+  margin: unset;
 }
 
 .textHeading2 {
   font-family: 'neue-haas-unica', 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
+  margin: unset;
 }
 
 .textHeading3 {
   font-family: 'neue-haas-unica', 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 1.25rem;
+  margin: unset;
 }

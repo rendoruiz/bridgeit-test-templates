@@ -12,6 +12,7 @@ import styles from '../styles/Home.module.css'
 import { Accordion } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link';
 
 export default function Home() {
   const [isBannerModalOpen, setIsBannerModalOpen] = useState(false);
@@ -94,35 +95,82 @@ export default function Home() {
         <Accordion className={styles.servicesAccordion}>
           <Accordion.Item eventKey="0">
             <Accordion.Header>
-              Film & TV
+              <h3 className={styles.heading3}>Film & TV</h3>
               <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
             </Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi explicabo iure est ipsam, adipisci possimus. Amet excepturi eveniet ex dolor!
+            <Accordion.Body className={styles.accordionBody}>
+              <p>Professional drone crew services for films, television & commercials.</p>
+              <Button
+                text="Explore Film & TV"
+                href="/"
+                className={styles.accordionLink}
+                iconClassName={styles.accordionLinkIcon}
+                title="Film & TV service page"
+              />
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
-            <Accordion.Header>FPV</Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi explicabo iure est ipsam, adipisci possimus. Amet excepturi eveniet ex dolor!
+            <Accordion.Header>
+              <h3 className={styles.heading3}>FPV</h3>
+              <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
+            </Accordion.Header>
+            <Accordion.Body className={styles.accordionBody}>
+              <p>Exceptional indoor & outdoor FPV footage.</p>
+              <Button
+                text="Explore FPV"
+                href="/"
+                className={styles.accordionLink}
+                iconClassName={styles.accordionLinkIcon}
+                title="FPV service page"
+              />
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="2">
-            <Accordion.Header>Construction</Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi explicabo iure est ipsam, adipisci possimus. Amet excepturi eveniet ex dolor!
+            <Accordion.Header>
+              <h3 className={styles.heading3}>Construction</h3>
+              <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
+            </Accordion.Header>
+            <Accordion.Body className={styles.accordionBody}>
+              <p>Construction progress monitoring.</p>
+              <Button
+                text="Explore Construction"
+                href="/"
+                className={styles.accordionLink}
+                iconClassName={styles.accordionLinkIcon}
+                title="Construction service page"
+              />
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">
-            <Accordion.Header>Commercial Real Estate</Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi explicabo iure est ipsam, adipisci possimus. Amet excepturi eveniet ex dolor!
+            <Accordion.Header>
+              <h3 className={styles.heading3}>Commercial Real Estate</h3>
+              <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
+            </Accordion.Header>
+            <Accordion.Body className={styles.accordionBody}>
+              <p>Showcase your properties from new heights.</p>
+              <Button
+                text="Explore Commercial Real Estate"
+                href="/"
+                className={styles.accordionLink}
+                iconClassName={styles.accordionLinkIcon}
+                title="Commercial Real Estate service page"
+              />
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="4">
-            <Accordion.Header>Aerial Photography</Accordion.Header>
-            <Accordion.Body>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi explicabo iure est ipsam, adipisci possimus. Amet excepturi eveniet ex dolor!
+            <Accordion.Header>
+              <h3 className={styles.heading3}>Aerial Photography & Videography</h3>
+              <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
+            </Accordion.Header>
+            <Accordion.Body className={styles.accordionBody}>
+              <p>Showcase your properties from new heights.</p>
+              <Button
+                text="Explore Aerial Photography & Videography"
+                href="/"
+                className={styles.accordionLink}
+                iconClassName={styles.accordionLinkIcon}
+                title="Aerial Photography & Videography service page"
+              />
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>

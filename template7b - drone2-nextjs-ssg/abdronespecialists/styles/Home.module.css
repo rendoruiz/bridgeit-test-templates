@@ -1,4 +1,4 @@
-@value color-dark, color-light, color-primary, color-shade, header-height, content-padding, font-primary from "./_variables.css";
+@value color-dark, color-light, color-primary, color-secondary, color-shade, header-height, content-padding, font-primary from "./_variables.css";
 
 .heading2 {
   composes: textHeading2 from "./_shared.module.css";
@@ -73,15 +73,41 @@
   composes: themeDark from "./_shared.module.css";
 }
 
-/* .servicesAccordion {
-  composes: themeDark from "./_shared.module.css";
+
+.sectionServices {
+  padding: calc(content-padding * 2) 0 calc(content-padding * 3);
 }
-.servicesAccordion *,
-.servicesAccordion button {
-  background: inherit;
-  color: inherit;
+.sectionServices .heading2 {
+  margin-bottom: content-padding;
+  text-align: center;
+  line-height: 1.5;
 }
- */
- .accordionIcon {
-  height: 20px;
+.accordionIcon {
+  padding: 5px;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  background: color-primary;
+}
+.sectionServices button {
+  padding: 15px content-padding;
+}
+.accordionBody {
+  font-size: 0.8rem;
+}
+.accordionBody > :not(img) {
+  margin: 0 content-padding;
+}
+.accordionLink,
+.accordionLink:visited {
+  font-weight: bold;
+  color: color-secondary;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+.accordionLinkIcon {
+  height: 0.8rem;
+  width: auto;
+  margin-left: 5px;
 }
