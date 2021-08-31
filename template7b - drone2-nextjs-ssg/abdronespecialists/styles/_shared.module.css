@@ -1,4 +1,9 @@
-@value color-dark, color-light from "./_variables.css";
+@value color-dark, color-light, font-primary, font-secondary, max-content-width from "./_variables.css";
+
+.container {
+  max-width: max-content-width;
+  width: 100%;
+}
 
 .themeDark {
   background: color-dark;
@@ -21,4 +26,16 @@
 .textTitle {
   font-family: 'neue-haas-unica', 'Roboto', sans-serif;
   font-weight: bold;
+}
+
+.textHeading2 {
+  font-family: 'neue-haas-unica', 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.textHeading3 {
+  font-family: 'neue-haas-unica', 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
 }

@@ -1,11 +1,11 @@
-@value color-dark, color-light, color-primary, color-shade, header-height, content-padding from "./_variables.css";
+@value color-dark, color-light, color-primary, color-shade, header-height, content-padding, font-primary from "./_variables.css";
 
-.banner {
+.mainBanner {
   composes: captionedMedia from "./_shared.module.css";
   height: clamp(300px, calc(90vh - header-height), 900px);
 }
 
-.bannerContext {
+.mainBannerContext {
   composes: textTitle from "./_shared.module.css";
   padding: content-padding;
   background: color-shade;
@@ -19,3 +19,44 @@
   row-gap: 20px;
 }
 
+.sectionPortfolio {
+  composes: container from "./_shared.module.css";
+  padding: calc(content-padding * 2) 0;
+}
+.portfolioHeader {
+  composes: captionedMedia from "./_shared.module.css";
+  margin-bottom: content-padding;
+  height: 170px;
+}
+.heading2 {
+  composes: textHeading2 from "./_shared.module.css";
+  background: color-shade;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.portfolioText {
+  padding: 10px content-padding 0;
+  display: grid;
+  row-gap: content-padding;
+}
+.portfolioText p {
+  letter-spacing: 0.5px;
+}
+.heading3 {
+  composes: textHeading3 from "./_shared.module.css";
+}
+.portfolioText .heading3 {
+  margin-top: content-padding;
+}
+.portfolioCustomers {
+  margin-top: -10px;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  align-items: center;
+}
+.portfolioCustomers img {
+  width: 50px;
+  height: 50px;
+}

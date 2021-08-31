@@ -15,6 +15,7 @@
 @value content-padding: 20px;
 @value header-height: 50px;
 @value modal-z-elevation: 1000;
+@value max-content-width: 1200px;
 
 
 /* breakpoints */

@@ -14,14 +14,15 @@ const Button = ({ text, noIcon = false, onClick, className, iconClassName, title
   }
 
   return href
-    ? <Link 
-        href={href}
-        onClick={onClick}
-        className={className ?? styles.button}
-        title={title ?? 'link button'}
-      >
-        { text }
-        { addIcon() }
+    ? <Link href={href}>
+        <a
+          onClick={onClick}
+          className={className ?? styles.button}
+          title={title ?? 'link button'}
+        >
+          { text }
+          { addIcon() }
+        </a>
       </Link>
     : <button
         onClick={onClick}

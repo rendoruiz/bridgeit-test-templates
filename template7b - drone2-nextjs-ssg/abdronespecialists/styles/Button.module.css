@@ -8,10 +8,12 @@
   background: color-primary;
   font-family: font-primary;
   font-size: 1.1rem;
+  text-align: center;
   text-decoration: none;
   transition: background 200ms, color 200ms, transform 100ms;
   cursor: pointer;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .button,

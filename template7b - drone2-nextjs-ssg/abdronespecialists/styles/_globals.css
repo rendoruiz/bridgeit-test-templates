@@ -59,6 +59,11 @@ a:visited {
   text-decoration: none;
 }
 
+img {
+  object-fit: contain;
+  object-position: center;
+}
+
 .ReactModal__Overlay {
   opacity: 0;
   transition: opacity 200ms ease-in-out;

@@ -1,6 +1,6 @@
 .video {
-  height: inherit;
   width: 100%;
+  height: inherit;
 }
 .backgroundVideo {
   composes: video;
