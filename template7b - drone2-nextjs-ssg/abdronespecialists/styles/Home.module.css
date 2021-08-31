@@ -52,7 +52,7 @@
 }
 
 .portfolioText .heading3 {
-  margin-top: content-padding;
+  margin-top: 10px;
 }
 .portfolioCustomers {
   margin-top: -10px;
@@ -75,7 +75,7 @@
 
 
 .sectionServices {
-  padding: calc(content-padding * 2) 0 calc(content-padding * 3);
+  padding: calc(content-padding * 2) 0;
 }
 .sectionServices .heading2 {
   margin-bottom: content-padding;
@@ -90,24 +90,33 @@
   background: color-primary;
 }
 .sectionServices button {
-  padding: 15px content-padding;
+  padding: 10px content-padding;
 }
 .accordionBody {
   font-size: 0.8rem;
+  display: grid;
+  row-gap: 5px;
 }
-.accordionBody > :not(img) {
+.accordionBody > :not(img):not(source):not(picture) {
   margin: 0 content-padding;
 }
 .accordionLink,
 .accordionLink:visited {
   font-weight: bold;
-  color: color-secondary;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+}
+.accordionLink,
+.accordionLink:visited {
+  color: color-secondary;
 }
 .accordionLinkIcon {
   height: 0.8rem;
   width: auto;
   margin-left: 5px;
+}
+.accordionImage {
+  composes: image from "./Image.module.css";
+  padding: 15px 0;
 }

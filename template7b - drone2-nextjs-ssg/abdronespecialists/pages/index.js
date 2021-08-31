@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import { useState } from 'react'
+import { Accordion } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 import Button from '../components/Button'
 import MainLayout from '../components/layouts/MainLayout'
@@ -7,12 +10,7 @@ import Modal from '../components/CustomModal'
 import Image from '../components/Image'
 import Video from '../components/Video'
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from '../styles/Home.module.css'
-import { Accordion } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
-import Link from 'next/link';
 
 export default function Home() {
   const [isBannerModalOpen, setIsBannerModalOpen] = useState(false);
@@ -107,6 +105,13 @@ export default function Home() {
                 iconClassName={styles.accordionLinkIcon}
                 title="Film & TV service page"
               />
+              <Image 
+                prefix="home-accordion-filmtv"
+                title="winter landscape image"
+                pictureClassName={styles.accordionImage}
+                noMd
+                noLg
+              />
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
@@ -122,6 +127,13 @@ export default function Home() {
                 className={styles.accordionLink}
                 iconClassName={styles.accordionLinkIcon}
                 title="FPV service page"
+              />
+              <Image 
+                prefix="home-accordion-fpv"
+                title="flying drone image"
+                pictureClassName={styles.accordionImage}
+                noMd
+                noLg
               />
             </Accordion.Body>
           </Accordion.Item>
@@ -139,6 +151,13 @@ export default function Home() {
                 iconClassName={styles.accordionLinkIcon}
                 title="Construction service page"
               />
+              <Image 
+                prefix="home-accordion-construction"
+                title="bridge construction image"
+                pictureClassName={styles.accordionImage}
+                noMd
+                noLg
+              />
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">
@@ -155,6 +174,13 @@ export default function Home() {
                 iconClassName={styles.accordionLinkIcon}
                 title="Commercial Real Estate service page"
               />
+              <Image 
+                prefix="home-accordion-realestate"
+                title="downtown calgary image"
+                pictureClassName={styles.accordionImage}
+                noMd
+                noLg
+              />
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="4">
@@ -170,6 +196,13 @@ export default function Home() {
                 className={styles.accordionLink}
                 iconClassName={styles.accordionLinkIcon}
                 title="Aerial Photography & Videography service page"
+              />
+              <Image 
+                prefix="home-accordion-aerial"
+                title="cityscape image"
+                pictureClassName={styles.accordionImage}
+                noMd
+                noLg
               />
             </Accordion.Body>
           </Accordion.Item>
