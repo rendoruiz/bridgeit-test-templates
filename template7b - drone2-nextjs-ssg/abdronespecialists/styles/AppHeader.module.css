@@ -30,7 +30,7 @@
 
 .menuButton {
   height: 18px;
-  transition: color 100ms ease-out;
+  transition: color 200ms ease-out;
 }
 .menuPanel {
   opacity: 0;
@@ -41,6 +41,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  /* z-index: 1000; */
   display: grid;
   align-content: flex-start;
   
@@ -48,14 +49,14 @@
   animation-fill-mode: forwards;
 }
 @keyframes menu-default {
-  from { display: grid; opacity: 1; }
+  from { display: grid; opacity: 1; z-index: 1000; }
   97% { opacity: 0; }
-  to { display: none; z-index: -1000; }
+  to { opacity: 0; display: none; z-index: -1000; }
 }
 @keyframes menu-active {
-  from { display: none; opacity: 0; }
+  from { display: none; opacity: 0; z-index: -1000; }
   1% { display: grid; }
-  to { opacity: 1; z-index: 1000; }
+  to { display: grid; opacity: 1; z-index: 1000; }
 }
 
 .navigationItem {
