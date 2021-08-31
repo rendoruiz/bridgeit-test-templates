@@ -10,3 +10,15 @@
   color: color-dark;
 }
 
+.captionedMedia {
+  display: grid;
+}
+.captionedMedia > * {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.textTitle {
+  font-family: 'neue-haas-unica', 'Roboto', sans-serif;
+  font-weight: bold;
+}

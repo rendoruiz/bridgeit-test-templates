@@ -1,0 +1,18 @@
+@value color-dark, color-light, color-primary, color-shade, header-height, content-padding from "./_variables.css";
+
+.banner {
+  composes: captionedMedia from "./_shared.module.css";
+  height: clamp(300px, calc(100vh - header-height), 900px);
+}
+
+.bannerContext {
+  composes: textTitle from "./_shared.module.css";
+  padding: content-padding;
+  background: color-shade;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+}

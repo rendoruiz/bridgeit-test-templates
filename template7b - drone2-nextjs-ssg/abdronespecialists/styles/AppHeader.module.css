@@ -1,5 +1,4 @@
-@value color-dark, color-light, color-primary, color-secondary, color-shade, content-padding from "./_variables.css";
-@value header-height: 50px;
+@value color-dark, color-light, color-primary, color-secondary, color-modal-overlay, header-height, content-padding from "./_variables.css";
 
 .appHeader {
   composes: themeLight from "./_shared.module.css";
@@ -35,7 +34,7 @@
 }
 .menuPanel {
   opacity: 0;
-  background: color-shade;
+  background: color-modal-overlay;
   overflow: hidden;
   position: absolute;
   top: header-height;
@@ -56,7 +55,7 @@
 @keyframes menu-active {
   from { display: none; opacity: 0; }
   1% { display: grid; }
-  to { opacity: 1; z-index: 1; }
+  to { opacity: 1; z-index: 1000; }
 }
 
 .navigationItem {

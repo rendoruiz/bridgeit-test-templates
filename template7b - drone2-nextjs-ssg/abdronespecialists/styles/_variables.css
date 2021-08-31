@@ -6,6 +6,10 @@
 @value color-dark-subtitle: #00020C0F;
 @value color-light-subtitle: #FCFCFC;
 
-@value color-shade: rgba(0, 0, 0, 0.8);
+@value color-shade: rgba(0, 0, 0, 0.5);
+@value color-modal-overlay: rgba(0, 0, 0, 0.8);
 
 @value content-padding: 20px;
+
+
+@value header-height: 50px;
