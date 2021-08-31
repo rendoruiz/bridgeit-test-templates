@@ -1,4 +1,4 @@
-@value color-dark, color-light, color-primary, color-modal-overlay, content-padding, modal-z-elevation from "./_variables.css";
+@value color-modal-overlay, content-padding from "./_variables.css";
 
 .overlay {
   padding: content-padding 0;
@@ -6,6 +6,5 @@
 }
 
 .modal {
-  background: color-light;
-  text-align: center;
+  display: grid;
 }

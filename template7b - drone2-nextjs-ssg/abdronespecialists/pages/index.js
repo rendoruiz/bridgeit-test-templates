@@ -1,14 +1,12 @@
 import Head from 'next/head'
 import { useState } from 'react'
-import Modal from 'react-modal'
+
 import Button from '../components/Button'
 import MainLayout from '../components/layouts/MainLayout'
+import Modal from '../components/CustomModal'
 import Video from '../components/Video'
 
 import styles from '../styles/Home.module.css'
-import modalStyles from '../styles/Modal.module.css'
-
-Modal.setAppElement("#__next");
 
 export default function Home() {
   const [isBannerModalOpen, setIsBannerModalOpen] = useState(false);
@@ -24,7 +22,10 @@ export default function Home() {
       </Head>
 
       <div className={styles.banner}>
-        <Video prefix="main" />
+        <Video 
+          prefix="main" 
+          isBackground 
+        />
         <div className={styles.bannerContext}>
           <p>
             <span>Quality&nbsp;</span>
@@ -39,12 +40,12 @@ export default function Home() {
           <Modal
             isOpen={isBannerModalOpen}
             onRequestClose={toggleBannerModal}
-            contentLabel="View Reel Video Modal"
-            className={modalStyles.modal}
-            overlayClassName={modalStyles.overlay}
-            closeTimeoutMS={200}
+            title="View Reel Video Modal"
           >
-            kek
+            <Video 
+              prefix="reel-fpv-filmtv" 
+              placeholderPrefix="main"
+            />
           </Modal>
         </div>
       </div>

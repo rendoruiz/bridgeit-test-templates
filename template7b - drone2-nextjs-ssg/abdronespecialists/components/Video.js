@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import styles from '../styles/Video.module.css';
 
-const Video = ({ prefix, className}) => {
+const Video = ({ prefix, placeholderPrefix, className, isBackground }) => {
   const [videoResolution, setVideoResolution] = useState(null);
+  const videoAttributes = !isBackground ? { controls: true } : { loop: true, muted: true }
 
   useEffect(() => {
     const windowWidth = window.innerWidth;
@@ -18,11 +19,10 @@ const Video = ({ prefix, className}) => {
 
   return (!prefix || !videoResolution) ? null : ( 
     <video 
-      autoPlay 
-      loop 
-      muted
-      poster={`/images/video-placeholders/${prefix}-placeholder-${videoResolution}.jpg`}
-      className={className ?? styles.video}
+      autoPlay
+      poster={`/images/video-placeholders/${placeholderPrefix ?? prefix}-placeholder-${videoResolution}.jpg`}
+      className={className ?? (isBackground ? styles.backgroundVideo : styles.video)}
+      {...videoAttributes}
       // onLoadedData={(e) => { console.log(e.target.currentSrc)}}
     >
       <source src={`/videos/${prefix}-${videoResolution}.webm`} type="video/webm" />
