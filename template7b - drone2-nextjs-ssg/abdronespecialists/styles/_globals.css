@@ -64,6 +64,9 @@ img {
   object-position: center;
 }
 
+
+
+/* react-modal override */
 .ReactModal__Overlay {
   opacity: 0;
   transition: opacity 200ms ease-in-out;
@@ -88,4 +91,20 @@ img {
 .ReactModal__Body--open,
 .ReactModal__Html--open {
   overflow: hidden;
+}
+
+/* react-bootstrap override */
+.accordion,
+.accordion .accordion-item,
+.accordion-header,
+.accordion-header button.accordion-button {
+  background: unset;
+  background-color: unset;
+  color: unset;
+}
+.accordion-header button.accordion-button::after {
+  content: none;
+}
+.accordion-header button.accordion-button:focus {
+  box-shadow: unset;
 }

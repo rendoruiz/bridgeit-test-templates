@@ -7,11 +7,13 @@
 
 .themeDark {
   background: color-dark;
+  background-color: color-dark;
   color: color-light;
 }
 
 .themeLight {
   background: color-light;
+  background-color: color-light;
   color: color-dark;
 }
 

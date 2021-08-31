@@ -7,7 +7,11 @@ import Modal from '../components/CustomModal'
 import Image from '../components/Image'
 import Video from '../components/Video'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from '../styles/Home.module.css'
+import { Accordion } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home() {
   const [isBannerModalOpen, setIsBannerModalOpen] = useState(false);
@@ -80,12 +84,48 @@ export default function Home() {
         </div>
       </section>
 
-
-      <section>
-        <h2></h2>
+      <section className={styles.sectionEquipment}>
+        <h2 className={styles.heading2}>Our Equipment</h2>
       </section>
-      <section>
-        <h2></h2>
+
+      <section className={styles.sectionServices}>
+        <h2 className={styles.heading2}>Services</h2>
+        
+        <Accordion className={styles.servicesAccordion}>
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>
+              Film & TV
+              <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
+            </Accordion.Header>
+            <Accordion.Body>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi explicabo iure est ipsam, adipisci possimus. Amet excepturi eveniet ex dolor!
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="1">
+            <Accordion.Header>FPV</Accordion.Header>
+            <Accordion.Body>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi explicabo iure est ipsam, adipisci possimus. Amet excepturi eveniet ex dolor!
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="2">
+            <Accordion.Header>Construction</Accordion.Header>
+            <Accordion.Body>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi explicabo iure est ipsam, adipisci possimus. Amet excepturi eveniet ex dolor!
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="3">
+            <Accordion.Header>Commercial Real Estate</Accordion.Header>
+            <Accordion.Body>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi explicabo iure est ipsam, adipisci possimus. Amet excepturi eveniet ex dolor!
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="4">
+            <Accordion.Header>Aerial Photography</Accordion.Header>
+            <Accordion.Body>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi explicabo iure est ipsam, adipisci possimus. Amet excepturi eveniet ex dolor!
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
       </section>
       <section>
         <h2></h2>

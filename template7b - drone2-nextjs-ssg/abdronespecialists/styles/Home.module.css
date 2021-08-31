@@ -1,5 +1,12 @@
 @value color-dark, color-light, color-primary, color-shade, header-height, content-padding, font-primary from "./_variables.css";
 
+.heading2 {
+  composes: textHeading2 from "./_shared.module.css";
+}
+.heading3 {
+  composes: textHeading3 from "./_shared.module.css";
+}
+
 .mainBanner {
   composes: captionedMedia from "./_shared.module.css";
   height: clamp(300px, calc(90vh - header-height), 900px);
@@ -28,8 +35,7 @@
   margin-bottom: content-padding;
   height: 170px;
 }
-.heading2 {
-  composes: textHeading2 from "./_shared.module.css";
+.sectionPortfolio .heading2 {
   background: color-shade;
   display: grid;
   place-items: center;
@@ -44,9 +50,7 @@
 .portfolioText p {
   letter-spacing: 0.5px;
 }
-.heading3 {
-  composes: textHeading3 from "./_shared.module.css";
-}
+
 .portfolioText .heading3 {
   margin-top: content-padding;
 }
@@ -59,4 +63,25 @@
 .portfolioCustomers img {
   width: 50px;
   height: 50px;
+}
+
+.sectionEquipment {
+  composes: themeLight from "./_shared.module.css";
+}
+
+.sectionServices {
+  composes: themeDark from "./_shared.module.css";
+}
+
+/* .servicesAccordion {
+  composes: themeDark from "./_shared.module.css";
+}
+.servicesAccordion *,
+.servicesAccordion button {
+  background: inherit;
+  color: inherit;
+}
+ */
+ .accordionIcon {
+  height: 20px;
 }
