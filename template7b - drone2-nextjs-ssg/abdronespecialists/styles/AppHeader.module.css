@@ -1,4 +1,4 @@
-@value color-dark, color-light, color-primary, color-secondary, color-modal-overlay, header-height, content-padding from "./_variables.css";
+@value color-dark, color-light, color-primary, color-secondary, color-modal-overlay, header-height, content-padding, modal-z-elevation from "./_variables.css";
 
 .appHeader {
   composes: themeLight from "./_shared.module.css";
@@ -41,7 +41,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-  /* z-index: 1000; */
   display: grid;
   align-content: flex-start;
   
@@ -49,14 +48,14 @@
   animation-fill-mode: forwards;
 }
 @keyframes menu-default {
-  from { display: grid; opacity: 1; z-index: 1000; }
+  from { display: grid; opacity: 1; z-index: modal-z-elevation; }
   97% { opacity: 0; }
-  to { opacity: 0; display: none; z-index: -1000; }
+  to { opacity: 0; display: none; z-index: calc(modal-z-elevation * -1); }
 }
 @keyframes menu-active {
-  from { display: none; opacity: 0; z-index: -1000; }
+  from { display: none; opacity: 0; z-index: calc(modal-z-elevation * -1); }
   1% { display: grid; }
-  to { display: grid; opacity: 1; z-index: 1000; }
+  to { display: grid; opacity: 1; z-index: modal-z-elevation; }
 }
 
 .navigationItem {
