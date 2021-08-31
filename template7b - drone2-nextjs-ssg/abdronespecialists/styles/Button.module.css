@@ -1,0 +1,41 @@
+@value color-light, color-primary, font-primary from "./_variables.css";
+@value button-border: 3px solid color-primary;
+
+.button {
+  padding: 2px 30px 5px 40px;
+  border: button-border;
+  border-radius: 26px;
+  background: color-primary;
+  font-family: font-primary;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background 200ms, color 200ms, transform 100ms;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.button,
+.button:visited {
+  color: color-light;
+}
+.button:hover {
+  background: transparent;
+  color: color-primary;
+}
+.button:active {
+  transform: scale(0.975);
+}
+.buttonIcon {
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  margin-right: -8px;
+}
+
+
+.button-sm {
+  composes: button;
+  padding: 50px 20px;
+  font-size: 1rem;
+}
+

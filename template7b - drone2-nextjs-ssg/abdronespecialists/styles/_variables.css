@@ -1,3 +1,4 @@
+/* colors */
 @value color-dark: #060505;
 @value color-light: #FFFFFF;
 @value color-primary: #D43737;
@@ -9,9 +10,19 @@
 @value color-shade: rgba(0, 0, 0, 0.5);
 @value color-modal-overlay: rgba(0, 0, 0, 0.8);
 
+
+/* shared properties */
 @value content-padding: 20px;
-
-
 @value header-height: 50px;
-
 @value modal-z-elevation: 1000;
+
+
+/* breakpoints */
+@value bp-sm: screen and (min-width: 425px);
+@value bp-md: screen and (min-width: 768px);
+@value bp-lg: screen and (min-width: 1024px);
+@value bp-xl: screen and (min-width: 1200px);
+
+
+@value font-primary: 'neue-haas-unica', 'Roboto', sans-serif;
+@value font-secondary: 'Roboto', sans-serif;

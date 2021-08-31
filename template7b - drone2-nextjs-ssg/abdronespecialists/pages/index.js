@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useState } from 'react'
 import Modal from 'react-modal'
+import Button from '../components/Button'
 import MainLayout from '../components/layouts/MainLayout'
 import Video from '../components/Video'
 
@@ -30,22 +31,24 @@ export default function Home() {
             <span>drone services&nbsp;</span>
             <span>from experienced pilots.</span>
           </p>
+
+          <Button 
+            text="View Reel" 
+            onClick={toggleBannerModal}
+          />
+          <Modal
+            isOpen={isBannerModalOpen}
+            onRequestClose={toggleBannerModal}
+            contentLabel="View Reel Video Modal"
+            className={modalStyles.modal}
+            overlayClassName={modalStyles.overlay}
+            closeTimeoutMS={200}
+          >
+            kek
+          </Modal>
         </div>
       </div>
 
-      <section>
-        <button onClick={toggleBannerModal}>Open Modal</button>
-        <Modal
-          isOpen={isBannerModalOpen}
-          onRequestClose={toggleBannerModal}
-          contentLabel="View Reel Video Modal"
-          className={modalStyles.modal}
-          overlayClassName={modalStyles.overlay}
-          closeTimeoutMS={200}
-        >
-          kek
-        </Modal>
-      </section>
 
       <section>
         <picture>
