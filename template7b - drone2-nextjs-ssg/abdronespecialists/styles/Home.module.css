@@ -146,8 +146,7 @@
   margin-left: 5px;
 }
 .accordionImage {
-  composes: image from "./Image.module.css";
-  padding: 15px 0;
+  margin: 15px 0;
 }
 
 

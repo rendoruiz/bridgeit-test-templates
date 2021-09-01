@@ -160,7 +160,7 @@ export default function Home() {
               <Image 
                 prefix="home-accordion-filmtv"
                 title="winter landscape image"
-                pictureClassName={styles.accordionImage}
+                className={styles.accordionImage}
                 noMd
                 noLg
               />
@@ -183,7 +183,7 @@ export default function Home() {
               <Image 
                 prefix="home-accordion-fpv"
                 title="flying drone image"
-                pictureClassName={styles.accordionImage}
+                className={styles.accordionImage}
                 noMd
                 noLg
               />
@@ -206,7 +206,7 @@ export default function Home() {
               <Image 
                 prefix="home-accordion-construction"
                 title="bridge construction image"
-                pictureClassName={styles.accordionImage}
+                className={styles.accordionImage}
                 noMd
                 noLg
               />
@@ -229,7 +229,7 @@ export default function Home() {
               <Image 
                 prefix="home-accordion-realestate"
                 title="downtown calgary image"
-                pictureClassName={styles.accordionImage}
+                className={styles.accordionImage}
                 noMd
                 noLg
               />
@@ -252,7 +252,7 @@ export default function Home() {
               <Image 
                 prefix="home-accordion-aerial"
                 title="cityscape image"
-                pictureClassName={styles.accordionImage}
+                className={styles.accordionImage}
                 noMd
                 noLg
               />
