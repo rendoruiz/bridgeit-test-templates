@@ -91,6 +91,8 @@
 }
 
 .accordion-header button.accordion-button svg {
+  /* align-self: flex-start;
+  margin-top: 3px; */
   transform: rotate(-180deg);
   transition: transform 200ms;
 }
