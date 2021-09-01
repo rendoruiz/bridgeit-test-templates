@@ -11,9 +11,19 @@ import Image from '../components/Image'
 import Video from '../components/Video'
 
 import styles from '../styles/Home.module.css'
+import Slider from 'react-slick'
 
 export default function Home() {
   const [isBannerModalOpen, setIsBannerModalOpen] = useState(false);
+
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
 
   const toggleBannerModal = () => {
     setIsBannerModalOpen(!isBannerModalOpen);
@@ -85,6 +95,21 @@ export default function Home() {
 
       <section className={styles.sectionEquipment}>
         <h2 className={styles.heading2}>Our Equipment</h2>
+
+        <Slider {...settings} className={styles.slider}>
+          <Image 
+            prefix="home-portfolio"
+            title="tower building image"
+          />
+          <Image 
+            prefix="home-portfolio"
+            title="tower building image"
+          />
+          <Image 
+            prefix="home-portfolio"
+            title="tower building image"
+          />
+        </Slider>
       </section>
 
       <section className={styles.sectionServices}>
@@ -208,6 +233,7 @@ export default function Home() {
           </Accordion.Item>
         </Accordion>
       </section>
+      
       <section>
         <h2></h2>
       </section>

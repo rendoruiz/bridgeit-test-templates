@@ -67,14 +67,22 @@
 
 .sectionEquipment {
   composes: themeLight from "./_shared.module.css";
+  padding: calc(content-padding * 2) 0 calc(content-padding * 3);
+  display: grid;
+  justify-content: center;
+  row-gap: calc(content-padding * 2);
 }
+.sectionEquipment .heading2 {
+  text-align: center;
+}
+.slider {
+  width: inherit;
+}
+
+
 
 .sectionServices {
   composes: themeDark from "./_shared.module.css";
-}
-
-
-.sectionServices {
   padding: calc(content-padding * 2) 0;
 }
 .sectionServices .heading2 {
@@ -120,3 +128,4 @@
   composes: image from "./Image.module.css";
   padding: 15px 0;
 }
+
