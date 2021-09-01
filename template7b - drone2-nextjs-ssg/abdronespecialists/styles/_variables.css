@@ -12,6 +12,8 @@
 
 @value color-shade: rgba(0, 0, 0, 0.5);
 @value color-modal-overlay: rgba(0, 0, 0, 0.9);
+@value color-box-shadow: rgba(0, 0, 0, 0.075);
+@value color-box-shadow-active: rgba(0, 0, 0, 0.3);
 
 
 /* shared properties */
@@ -19,7 +21,8 @@
 @value header-height: 50px;
 @value modal-z-elevation: 1000;
 @value max-content-width: 1200px;
-
+@value corner-rounding: 10px;
+@value box-shadow: 0 3px 10px;
 
 /* breakpoints */
 @value bp-sm: screen and (min-width: 425px);
