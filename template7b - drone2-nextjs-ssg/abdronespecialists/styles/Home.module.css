@@ -67,11 +67,17 @@
   display: grid;
   grid-template-columns: repeat(5, auto);
   align-items: center;
+  column-gap: 15px;
 }
-.portfolioCustomers img {
-  width: 50px;
-  height: 50px;
+.portfolioLogo {
+  width: 100%;
+  height: 30px;
 }
+.portfolioLogo4 {
+  composes: portfolioLogo;
+  height: 40px;
+}
+
 
 .sectionEquipment {
   composes: themeLight from "./_shared.module.css";

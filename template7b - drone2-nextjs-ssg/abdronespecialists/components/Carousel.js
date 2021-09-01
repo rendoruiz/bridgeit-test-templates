@@ -10,7 +10,10 @@ const Carousel = ({ children, infinite, noDots, noArrows, className }) => {
 
   const PrevArrow = ({ onClick }) => {
     return (
-      <button className={((currentSlide > 0) || infinite) ? styles.button : styles.inactiveButton}>
+      <button 
+        className={((currentSlide > 0) || infinite) ? styles.button : styles.inactiveButton}
+        title="carousel back button"
+      >
         <FontAwesomeIcon 
           icon={faChevronLeft} 
           onClick={onClick}
@@ -21,7 +24,10 @@ const Carousel = ({ children, infinite, noDots, noArrows, className }) => {
   }
   const NextArrow = ({ onClick }) => {
     return (
-      <button className={((currentSlide + 1 < children.length) || infinite) ? styles.button : styles.inactiveButton}>
+      <button 
+        className={((currentSlide + 1 < children.length) || infinite) ? styles.button : styles.inactiveButton}
+        title="carousel next button"
+      >
         <FontAwesomeIcon 
           icon={faChevronRight} 
           onClick={onClick}

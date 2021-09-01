@@ -24,6 +24,7 @@ export default function Home() {
     <MainLayout>
       <Head>
         <title>Home - Alberta Drone Specialists</title>
+
       </Head>
 
       <div className={styles.mainBanner}>
@@ -71,11 +72,46 @@ export default function Home() {
           </p>
           <h3 className={styles.heading3}>Trusted by:</h3>
           <div className={styles.portfolioCustomers}>
-            <img src="/images/logo-disney-white.png" alt="H4H: Horsepower For Hope logo" loading="lazy" />
-            <img src="/images/logo-fx-white.png" alt="Kids with Cancer Society logo" loading="lazy" />
-            <img src="/images/logo-cbc-white.png" alt="FX logo" loading="lazy" />
-            <img src="/images/logo-h4h-white.png" alt="Disney logo" loading="lazy" />
-            <img src="/images/logo-kwcs-white.png" alt="CBC logo" loading="lazy" />
+            <Image 
+              prefix="logo-disney-white"
+              fileExtension="png"
+              title="H4H: Horsepower For Hope logo"
+              isContained
+              className={styles.portfolioLogo}
+              noMd
+            />
+            <Image 
+              prefix="logo-fx-white"
+              fileExtension="png"
+              title="Kids with Cancer Society logo"
+              isContained
+              className={styles.portfolioLogo}
+              noMd
+            />
+            <Image 
+              prefix="logo-cbc-white"
+              fileExtension="png"
+              title="FX logo"
+              isContained
+              className={styles.portfolioLogo}
+              noMd
+            />
+            <Image 
+              prefix="logo-h4h-white"
+              fileExtension="png"
+              title="Disney logo"
+              isContained
+              className={styles.portfolioLogo4}
+              noMd
+            />
+            <Image 
+              prefix="logo-kwcs-white"
+              fileExtension="png"
+              title="CBC logo"
+              isContained
+              className={styles.portfolioLogo}
+              noMd
+            />
           </div>
           <Button
             text="Portfolio"
