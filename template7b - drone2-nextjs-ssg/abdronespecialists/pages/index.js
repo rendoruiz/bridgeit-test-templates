@@ -16,12 +16,6 @@ import DroneCard from '../components/DroneCard'
 import VideoModal from '../components/VideoModal'
 
 export default function Home() {
-  const [isBannerModalOpen, setIsBannerModalOpen] = useState(false);
-
-  const toggleBannerModal = () => {
-    setIsBannerModalOpen(!isBannerModalOpen);
-  }
-
   return (
     <MainLayout>
       <Head>
@@ -39,20 +33,12 @@ export default function Home() {
             <span>drone services&nbsp;</span>
             <span>from experienced pilots.</span>
           </p>
-          <Button 
-            text="View Reel" 
-            onClick={toggleBannerModal}
-          />
-          <Modal
-            isOpen={isBannerModalOpen}
-            onRequestClose={toggleBannerModal}
-            title="View Reel Video Modal"
-          >
+          <VideoModal buttonText="View Reel">
             <Video 
               prefix="reel-fpv-filmtv" 
               placeholderPrefix="main"
             />
-          </Modal>
+          </VideoModal>
         </div>
       </div>
 

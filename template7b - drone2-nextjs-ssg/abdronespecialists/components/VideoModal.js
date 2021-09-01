@@ -6,45 +6,52 @@ import Image from "./Image";
 import Modal from "./CustomModal"
 
 import styles from '../styles/VideoModal.module.css';
+import Button from "./Button";
 
-const VideoModal = ({ children, youtubeEmbedId, imagePrefix, title }) => {
+const VideoModal = ({ imagePrefix, buttonText, children, youtubeEmbedId, title }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   }
 
-  return (!imagePrefix && (!children || !youtubeEmbedId)) ? null : ( 
+  return (!imagePrefix && !buttonText) ? null : ( 
     <>
-      <div 
-        onClick={toggleModal} 
-        className={styles.videoPreview}
-      >
-        <Image
-          prefix={imagePrefix}
-          title={title + " preview image"}
-          noMd 
-          noLg
-        />
-        <div className={styles.playButton}>
-          <FontAwesomeIcon 
-            icon={faPlay} 
-            className={styles.buttonIcon} 
+      { imagePrefix ? (
+        <div 
+          onClick={toggleModal} 
+          className={styles.videoPreview}
+        >
+          <Image
+            prefix={imagePrefix}
+            title={title + " preview image"}
+            noMd 
+            noLg
           />
+          <div className={styles.playButton}>
+            <FontAwesomeIcon 
+              icon={faPlay} 
+              className={styles.buttonIcon} 
+            />
+          </div>
         </div>
-      </div>
+      ) : buttonText ? (
+        <Button
+          text={buttonText}
+          onClick={toggleModal}
+        />
+      ) : null }
 
       <Modal
         isOpen={isModalOpen}
         onRequestClose={toggleModal}
         title={title + " modal"}
       >
-        { children }
-        { !youtubeEmbedId ? null : (
+        { youtubeEmbedId ? (
           <div className={styles.videoWrapper}>
-            <iframe src={"https://www.youtube.com/embed/" + youtubeEmbedId} title="YouTube video player" frameborder="0" allow="autoplay; picture-in-picture" allowfullscreen></iframe>
+            <iframe src={"https://www.youtube.com/embed/" + youtubeEmbedId} title="YouTube video player" frameBorder="0" allow="autoplay; picture-in-picture" allowFullScreen></iframe>
           </div>
-        )}
+        ) : children }
       </Modal>
     </>
   );
