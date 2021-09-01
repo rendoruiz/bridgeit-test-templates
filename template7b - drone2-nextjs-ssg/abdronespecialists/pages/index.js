@@ -63,10 +63,10 @@ export default function Home() {
           <h2 className={styles.heading2}>Why Choose Us?</h2>
         </div>
         <div className={styles.portfolioText}>
-          <p>
+          <p className={styles.bodyText}>
             We are fully certified and able to accomplish any project you have in mind. Our Inspire 2 systems are equipped with a ballistic parachute system granting us approvals from Transport Canada to operate in dense urban environments. Additionally, all Alberta Drone Specialists’ pilots hold advanced RPAS licenses. 
           </p>
-          <p>
+          <p className={styles.bodyText}>
             <strong>Don't know how to obtain proper permits and approvals?</strong> Let us handle it! We coordinate with Nav Canada for all flights in control zones near major airports and have experience coordinating drone operations and flight plans with National & Provincial Parks, Transport Canada, and Municipalities.
           </p>
           <h3 className={styles.heading3}>Trusted by:</h3>

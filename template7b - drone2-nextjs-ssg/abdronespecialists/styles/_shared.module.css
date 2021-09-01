@@ -1,4 +1,5 @@
 @value color-dark, color-light, font-primary, font-secondary, max-content-width from "./_variables.css";
+@value bp-sm, bp-md, bp-lg, bp-xl from "./_variables.css";
 
 .container {
   max-width: max-content-width;
@@ -43,4 +44,18 @@
   font-weight: bold;
   font-size: 1.25rem;
   margin: unset;
+}
+
+.textBody {
+  font-size: 0.9rem;
+}
+
+.textSubtitle {
+  font-size: 0.8rem;
+}
+
+@media bp-md {
+  .textBody {
+    font-size: 1rem;
+  }
 }
