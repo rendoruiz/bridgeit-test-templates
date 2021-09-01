@@ -21,6 +21,14 @@
   height: 28px;
 }
 
+.inactiveButton {
+  composes: button;
+  color: transparent;
+}
+.inactiveButton:active {
+  color: transparent;
+}
+
 .dotList {
   grid-column: 1 / -1;
   list-style: none;

@@ -3,11 +3,14 @@ import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons
 import Slider from "react-slick";
 
 import styles from '../styles/Carousel.module.css';
+import { useState } from "react";
 
-const Carousel = ({ children, config, className }) => {
+const Carousel = ({ children, infinite, noDots, noArrows, className }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   const PrevArrow = ({ onClick }) => {
     return (
-      <button className={styles.button}>
+      <button className={((currentSlide > 0) || infinite) ? styles.button : styles.inactiveButton}>
         <FontAwesomeIcon 
           icon={faChevronLeft} 
           onClick={onClick}
@@ -18,7 +21,7 @@ const Carousel = ({ children, config, className }) => {
   }
   const NextArrow = ({ onClick }) => {
     return (
-      <button className={styles.button}>
+      <button className={((currentSlide + 1 < children.length) || infinite) ? styles.button : styles.inactiveButton}>
         <FontAwesomeIcon 
           icon={faChevronRight} 
           onClick={onClick}
@@ -27,16 +30,15 @@ const Carousel = ({ children, config, className }) => {
       </button>
     )
   }
-  // const DotItem = ({ dot }) => {
-
-  // }
 
   var defaultConfig = {
-    dots: true,
-    infinite: true,
+    dots: !noDots,
+    arrows: !noArrows,
+    infinite: infinite,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    beforeChange: (current, next) => setCurrentSlide(next),
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
     dotsClass: styles.dotList,
@@ -46,7 +48,6 @@ const Carousel = ({ children, config, className }) => {
   return !children ? null : ( 
     <Slider
       {...defaultConfig}
-      {...config}
       className={`${styles.carousel} ${className}`}
     >
       { children }
