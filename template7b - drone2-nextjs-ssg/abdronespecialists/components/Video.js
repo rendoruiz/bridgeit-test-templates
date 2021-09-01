@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from '../styles/Video.module.css';
 
-const Video = ({ prefix, placeholderPrefix, className, isBackground }) => {
+const Video = ({ prefix, placeholderPrefix, className, isBackground, noWebM }) => {
   const [videoResolution, setVideoResolution] = useState(null);
   const videoAttributes = !isBackground ? { controls: true } : { loop: true, muted: true }
 
@@ -25,7 +25,9 @@ const Video = ({ prefix, placeholderPrefix, className, isBackground }) => {
       {...videoAttributes}
       // onLoadedData={(e) => { console.log(e.target.currentSrc)}}
     >
-      <source src={`/videos/${prefix}-${videoResolution}.webm`} type="video/webm" />
+      { noWebM ? null : (
+        <source src={`/videos/${prefix}-${videoResolution}.webm`} type="video/webm" />
+      )}
       <source src={`/videos/${prefix}-${videoResolution}.mp4`} type="video/mp4" />
       Sorry, your browser doesn't support embedded videos.
     </video>
