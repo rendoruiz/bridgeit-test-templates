@@ -8,7 +8,7 @@
 @value color-light-subtitle: #FCFCFC;
 
 @value color-button: color-primary;
-@value color-button-faded: #FFAEAE;
+@value color-button-faded: color-secondary;
 
 @value color-shade: rgba(0, 0, 0, 0.5);
 @value color-modal-overlay: rgba(0, 0, 0, 0.9);

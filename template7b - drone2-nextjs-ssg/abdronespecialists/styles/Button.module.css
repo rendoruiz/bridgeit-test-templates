@@ -1,11 +1,11 @@
-@value color-light, color-primary, font-primary from "./_variables.css";
-@value button-border: 3px solid color-primary;
+@value color-light, color-button, font-primary from "./_variables.css";
+@value button-border: 3px solid color-button;
 
 .button {
   padding: 2px 30px 5px 40px;
   border: button-border;
   border-radius: 26px;
-  background: color-primary;
+  background: color-button;
   font-family: font-primary;
   font-size: 1.1rem;
   text-align: center;
@@ -22,7 +22,7 @@
 }
 .button:hover {
   background: transparent;
-  color: color-primary;
+  color: color-button;
 }
 .button:active {
   transform: scale(0.975);

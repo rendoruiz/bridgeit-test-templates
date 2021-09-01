@@ -1,4 +1,4 @@
-@value color-dark, color-light, color-primary, color-secondary, color-shade, header-height, content-padding, font-primary from "./_variables.css";
+@value color-dark, color-light, color-primary, color-secondary, color-shade, color-button, header-height, content-padding, font-primary from "./_variables.css";
 
 .heading2 {
   composes: textHeading2 from "./_shared.module.css";
@@ -96,7 +96,7 @@
   border-radius: 100%;
   width: 25px;
   height: 25px;
-  background: color-primary;
+  background: color-button;
 }
 .sectionServices button {
   padding: 10px content-padding;
@@ -115,10 +115,15 @@
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  transition: color 200ms ease-out;
 }
 .accordionLink,
 .accordionLink:visited {
   color: color-secondary;
+}
+.accordionLink:hover,
+.accordionLink:active {
+  color: color-primary;
 }
 .accordionLinkIcon {
   height: 0.8rem;
