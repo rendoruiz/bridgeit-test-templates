@@ -24,6 +24,7 @@ const Image = ({ prefix, title, className, pictureClassName, noMd, noLg }) => {
         src={`/images/${prefix}-sm.jpg`} 
         alt={title ?? "untitled image"} 
         className={className ?? styles.image}
+        loading="lazy"
       />
     </picture>
   );

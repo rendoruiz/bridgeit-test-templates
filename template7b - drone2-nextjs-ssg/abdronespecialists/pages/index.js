@@ -71,11 +71,11 @@ export default function Home() {
           </p>
           <h3 className={styles.heading3}>Trusted by:</h3>
           <div className={styles.portfolioCustomers}>
-            <img src="/images/logo-disney-white.png" alt="H4H: Horsepower For Hope logo" />
-            <img src="/images/logo-fx-white.png" alt="Kids with Cancer Society logo" />
-            <img src="/images/logo-cbc-white.png" alt="FX logo" />
-            <img src="/images/logo-h4h-white.png" alt="Disney logo" />
-            <img src="/images/logo-kwcs-white.png" alt="CBC logo" />
+            <img src="/images/logo-disney-white.png" alt="H4H: Horsepower For Hope logo" loading="lazy" />
+            <img src="/images/logo-fx-white.png" alt="Kids with Cancer Society logo" loading="lazy" />
+            <img src="/images/logo-cbc-white.png" alt="FX logo" loading="lazy" />
+            <img src="/images/logo-h4h-white.png" alt="Disney logo" loading="lazy" />
+            <img src="/images/logo-kwcs-white.png" alt="CBC logo" loading="lazy" />
           </div>
           <Button
             text="Portfolio"
@@ -225,11 +225,16 @@ export default function Home() {
         </Accordion>
       </section>
       
-      <section>
-        <h2></h2>
+      <div className={styles.sectionSeparatorLight}></div>
+
+      <section className={styles.sectionHighlights}>
+        <h2>Highlights</h2>
       </section>
-      <section>
-        <h2></h2>
+
+      <div className={styles.sectionSeparatorLight}></div>
+
+      <section className={styles.sectionContact}>
+        <h2>Send us a message.</h2>
       </section>
     </MainLayout>
   )

@@ -10,6 +10,11 @@
   composes: textBody from "./_shared.module.css";
 }
 
+.sectionSeparatorLight {
+  height: content-padding;
+  background: color-light;
+}
+
 .mainBanner {
   composes: captionedMedia from "./_shared.module.css";
   height: clamp(300px, calc(90vh - header-height), 900px);
@@ -58,7 +63,7 @@
   margin-top: 10px;
 }
 .portfolioCustomers {
-  margin-top: -10px;
+  margin: -10px 0 10px;
   display: grid;
   grid-template-columns: repeat(5, auto);
   align-items: center;
@@ -139,3 +144,12 @@
   padding: 15px 0;
 }
 
+
+.sectionHighlights {
+  padding: content-padding;
+  text-align: center;
+}
+
+.sectionContact {
+  padding: content-padding;
+}
