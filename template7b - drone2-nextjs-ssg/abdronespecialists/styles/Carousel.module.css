@@ -3,8 +3,11 @@
 .carousel {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  row-gap: 20px;
+  row-gap: 10px;
   column-gap: 5px;
+}
+.noArrows {
+  grid-template-columns: unset;
 }
 
 .button {

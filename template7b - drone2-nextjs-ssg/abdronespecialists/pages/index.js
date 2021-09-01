@@ -13,6 +13,7 @@ import Carousel from '../components/Carousel'
 
 import styles from '../styles/Home.module.css'
 import DroneCard from '../components/DroneCard'
+import VideoModal from '../components/VideoModal'
 
 export default function Home() {
   const [isBannerModalOpen, setIsBannerModalOpen] = useState(false);
@@ -25,7 +26,6 @@ export default function Home() {
     <MainLayout>
       <Head>
         <title>Home - Alberta Drone Specialists</title>
-
       </Head>
 
       <div className={styles.mainBanner}>
@@ -289,6 +289,29 @@ export default function Home() {
 
       <section className={styles.sectionHighlights}>
         <h2>Highlights</h2>
+        <Carousel  
+          className={styles.carousel}
+          noArrows
+        >
+          <VideoModal 
+            imagePrefix="highlights-pv1"
+            title="highlight video"
+          >
+            hallo
+          </VideoModal>
+          <VideoModal 
+            imagePrefix="highlights-pv2"
+            title="highlight video"
+          >
+            hallo
+          </VideoModal>
+          <VideoModal 
+            imagePrefix="highlights-pv3"
+            title="highlight video"
+          >
+            hallo
+          </VideoModal>
+        </Carousel>
       </section>
 
       <div className={styles.sectionSeparatorLight}></div>

@@ -54,7 +54,7 @@ const Carousel = ({ children, infinite, noDots, noArrows, className }) => {
   return !children ? null : ( 
     <Slider
       {...defaultConfig}
-      className={`${styles.carousel} ${className}`}
+      className={styles.carousel + (!className ? '' : ` ${className}`) + (!noArrows ? '' : ` ${styles.noArrows}`)}
     >
       { children }
     </Slider>

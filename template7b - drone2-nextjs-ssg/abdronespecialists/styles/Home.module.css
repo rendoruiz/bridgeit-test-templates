@@ -10,6 +10,10 @@
   composes: textBody from "./_shared.module.css";
 }
 
+.carousel {
+  composes: carousel from "./Carousel.module.css";
+}
+
 .sectionSeparatorLight {
   height: content-padding;
   background: color-light;
@@ -89,8 +93,7 @@
 .sectionEquipment .heading2 {
   text-align: center;
 }
-.carousel {
-  composes: carousel from "./Carousel.module.css";
+.sectionEquipment .carousel {
   padding: 0 content-padding;
 }
 
@@ -154,6 +157,10 @@
   padding: content-padding;
   text-align: center;
 }
+.sectionHighlights .carousel {
+  margin: content-padding 0;
+}
+
 
 .sectionContact {
   padding: content-padding;
