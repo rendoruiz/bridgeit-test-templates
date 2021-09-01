@@ -12,6 +12,7 @@ import Video from '../components/Video'
 import Carousel from '../components/Carousel'
 
 import styles from '../styles/Home.module.css'
+import DroneCard from '../components/DroneCard'
 
 export default function Home() {
   const [isBannerModalOpen, setIsBannerModalOpen] = useState(false);
@@ -124,17 +125,40 @@ export default function Home() {
         <h2 className={styles.heading2}>Our Equipment</h2>
 
         <Carousel className={styles.carousel}>
-          <Image 
-            prefix="home-portfolio"
-            title="tower building image"
+          <DroneCard 
+            imagePrefix="equipment-dji-inspire-2"
+            imageTitle="DJI Inspire 2 image"
+            heading="DJI Inspire 2"
+            body="Image quality, power and intelligence to meet the needs of professional filmmakers and enterprises around the globe."
+            href="/"
           />
-          <Image 
-            prefix="home-portfolio"
-            title="tower building image"
+          <DroneCard 
+            imagePrefix="equipment-zenmuse-x7"
+            imageTitle="Zenmuse X7 image"
+            heading="Zenmuse X7"
+            body="The Zenmuse X7 is a compact Super 35 camera with an integrated gimbal made for high-end filmmaking."
+            href="/"
           />
-          <Image 
-            prefix="home-portfolio"
-            title="tower building image"
+          <DroneCard 
+            imagePrefix="equipment-indemnis-nexus"
+            imageTitle="Indemnis Nexus image"
+            heading="Indemnis Nexus"
+            body="The Nexus by Indemnis is the first UAV recovery system to be proven reliable in any failure situation."
+            href="/"
+          />
+          <DroneCard 
+            imagePrefix="equipment-outdoor-fpv"
+            imageTitle="Outdoor FPV image"
+            heading="Outdoor FPV"
+            body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae quia suscipit ratione repellendus facilis."
+            href="/"
+          />
+          <DroneCard 
+            imagePrefix="equipment-indoor-fpv"
+            imageTitle="Indoor FPV image"
+            heading="Indoor FPV"
+            body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae quia suscipit ratione repellendus facilis."
+            href="/"
           />
         </Carousel>
       </section>
