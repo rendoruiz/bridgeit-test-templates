@@ -1,0 +1,43 @@
+@value color-button, color-button-faded from "./_variables.css";
+
+.carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  row-gap: 20px;
+  column-gap: 5px;
+}
+
+.button {
+  border: none;
+  background: none;
+  color: color-button-faded;
+  transition: color 200ms ease-in-out;
+}
+.button:active {
+  color: color-button;
+}
+.buttonIcon {
+  width: 28px;
+  height: 28px;
+}
+
+.dotList {
+  grid-column: 1 / -1;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.dotList button {
+  border: none;
+  border-radius: 100%;
+  background: color-button-faded;
+  width: 10px;
+  height: 10px;
+  font-size: 0;
+  line-height: 0;
+  transition: background 200ms ease-in-out;
+}
+.dotList li:global(.slick-active) button {
+  background: color-button;
+}

@@ -9,21 +9,12 @@ import MainLayout from '../components/layouts/MainLayout'
 import Modal from '../components/CustomModal'
 import Image from '../components/Image'
 import Video from '../components/Video'
+import Carousel from '../components/Carousel'
 
 import styles from '../styles/Home.module.css'
-import Slider from 'react-slick'
 
 export default function Home() {
   const [isBannerModalOpen, setIsBannerModalOpen] = useState(false);
-
-
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
 
   const toggleBannerModal = () => {
     setIsBannerModalOpen(!isBannerModalOpen);
@@ -96,7 +87,7 @@ export default function Home() {
       <section className={styles.sectionEquipment}>
         <h2 className={styles.heading2}>Our Equipment</h2>
 
-        <Slider {...settings} className={styles.slider}>
+        <Carousel className={styles.carousel}>
           <Image 
             prefix="home-portfolio"
             title="tower building image"
@@ -109,7 +100,7 @@ export default function Home() {
             prefix="home-portfolio"
             title="tower building image"
           />
-        </Slider>
+        </Carousel>
       </section>
 
       <section className={styles.sectionServices}>

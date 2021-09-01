@@ -69,14 +69,15 @@
   composes: themeLight from "./_shared.module.css";
   padding: calc(content-padding * 2) 0 calc(content-padding * 3);
   display: grid;
-  justify-content: center;
+  justify-items: center;
   row-gap: calc(content-padding * 2);
 }
 .sectionEquipment .heading2 {
   text-align: center;
 }
-.slider {
-  width: inherit;
+.carousel {
+  composes: carousel from "./Carousel.module.css";
+  padding: 0 content-padding;
 }
 
 

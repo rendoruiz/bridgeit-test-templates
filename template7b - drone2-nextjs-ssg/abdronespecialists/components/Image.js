@@ -6,7 +6,7 @@ const Image = ({ prefix, title, className, pictureClassName, noMd, noLg }) => {
     <picture className={pictureClassName}>
       { noLg ? null : (
         <source 
-          srcset={`/images/${prefix}-lg.jpg`} 
+          srcSet={`/images/${prefix}-lg.jpg`} 
           media="(min-width: 1024px)" 
           alt={title ?? "untitled image"} 
           className={className ?? styles.image}
@@ -14,7 +14,7 @@ const Image = ({ prefix, title, className, pictureClassName, noMd, noLg }) => {
       )} 
       { noMd ? null : (
         <source 
-          srcset={`/images/${prefix}-md.jpg`} 
+          srcSet={`/images/${prefix}-md.jpg`} 
           media="(min-width: 768px)" 
           alt={title ?? "untitled image"} 
           className={className ?? styles.image}
