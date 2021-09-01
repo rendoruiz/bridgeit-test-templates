@@ -3,7 +3,7 @@ import styles from '../styles/Image.module.css';
 
 const Image = ({ prefix, title, isContained, className, noMd, noLg, fileExtension }) => {
   return !prefix ? null : ( 
-    <picture className={className}>
+    <picture className={styles.picture + (!className ? "" : ` ${className}`)}>
       { noLg ? null : (
         <source 
           srcSet={`/images/${prefix}-lg.${fileExtension ?? "jpg"}`} 

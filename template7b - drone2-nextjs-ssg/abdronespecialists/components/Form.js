@@ -36,7 +36,6 @@ const Form = ({ className }) => {
       />
       <Button 
         text="Send" 
-        noIcon 
         className={styles.button} 
       />
     </form>
