@@ -1,4 +1,4 @@
-@value color-dark, color-light, color-primary, color-secondary, color-shade, color-button, header-height, content-padding, font-primary from "./_variables.css";
+@value color-dark, color-light, color-primary, color-secondary, color-shade, color-shade-darker, color-button, header-height, content-padding, font-primary from "./_variables.css";
 
 .heading2 {
   composes: textHeading2 from "./_shared.module.css";
@@ -163,5 +163,23 @@
 
 
 .sectionContact {
-  padding: content-padding;
+  padding: calc(content-padding * 4) 0 content-padding;
+}
+.contactText {
+  composes: captionedMedia from "./_shared.module.css";
+
+}
+.contactText div {
+  padding: 100px content-padding;
+  background: color-shade-darker;
+  display: grid;
+  align-content: center;
+  align-items: center;
+  row-gap: content-padding;
+}
+.contactText .heading3 {
+  display: grid;
+}
+.form {
+  padding: calc(content-padding * 2) content-padding calc(content-padding * 3);
 }

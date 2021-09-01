@@ -6,7 +6,6 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 import Button from '../components/Button'
 import MainLayout from '../components/layouts/MainLayout'
-import Modal from '../components/CustomModal'
 import Image from '../components/Image'
 import Video from '../components/Video'
 import Carousel from '../components/Carousel'
@@ -14,6 +13,7 @@ import Carousel from '../components/Carousel'
 import styles from '../styles/Home.module.css'
 import DroneCard from '../components/DroneCard'
 import VideoModal from '../components/VideoModal'
+import Form from '../components/Form'
 
 export default function Home() {
   return (
@@ -301,7 +301,21 @@ export default function Home() {
       <div className={styles.sectionSeparatorLight}></div>
 
       <section className={styles.sectionContact}>
-        <h2>Send us a message.</h2>
+        <div className={styles.contactText}>
+          <Image 
+            prefix="home-contact-bg"
+            title="race car image"
+            noLg
+          />
+          <div>
+            <span className={styles.heading3}>
+              <span>We're always ready</span>
+              <span> to take on new projects.</span>
+            </span>
+            <p>Keep scrolling to send us a quick message and we will get back to you within 24 hours. Thank you for choosing Alberta Drone Specialists.</p>
+            </div>
+        </div>
+        <Form className={styles.form} />
       </section>
     </MainLayout>
   )

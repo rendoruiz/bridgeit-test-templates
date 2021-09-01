@@ -11,6 +11,7 @@
 @value color-button-faded: color-secondary;
 
 @value color-shade: rgba(0, 0, 0, 0.5);
+@value color-shade-darker:  rgba(0, 0, 0, 0.7);
 @value color-modal-overlay: rgba(0, 0, 0, 0.9);
 @value color-box-shadow: rgba(0, 0, 0, 0.075);
 @value color-box-shadow-active: rgba(0, 0, 0, 0.3);

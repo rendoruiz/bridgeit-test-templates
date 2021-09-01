@@ -1,0 +1,58 @@
+@value color-light, color-button, color-primary from "./_variables.css";
+@value content-padding, corner-rounding from "./_variables.css";
+@value color-placeholder: rgb(150, 150, 150);
+
+.form {
+  display: grid;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: calc(content-padding * 2);
+}
+
+.label {
+  composes: textBody from "./_shared.module.css";
+  margin-bottom: 10px;
+}
+.label + .inputField {
+
+  margin-bottom: 20px;
+}
+
+.inputField {
+  composes: textBody from "./_shared.module.css";
+  border-radius: corner-rounding;
+  background: color-light;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+.icon {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  color: color-primary;
+}
+.inputField input,
+.inputField textarea {
+  border-radius: corner-rounding;
+  padding: 10px;
+  border: none;
+  font-family: inherit;
+}
+.inputField textarea {
+  resize: none;
+  height: 200px;
+}
+.inputField ::placeholder {
+  color: color-placeholder;
+}
+.label:last-of-type {
+  margin-top: 20px;
+}
+
+.button {
+  composes: button from "./Button.module.css";
+  margin-top: 10px;
+}
