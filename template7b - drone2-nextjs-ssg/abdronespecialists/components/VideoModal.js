@@ -7,12 +7,17 @@ import Modal from "./CustomModal"
 
 import styles from '../styles/VideoModal.module.css';
 import Button from "./Button";
+import YouTube from "react-youtube";
 
 const VideoModal = ({ imagePrefix, buttonText, children, youtubeEmbedId, title }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+  }
+
+  const _onReady = (e) => {
+    e.target.pauseVideo();
   }
 
   return (!imagePrefix && !buttonText) ? null : ( 
@@ -49,7 +54,12 @@ const VideoModal = ({ imagePrefix, buttonText, children, youtubeEmbedId, title }
       >
         { youtubeEmbedId ? (
           <div className={styles.videoWrapper}>
-            <iframe src={"https://www.youtube.com/embed/" + youtubeEmbedId} title="YouTube video player" frameBorder="0" allow="autoplay; picture-in-picture" allowFullScreen></iframe>
+            <YouTube 
+              className={styles.youtubeIframe}
+              videoId={youtubeEmbedId}
+              opts={{ playerVars: { autoplay: 1 } }}
+              onReady={_onReady}
+            />
           </div>
         ) : children }
       </Modal>
