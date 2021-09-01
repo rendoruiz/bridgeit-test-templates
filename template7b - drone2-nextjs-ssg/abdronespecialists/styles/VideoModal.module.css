@@ -1,4 +1,4 @@
-@value color-light, color-primary, color-secondary, corner-rounding from "./_variables.css";
+@value color-light, color-dark, color-primary, color-secondary, corner-rounding from "./_variables.css";
 
 .videoPreview {
   composes: captionedMedia from "./_shared.module.css";
@@ -25,4 +25,17 @@
 .buttonIcon {
   width: 25px;
   height: 25px;
+}
+
+.videoWrapper {
+  padding-top:56.25%;
+  background: color-dark;
+  position:relative;
+}
+.videoWrapper iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

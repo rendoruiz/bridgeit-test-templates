@@ -296,21 +296,18 @@ export default function Home() {
           <VideoModal 
             imagePrefix="highlights-pv1"
             title="highlight video"
-          >
-            hallo
-          </VideoModal>
+            youtubeEmbedId="ifO6DECu6-k"
+          />
           <VideoModal 
             imagePrefix="highlights-pv2"
             title="highlight video"
-          >
-            hallo
-          </VideoModal>
+            youtubeEmbedId="ohsQcJyELi0"
+          />
           <VideoModal 
             imagePrefix="highlights-pv3"
             title="highlight video"
-          >
-            hallo
-          </VideoModal>
+            youtubeEmbedId="Zi_trzln4ss"
+          />
         </Carousel>
       </section>
 
