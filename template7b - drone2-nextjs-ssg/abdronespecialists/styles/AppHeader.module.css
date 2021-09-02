@@ -1,9 +1,16 @@
-@value color-dark, color-light, color-primary, color-secondary, color-modal-overlay, header-height, content-padding, modal-z-elevation from "./_variables.css";
+@value color-dark, color-light, color-primary, color-secondary, color-modal-overlay from "./_variables.css";
+@value font-primary from "./_variables.css";
+@value header-height-sm, header-height-lg, content-padding, modal-z-elevation from "./_variables.css";
+@value bp-lg from "./_variables.css";
+
+.mobile {
+  composes: mobileOnly from "./_shared.module.css";
+}
 
 .appHeader {
   composes: themeLight from "./_shared.module.css";
   padding: 0 content-padding;
-  height: header-height;
+  height: header-height-sm;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,11 +28,10 @@
   transform: unset;
 }
 
-.logo,
-.logo:visited {
+.logo {
+  composes: link from "./_shared.module.css";
   font-size: 18px;
   font-weight: 900;
-  color: color-dark;
 }
 
 .menuButton {
@@ -37,7 +43,7 @@
   background: color-modal-overlay;
   overflow: hidden;
   position: absolute;
-  top: header-height;
+  top: header-height-sm;
   right: 0;
   bottom: 0;
   left: 0;
@@ -84,3 +90,64 @@
   color: color-secondary;
 }
 
+.mediaLinks {
+  display: none;
+}
+
+@media bp-lg {
+  .appHeader {
+    height: header-height-lg;
+  }
+  .menuButton {
+    display: none;
+  }
+
+  .menuPanel {
+    opacity: unset;
+    background: unset;
+    animation: unset;
+    position: static;
+    display: flex;
+    gap: 15px;
+  }
+  .navigationItem,
+  .navigationItem:first-of-type,
+  .navigationItem:last-of-type {
+    padding: 2px 5px;
+  }
+  .navigationItem {
+    background: unset;
+    font-family: font-primary;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transform: unset;
+    transition: color 200ms ease-out;
+    animation: unset;
+    display: inline-block;
+  }
+  .navigationItem,
+  .navigationItem:visited {
+    color: color-dark;
+  }
+  .navigationItem:hover,
+  .navigationItem:active {
+    color: color-primary;
+  }
+  .navigationIcon {
+    display: none;
+  }
+
+  .mediaLinks {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .linkItem {
+    composes: link from "./_shared.module.css";
+  }
+  .mediaIcon {
+    width: 20px;
+  }
+
+  
+}

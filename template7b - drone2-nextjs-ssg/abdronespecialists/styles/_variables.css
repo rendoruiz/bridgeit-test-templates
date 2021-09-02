@@ -19,7 +19,8 @@
 
 /* shared properties */
 @value content-padding: 20px;
-@value header-height: 50px;
+@value header-height-sm: 50px;
+@value header-height-lg: 60px;
 @value modal-z-elevation: 1000;
 @value max-content-width: 1200px;
 @value corner-rounding: 10px;

@@ -15,6 +15,7 @@
   box-shadow: box-shadow color-box-shadow;
   transition: box-shadow 200ms ease-out;
   display: grid;
+  grid-template-columns: 1fr auto;
   row-gap: 10px;
   column-gap: 10px;
 }
