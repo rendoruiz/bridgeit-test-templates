@@ -74,8 +74,10 @@
   .inputField:not(:last-of-type) {
     width: 70%;
   }
+  .inputField:last-of-type {
+    width: 95%;
+  }
   .inputField textarea {
-    resize: none;
     height: 280px;
   }
 }

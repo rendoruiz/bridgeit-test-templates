@@ -432,6 +432,7 @@
 /* Contact */
 .sectionContact {
   padding: calc(spacing-md * 2) 0 spacing-sm;
+  display: grid;
 }
 .contactNotice {
   composes: captionedMedia from "./_shared.module.css";
@@ -460,6 +461,7 @@
   display: grid;
 }
 .form {
+  justify-self: center;
   padding: spacing-md spacing-sm;
   width: 100%;
   max-width: max-content-width-half;
@@ -467,7 +469,6 @@
 @media bp-md {
   .sectionContact {
     padding: 0;
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
   .contactImage {
@@ -483,6 +484,7 @@
     justify-self: flex-end;
   }
   .form {
+    justify-self: flex-start;
     padding: 0 spacing-md;
   }
 }
