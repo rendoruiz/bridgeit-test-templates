@@ -21,7 +21,7 @@ const Video = ({ prefix, placeholderPrefix, className, isBackground, noWebM }) =
     <video 
       autoPlay
       poster={`/images/video-placeholders/${placeholderPrefix ?? prefix}-placeholder-${videoResolution}.jpg`}
-      className={className ?? (isBackground ? styles.backgroundVideo : styles.video)}
+      className={(isBackground ? styles.backgroundVideo : styles.video) + (!className ? '' : ` ${className}`)}
       {...videoAttributes}
       // onLoadedData={(e) => { console.log(e.target.currentSrc)}}
     >

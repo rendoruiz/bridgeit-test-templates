@@ -23,6 +23,7 @@
 @value header-height-lg: 60px;
 @value modal-z-elevation: 1000;
 @value max-content-width: 1200px;
+@value max-content-width-half: calc(max-content-width / 2);
 @value corner-rounding: 10px;
 @value box-shadow: 0 3px 10px;
 

@@ -1,4 +1,6 @@
-@value color-dark, color-light, color-primary, color-secondary, color-shade, color-shade-darker, color-button, header-height-sm, content-padding, font-primary from "./_variables.css";
+@value color-dark, color-light, color-primary, color-secondary, color-shade, color-shade-darker, color-button from "./_variables.css";
+@value max-content-width-half, header-height-sm, content-padding, font-primary from "./_variables.css";
+@value bp-md, bp-lg from "./_variables.css";
 
 .heading2 {
   composes: textHeading2 from "./_shared.module.css";
@@ -14,7 +16,7 @@
   composes: carousel from "./Carousel.module.css";
 }
 
-.sectionSeparatorLight {
+.sectionSeparator {
   height: content-padding;
   background: color-light;
 }
@@ -26,17 +28,45 @@
   height: clamp(300px, calc(90vh - header-height-sm), 900px);
 }
 .mainBannerContext {
-  composes: textTitle from "./_shared.module.css";
-  padding: content-padding;
   background: color-shade;
-  font-size: 2rem;
-  letter-spacing: 1px;
   position: relative;
   z-index: 1;
+  display: grid;
+  align-content: center;    
+  justify-content: flex-start;
+}
+.bannerText {
+  composes: textTitle from "./_shared.module.css";
+  padding: content-padding;
+  font-size: 2rem;
+  letter-spacing: 1px;
   display: grid;
   justify-items: flex-start;
   align-content: center;
   row-gap: 20px;
+}
+@media bp-md {
+  .mainBanner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mainBannerContext {
+    padding: content-padding;
+    justify-content: unset;
+  }
+  .bannerText {
+    composes: halfContent from "./_shared.module.css";
+    justify-self: flex-end;
+    padding: calc(content-padding * 2) 0 calc(content-padding * 2) content-padding;
+    border-left: 2px solid color-light;
+  }
+  .bannerVideo {
+    grid-column: 1 / 3;
+  }
+}
+@media bp-lg {
+  .bannerText p {
+    display: grid;
+  }
 }
 
 

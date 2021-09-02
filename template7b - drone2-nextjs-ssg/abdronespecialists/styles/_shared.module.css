@@ -1,4 +1,5 @@
-@value color-dark, color-light, color-primary, font-primary, font-secondary, max-content-width from "./_variables.css";
+@value color-dark, color-light, color-primary, font-primary, font-secondary from "./_variables.css";
+@value max-content-width, max-content-width-half from "./_variables.css";
 @value bp-sm, bp-md, bp-lg, bp-xl from "./_variables.css";
 
 .container {
@@ -7,6 +8,10 @@
 }
 .content {
   max-width: max-content-width;
+  width: 100%;
+}
+.halfContent {
+  max-width: max-content-width-half;
   width: 100%;
 }
 

@@ -18,8 +18,8 @@
   place-items: center;
   transition: background 200ms ease-out;
 }
-.playButton:hover,
-.playButton:active {
+.videoPreview:hover .playButton,
+.videoPreview:active .playButton {
   background: color-secondary;
 }
 .buttonIcon {

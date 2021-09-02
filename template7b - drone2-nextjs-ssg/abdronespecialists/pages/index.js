@@ -25,20 +25,22 @@ export default function Home() {
         <Video 
           prefix="main" 
           isBackground 
+          className={styles.bannerVideo}
         />
         <div className={styles.mainBannerContext}>
-          <p>
-            <span>Quality&nbsp;</span>
-            <span>drone services&nbsp;</span>
-            <span>from experienced pilots.</span>
-          </p>
-          <VideoModal buttonText="View Reel">
-            <Video 
-              prefix="reel-fpv-filmtv" 
-              placeholderPrefix="main"
-              noWebM
-            />
-          </VideoModal>
+          <div className={styles.bannerText}>
+            <p>
+              <span>Quality drone services&nbsp;</span>
+              <span>from experienced pilots.</span>
+            </p>
+            <VideoModal buttonText="View Reel">
+              <Video 
+                prefix="reel-fpv-filmtv" 
+                placeholderPrefix="main"
+                noWebM
+              />
+            </VideoModal>
+          </div>
         </div>
       </div>
 
@@ -271,13 +273,14 @@ export default function Home() {
         </Accordion>
       </section>
       
-      <div className={styles.sectionSeparatorLight}></div>
+      <div className={styles.sectionSeparator}></div>
 
       <section className={styles.sectionHighlights}>
         <h2>Highlights</h2>
         <Carousel  
           className={styles.carousel}
           noArrows
+          infinite
         >
           <VideoModal 
             imagePrefix="highlights-pv1"
@@ -297,7 +300,7 @@ export default function Home() {
         </Carousel>
       </section>
 
-      <div className={styles.sectionSeparatorLight}></div>
+      <div className={styles.sectionSeparator}></div>
 
       <section className={styles.sectionContact}>
         <div className={styles.contactText}>
