@@ -118,6 +118,7 @@
 }
 @media bp-md {
   .sectionPortfolio {
+    padding: spacing-lg 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -172,9 +173,6 @@
   justify-items: center;
   row-gap: spacing-md;
 }
-.sectionEquipment .heading2 {
-  text-align: center;
-}
 .sectionEquipment .carousel {
   padding: 0 spacing-sm;
 }
@@ -182,6 +180,12 @@
   display: none;
 }
 @media bp-lg {
+  .equipmentContent {
+    padding: spacing-lg spacing-sm;
+  }
+  .sectionEquipment .heading2 {
+    justify-self: flex-start;
+  }
   .sectionEquipment .carousel {
     display: none;
   }
