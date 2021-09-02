@@ -1,0 +1,79 @@
+@value color-dark, color-light, color-primary, font-primary, font-secondary, max-content-width from "./_variables.css";
+@value bp-sm, bp-md, bp-lg, bp-xl from "./_variables.css";
+
+.container {
+  display: grid;
+  justify-items: center;
+}
+.content {
+  max-width: max-content-width;
+  width: 100%;
+}
+
+.themeDark {
+  background: color-dark;
+  background-color: color-dark;
+  color: color-light;
+}
+
+.themeLight {
+  background: color-light;
+  background-color: color-light;
+  color: color-dark;
+}
+
+.captionedMedia {
+  display: grid;
+}
+.captionedMedia > * {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.textTitle {
+  font-family: 'neue-haas-unica', 'Roboto', sans-serif;
+  font-weight: bold;
+  margin: unset;
+}
+
+.textHeading2 {
+  font-family: 'neue-haas-unica', 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: unset;
+}
+
+.textHeading3 {
+  font-family: 'neue-haas-unica', 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin: unset;
+}
+
+.textBody {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+}
+
+.textSubtitle {
+  font-size: 0.8rem;
+}
+
+.link,
+.link:visited {
+  color: inherit;
+  transition: color 200ms ease-out;
+}
+.link:hover,
+.link:active {
+  color: color-primary;
+}
+
+@media bp-md {
+  .mobileOnly {
+    display: none;
+  }
+  .textBody {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,52 @@
+@value color-light, color-button, font-primary from "./_variables.css";
+@value bp-sm, bp-md, bp-lg, bp-xl from "./_variables.css";
+@value button-border: 3px solid color-button;
+
+.button {
+  padding: 2px 30px 5px 40px;
+  border: button-border;
+  border-radius: 26px;
+  background: color-button;
+  font-family: font-primary;
+  font-size: 0.9rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background 200ms, color 200ms, transform 100ms;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button,
+.button:visited {
+  color: color-light;
+}
+.button:hover {
+  background: transparent;
+  color: color-button;
+}
+.button:active {
+  transform: scale(0.975);
+}
+.buttonIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+  margin-left: 10px;
+  margin-right: -8px;
+}
+
+@media bp-md {
+  .button {
+    font-size: 1.1rem;
+  }
+  .buttonIcon {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+}
+
+.button-sm {
+  composes: button;
+  padding: 50px 20px;
+  font-size: 1rem;
+}

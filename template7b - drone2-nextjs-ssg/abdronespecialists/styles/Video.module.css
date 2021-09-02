@@ -1,0 +1,10 @@
+.video {
+  width: 100%;
+  height: inherit;
+}
+.backgroundVideo {
+  composes: video;
+  object-fit: cover;
+  object-position: center;
+}
+

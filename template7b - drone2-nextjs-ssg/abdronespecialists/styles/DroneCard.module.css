@@ -1,0 +1,46 @@
+@value color-button, color-shade, corner-rounding, box-shadow, color-box-shadow, color-box-shadow-active from "./_variables.css";
+
+.droneCard {
+  display: grid;
+  grid-template-rows: 250px auto;
+}
+
+.text {
+  justify-self: center;
+  margin-bottom: 16px;
+  padding: 10px 5px 10px 15px;
+  border-radius: corner-rounding;
+  width: 80%;
+  letter-spacing: 0.5px;
+  box-shadow: box-shadow color-box-shadow;
+  transition: box-shadow 200ms ease-out;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+.text:hover,
+.text:active {
+  box-shadow: box-shadow color-box-shadow-active;
+}
+.text:hover .icon,
+.text:active .icon {
+  margin-right: 0;
+  margin-left: 5px;
+}
+.heading {
+  composes: heading3 from "./_shared.module.css";
+  font-weight: normal;
+}
+.body {
+  composes: textSubtitle from "./_shared.module.css";
+}
+.icon {
+  align-self: center;
+  grid-row: 1 / 3;
+  grid-column: 2;
+  margin-right: 5px;
+  height: 25px;
+  color: color-button;
+  transition: margin 200ms ease-out;
+}

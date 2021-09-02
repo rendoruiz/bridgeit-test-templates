@@ -1,0 +1,101 @@
+/* react bootstrap cherry-picked properties */
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
+  }
+}
+.collapsing.collapse-horizontal {
+  width: 0;
+  height: auto;
+  transition: width 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing.collapse-horizontal {
+    transition: none;
+  }
+}
+
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+  border: 0;
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion-button {
+    transition: none;
+  }
+}
+.accordion-button:not(.collapsed) {
+  color: #0c63e4;
+  background-color: #e7f1ff;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion-button::after {
+    transition: none;
+  }
+}
+.accordion-button:hover {
+  z-index: 2;
+}
+.accordion-button:focus {
+  z-index: 3;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+
+
+/* react-bootstrap override */
+.accordion,
+.accordion .accordion-item,
+.accordion-header,
+.accordion-header button.accordion-button {
+  background: unset;
+  background-color: unset;
+  color: unset;
+}
+.accordion-header button.accordion-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion-header button.accordion-button::after {
+  content: none;
+}
+.accordion-header button.accordion-button:focus {
+  box-shadow: unset;
+}
+.accordion-item .accordion-body {
+  padding: unset;
+}
+
+.accordion-header button.accordion-button svg {
+  /* align-self: flex-start;
+  margin-top: 3px; */
+  transform: rotate(-180deg);
+  transition: transform 200ms;
+}
+.accordion-header button.accordion-button.collapsed svg {
+  transform: rotate(0)
+}

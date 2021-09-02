@@ -1,0 +1,37 @@
+/* colors */
+@value color-dark: #060505;
+@value color-light: #FFFFFF;
+@value color-primary: #D43737;
+@value color-secondary: #FFAEAE;
+
+@value color-dark-subtitle: #00020C0F;
+@value color-light-subtitle: #FCFCFC;
+
+@value color-button: color-primary;
+@value color-button-faded: color-secondary;
+
+@value color-shade: rgba(0, 0, 0, 0.5);
+@value color-shade-darker:  rgba(0, 0, 0, 0.7);
+@value color-modal-overlay: rgba(0, 0, 0, 0.9);
+@value color-box-shadow: rgba(0, 0, 0, 0.075);
+@value color-box-shadow-active: rgba(0, 0, 0, 0.3);
+
+
+/* shared properties */
+@value content-padding: 20px;
+@value header-height-sm: 50px;
+@value header-height-lg: 60px;
+@value modal-z-elevation: 1000;
+@value max-content-width: 1200px;
+@value corner-rounding: 10px;
+@value box-shadow: 0 3px 10px;
+
+/* breakpoints */
+@value bp-sm: screen and (min-width: 425px);
+@value bp-md: screen and (min-width: 768px);
+@value bp-lg: screen and (min-width: 1024px);
+@value bp-xl: screen and (min-width: 1200px);
+
+
+@value font-primary: 'neue-haas-unica', 'Roboto', sans-serif;
+@value font-secondary: 'Roboto', sans-serif;

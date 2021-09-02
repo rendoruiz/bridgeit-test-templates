@@ -1,0 +1,10 @@
+@value color-modal-overlay, content-padding from "./_variables.css";
+
+.overlay {
+  padding: content-padding 0;
+  background: color-modal-overlay;
+}
+
+.modal {
+  display: grid;
+}
