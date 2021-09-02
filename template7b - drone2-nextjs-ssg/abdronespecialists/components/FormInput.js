@@ -5,7 +5,7 @@ const FormInput = ({ label, type, inputName, icon, placeholder, autoCapitalize, 
   return (!type || !label) ? null : (
     <>
       <label 
-        for={inputName}
+        htmlFor={inputName}
         className={styles.label}
       >
         { label }
