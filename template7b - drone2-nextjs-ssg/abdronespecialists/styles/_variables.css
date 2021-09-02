@@ -30,6 +30,7 @@
 @value corner-rounding: 10px;
 @value box-shadow: 0 3px 10px;
 
+
 /* breakpoints */
 @value bp-sm: screen and (min-width: 425px);
 @value bp-md: screen and (min-width: 768px);
@@ -37,5 +38,6 @@
 @value bp-xl: screen and (min-width: 1200px);
 
 
+/* fonts */
 @value font-primary: 'neue-haas-unica', 'Roboto', sans-serif;
 @value font-secondary: 'Roboto', sans-serif;

@@ -1,12 +1,15 @@
 @value color-light, color-button, color-primary from "./_variables.css";
 @value spacing-sm, spacing-md, corner-rounding from "./_variables.css";
+@value bp-md, bp-lg from "./_variables.css";
 @value color-placeholder: rgb(150, 150, 150);
 
 .form {
   display: grid;
+  align-content: center;
 }
 
 .heading {
+  composes: textHeading2 from "./_shared.module.css";
   text-align: center;
   margin-bottom: spacing-md;
 }
@@ -54,4 +57,25 @@
 .button {
   composes: button from "./Button.module.css";
   margin-top: 10px;
+}
+
+@media bp-md {
+  .heading {
+    text-align: left;
+  }
+  .inputField:not(:last-of-type) {
+    width: 80%;
+  }
+  .button {
+    justify-self: flex-start;
+  }
+}
+@media bp-lg {
+  .inputField:not(:last-of-type) {
+    width: 70%;
+  }
+  .inputField textarea {
+    resize: none;
+    height: 280px;
+  }
 }
