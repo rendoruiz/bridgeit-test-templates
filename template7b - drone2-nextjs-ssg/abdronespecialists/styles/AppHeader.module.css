@@ -81,7 +81,6 @@
   transition: transform 200ms ease-in-out;
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 .navigationItem:visited {
   color: color-light;
@@ -93,6 +92,7 @@
   padding-bottom: content-padding;
 }
 .navigationIcon {
+  margin-right: 10px;
   height: 14px;
   width: 20px !important;
   color: color-secondary;

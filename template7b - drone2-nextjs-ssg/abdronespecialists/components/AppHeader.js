@@ -66,7 +66,7 @@ const AppHeader = () => {
           <Link href="/">
             <a className={styles.navigationItem}>
               <FontAwesomeIcon icon={faEnvelope} className={styles.navigationIcon} />
-              Contact<span className={styles.mobile}> Us</span>
+              Contact<span className={styles.mobile}>&nbsp;Us</span>
             </a>
           </Link>
         </nav>
