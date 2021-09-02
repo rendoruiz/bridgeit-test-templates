@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { Accordion } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 import Button from '../components/Button'
 import MainLayout from '../components/layouts/MainLayout'
@@ -13,6 +13,7 @@ import styles from '../styles/Home.module.css'
 import DroneCard from '../components/DroneCard'
 import VideoModal from '../components/VideoModal'
 import Form from '../components/Form'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -315,63 +316,118 @@ export default function Home() {
             </Accordion.Item>
           </Accordion>
           <div className={styles.servicesCards}>
-            <div className={styles.serviceCard + ` ${styles.cardSpan3}`}>
-              <Image 
-                prefix="services-filmtv"
-                title="film/tv service image"
-                noLg
-                className={styles.serviceCardImage}
-              />
-              <div className={styles.cardText}>
-                <h3 className={styles.heading2}>Film/TV</h3>
-                <span>Film, TV, & commercials.</span>
-              </div>
-            </div>
-            <div className={styles.serviceCard + ` ${styles.cardSpan3}`}>
-              <Image 
-                prefix="services-fpv"
-                title="fpv service image"
-                noLg
-                className={styles.serviceCardImage}
-              />
-              <div className={styles.cardText}>
-                <h3 className={styles.heading2}>FPV</h3>
-                <span>Indoor and outdoor <br />precision filming.</span>
-              </div>
-            </div>
-            <div className={styles.serviceCard + ` ${styles.cardSpan2}`}>
-              <Image 
-                prefix="services-construction"
-                title="construction service image"
-                noLg
-                className={styles.serviceCardImage}
-              />
-              <div className={styles.cardText}>
-                <h3 className={styles.heading3}>Construction</h3>
-              </div>
-            </div>
-            <div className={styles.serviceCard + ` ${styles.cardSpan2}`}>
-              <Image 
-                prefix="services-realestate"
-                title="commercial real estate service image"
-                noLg
-                className={styles.serviceCardImage}
-              />
-              <div className={styles.cardText}>
-                <h3 className={styles.heading3}>Commercial Real Estate</h3>
-              </div>
-            </div>
-            <div className={styles.serviceCard + ` ${styles.cardSpan2}`}>
-              <Image 
-                prefix="services-aerial"
-                title="aerial photography & videography service image"
-                noLg
-                className={styles.serviceCardImage}
-              />
-              <div className={styles.cardText}>
-                <h3 className={styles.heading3}>Aerial Photography <br />& Videography</h3>
-              </div>
-            </div>
+            <Link href="/">
+              <a 
+                className={styles.serviceCard + ` ${styles.cardSpan3}`}
+                title=" service page link"
+              >
+                <Image 
+                  prefix="services-filmtv"
+                  title="film/tv service image"
+                  noLg
+                  className={styles.serviceCardImage}
+                />
+                <div className={styles.cardText}>
+                  <h3 className={styles.heading2}>Film/TV</h3>
+                  <span>Film, TV, & commercials.</span>
+                  <div className={styles.cardButton}>
+                    <FontAwesomeIcon 
+                      icon={faAngleRight} 
+                      className={styles.cardButtonIcon} 
+                    />
+                  </div>
+                </div>
+              </a>
+            </Link>
+            <Link href="/">
+              <a 
+                className={styles.serviceCard + ` ${styles.cardSpan3}`}
+                title=" service page link"
+              >
+                <Image 
+                  prefix="services-fpv"
+                  title="fpv service image"
+                  noLg
+                  className={styles.serviceCardImage}
+                />
+                <div className={styles.cardText}>
+                  <h3 className={styles.heading2}>FPV</h3>
+                  <span>Indoor and outdoor <br />precision filming.</span>
+                  <div className={styles.cardButton}>
+                    <FontAwesomeIcon 
+                      icon={faAngleRight} 
+                      className={styles.cardButtonIcon} 
+                    />
+                  </div>
+                </div>
+              </a>
+            </Link>
+            <Link href="/">
+              <a 
+                className={styles.serviceCard + ` ${styles.cardSpan2}`}
+                title=" service page link"
+              >
+                <Image 
+                  prefix="services-construction"
+                  title="construction service image"
+                  noLg
+                  className={styles.serviceCardImage}
+                />
+                <div className={styles.cardText}>
+                  <h3 className={styles.heading3}>Construction</h3>
+                  <div className={styles.cardButton}>
+                    <FontAwesomeIcon 
+                      icon={faAngleRight} 
+                      className={styles.cardButtonIcon} 
+                    />
+                  </div>
+                </div>
+              </a>
+            </Link>
+            <Link href="/">
+              <a 
+                className={styles.serviceCard + ` ${styles.cardSpan2}`}
+                title=" service page link"
+              >
+                <Image 
+                  prefix="services-realestate"
+                  title="commercial real estate service image"
+                  noLg
+                  className={styles.serviceCardImage}
+                />
+                <div className={styles.cardText}>
+                  <h3 className={styles.heading3}>Commercial Real Estate</h3>
+                  <div className={styles.cardButton}>
+                    <FontAwesomeIcon 
+                      icon={faAngleRight} 
+                      className={styles.cardButtonIcon} 
+                    />
+                  </div>
+                </div>
+              </a>
+            </Link>
+            <Link href="/">
+              <a 
+                className={styles.serviceCard + ` ${styles.cardSpan2}`}
+                title=" service page link"
+              >
+                <Image 
+                  prefix="services-aerial"
+                  title="aerial photography & videography service image"
+                  noLg
+                  className={styles.serviceCardImage}
+                />
+                <div className={styles.cardText}>
+                  <h3 className={styles.heading3}>Aerial Photography <br />& Videography</h3>
+                  <div className={styles.cardButton}>
+                    <FontAwesomeIcon 
+                      icon={faAngleRight} 
+                      className={styles.cardButtonIcon} 
+                    />
+                  </div>
+                </div>
+              </a>
+            </Link>
           </div>
         </div>
       </section>

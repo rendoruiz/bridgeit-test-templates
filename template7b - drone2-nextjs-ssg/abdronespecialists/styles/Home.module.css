@@ -273,6 +273,14 @@
   border-radius: corner-rounding;
   overflow: hidden;
 }
+.serviceCard:hover .cardText,
+.serviceCard:active .cardText {
+  background: color-shade;
+}
+.serviceCard:hover .cardButton,
+.serviceCard:active .cardButton {
+  background: color-secondary;
+}
 .servicesContent .cardSpan2 {
   grid-column: span 2;
 }
@@ -285,9 +293,37 @@
   display: grid;
   justify-items: center;
   align-content: center;
+  transition: background 200ms ease-out;
 }
 .cardText {
   composes: textBody from "./_shared.module.css";
+}
+.cardButton {
+  border-radius: 100%;
+  background: color-primary;
+  width: 35px;
+  height: 35px;
+  transition: background 200ms ease-out;
+  display: grid;
+  place-items: center;
+}
+.cardButtonIcon {
+  width: 18px !important;
+  height: 18px;
+}
+.heading3 + .cardButton {
+  margin-top: 10px;
+}
+.servicesContent .cardSpan3 .cardText {
+  display: grid;
+  justify-content: center;
+  column-gap: 10px;
+}
+.servicesContent .cardSpan3 .cardText .cardButton {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: center;
+  margin-right: -45px;
 }
 @media bp-md {
   .servicesContent {
