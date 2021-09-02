@@ -1,6 +1,6 @@
 @value color-dark, color-light, color-primary, color-secondary, color-shade, color-shade-darker, color-button from "./_variables.css";
-@value max-content-width-half, header-height-sm, header-height-lg, spacing-sm, spacing-md, spacing-lg, font-primary from "./_variables.css";
-@value bp-md, bp-lg from "./_variables.css";
+@value max-content-width-half, corner-rounding, header-height-sm, header-height-lg, spacing-sm, spacing-md, spacing-lg, font-primary from "./_variables.css";
+@value bp-md, bp-lg, bp-xl from "./_variables.css";
 
 .heading2 {
   composes: textHeading2 from "./_shared.module.css";
@@ -54,11 +54,11 @@
     justify-content: unset;
   }
   .bannerText {
+    padding: spacing-md 0 spacing-md spacing-sm;
+    border-left: 2px solid color-light;
     width: 100%;
     max-width: max-content-width-half;
     justify-self: flex-end;
-    padding: spacing-md 0 spacing-md spacing-sm;
-    border-left: 2px solid color-light;
   }
   .bannerVideo {
     grid-column: 1 / 3;
@@ -70,6 +70,11 @@
   }
   .bannerText p {
     display: grid;
+  }
+}
+@media bp-xl {
+  .mainBannerContext {
+    padding-right: 0;
   }
 }
 
@@ -205,9 +210,13 @@
 /* Services */
 .sectionServices {
   composes: themeDark from "./_shared.module.css";
+  composes: container from "./_shared.module.css";
+}
+.servicesContent {
+  composes: content from "./_shared.module.css";
   padding: spacing-md 0;
 }
-.sectionServices .heading2 {
+.servicesContent > .heading2 {
   margin-bottom: spacing-sm;
   text-align: center;
   line-height: 1.5;
@@ -255,11 +264,82 @@
 .accordionImage {
   margin: 15px 0;
 }
-@media bp-md {
+.servicesCards {
+  display: none;
+}
 
+.serviceCard {
+  composes: captionedMedia from "./_shared.module.css";
+  border-radius: corner-rounding;
+  overflow: hidden;
+}
+.servicesContent .cardSpan2 {
+  grid-column: span 2;
+}
+.servicesContent .cardSpan3 {
+  grid-column: span 3;
+}
+.cardText {
+  text-align: center;
+  letter-spacing: 1px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+.cardText {
+  composes: textBody from "./_shared.module.css";
+}
+@media bp-md {
+  .servicesContent {
+    padding: spacing-md spacing-sm;
+  }
+  .servicesContent > .heading2 {
+    text-align: left;
+  }
+  .servicesAccordion {
+    display: none;
+  }
+  .servicesCards {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: spacing-sm;
+    column-gap: spacing-md;
+  }
+  .cardSpan3 .serviceCardImage {
+    height: 400px;
+  }
+  .cardSpan2 .serviceCardImage {
+    height: 250px;
+  }
 }
 @media bp-lg {
-
+  .servicesContent {
+    padding: spacing-lg spacing-sm;
+  }
+  .servicesContent > .heading2 {
+    margin-bottom: spacing-md;
+  }
+  .servicesCards {
+    row-gap: calc(spacing-md - 10px);
+  }
+  .cardSpan3 .serviceCardImage {
+    height: 500px;
+  }
+  .cardSpan2 .serviceCardImage {
+    height: 300px;
+  }
+}
+@media bp-xl {
+  .servicesCards {
+    row-gap: spacing-md;
+  }
+  .cardSpan3 .serviceCardImage {
+    height: 600px;
+  }
+  .cardSpan2 .serviceCardImage {
+    height: 350px;
+  }
 }
 
 

@@ -195,131 +195,191 @@ export default function Home() {
       </section>
 
       <section className={styles.sectionServices}>
-        <h2 className={styles.heading2}>Services</h2>
-        
-        <Accordion className={styles.servicesAccordion}>
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>
-              <h3 className={styles.heading3}>Film & TV</h3>
-              <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
-            </Accordion.Header>
-            <Accordion.Body className={styles.accordionBody}>
-              <p>Professional drone crew services for films, television & commercials.</p>
-              <Button
-                text="Explore Film & TV"
-                href="/"
-                className={styles.accordionLink}
-                iconClassName={styles.accordionLinkIcon}
-                title="Film & TV service page"
-              />
+        <div className={styles.servicesContent}>
+          <h2 className={styles.heading2}>Services</h2>
+          <Accordion className={styles.servicesAccordion}>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>
+                <h3 className={styles.heading3}>Film & TV</h3>
+                <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
+              </Accordion.Header>
+              <Accordion.Body className={styles.accordionBody}>
+                <p>Professional drone crew services for films, television & commercials.</p>
+                <Button
+                  text="Explore Film & TV"
+                  href="/"
+                  className={styles.accordionLink}
+                  iconClassName={styles.accordionLinkIcon}
+                  title="Film & TV service page"
+                />
+                <Image 
+                  prefix="home-accordion-filmtv"
+                  title="winter landscape image"
+                  className={styles.accordionImage}
+                  noMd
+                  noLg
+                />
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="1">
+              <Accordion.Header>
+                <h3 className={styles.heading3}>FPV</h3>
+                <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
+              </Accordion.Header>
+              <Accordion.Body className={styles.accordionBody}>
+                <p>Exceptional indoor & outdoor FPV footage.</p>
+                <Button
+                  text="Explore FPV"
+                  href="/"
+                  className={styles.accordionLink}
+                  iconClassName={styles.accordionLinkIcon}
+                  title="FPV service page"
+                />
+                <Image 
+                  prefix="home-accordion-fpv"
+                  title="flying drone image"
+                  className={styles.accordionImage}
+                  noMd
+                  noLg
+                />
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="2">
+              <Accordion.Header>
+                <h3 className={styles.heading3}>Construction</h3>
+                <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
+              </Accordion.Header>
+              <Accordion.Body className={styles.accordionBody}>
+                <p>Construction progress monitoring.</p>
+                <Button
+                  text="Explore Construction"
+                  href="/"
+                  className={styles.accordionLink}
+                  iconClassName={styles.accordionLinkIcon}
+                  title="Construction service page"
+                />
+                <Image 
+                  prefix="home-accordion-construction"
+                  title="bridge construction image"
+                  className={styles.accordionImage}
+                  noMd
+                  noLg
+                />
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="3">
+              <Accordion.Header>
+                <h3 className={styles.heading3}>Commercial Real Estate</h3>
+                <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
+              </Accordion.Header>
+              <Accordion.Body className={styles.accordionBody}>
+                <p>Showcase your properties from new heights.</p>
+                <Button
+                  text="Explore Commercial Real Estate"
+                  href="/"
+                  className={styles.accordionLink}
+                  iconClassName={styles.accordionLinkIcon}
+                  title="Commercial Real Estate service page"
+                />
+                <Image 
+                  prefix="home-accordion-realestate"
+                  title="downtown calgary image"
+                  className={styles.accordionImage}
+                  noMd
+                  noLg
+                />
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="4">
+              <Accordion.Header>
+                <h3 className={styles.heading3}>Aerial Photography & Videography</h3>
+                <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
+              </Accordion.Header>
+              <Accordion.Body className={styles.accordionBody}>
+                <p>Showcase your properties from new heights.</p>
+                <Button
+                  text="Explore Aerial Photography & Videography"
+                  href="/"
+                  className={styles.accordionLink}
+                  iconClassName={styles.accordionLinkIcon}
+                  title="Aerial Photography & Videography service page"
+                />
+                <Image 
+                  prefix="home-accordion-aerial"
+                  title="cityscape image"
+                  className={styles.accordionImage}
+                  noMd
+                  noLg
+                />
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+          <div className={styles.servicesCards}>
+            <div className={styles.serviceCard + ` ${styles.cardSpan3}`}>
               <Image 
-                prefix="home-accordion-filmtv"
-                title="winter landscape image"
-                className={styles.accordionImage}
-                noMd
+                prefix="services-filmtv"
+                title="film/tv service image"
                 noLg
+                className={styles.serviceCardImage}
               />
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>
-              <h3 className={styles.heading3}>FPV</h3>
-              <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
-            </Accordion.Header>
-            <Accordion.Body className={styles.accordionBody}>
-              <p>Exceptional indoor & outdoor FPV footage.</p>
-              <Button
-                text="Explore FPV"
-                href="/"
-                className={styles.accordionLink}
-                iconClassName={styles.accordionLinkIcon}
-                title="FPV service page"
-              />
+              <div className={styles.cardText}>
+                <h3 className={styles.heading2}>Film/TV</h3>
+                <span>Film, TV, & commercials.</span>
+              </div>
+            </div>
+            <div className={styles.serviceCard + ` ${styles.cardSpan3}`}>
               <Image 
-                prefix="home-accordion-fpv"
-                title="flying drone image"
-                className={styles.accordionImage}
-                noMd
+                prefix="services-fpv"
+                title="fpv service image"
                 noLg
+                className={styles.serviceCardImage}
               />
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="2">
-            <Accordion.Header>
-              <h3 className={styles.heading3}>Construction</h3>
-              <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
-            </Accordion.Header>
-            <Accordion.Body className={styles.accordionBody}>
-              <p>Construction progress monitoring.</p>
-              <Button
-                text="Explore Construction"
-                href="/"
-                className={styles.accordionLink}
-                iconClassName={styles.accordionLinkIcon}
-                title="Construction service page"
-              />
+              <div className={styles.cardText}>
+                <h3 className={styles.heading2}>FPV</h3>
+                <span>Indoor and outdoor <br />precision filming.</span>
+              </div>
+            </div>
+            <div className={styles.serviceCard + ` ${styles.cardSpan2}`}>
               <Image 
-                prefix="home-accordion-construction"
-                title="bridge construction image"
-                className={styles.accordionImage}
-                noMd
+                prefix="services-construction"
+                title="construction service image"
                 noLg
+                className={styles.serviceCardImage}
               />
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="3">
-            <Accordion.Header>
-              <h3 className={styles.heading3}>Commercial Real Estate</h3>
-              <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
-            </Accordion.Header>
-            <Accordion.Body className={styles.accordionBody}>
-              <p>Showcase your properties from new heights.</p>
-              <Button
-                text="Explore Commercial Real Estate"
-                href="/"
-                className={styles.accordionLink}
-                iconClassName={styles.accordionLinkIcon}
-                title="Commercial Real Estate service page"
-              />
+              <div className={styles.cardText}>
+                <h3 className={styles.heading3}>Construction</h3>
+              </div>
+            </div>
+            <div className={styles.serviceCard + ` ${styles.cardSpan2}`}>
               <Image 
-                prefix="home-accordion-realestate"
-                title="downtown calgary image"
-                className={styles.accordionImage}
-                noMd
+                prefix="services-realestate"
+                title="commercial real estate service image"
                 noLg
+                className={styles.serviceCardImage}
               />
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="4">
-            <Accordion.Header>
-              <h3 className={styles.heading3}>Aerial Photography & Videography</h3>
-              <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
-            </Accordion.Header>
-            <Accordion.Body className={styles.accordionBody}>
-              <p>Showcase your properties from new heights.</p>
-              <Button
-                text="Explore Aerial Photography & Videography"
-                href="/"
-                className={styles.accordionLink}
-                iconClassName={styles.accordionLinkIcon}
-                title="Aerial Photography & Videography service page"
-              />
+              <div className={styles.cardText}>
+                <h3 className={styles.heading3}>Commercial Real Estate</h3>
+              </div>
+            </div>
+            <div className={styles.serviceCard + ` ${styles.cardSpan2}`}>
               <Image 
-                prefix="home-accordion-aerial"
-                title="cityscape image"
-                className={styles.accordionImage}
-                noMd
+                prefix="services-aerial"
+                title="aerial photography & videography service image"
                 noLg
+                className={styles.serviceCardImage}
               />
-            </Accordion.Body>
-          </Accordion.Item>
-        </Accordion>
+              <div className={styles.cardText}>
+                <h3 className={styles.heading3}>Aerial Photography <br />& Videography</h3>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       
       <div className={styles.sectionSeparator}></div>
 
       <section className={styles.sectionHighlights}>
-        <h2>Highlights</h2>
+        <h2 className={styles.heading2}>Highlights</h2>
         <Carousel  
           className={styles.carousel}
           noArrows
