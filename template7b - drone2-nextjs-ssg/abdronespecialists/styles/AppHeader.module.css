@@ -9,12 +9,19 @@
 
 .appHeader {
   composes: themeLight from "./_shared.module.css";
+  composes: container from "./_shared.module.css";
+}
+
+.content {
+  composes: content from "./_shared.module.css";
   padding: 0 content-padding;
   height: header-height-sm;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+
 .appHeaderNavActive {
   composes: appHeader;
 }
@@ -95,7 +102,7 @@
 }
 
 @media bp-lg {
-  .appHeader {
+  .content {
     height: header-height-lg;
   }
   .menuButton {

@@ -2,6 +2,10 @@
 @value bp-sm, bp-md, bp-lg, bp-xl from "./_variables.css";
 
 .container {
+  display: grid;
+  justify-items: center;
+}
+.content {
   max-width: max-content-width;
   width: 100%;
 }

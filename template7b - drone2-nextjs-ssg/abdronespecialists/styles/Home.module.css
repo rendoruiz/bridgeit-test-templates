@@ -39,7 +39,7 @@
 }
 
 .sectionPortfolio {
-  composes: container from "./_shared.module.css";
+  composes: content from "./_shared.module.css";
   padding: calc(content-padding * 2) 0;
 }
 .portfolioHeader {
