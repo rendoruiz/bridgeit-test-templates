@@ -17,7 +17,7 @@ const Button = ({ text, noIcon = false, onClick, className, iconClassName, title
     ? <Link href={href}>
         <a
           onClick={onClick}
-          className={className ?? styles.button}
+          className={styles.button + (!className ? "" : ` ${className}`)}
           title={title ?? 'link button'}
         >
           { text }
@@ -26,7 +26,7 @@ const Button = ({ text, noIcon = false, onClick, className, iconClassName, title
       </Link>
     : <button
         onClick={onClick}
-        className={className ?? styles.button}
+          className={styles.button + (!className ? "" : ` ${className}`)}
         title={title ?? 'button'}
       >
         { text }
