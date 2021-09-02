@@ -1,6 +1,6 @@
 @value color-dark, color-light, color-primary, color-secondary, color-modal-overlay from "./_variables.css";
 @value font-primary from "./_variables.css";
-@value header-height-sm, header-height-lg, content-padding, modal-z-elevation from "./_variables.css";
+@value header-height-sm, header-height-lg, spacing-sm, modal-z-elevation from "./_variables.css";
 @value bp-lg from "./_variables.css";
 
 .mobile {
@@ -14,7 +14,7 @@
 
 .content {
   composes: content from "./_shared.module.css";
-  padding: 0 content-padding;
+  padding: 0 spacing-sm;
   height: header-height-sm;
   display: flex;
   justify-content: space-between;
@@ -74,7 +74,7 @@
 }
 
 .navigationItem {
-  padding: 10px content-padding;
+  padding: 10px spacing-sm;
   background: color-dark;
   font-weight: bold;
   color: color-light;
@@ -87,10 +87,10 @@
   color: color-light;
 }
 .navigationItem:first-of-type {
-  padding-top: content-padding;
+  padding-top: spacing-sm;
 }
 .navigationItem:last-of-type {
-  padding-bottom: content-padding;
+  padding-bottom: spacing-sm;
 }
 .navigationIcon {
   margin-right: 10px;

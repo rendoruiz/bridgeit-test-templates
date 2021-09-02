@@ -1,5 +1,5 @@
 @value color-dark, color-light, color-primary, color-secondary, color-shade, color-shade-darker, color-button from "./_variables.css";
-@value max-content-width-half, header-height-sm, content-padding, font-primary from "./_variables.css";
+@value max-content-width-half, header-height-sm, spacing-sm, spacing-md, spacing-lg, font-primary from "./_variables.css";
 @value bp-md, bp-lg from "./_variables.css";
 
 .heading2 {
@@ -17,7 +17,7 @@
 }
 
 .sectionSeparator {
-  height: content-padding;
+  height: spacing-sm;
   background: color-light;
 }
 
@@ -37,7 +37,7 @@
 }
 .bannerText {
   composes: textTitle from "./_shared.module.css";
-  padding: content-padding;
+  padding: spacing-sm;
   font-size: 2rem;
   letter-spacing: 1px;
   display: grid;
@@ -50,13 +50,13 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .mainBannerContext {
-    padding: content-padding;
+    padding: spacing-sm;
     justify-content: unset;
   }
   .bannerText {
     composes: halfContent from "./_shared.module.css";
     justify-self: flex-end;
-    padding: calc(content-padding * 2) 0 calc(content-padding * 2) content-padding;
+    padding: spacing-md 0 spacing-md spacing-sm;
     border-left: 2px solid color-light;
   }
   .bannerVideo {
@@ -73,12 +73,12 @@
 
 /* Portfolio */
 .sectionPortfolio {
-  composes: content from "./_shared.module.css";
-  padding: calc(content-padding * 2) 0;
+  /* composes: content from "./_shared.module.css"; */
+  padding: spacing-md 0;
 }
 .portfolioHeader {
   composes: captionedMedia from "./_shared.module.css";
-  margin-bottom: content-padding;
+  margin-bottom: spacing-sm;
   height: 170px;
 }
 .sectionPortfolio .heading2 {
@@ -88,9 +88,12 @@
   text-align: center;
 }
 .portfolioText {
-  padding: 10px content-padding 0;
+  padding: 10px spacing-sm 0;
   display: grid;
-  row-gap: content-padding;
+  row-gap: spacing-sm;
+}
+.portfolioText .heading2 {
+  display: none;
 }
 .portfolioText .bodyText {
   letter-spacing: 0.5px;
@@ -113,22 +116,44 @@
   composes: portfolioLogo;
   height: 40px;
 }
+@media bp-md {
+  .sectionPortfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .portfolioHeader {
+    height: 600px;
+  }
+  .portfolioHeader .heading2 {
+    display: none;
+  }
+  .portfolioText {
+    composes: halfContent from "./_shared.module.css";
+  }
+  .portfolioText .heading2 {
+    display: block;
+  }
+}
+@media bp-lg {
+
+}
 
 
 
 /* Equipment */
 .sectionEquipment {
   composes: themeLight from "./_shared.module.css";
-  padding: calc(content-padding * 2) 0;
+  padding: spacing-md 0;
   display: grid;
   justify-items: center;
-  row-gap: calc(content-padding * 2);
+  row-gap: spacing-md;
 }
 .sectionEquipment .heading2 {
   text-align: center;
 }
 .sectionEquipment .carousel {
-  padding: 0 content-padding;
+  padding: 0 spacing-sm;
 }
 
 
@@ -136,10 +161,10 @@
 /* Services */
 .sectionServices {
   composes: themeDark from "./_shared.module.css";
-  padding: calc(content-padding * 2) 0;
+  padding: spacing-md 0;
 }
 .sectionServices .heading2 {
-  margin-bottom: content-padding;
+  margin-bottom: spacing-sm;
   text-align: center;
   line-height: 1.5;
 }
@@ -151,7 +176,7 @@
   background: color-button;
 }
 .sectionServices button {
-  padding: 10px content-padding;
+  padding: 10px spacing-sm;
 }
 .accordionBody {
   composes: textSubtitle from "./_shared.module.css";
@@ -159,7 +184,7 @@
   row-gap: 5px;
 }
 .accordionBody > :not(img):not(source):not(picture) {
-  margin: 0 content-padding;
+  margin: 0 spacing-sm;
 }
 .accordionLink,
 .accordionLink:visited {
@@ -191,33 +216,33 @@
 
 /* Highlights */
 .sectionHighlights {
-  padding: content-padding;
+  padding: spacing-sm;
   text-align: center;
 }
 .sectionHighlights .carousel {
-  margin: content-padding 0;
+  margin: spacing-sm 0;
 }
 
 
 
 /* Contact */
 .sectionContact {
-  padding: calc(content-padding * 4) 0 content-padding;
+  padding: calc(spacing-md * 2) 0 spacing-sm;
 }
 .contactText {
   composes: captionedMedia from "./_shared.module.css";
 }
 .contactText div {
-  padding: 100px content-padding;
+  padding: 100px spacing-sm;
   background: color-shade-darker;
   display: grid;
   align-content: center;
   align-items: center;
-  row-gap: content-padding;
+  row-gap: spacing-sm;
 }
 .contactText .heading3 {
   display: grid;
 }
 .form {
-  padding: calc(content-padding * 2) content-padding calc(content-padding * 3);
+  padding: spacing-md spacing-sm spacing-lg;
 }

@@ -49,10 +49,12 @@ export default function Home() {
           <Image 
             prefix="home-portfolio"
             title="tower building image"
+            noLg
           />
           <h2 className={styles.heading2}>Why Choose Us?</h2>
         </div>
         <div className={styles.portfolioText}>
+          <h2 className={styles.heading2}>Why Choose Us?</h2>
           <p className={styles.bodyText}>
             We are fully certified and able to accomplish any project you have in mind. Our Inspire 2 systems are equipped with a ballistic parachute system granting us approvals from Transport Canada to operate in dense urban environments. Additionally, all Alberta Drone Specialists’ pilots hold advanced RPAS licenses. 
           </p>

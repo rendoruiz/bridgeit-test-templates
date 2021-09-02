@@ -1,7 +1,7 @@
-@value color-modal-overlay, content-padding from "./_variables.css";
+@value color-modal-overlay, spacing-sm from "./_variables.css";
 
 .overlay {
-  padding: content-padding 0;
+  padding: spacing-sm 0;
   background: color-modal-overlay;
 }
 
