@@ -1,5 +1,5 @@
 @value color-dark, color-light, color-primary, color-secondary, color-shade, color-shade-darker, color-button from "./_variables.css";
-@value max-content-width-half, header-height-sm, spacing-sm, spacing-md, spacing-lg, font-primary from "./_variables.css";
+@value max-content-width-half, header-height-sm, header-height-lg, spacing-sm, spacing-md, spacing-lg, font-primary from "./_variables.css";
 @value bp-md, bp-lg from "./_variables.css";
 
 .heading2 {
@@ -65,6 +65,9 @@
   }
 }
 @media bp-lg {
+  .mainBanner {
+    height: max(600px, calc(95vh - header-height-lg));
+  }
   .bannerText p {
     display: grid;
   }
@@ -251,6 +254,12 @@
 }
 .accordionImage {
   margin: 15px 0;
+}
+@media bp-md {
+
+}
+@media bp-lg {
+
 }
 
 
