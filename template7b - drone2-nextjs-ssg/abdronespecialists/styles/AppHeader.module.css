@@ -42,6 +42,7 @@
 }
 
 .menuButton {
+  width: auto !important;
   height: 18px;
   transition: color 200ms ease-out;
 }
@@ -93,7 +94,7 @@
 }
 .navigationIcon {
   height: 14px;
-  width: 20px;
+  width: 20px !important;
   color: color-secondary;
 }
 

@@ -1,4 +1,4 @@
-@value color-dark, color-light, color-primary, color-secondary, color-shade, color-shade-darker, color-button, header-height, content-padding, font-primary from "./_variables.css";
+@value color-dark, color-light, color-primary, color-secondary, color-shade, color-shade-darker, color-button, header-height-sm, content-padding, font-primary from "./_variables.css";
 
 .heading2 {
   composes: textHeading2 from "./_shared.module.css";
@@ -21,7 +21,7 @@
 
 .mainBanner {
   composes: captionedMedia from "./_shared.module.css";
-  height: clamp(300px, calc(90vh - header-height), 900px);
+  height: clamp(300px, calc(90vh - header-height-sm), 900px);
 }
 
 .mainBannerContext {
@@ -111,7 +111,7 @@
 .accordionIcon {
   padding: 5px;
   border-radius: 100%;
-  width: 25px;
+  width: 25px !important;
   height: 25px;
   background: color-button;
 }
