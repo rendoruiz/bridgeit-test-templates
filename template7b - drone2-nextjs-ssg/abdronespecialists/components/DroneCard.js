@@ -8,14 +8,16 @@ import Image from './Image';
 const DroneCard = ({ imagePrefix, imageTitle, heading, body, href }) => {
   return ( 
     <div className={styles.droneCard}>
-      <Image 
-        prefix={imagePrefix} 
-        title={imageTitle} 
-        fileExtension="png"
-        noMd
-        noLg
-        isContained
-      />
+      <div className={styles.imageContainer}>
+        <Image 
+          prefix={imagePrefix} 
+          title={imageTitle} 
+          fileExtension="png"
+          noMd
+          noLg
+          isContained
+        />
+      </div>
       
       <Link href={href ?? "/"}>
         <a className={styles.text}>

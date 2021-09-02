@@ -163,6 +163,10 @@
 /* Equipment */
 .sectionEquipment {
   composes: themeLight from "./_shared.module.css";
+  composes: container from "./_shared.module.css";
+}
+.equipmentContent {
+  composes: content from "./_shared.module.css";
   padding: spacing-md 0;
   display: grid;
   justify-items: center;
@@ -174,6 +178,20 @@
 .sectionEquipment .carousel {
   padding: 0 spacing-sm;
 }
+.droneCards {
+  display: none;
+}
+@media bp-lg {
+  .sectionEquipment .carousel {
+    display: none;
+  }
+  .droneCards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: spacing-sm;
+  }
+}
+
 
 
 

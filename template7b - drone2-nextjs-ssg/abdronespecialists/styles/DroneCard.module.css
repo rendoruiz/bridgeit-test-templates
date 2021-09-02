@@ -1,4 +1,6 @@
-@value color-button, color-shade, corner-rounding, box-shadow, color-box-shadow, color-box-shadow-active from "./_variables.css";
+@value color-button, color-shade, color-box-shadow, color-box-shadow-active from "./_variables.css";
+@value corner-rounding, box-shadow, spacing-sm from "./_variables.css";
+@value bp-lg from "./_variables.css";
 
 .droneCard {
   display: grid;
@@ -16,6 +18,7 @@
   transition: box-shadow 200ms ease-out;
   display: grid;
   grid-template-columns: 1fr auto;
+  align-content: flex-start;
   row-gap: 10px;
   column-gap: 10px;
 }
@@ -44,4 +47,17 @@
   height: 25px;
   color: color-button;
   transition: margin 200ms ease-out;
+}
+
+@media bp-lg {
+  .droneCard {
+    grid-template-rows: 220px auto;
+  }
+  .imageContainer {
+    padding: spacing-sm;
+  }
+  .text {
+    width: 95%;
+    row-gap: 5px;
+  }
 }
