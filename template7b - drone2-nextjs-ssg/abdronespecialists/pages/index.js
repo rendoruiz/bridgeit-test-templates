@@ -435,28 +435,50 @@ export default function Home() {
       <div className={styles.sectionSeparator}></div>
 
       <section className={styles.sectionHighlights}>
-        <h2 className={styles.heading2}>Highlights</h2>
-        <Carousel  
-          className={styles.carousel}
-          noArrows
-          infinite
-        >
-          <VideoModal 
-            imagePrefix="highlights-pv1"
-            title="highlight video"
-            youtubeEmbedId="ifO6DECu6-k"
-          />
-          <VideoModal 
-            imagePrefix="highlights-pv2"
-            title="highlight video"
-            youtubeEmbedId="ohsQcJyELi0"
-          />
-          <VideoModal 
-            imagePrefix="highlights-pv3"
-            title="highlight video"
-            youtubeEmbedId="Zi_trzln4ss"
-          />
-        </Carousel>
+        <div className={styles.highlightsContent}>
+          <h2 className={styles.heading2}>Highlights</h2>
+          <Carousel  
+            className={styles.carousel}
+            noArrows
+            infinite
+          >
+            <VideoModal 
+              imagePrefix="highlights-pv1"
+              title="highlight video"
+              youtubeEmbedId="ifO6DECu6-k"
+              className={styles.carouselVideo}
+            />
+            <VideoModal 
+              imagePrefix="highlights-pv2"
+              title="highlight video"
+              youtubeEmbedId="ohsQcJyELi0"
+              className={styles.carouselVideo}
+            />
+            <VideoModal 
+              imagePrefix="highlights-pv3"
+              title="highlight video"
+              youtubeEmbedId="Zi_trzln4ss"
+              className={styles.carouselVideo}
+            />
+          </Carousel>
+          <div className={styles.highlightsCards}>
+            <VideoModal 
+              imagePrefix="highlights-pv1"
+              title="highlight video"
+              youtubeEmbedId="ifO6DECu6-k"
+            />
+            <VideoModal 
+              imagePrefix="highlights-pv2"
+              title="highlight video"
+              youtubeEmbedId="ohsQcJyELi0"
+            />
+            <VideoModal 
+              imagePrefix="highlights-pv3"
+              title="highlight video"
+              youtubeEmbedId="Zi_trzln4ss"
+            />
+          </div>
+        </div>
       </section>
 
       <div className={styles.sectionSeparator}></div>

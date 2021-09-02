@@ -2,7 +2,6 @@
 
 .videoPreview {
   composes: captionedMedia from "./_shared.module.css";
-  margin: 0 3px;
   border-radius: corner-rounding;
   height: 250px;
   overflow: hidden;
