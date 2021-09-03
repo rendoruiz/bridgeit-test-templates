@@ -12,6 +12,7 @@ const AppHeader = () => {
   const router = useRouter();
   // console.log(router)
   // console.log(router.pathname)
+  // console.log(router.asPath)
 
   const toggleNavigation = () => {
     if (isNavigationOpen === null) {
@@ -21,8 +22,11 @@ const AppHeader = () => {
     }
   }
 
-  const setActive = (routeTo) => {
-    return router.pathname === routeTo ? ` ${styles.active}` : '';
+  const setActive = (routeTo, match=false) => {
+    if (match) {
+      return router.asPath.includes(routeTo) ? ` ${styles.active}` : '';
+    }
+    return router.asPath === routeTo ? ` ${styles.active}` : '';
   }
 
   return ( 
@@ -48,8 +52,8 @@ const AppHeader = () => {
               Home
             </a>
           </Link>
-          <Link href="/">
-            <a className={styles.navigationItem + setActive('')}>
+          <Link href="/about">
+            <a className={styles.navigationItem + setActive('/about', true)}>
               <FontAwesomeIcon icon={faUserFriends} className={styles.navigationIcon} />
               About
             </a>
