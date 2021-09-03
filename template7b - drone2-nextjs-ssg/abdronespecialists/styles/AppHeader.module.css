@@ -155,8 +155,6 @@
     composes: link from "./_shared.module.css";
   }
   .mediaIcon {
-    width: 20px;
+    width: 20px !important;
   }
-
-  
 }
