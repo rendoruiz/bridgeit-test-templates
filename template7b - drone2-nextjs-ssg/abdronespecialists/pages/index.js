@@ -118,6 +118,7 @@ export default function Home() {
           <Carousel 
             className={styles.carousel} 
             noArrows
+            infinite
           >
             <DroneCard 
               imagePrefix="equipment-dji-inspire-2"
@@ -440,7 +441,6 @@ export default function Home() {
           <Carousel  
             className={styles.carousel}
             noArrows
-            infinite
           >
             <VideoModal 
               imagePrefix="highlights-pv1"
