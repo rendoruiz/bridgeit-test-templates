@@ -17,6 +17,7 @@ import DroneList from '../components/DroneList'
 
 import styles from '../styles/Home.module.css'
 import Highlights from '../components/About/Highlights'
+import Divider from '../components/Divider'
 
 export default function Home() {
   return (
@@ -363,11 +364,11 @@ export default function Home() {
         </div>
       </section>
       
-      <div className={styles.sectionSeparator}></div>
+      <Divider />
 
       <Highlights />
 
-      <div className={styles.sectionSeparator}></div>
+      <Divider />
 
       <section className={styles.sectionContact}>
         <div className={styles.contactNotice}>

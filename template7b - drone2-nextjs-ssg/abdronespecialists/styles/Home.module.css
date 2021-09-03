@@ -16,16 +16,6 @@
   composes: carousel from "./Carousel.module.css";
 }
 
-.sectionSeparator {
-  height: spacing-sm;
-  background: color-light;
-}
-@media bp-md {
-  .sectionSeparator {
-    height: spacing-md;
-  }
-}
-
 
 /* Banner */
 .mainBanner {

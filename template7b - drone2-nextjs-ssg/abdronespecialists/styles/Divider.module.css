@@ -1,0 +1,13 @@
+@value color-light from "./_variables.css";
+@value spacing-sm, spacing-md from "./_variables.css";
+@value bp-md from "./_variables.css";
+
+.divider {
+  height: spacing-sm;
+  background: color-light;
+}
+@media bp-md {
+  .divider {
+    height: spacing-md;
+  }
+}
