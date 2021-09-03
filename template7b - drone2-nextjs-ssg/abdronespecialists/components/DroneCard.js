@@ -12,7 +12,7 @@ const DroneCard = ({ imagePrefix, imageTitle, heading, body, href, fileExtension
         <Image 
           prefix={imagePrefix} 
           title={imageTitle} 
-          fileExtension={fileExtension ?? "png"}
+          fileExtension={fileExtension}
           noMd
           noLg
           isContained
