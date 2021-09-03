@@ -5,14 +5,14 @@ import Link from 'next/link';
 import styles from '../styles/DroneCard.module.css';
 import Image from './Image';
 
-const DroneCard = ({ imagePrefix, imageTitle, heading, body, href }) => {
+const DroneCard = ({ imagePrefix, imageTitle, heading, body, href, fileExtension }) => {
   return ( 
     <div className={styles.droneCard}>
       <div className={styles.imageContainer}>
         <Image 
           prefix={imagePrefix} 
           title={imageTitle} 
-          fileExtension="png"
+          fileExtension={fileExtension ?? "png"}
           noMd
           noLg
           isContained
