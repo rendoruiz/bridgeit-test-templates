@@ -98,6 +98,15 @@
   width: 20px !important;
   color: color-secondary;
 }
+.navigationIconDrone {
+  composes: navigationIcon;
+  display: grid;
+  place-items: center;
+}
+.navigationIconDrone svg {
+  height: 100%;
+  width: auto;
+}
 
 .mediaLinks {
   display: none;

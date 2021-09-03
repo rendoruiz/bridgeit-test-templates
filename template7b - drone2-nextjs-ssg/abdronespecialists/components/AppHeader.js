@@ -1,16 +1,19 @@
-import { faBars, faBookmark, faCamera, faEnvelope, faHome, faToolbox, faUserFriends } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
-import Link from 'next/link';
-import styles from '../styles/AppHeader.module.css';
-import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { useRouter } from 'next/dist/client/router';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faBookmark, faCamera, faEnvelope, faHome, faToolbox, faUserFriends } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+
+import DroneIcon from "../public/images/icon-drone.svg";
+
+import styles from '../styles/AppHeader.module.css';
 
 const AppHeader = () => { 
   const [isNavigationOpen, setIsNavigationOpen] = useState(null);
   const router = useRouter();
-  console.log(router)
-  console.log(router.pathname)
+  // console.log(router)
+  // console.log(router.pathname)
 
   const toggleNavigation = () => {
     if (isNavigationOpen === null) {
@@ -67,7 +70,7 @@ const AppHeader = () => {
           </Link>
           <Link href="/">
             <a className={styles.navigationItem + setActive('')}>
-              <FontAwesomeIcon icon={faToolbox} className={styles.navigationIcon} />
+              <div className={styles.navigationIconDrone}><DroneIcon /></div>
               Equipment
             </a>
           </Link>
