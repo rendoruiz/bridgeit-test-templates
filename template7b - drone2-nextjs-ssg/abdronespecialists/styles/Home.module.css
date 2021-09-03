@@ -369,52 +369,6 @@
 }
 
 
-
-/* Highlights */
-.sectionHighlights {
-  composes: container from "./_shared.module.css";
-}
-.highlightsContent {
-  composes: content from "./_shared.module.css";
-  padding: spacing-sm;
-  text-align: center;
-}
-.sectionHighlights .carousel {
-  margin: spacing-sm 0;
-}
-.sectionHighlights .carouselVideo {
-  margin: 0 3px;
-}
-.sectionHighlights .highlightsCards {
-  display: none;
-}
-@media bp-md {
-  .highlightsContent {
-    padding: spacing-md spacing-sm;
-    text-align: left;
-  }
-  .sectionHighlights .carousel {
-    display: none;
-  }
-  .sectionHighlights .highlightsCards {
-    margin-top: spacing-sm;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: spacing-sm;
-  }
-}
-@media bp-lg {
-  .highlightsContent {
-    padding: spacing-lg spacing-sm;
-  }
-  .sectionHighlights .highlightsCards {
-    margin-bottom: spacing-sm;
-    column-gap: spacing-md;
-  }
-}
-
-
-
 /* Contact */
 .sectionContact {
   padding: calc(spacing-md * 2) 0 spacing-sm;

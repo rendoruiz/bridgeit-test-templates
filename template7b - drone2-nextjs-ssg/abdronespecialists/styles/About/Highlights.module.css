@@ -1,0 +1,44 @@
+@value spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
+.highlights {
+  composes: container from "./../_shared.module.css";
+}
+.content {
+  composes: content from "./../_shared.module.css";
+  padding: spacing-sm;
+  text-align: center;
+}
+.carousel {
+  margin: spacing-sm 0;
+}
+.carouselItem {
+  margin: 0 3px;
+}
+.cards {
+  display: none;
+}
+@media bp-md {
+  .content {
+    padding: spacing-md spacing-sm;
+    text-align: left;
+  }
+  .carousel {
+    display: none;
+  }
+  .cards {
+    margin-top: spacing-sm;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: spacing-sm;
+  }
+}
+@media bp-lg {
+  .content {
+    padding: spacing-lg spacing-sm;
+  }
+  .cards {
+    margin-bottom: spacing-sm;
+    column-gap: spacing-md;
+  }
+}

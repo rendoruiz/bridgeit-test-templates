@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { Accordion } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons'
@@ -8,14 +9,14 @@ import MainLayout from '../components/layouts/MainLayout'
 import Image from '../components/Image'
 import Video from '../components/Video'
 import Carousel from '../components/Carousel'
-
-import styles from '../styles/Home.module.css'
 import DroneCard from '../components/DroneCard'
 import VideoModal from '../components/VideoModal'
 import Form from '../components/Form'
-import Link from 'next/link'
 import Partners from '../components/About/Partners'
 import DroneList from '../components/DroneList'
+
+import styles from '../styles/Home.module.css'
+import Highlights from '../components/About/Highlights'
 
 export default function Home() {
   return (
@@ -364,51 +365,7 @@ export default function Home() {
       
       <div className={styles.sectionSeparator}></div>
 
-      <section className={styles.sectionHighlights}>
-        <div className={styles.highlightsContent}>
-          <h2 className={styles.heading2}>Highlights</h2>
-          <Carousel  
-            className={styles.carousel}
-            noArrows
-          >
-            <VideoModal 
-              imagePrefix="highlights-pv1"
-              title="highlight video"
-              youtubeEmbedId="ifO6DECu6-k"
-              className={styles.carouselVideo}
-            />
-            <VideoModal 
-              imagePrefix="highlights-pv2"
-              title="highlight video"
-              youtubeEmbedId="ohsQcJyELi0"
-              className={styles.carouselVideo}
-            />
-            <VideoModal 
-              imagePrefix="highlights-pv3"
-              title="highlight video"
-              youtubeEmbedId="Zi_trzln4ss"
-              className={styles.carouselVideo}
-            />
-          </Carousel>
-          <div className={styles.highlightsCards}>
-            <VideoModal 
-              imagePrefix="highlights-pv1"
-              title="highlight video"
-              youtubeEmbedId="ifO6DECu6-k"
-            />
-            <VideoModal 
-              imagePrefix="highlights-pv2"
-              title="highlight video"
-              youtubeEmbedId="ohsQcJyELi0"
-            />
-            <VideoModal 
-              imagePrefix="highlights-pv3"
-              title="highlight video"
-              youtubeEmbedId="Zi_trzln4ss"
-            />
-          </div>
-        </div>
-      </section>
+      <Highlights />
 
       <div className={styles.sectionSeparator}></div>
 
