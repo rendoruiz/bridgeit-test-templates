@@ -1,4 +1,7 @@
-@value color-dark, color-light, color-secondary, color-modal-overlay, spacing-sm from "./_variables.css";
+@value color-dark, color-light, color-primary from "./_variables.css";
+@value spacing-sm, spacing-lg from "./_variables.css";
+@value bp-md, bp-lg from "./_variables.css";
+@value line-spacing: 10px;
 
 .appFooter {
   composes: themeLight from "./_shared.module.css";
@@ -7,10 +10,24 @@
   text-align: center;
   display: grid;
   justify-items: center;
-  row-gap: 8px;
+  row-gap: line-spacing;
 }
 
-.blurb {
+.contactSection {
+  display: none;
+}
+
+.mediaSection {
+  display: grid;
+  row-gap: line-spacing;
+}
+
+.creditSection {
+  display: grid;
+  row-gap: 5px;
+}
+
+.mediaBlurb {
   font-size: 0.7rem;
   letter-spacing: 0.5px;
 }
@@ -24,3 +41,17 @@
   width: auto !important;
   height: 16px;
 }
+.appFooter a {
+  transition: color 200ms ease-out;
+}
+.appFooter a:hover,
+.appFooter a:active {
+  color: color-primary;
+}
+
+@media bp-md {
+  .contactSection {
+    display: grid;
+  }
+}
+
