@@ -144,7 +144,7 @@
     display: none;
   }
   .portfolioText {
-    padding: spacing-md;
+    padding: spacing-sm spacing-md;
     width: 100%;
     max-width: max-content-width-half;
     justify-items: flex-start;
@@ -154,15 +154,15 @@
   }
 }
 @media bp-lg {
-  .portfolioHeader {
-    height: 600px;
+  .sectionPortfolio {
+    padding: calc(spacing-md * 2) 0;
   }
   .portfolioCustomers {
     margin: 0 0 10px;
     grid-template-columns: repeat(5, 1fr);
   }
   .portfolioText {
-    padding: spacing-lg;
+    padding-left: spacing-lg;
   }
   .portfolioLogo {
     height: 40px;
@@ -363,6 +363,7 @@
   }
   .servicesCards {
     row-gap: calc(spacing-md - 10px);
+    margin-bottom: spacing-sm;
   }
   .cardSpan3 .serviceCardImage {
     height: 500px;
@@ -423,6 +424,7 @@
     padding: spacing-lg spacing-sm;
   }
   .sectionHighlights .highlightsCards {
+    margin-bottom: spacing-sm;
     column-gap: spacing-md;
   }
 }
