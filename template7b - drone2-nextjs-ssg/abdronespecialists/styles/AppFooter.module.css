@@ -1,45 +1,20 @@
 @value color-dark, color-light, color-primary from "./_variables.css";
-@value spacing-sm, spacing-lg from "./_variables.css";
+@value spacing-sm, spacing-md, spacing-lg from "./_variables.css";
 @value bp-md, bp-lg from "./_variables.css";
-@value line-spacing: 10px;
 
 .appFooter {
   composes: themeLight from "./_shared.module.css";
-  padding: 15px spacing-sm;
+  composes: container from "./_shared.module.css";
+}
+.content {
+  composes: content from "./_shared.module.css";
+  justify-self: center;
+  padding: spacing-sm;
   font-size: 0.65rem;
   text-align: center;
   display: grid;
   justify-items: center;
-  row-gap: line-spacing;
-}
-
-.contactSection {
-  display: none;
-}
-
-.mediaSection {
-  display: grid;
-  row-gap: line-spacing;
-}
-
-.creditSection {
-  display: grid;
-  row-gap: 5px;
-}
-
-.mediaBlurb {
-  font-size: 0.7rem;
-  letter-spacing: 0.5px;
-}
-
-.externalLinks {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.icon {
-  width: auto !important;
-  height: 16px;
+  row-gap: 10px;
 }
 .appFooter a {
   transition: color 200ms ease-out;
@@ -49,9 +24,73 @@
   color: color-primary;
 }
 
-@media bp-md {
-  .contactSection {
-    display: grid;
-  }
+.contactSection {
+  display: none;
 }
 
+.creditSection {
+  display: grid;
+  row-gap: 5px;
+}
+
+.mediaSection {
+  display: grid;
+  row-gap: 8px;
+}
+.mediaBlurb {
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+}
+.externalLinks {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.icon {
+  width: auto !important;
+  height: 16px;
+}
+
+@media bp-md {
+  .content {
+    padding: spacing-md spacing-sm;
+    font-size: 0.8rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: unset;
+    align-items: flex-start;
+  }
+  .contactSection {
+    text-align: left;
+    display: grid;
+    justify-items: flex-start;
+    row-gap: 5px;
+  }
+  .contactSection span {
+    text-transform: uppercase;
+  }
+  .mediaSection {
+    order: 3;
+    justify-content: flex-end;
+  }
+  .mediaBlurb {
+    display: none;
+  }
+  .externalLinks {
+    gap: spacing-sm;
+  }
+  .icon {
+    height: 18px;
+  }
+}
+@media bp-lg {
+  .content {
+    padding: spacing-md spacing-sm spacing-lg;
+  }
+  .contactSection, 
+  .creditSection {
+    row-gap: 8px;
+  }
+  .icon {
+    height: 20px;
+  }
+}
