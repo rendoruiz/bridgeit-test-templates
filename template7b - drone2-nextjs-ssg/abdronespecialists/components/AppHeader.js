@@ -4,9 +4,13 @@ import { useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/AppHeader.module.css';
 import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { useRouter } from 'next/dist/client/router';
 
 const AppHeader = () => { 
   const [isNavigationOpen, setIsNavigationOpen] = useState(null);
+  const router = useRouter();
+  console.log(router)
+  console.log(router.pathname)
 
   const toggleNavigation = () => {
     if (isNavigationOpen === null) {
@@ -14,6 +18,10 @@ const AppHeader = () => {
     } else {
       setIsNavigationOpen(!isNavigationOpen);
     }
+  }
+
+  const setActive = (routeTo) => {
+    return router.pathname === routeTo ? ` ${styles.active}` : '';
   }
 
   return ( 
@@ -34,37 +42,37 @@ const AppHeader = () => {
           onClick={toggleNavigation}
         >
           <Link href="/">
-            <a className={styles.navigationItem}>
+            <a className={styles.navigationItem + setActive('/')}>
               <FontAwesomeIcon icon={faHome} className={styles.navigationIcon} />
               Home
             </a>
           </Link>
           <Link href="/">
-            <a className={styles.navigationItem}>
+            <a className={styles.navigationItem + setActive('')}>
               <FontAwesomeIcon icon={faUserFriends} className={styles.navigationIcon} />
               About
             </a>
           </Link>
           <Link href="/">
-            <a className={styles.navigationItem}>
+            <a className={styles.navigationItem + setActive('')}>
               <FontAwesomeIcon icon={faCamera} className={styles.navigationIcon} />
               Services
             </a>
           </Link>
           <Link href="/">
-            <a className={styles.navigationItem}>
+            <a className={styles.navigationItem + setActive('')}>
               <FontAwesomeIcon icon={faBookmark} className={styles.navigationIcon} />
               Portfolio
             </a>
           </Link>
           <Link href="/">
-            <a className={styles.navigationItem}>
+            <a className={styles.navigationItem + setActive('')}>
               <FontAwesomeIcon icon={faToolbox} className={styles.navigationIcon} />
               Equipment
             </a>
           </Link>
           <Link href="/">
-            <a className={styles.navigationItem}>
+            <a className={styles.navigationItem + setActive('')}>
               <FontAwesomeIcon icon={faEnvelope} className={styles.navigationIcon} />
               Contact<span className={styles.mobile}>&nbsp;Us</span>
             </a>
