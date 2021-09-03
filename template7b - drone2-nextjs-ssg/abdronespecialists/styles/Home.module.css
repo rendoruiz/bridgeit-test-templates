@@ -363,6 +363,7 @@
   }
   .servicesCards {
     row-gap: calc(spacing-md - 10px);
+    margin-bottom: spacing-sm;
   }
   .cardSpan3 .serviceCardImage {
     height: 500px;
@@ -423,6 +424,7 @@
     padding: spacing-lg spacing-sm;
   }
   .sectionHighlights .highlightsCards {
+    margin-bottom: spacing-sm;
     column-gap: spacing-md;
   }
 }
