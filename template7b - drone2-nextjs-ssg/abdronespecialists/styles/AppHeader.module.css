@@ -98,6 +98,15 @@
   width: 20px !important;
   color: color-secondary;
 }
+.navigationIconDrone {
+  composes: navigationIcon;
+  display: grid;
+  place-items: center;
+}
+.navigationIconDrone svg {
+  height: 100%;
+  width: auto;
+}
 
 .mediaLinks {
   display: none;
@@ -117,12 +126,12 @@
     animation: unset;
     position: static;
     display: flex;
-    gap: 15px;
+    gap: spacing-sm;
   }
   .navigationItem,
   .navigationItem:first-of-type,
   .navigationItem:last-of-type {
-    padding: 2px 5px;
+    padding: 3px 5px;
   }
   .navigationItem {
     background: unset;
@@ -157,5 +166,17 @@
   .mediaIcon {
     width: 20px !important;
     height: 20px !important;
+  }
+
+  .active {
+    position: relative;
+  }
+  .active::after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    right: 5px;
+    border-bottom: 3px solid color-primary;
   }
 }

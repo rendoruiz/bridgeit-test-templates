@@ -118,6 +118,7 @@ export default function Home() {
           <Carousel 
             className={styles.carousel} 
             noArrows
+            infinite
           >
             <DroneCard 
               imagePrefix="equipment-dji-inspire-2"
@@ -125,6 +126,7 @@ export default function Home() {
               heading="DJI Inspire 2"
               body="Image quality, power and intelligence to meet the needs of professional filmmakers and enterprises around the globe."
               href="/"
+              fileExtension="jpg"
             />
             <DroneCard 
               imagePrefix="equipment-zenmuse-x7"
@@ -146,6 +148,7 @@ export default function Home() {
               heading="Outdoor FPV"
               body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae quia suscipit ratione repellendus facilis."
               href="/"
+              fileExtension="jpg"
             />
             <DroneCard 
               imagePrefix="equipment-indoor-fpv"
@@ -153,6 +156,7 @@ export default function Home() {
               heading="Indoor FPV"
               body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae quia suscipit ratione repellendus facilis."
               href="/"
+              fileExtension="jpg"
             />
           </Carousel>
           <div className={styles.droneCards}>
@@ -440,7 +444,6 @@ export default function Home() {
           <Carousel  
             className={styles.carousel}
             noArrows
-            infinite
           >
             <VideoModal 
               imagePrefix="highlights-pv1"
