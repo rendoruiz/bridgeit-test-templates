@@ -97,7 +97,7 @@
   margin-bottom: spacing-sm;
   height: 170px;
 }
-.sectionPortfolio .heading2 {
+.portfolioHeader .heading2 {
   background: color-shade;
   display: grid;
   place-items: center;
