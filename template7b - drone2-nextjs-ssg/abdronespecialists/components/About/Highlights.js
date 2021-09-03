@@ -3,9 +3,9 @@ import VideoModal from '../../components/VideoModal'
 
 import styles from '../../styles/About/Highlights.module.css'
 
-const Highlights = () => {
+const Highlights = ({ className }) => {
   return ( 
-    <section className={styles.highlights}>
+    <section className={styles.highlights + ` ${className}`}>
       <div className={styles.content}>
         <h2 className={styles.heading2}>Highlights</h2>
         <Carousel  

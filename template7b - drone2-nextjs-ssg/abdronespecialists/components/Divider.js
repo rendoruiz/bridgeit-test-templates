@@ -1,8 +1,8 @@
 import styles from '../styles/Divider.module.css';
 
-const Divider = () => {
+const Divider = ({ className}) => {
   return ( 
-    <div className={styles.divider}></div>
+    <div className={styles.divider + (!className ? '' : ` ${className}`)}></div>
   );
 }
  

@@ -4,7 +4,7 @@ import styles from '../../styles/About/Partners.module.css'
 
 const Partners = ({ className }) => {
   return ( 
-    <div className={styles.partners + ` ${className}`}>
+    <div className={styles.partners + (!className ? '' : ` ${className}`)}>
       <Image 
         prefix="logo-disney-white"
         fileExtension="png"

@@ -1,0 +1,14 @@
+@value spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
+.divider,
+.highlights {
+  display: none;
+}
+
+@media bp-md {
+  .divider,
+  .highlights {
+    display: grid;
+  }
+}
