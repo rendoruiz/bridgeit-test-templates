@@ -2,10 +2,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faBookmark, faCamera, faEnvelope, faHome, faToolbox, faUserFriends } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faBookmark, faCamera, faEnvelope, faHome, faUserFriends } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
-
-import DroneIcon from "../public/images/icon-drone.svg";
 
 import styles from '../styles/AppHeader.module.css';
 
@@ -70,7 +68,11 @@ const AppHeader = () => {
           </Link>
           <Link href="/">
             <a className={styles.navigationItem + setActive('')}>
-              <div className={styles.navigationIconDrone}><DroneIcon /></div>
+              <div className={styles.navigationIconDrone}>
+                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="23.97 31.22 96.18 81.34">
+                  <path d="M309.94,406a12.3,12.3,0,1,1-12.3-12.31h0A12.31,12.31,0,0,1,309.94,406Zm-12.3-47.2c21.47.17,45.89,15.31,48.09,43.84H316.65s-3.75-15.76-19-15.64-19,15.64-19,15.64H249.55C251,374.59,275,358.6,297.64,358.77Zm.2,81.31c-16,0-31-12.05-37.11-30.76h17.9s3.86,15.59,19.12,15.49,18.9-15.48,18.9-15.48h17.89a37.63,37.63,0,0,1-36.69,30.75Z" transform="translate(-225.58 -327.55)"/>
+                </svg>
+              </div>
               Equipment
             </a>
           </Link>
