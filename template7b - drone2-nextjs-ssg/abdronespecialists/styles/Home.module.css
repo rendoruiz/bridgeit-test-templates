@@ -1,4 +1,6 @@
-@value color-dark, color-light, color-primary, color-secondary, color-shade, color-shade-darker, color-button, header-height-sm, content-padding, font-primary from "./_variables.css";
+@value color-dark, color-light, color-primary, color-secondary, color-shade, color-shade-darker, color-button from "./_variables.css";
+@value max-content-width-half, corner-rounding, header-height-sm, header-height-lg, spacing-sm, spacing-md, spacing-lg, font-primary from "./_variables.css";
+@value bp-md, bp-lg, bp-xl from "./_variables.css";
 
 .heading2 {
   composes: textHeading2 from "./_shared.module.css";
@@ -14,37 +16,82 @@
   composes: carousel from "./Carousel.module.css";
 }
 
-.sectionSeparatorLight {
-  height: content-padding;
+.sectionSeparator {
+  height: spacing-sm;
   background: color-light;
 }
+@media bp-md {
+  .sectionSeparator {
+    height: spacing-md;
+  }
+}
 
+
+/* Banner */
 .mainBanner {
   composes: captionedMedia from "./_shared.module.css";
   height: clamp(300px, calc(90vh - header-height-sm), 900px);
 }
-
 .mainBannerContext {
-  composes: textTitle from "./_shared.module.css";
-  padding: content-padding;
   background: color-shade;
-  font-size: 2rem;
-  letter-spacing: 1px;
   position: relative;
   z-index: 1;
+  display: grid;
+  align-content: center;    
+  justify-content: flex-start;
+}
+.bannerText {
+  composes: textTitle from "./_shared.module.css";
+  padding: spacing-sm;
+  font-size: 2rem;
+  letter-spacing: 1px;
   display: grid;
   justify-items: flex-start;
   align-content: center;
   row-gap: 20px;
 }
+@media bp-md {
+  .mainBanner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mainBannerContext {
+    padding: spacing-sm;
+    justify-content: unset;
+  }
+  .bannerText {
+    padding: spacing-md 0 spacing-md spacing-sm;
+    border-left: 2px solid color-light;
+    width: 100%;
+    max-width: max-content-width-half;
+    justify-self: flex-end;
+  }
+  .bannerVideo {
+    grid-column: 1 / 3;
+  }
+}
+@media bp-lg {
+  .mainBanner {
+    height: max(600px, calc(95vh - header-height-lg));
+  }
+  .bannerText p {
+    display: grid;
+  }
+}
+@media bp-xl {
+  .mainBannerContext {
+    padding-right: 0;
+  }
+}
 
+
+
+/* Portfolio */
 .sectionPortfolio {
-  composes: content from "./_shared.module.css";
-  padding: calc(content-padding * 2) 0;
+  padding: spacing-md 0;
 }
 .portfolioHeader {
   composes: captionedMedia from "./_shared.module.css";
-  margin-bottom: content-padding;
+  margin-bottom: spacing-sm;
   height: 170px;
 }
 .sectionPortfolio .heading2 {
@@ -53,16 +100,17 @@
   place-items: center;
   text-align: center;
 }
-
 .portfolioText {
-  padding: 10px content-padding 0;
+  padding: 10px spacing-sm 0;
   display: grid;
-  row-gap: content-padding;
+  row-gap: spacing-sm;
+}
+.portfolioText .heading2 {
+  display: none;
 }
 .portfolioText .bodyText {
   letter-spacing: 0.5px;
 }
-
 .portfolioText .heading3 {
   margin-top: 10px;
 }
@@ -81,30 +129,100 @@
   composes: portfolioLogo;
   height: 40px;
 }
+@media bp-md {
+  .sectionPortfolio {
+    padding: spacing-lg 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .portfolioHeader {
+    height: 700px;
+    margin-bottom: 0;
+  }
+  .portfolioHeader .heading2 {
+    display: none;
+  }
+  .portfolioText {
+    padding: spacing-md;
+    width: 100%;
+    max-width: max-content-width-half;
+    justify-items: flex-start;
+  }
+  .portfolioText .heading2 {
+    display: block;
+  }
+}
+@media bp-lg {
+  .portfolioHeader {
+    height: 600px;
+  }
+  .portfolioCustomers {
+    margin: 0 0 10px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .portfolioText {
+    padding: spacing-lg;
+  }
+  .portfolioLogo {
+    height: 40px;
+  }
+  .portfolioLogo4 {
+    height: 60px;
+  }
+}
 
 
+
+/* Equipment */
 .sectionEquipment {
   composes: themeLight from "./_shared.module.css";
-  padding: calc(content-padding * 2) 0;
+  composes: container from "./_shared.module.css";
+}
+.equipmentContent {
+  composes: content from "./_shared.module.css";
+  padding: spacing-md 0;
   display: grid;
   justify-items: center;
-  row-gap: calc(content-padding * 2);
-}
-.sectionEquipment .heading2 {
-  text-align: center;
+  row-gap: spacing-md;
 }
 .sectionEquipment .carousel {
-  padding: 0 content-padding;
+  padding: 0 spacing-sm;
+}
+.droneCards {
+  display: none;
+}
+@media bp-lg {
+  .equipmentContent {
+    padding: spacing-lg spacing-sm;
+  }
+  .sectionEquipment .heading2 {
+    justify-self: flex-start;
+  }
+  .sectionEquipment .carousel {
+    display: none;
+  }
+  .droneCards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: spacing-sm;
+  }
 }
 
 
 
+
+/* Services */
 .sectionServices {
   composes: themeDark from "./_shared.module.css";
-  padding: calc(content-padding * 2) 0;
+  composes: container from "./_shared.module.css";
 }
-.sectionServices .heading2 {
-  margin-bottom: content-padding;
+.servicesContent {
+  composes: content from "./_shared.module.css";
+  padding: spacing-md 0;
+}
+.servicesContent > .heading2 {
+  margin-bottom: spacing-sm;
   text-align: center;
   line-height: 1.5;
 }
@@ -116,7 +234,7 @@
   background: color-button;
 }
 .sectionServices button {
-  padding: 10px content-padding;
+  padding: 10px spacing-sm;
 }
 .accordionBody {
   composes: textSubtitle from "./_shared.module.css";
@@ -124,7 +242,7 @@
   row-gap: 5px;
 }
 .accordionBody > :not(img):not(source):not(picture) {
-  margin: 0 content-padding;
+  margin: 0 spacing-sm;
 }
 .accordionLink,
 .accordionLink:visited {
@@ -151,35 +269,238 @@
 .accordionImage {
   margin: 15px 0;
 }
+.servicesCards {
+  display: none;
+}
+
+.serviceCard {
+  composes: captionedMedia from "./_shared.module.css";
+  border-radius: corner-rounding;
+  overflow: hidden;
+}
+.serviceCard:hover .cardText,
+.serviceCard:active .cardText {
+  background: color-shade;
+}
+.serviceCard:hover .cardButton,
+.serviceCard:active .cardButton {
+  background: color-secondary;
+}
+.servicesContent .cardSpan2 {
+  grid-column: span 2;
+}
+.servicesContent .cardSpan3 {
+  grid-column: span 3;
+}
+.cardText {
+  text-align: center;
+  letter-spacing: 1px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  transition: background 200ms ease-out;
+}
+.cardText {
+  composes: textBody from "./_shared.module.css";
+}
+.cardButton {
+  border-radius: 100%;
+  background: color-primary;
+  width: 35px;
+  height: 35px;
+  transition: background 200ms ease-out;
+  display: grid;
+  place-items: center;
+}
+.cardButtonIcon {
+  width: 18px !important;
+  height: 18px;
+}
+.heading3 + .cardButton {
+  margin-top: 10px;
+}
+.servicesContent .cardSpan3 .cardText {
+  display: grid;
+  justify-content: center;
+  column-gap: 10px;
+}
+.servicesContent .cardSpan3 .cardText .cardButton {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: center;
+  margin-right: -45px;
+}
+@media bp-md {
+  .servicesContent {
+    padding: spacing-md spacing-sm;
+  }
+  .servicesContent > .heading2 {
+    text-align: left;
+  }
+  .servicesAccordion {
+    display: none;
+  }
+  .servicesCards {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: spacing-sm;
+    column-gap: spacing-md;
+  }
+  .cardSpan3 .serviceCardImage {
+    height: 400px;
+  }
+  .cardSpan2 .serviceCardImage {
+    height: 250px;
+  }
+}
+@media bp-lg {
+  .servicesContent {
+    padding: spacing-lg spacing-sm;
+  }
+  .servicesContent > .heading2 {
+    margin-bottom: spacing-md;
+  }
+  .servicesCards {
+    row-gap: calc(spacing-md - 10px);
+  }
+  .cardSpan3 .serviceCardImage {
+    height: 500px;
+  }
+  .cardSpan2 .serviceCardImage {
+    height: 300px;
+  }
+}
+@media bp-xl {
+  .servicesCards {
+    row-gap: spacing-md;
+  }
+  .cardSpan3 .serviceCardImage {
+    height: 600px;
+  }
+  .cardSpan2 .serviceCardImage {
+    height: 350px;
+  }
+}
 
 
+
+/* Highlights */
 .sectionHighlights {
-  padding: content-padding;
+  composes: container from "./_shared.module.css";
+}
+.highlightsContent {
+  composes: content from "./_shared.module.css";
+  padding: spacing-sm;
   text-align: center;
 }
 .sectionHighlights .carousel {
-  margin: content-padding 0;
+  margin: spacing-sm 0;
+}
+.sectionHighlights .carouselVideo {
+  margin: 0 3px;
+}
+.sectionHighlights .highlightsCards {
+  display: none;
+}
+@media bp-md {
+  .highlightsContent {
+    padding: spacing-md spacing-sm;
+    text-align: left;
+  }
+  .sectionHighlights .carousel {
+    display: none;
+  }
+  .sectionHighlights .highlightsCards {
+    margin-top: spacing-sm;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: spacing-sm;
+  }
+}
+@media bp-lg {
+  .highlightsContent {
+    padding: spacing-lg spacing-sm;
+  }
+  .sectionHighlights .highlightsCards {
+    column-gap: spacing-md;
+  }
 }
 
 
+
+/* Contact */
 .sectionContact {
-  padding: calc(content-padding * 4) 0 content-padding;
+  padding: calc(spacing-md * 2) 0 spacing-sm;
+  display: grid;
+}
+.contactNotice {
+  composes: captionedMedia from "./_shared.module.css";
+}
+.contactImage {
+  height: 400px;
+}
+.contactContext {
+  padding: 0 spacing-sm;
+  background: color-shade-darker;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 .contactText {
-  composes: captionedMedia from "./_shared.module.css";
-
-}
-.contactText div {
-  padding: 100px content-padding;
-  background: color-shade-darker;
+  width: 100%;
+  max-width: max-content-width-half;
   display: grid;
   align-content: center;
   align-items: center;
-  row-gap: content-padding;
+  row-gap: spacing-sm;
 }
-.contactText .heading3 {
+.contactTextHeading {
+  composes: textHeading2 from "./_shared.module.css";
   display: grid;
 }
 .form {
-  padding: calc(content-padding * 2) content-padding calc(content-padding * 3);
+  justify-self: center;
+  padding: spacing-md spacing-sm;
+  width: 100%;
+  max-width: max-content-width-half;
+}
+@media bp-md {
+  .sectionContact {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contactImage {
+    height: 800px;
+  }
+  .contactContext {
+    justify-content: unset;
+  }
+  .contactContext p {
+    width: 350px;
+  }
+  .contactText {
+    justify-self: flex-end;
+  }
+  .form {
+    justify-self: flex-start;
+    padding: 0 spacing-md;
+  }
+}
+@media bp-lg {
+  .contactImage {
+    height: 900px;
+  }
+  .contactContext {
+    padding-right: 0;
+  }
+  .form {
+    padding: spacing-sm spacing-lg;
+  }
+}
+@media bp-xl {
+  .contactText {
+    padding-left: spacing-sm;
+  }
 }

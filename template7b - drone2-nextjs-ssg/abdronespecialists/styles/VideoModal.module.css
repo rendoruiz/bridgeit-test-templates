@@ -2,29 +2,31 @@
 
 .videoPreview {
   composes: captionedMedia from "./_shared.module.css";
-  margin: 0 3px;
   border-radius: corner-rounding;
   height: 250px;
   overflow: hidden;
+  cursor: pointer;
 }
 .playButton {
   place-self: center;
-  padding: 15px 13px 15px 17px;
+  padding-left: 2px;
   border: none;
   border-radius: 100%;
+  width: 45px;
+  height: 45px;
   background: color-primary;
   color: color-light;
   display: grid;
   place-items: center;
   transition: background 200ms ease-out;
 }
-.playButton:hover,
-.playButton:active {
+.videoPreview:hover .playButton,
+.videoPreview:active .playButton {
   background: color-secondary;
 }
 .buttonIcon {
-  width: 25px !important;
-  height: 25px;
+  width: 18px !important;
+  height: 18px;
 }
 
 .videoWrapper {

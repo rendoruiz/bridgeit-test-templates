@@ -9,7 +9,7 @@ import styles from '../styles/VideoModal.module.css';
 import Button from "./Button";
 import YouTube from "react-youtube";
 
-const VideoModal = ({ imagePrefix, buttonText, children, youtubeEmbedId, title }) => {
+const VideoModal = ({ imagePrefix, buttonText, children, youtubeEmbedId, title, className }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModal = () => {
@@ -25,7 +25,7 @@ const VideoModal = ({ imagePrefix, buttonText, children, youtubeEmbedId, title }
       { imagePrefix ? (
         <div 
           onClick={toggleModal} 
-          className={styles.videoPreview}
+          className={styles.videoPreview + (!className ? '' : ` ${className}`)}
         >
           <Image
             prefix={imagePrefix}

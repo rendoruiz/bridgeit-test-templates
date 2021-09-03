@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import styles from '../styles/Button.module.css';
 
-const Button = ({ text, noIcon = false, onClick, className, iconClassName, title, href }) => {
+const Button = ({ text, noIcon = false, onClick, className, appendClassName, iconClassName, title, href }) => {
   const addIcon = () => {
     return noIcon ? null :
       <FontAwesomeIcon 
@@ -17,7 +17,7 @@ const Button = ({ text, noIcon = false, onClick, className, iconClassName, title
     ? <Link href={href}>
         <a
           onClick={onClick}
-          className={className ?? styles.button}
+          className={!appendClassName ? (className ?? styles.button) : (styles.button + (!className ? '' : ` ${className}`))}
           title={title ?? 'link button'}
         >
           { text }
@@ -26,7 +26,7 @@ const Button = ({ text, noIcon = false, onClick, className, iconClassName, title
       </Link>
     : <button
         onClick={onClick}
-        className={className ?? styles.button}
+          className={!appendClassName ? (className ?? styles.button) : (styles.button + (!className ? '' : ` ${className}`))}
         title={title ?? 'button'}
       >
         { text }

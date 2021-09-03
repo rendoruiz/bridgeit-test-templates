@@ -1,20 +1,46 @@
-@value color-dark, color-light, color-secondary, color-modal-overlay, content-padding from "./_variables.css";
+@value color-dark, color-light, color-primary from "./_variables.css";
+@value spacing-sm, spacing-md, spacing-lg from "./_variables.css";
+@value bp-md, bp-lg from "./_variables.css";
 
 .appFooter {
   composes: themeLight from "./_shared.module.css";
-  padding: 15px content-padding;
+  composes: container from "./_shared.module.css";
+}
+.content {
+  composes: content from "./_shared.module.css";
+  justify-self: center;
+  padding: spacing-sm;
   font-size: 0.65rem;
   text-align: center;
   display: grid;
   justify-items: center;
-  row-gap: 8px;
+  row-gap: 10px;
+}
+.appFooter a {
+  transition: color 200ms ease-out;
+}
+.appFooter a:hover,
+.appFooter a:active {
+  color: color-primary;
 }
 
-.blurb {
+.contactSection {
+  display: none;
+}
+
+.creditSection {
+  display: grid;
+  row-gap: 5px;
+}
+
+.mediaSection {
+  display: grid;
+  row-gap: 8px;
+}
+.mediaBlurb {
   font-size: 0.7rem;
   letter-spacing: 0.5px;
 }
-
 .externalLinks {
   display: flex;
   align-items: center;
@@ -23,4 +49,48 @@
 .icon {
   width: auto !important;
   height: 16px;
+}
+
+@media bp-md {
+  .content {
+    padding: spacing-md spacing-sm;
+    font-size: 0.8rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: unset;
+    align-items: flex-start;
+  }
+  .contactSection {
+    text-align: left;
+    display: grid;
+    justify-items: flex-start;
+    row-gap: 5px;
+  }
+  .contactSection span {
+    text-transform: uppercase;
+  }
+  .mediaSection {
+    order: 3;
+    justify-content: flex-end;
+  }
+  .mediaBlurb {
+    display: none;
+  }
+  .externalLinks {
+    gap: spacing-sm;
+  }
+  .icon {
+    height: 18px;
+  }
+}
+@media bp-lg {
+  .content {
+    padding: spacing-md spacing-sm spacing-lg;
+  }
+  .contactSection, 
+  .creditSection {
+    row-gap: 8px;
+  }
+  .icon {
+    height: 20px;
+  }
 }

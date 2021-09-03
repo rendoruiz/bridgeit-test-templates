@@ -18,13 +18,18 @@
 
 
 /* shared properties */
-@value content-padding: 20px;
+@value spacing-sm: 20px;
+@value spacing-md: 40px;
+@value spacing-lg: 60px;
+
 @value header-height-sm: 50px;
 @value header-height-lg: 60px;
 @value modal-z-elevation: 1000;
 @value max-content-width: 1200px;
+@value max-content-width-half: calc(max-content-width / 2);
 @value corner-rounding: 10px;
 @value box-shadow: 0 3px 10px;
+
 
 /* breakpoints */
 @value bp-sm: screen and (min-width: 425px);
@@ -33,5 +38,6 @@
 @value bp-xl: screen and (min-width: 1200px);
 
 
+/* fonts */
 @value font-primary: 'neue-haas-unica', 'Roboto', sans-serif;
 @value font-secondary: 'Roboto', sans-serif;
