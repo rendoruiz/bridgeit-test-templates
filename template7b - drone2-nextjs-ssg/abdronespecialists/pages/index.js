@@ -126,7 +126,6 @@ export default function Home() {
               heading="DJI Inspire 2"
               body="Image quality, power and intelligence to meet the needs of professional filmmakers and enterprises around the globe."
               href="/"
-              fileExtension="jpg"
             />
             <DroneCard 
               imagePrefix="equipment-zenmuse-x7"
@@ -134,6 +133,7 @@ export default function Home() {
               heading="Zenmuse X7"
               body="The Zenmuse X7 is a compact Super 35 camera with an integrated gimbal made for high-end filmmaking."
               href="/"
+              fileExtension="png"
             />
             <DroneCard 
               imagePrefix="equipment-indemnis-nexus"
@@ -141,6 +141,7 @@ export default function Home() {
               heading="Indemnis Nexus"
               body="The Nexus by Indemnis is the first UAV recovery system to be proven reliable in any failure situation."
               href="/"
+              fileExtension="png"
             />
             <DroneCard 
               imagePrefix="equipment-outdoor-fpv"
@@ -148,7 +149,6 @@ export default function Home() {
               heading="Outdoor FPV"
               body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae quia suscipit ratione repellendus facilis."
               href="/"
-              fileExtension="jpg"
             />
             <DroneCard 
               imagePrefix="equipment-indoor-fpv"
@@ -156,7 +156,6 @@ export default function Home() {
               heading="Indoor FPV"
               body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae quia suscipit ratione repellendus facilis."
               href="/"
-              fileExtension="jpg"
             />
           </Carousel>
           <div className={styles.droneCards}>
@@ -173,6 +172,7 @@ export default function Home() {
               heading="Zenmuse X7"
               body="The Zenmuse X7 is a compact Super 35 camera with an integrated gimbal made for high-end filmmaking."
               href="/"
+              fileExtension="png"
             />
             <DroneCard 
               imagePrefix="equipment-indemnis-nexus"
@@ -180,6 +180,7 @@ export default function Home() {
               heading="Indemnis Nexus"
               body="The Nexus by Indemnis is the first UAV recovery system to be proven reliable in any failure situation."
               href="/"
+              fileExtension="png"
             />
             <DroneCard 
               imagePrefix="equipment-outdoor-fpv"
