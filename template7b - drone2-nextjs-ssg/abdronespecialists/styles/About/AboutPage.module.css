@@ -6,9 +6,52 @@
   display: none;
 }
 
+.bannerContent {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+.bannerHeading {
+  composes: textHeading2 from "./../_shared.module.css";
+  font-size: 1.25rem;
+  letter-spacing: 0.25px;
+  display: grid;
+  text-align: center;
+}
+.bannerSubheading {
+  composes: textHeading3 from "./../_shared.module.css";
+  font-size: 1rem;
+  margin: spacing-sm 0 10px;
+}
+.partners {
+  width: 80%;
+  max-width: 380px;
+}
+
+
+
 @media bp-md {
+  .bannerHeading {
+    letter-spacing: 1px;
+    font-size: 2rem;
+  }
+  .bannerSubheading {
+    font-size: 1.25rem;
+  }
+  .partners {
+    max-width: 500px;
+  }
   .divider,
   .highlights {
     display: grid;
+  }
+}
+@media bp-lg {
+  .bannerHeading {
+    font-size: 2.25rem;
+    display: flex;
+  }
+  .bannerSubheading {
+    margin: spacing-sm 0;
   }
 }

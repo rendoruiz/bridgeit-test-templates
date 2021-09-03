@@ -1,0 +1,27 @@
+@value header-height-sm, header-height-lg from "./_variables.css";
+@value bp-md, bp-lg from "./_variables.css";
+
+.banner {
+  composes: captionedMedia from "./_shared.module.css";
+  height: 270px;
+}
+.fullHeight {
+  height: clamp(300px, calc(90vh - header-height-sm), 900px);
+}
+@media bp-md {
+  .banner {
+    height: 500px;
+  }
+  .contentHalf {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contentHalf .background {
+    grid-column: 1 / 3;
+  }
+}
+@media bp-lg {
+  .banner,
+  .fullHeight {
+    height: max(600px, calc(95vh - header-height-lg));
+  }
+}
