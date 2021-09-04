@@ -11,14 +11,13 @@ import Video from '../components/Video'
 import Carousel from '../components/Carousel'
 import DroneCard from '../components/DroneCard'
 import VideoModal from '../components/VideoModal'
-import Form from '../components/Form'
 import Partners from '../components/About/Partners'
 import DroneList from '../components/DroneList'
-
-import styles from '../styles/Home.module.css'
 import Highlights from '../components/About/Highlights'
 import Divider from '../components/Divider'
 import ContactPanel from '../components/Contact/ContactPanel'
+
+import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (

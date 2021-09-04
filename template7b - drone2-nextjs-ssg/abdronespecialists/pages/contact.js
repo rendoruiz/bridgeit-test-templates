@@ -1,7 +1,8 @@
 import Head from 'next/head'
+
 import Banner from '../components/Banner';
 import ContactPanel from '../components/Contact/ContactPanel';
-
+import Divider from '../components/Divider'
 import MainLayout from "../components/layouts/MainLayout";
 
 import styles from '../styles/Contact/ContactPage.module.css'
@@ -14,13 +15,16 @@ const ContactPage = () => {
       </Head>
 
       <div className={styles.contact}>
-        <Banner imagePrefix="about-banner">
+        <Banner imagePrefix="about-banner" className={styles.banner}>
           <div className={styles.bannerContent}>
             <span>Contact Us</span>
           </div>
         </Banner>
+        <Divider className={styles.dividerTop} />
 
         <ContactPanel />
+
+        <Divider className={styles.dividerBottom} isDark />
       </div>
     </MainLayout>
   );
