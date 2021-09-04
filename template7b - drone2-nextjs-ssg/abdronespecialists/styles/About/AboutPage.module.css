@@ -40,8 +40,10 @@
 }
 
 .aboutContent {
+  composes: content from "./../_shared.module.css";
   composes: textBody from "./../_shared.module.css";
-  margin: spacing-sm;
+  justify-self: center;
+  padding: spacing-md spacing-sm;
   display: grid;
   row-gap: spacing-sm;
 }
@@ -93,6 +95,12 @@
   .divider,
   .highlights {
     display: grid;
+  }
+  .heading2::after {
+    content: none;
+  }
+  .profiles {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media bp-lg {
