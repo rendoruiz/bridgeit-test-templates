@@ -42,12 +42,11 @@
   letter-spacing: 0.5px;
 }
 .externalLinks {
-  display: flex;
-  align-items: center;
   gap: 15px;
 }
 .icon {
-  width: auto !important;
+  composes: link from "./_shared.module.css";
+  width: 16px;
   height: 16px;
 }
 
@@ -79,6 +78,7 @@
     gap: spacing-sm;
   }
   .icon {
+    width: 18px;
     height: 18px;
   }
 }
@@ -91,6 +91,7 @@
     row-gap: 8px;
   }
   .icon {
+    width: 20px;
     height: 20px;
   }
 }
