@@ -1,8 +1,11 @@
-@value color-shade-darker from "./../_variables.css";
+@value color-primary, color-secondary, color-shade-darker from "./../_variables.css";
 @value max-content-width-half, spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
 @value bp-md, bp-lg from "./../_variables.css";
 
 
+.heading3 {
+  composes: textHeading3 from "./../_shared.module.css";
+}
 
 
 .bannerContent {
@@ -15,12 +18,59 @@
   height: spacing-md;
 }
 
-
-.sideContent {
-  composes: captionedMedia from "./../_shared.module.css";
-  height: 400px;
+.cards {
+  composes: themeLight from "./../_shared.module.css";
+  padding: spacing-md spacing-sm;
+  display: grid;
+  row-gap: spacing-md;
+}
+.cardItem {
+  composes: card from "./../_shared.module.css";
+  composes: textBody from "./../_shared.module.css";
+  min-height: 150px;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+}
+.followCard,
+.phoneCard,
+.hoursCard {
+  composes: cardItem;
+  row-gap: 5px;
+}
+.followCard,
+.hoursCard {
+  composes: cardItem;
+  cursor: unset;
+}
+.followCard {
+  row-gap: spacing-sm;
+}
+.icon {
+  width: 20px !important;
+  height: 20px !important;
+  color: color-secondary;
+}
+.hoursText {
+  display: grid;
+  letter-spacing: 0.5px;
 }
 
+.linkIcons {
+  width: 40px;
+  height: 30px;
+  transition: color 200ms ease-out;
+}
+.linkIcons,
+.linkIcons:visited {
+  color: color-secondary;
+}
+.linkIcons:hover,
+.linkIcons:active {
+  color: color-primary;
+}
 
 .dividerBottom {
   display: none;

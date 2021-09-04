@@ -7,6 +7,10 @@ import ContactPanel from '../components/Contact/ContactPanel';
 import Divider from '../components/Divider'
 
 import styles from '../styles/Contact/ContactPage.module.css'
+import ExternalMediaLinks from '../components/Contact/ExternalMediaLinks';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faClock } from '@fortawesome/free-regular-svg-icons';
 
 const ContactPage = () => {
   return ( 
@@ -26,16 +30,31 @@ const ContactPage = () => {
         <ContactPanel />
 
         <div className={styles.cards}>
-          <div>
-            <h3>Follow Us</h3>
+          <div className={styles.followCard}>
+            <h3 className={styles.heading3}>Follow Us</h3>
+            <ExternalMediaLinks iconClassName={styles.linkIcons} />
           </div>
-          <a href="tel:+7809383090">
-            <h3>Phone</h3>
-            (780) 938-3090
+          <a 
+            href="tel:+7809383090" 
+            className={styles.phoneCard}
+          >
+            <h3 className={styles.heading3}>Phone</h3>
+            <FontAwesomeIcon 
+              icon={faMobileAlt} 
+              className={styles.icon} 
+            />
+            <span>(780) 938-3090</span>
           </a>
-          <div>
-            <h3>Office Hours</h3>
-
+          <div className={styles.hoursCard}>
+            <h3 className={styles.heading3}>Office Hours</h3>
+            <FontAwesomeIcon 
+              icon={faClock} 
+              className={styles.icon} 
+            />
+            <p className={styles.hoursText}>
+              <span>Mon-Fri</span>
+              <span>9 am. to 5 pm.</span>
+            </p>
           </div>
         </div>
 
