@@ -53,7 +53,7 @@ const AppHeader = () => {
             </a>
           </Link>
           <Link href="/about">
-            <a className={styles.navigationItem + setActive('/about', true)}>
+            <a className={styles.navigationItem + setActive('/about')}>
               <FontAwesomeIcon icon={faUserFriends} className={styles.navigationIcon} />
               About
             </a>
@@ -80,8 +80,8 @@ const AppHeader = () => {
               Equipment
             </a>
           </Link>
-          <Link href="/">
-            <a className={styles.navigationItem + setActive('')}>
+          <Link href="/contact">
+            <a className={styles.navigationItem + setActive('/contact')}>
               <FontAwesomeIcon icon={faEnvelope} className={styles.navigationIcon} />
               Contact<span className={styles.mobile}>&nbsp;Us</span>
             </a>
