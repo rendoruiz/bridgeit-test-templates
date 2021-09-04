@@ -36,7 +36,7 @@ const ContactPage = () => {
               <ExternalMediaLinks iconClassName={styles.linkIcons} />
             </div>
             <a 
-              href="tel:+7809383090" 
+              href="tel:+1-780-938-3090" 
               className={styles.phoneCard}
             >
               <h3 className={styles.heading3}>Phone</h3>
