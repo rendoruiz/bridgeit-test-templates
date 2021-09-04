@@ -3,7 +3,6 @@ import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faBookmark, faCamera, faEnvelope, faHome, faUserFriends } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 import styles from '../styles/AppHeader.module.css';
 import ExternalMediaLinks from './Contact/ExternalMediaLinks';

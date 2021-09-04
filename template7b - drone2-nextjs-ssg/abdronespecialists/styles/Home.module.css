@@ -66,10 +66,14 @@
   .bannerText p {
     display: grid;
   }
+  .mainBannerContext {
+    padding-left: spacing-md;
+  }
 }
 @media bp-xl {
   .bannerText {
     font-size: 2.25rem;
+    max-width: calc(max-content-width-half - spacing-md);
   }
   .mainBannerContext {
     padding-right: 0;
@@ -143,6 +147,7 @@
   }
   .portfolioText {
     padding-left: spacing-lg;
+    padding-right: spacing-md;
   }
 }
 
@@ -168,7 +173,7 @@
 }
 @media bp-lg {
   .equipmentContent {
-    padding: spacing-lg spacing-sm;
+    padding: spacing-lg spacing-md;
   }
   .sectionEquipment .heading2 {
     justify-self: flex-start;
@@ -330,7 +335,7 @@
 }
 @media bp-lg {
   .servicesContent {
-    padding: spacing-lg spacing-sm;
+    padding: spacing-lg spacing-md;
   }
   .servicesContent > .heading2 {
     margin-bottom: spacing-md;

@@ -1,5 +1,3 @@
-import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '../styles/AppFooter.module.css';
 import ExternalMediaLinks from './Contact/ExternalMediaLinks';
 

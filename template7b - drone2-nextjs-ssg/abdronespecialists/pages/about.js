@@ -72,10 +72,7 @@ const AboutPage = () => {
         
         <Divider className={styles.divider} />
 
-        <Highlights 
-          className={styles.highlights} 
-          contentClassName={styles.highlightsContent} 
-        />
+        <Highlights className={styles.highlights} />
       </div>
     </MainLayout>
   );

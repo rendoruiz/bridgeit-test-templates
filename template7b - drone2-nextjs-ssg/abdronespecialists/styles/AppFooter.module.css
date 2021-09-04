@@ -84,7 +84,7 @@
 }
 @media bp-lg {
   .content {
-    padding: spacing-md spacing-sm spacing-lg;
+    padding: spacing-md spacing-md spacing-lg;
   }
   .contactSection, 
   .creditSection {
