@@ -1,6 +1,6 @@
-@value color-dark, color-light, color-primary, color-secondary, color-shade, color-shade-darker, color-button from "./../_variables.css";
-@value max-content-width-half, corner-rounding, header-height-sm, header-height-lg, spacing-sm, spacing-md, spacing-lg, border-line, font-primary from "./../_variables.css";
-@value bp-md, bp-lg, bp-xl from "./../_variables.css";
+@value color-shade-darker from "./../_variables.css";
+@value max-content-width-half, spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
 
 .contact {
   display: grid;
@@ -10,14 +10,13 @@
   height: 400px;
 }
 .textContainer {
-  padding: 0 spacing-sm;
   background: color-shade-darker;
   display: grid;
   justify-content: center;
   align-content: center;
-  align-items: center;
 }
 .sideText {
+  padding: 0 spacing-sm;
   width: 100%;
   max-width: max-content-width-half;
   display: grid;
@@ -45,11 +44,11 @@
   .textContainer {
     justify-content: unset;
   }
-  .subtitle {
-    width: 350px;
-  }
   .sideText {
     justify-self: flex-end;
+  }
+  .subtitle {
+    width: 350px;
   }
   .form {
     justify-self: flex-start;
@@ -63,12 +62,10 @@
   .textContainer {
     padding-right: 0;
   }
+  .sideText {
+    padding-left: spacing-md;
+  }
   .form {
     padding: spacing-sm spacing-lg;
-  }
-}
-@media bp-xl {
-  .sideText {
-    padding-left: spacing-sm;
   }
 }
