@@ -1,5 +1,5 @@
 @value color-dark, color-light, color-primary, color-secondary, color-shade, color-shade-darker, color-button from "./_variables.css";
-@value max-content-width-half, corner-rounding, header-height-sm, header-height-lg, spacing-sm, spacing-md, spacing-lg, font-primary from "./_variables.css";
+@value max-content-width-half, corner-rounding, header-height-sm, header-height-lg, spacing-sm, spacing-md, spacing-lg, border-line, font-primary from "./_variables.css";
 @value bp-md, bp-lg, bp-xl from "./_variables.css";
 
 .heading2 {
@@ -14,16 +14,6 @@
 
 .carousel {
   composes: carousel from "./Carousel.module.css";
-}
-
-.sectionSeparator {
-  height: spacing-sm;
-  background: color-light;
-}
-@media bp-md {
-  .sectionSeparator {
-    height: spacing-md;
-  }
 }
 
 
@@ -60,7 +50,7 @@
   }
   .bannerText {
     padding: spacing-md 0 spacing-md spacing-sm;
-    border-left: 2px solid color-light;
+    border-left: border-line;
     width: 100%;
     max-width: max-content-width-half;
     justify-self: flex-end;
@@ -117,20 +107,8 @@
 .portfolioText .heading3 {
   margin-top: 10px;
 }
-.portfolioCustomers {
+.portfolioPartners {
   margin: -10px 0 10px;
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  align-items: center;
-  column-gap: 15px;
-}
-.portfolioLogo {
-  width: 100%;
-  height: 30px;
-}
-.portfolioLogo4 {
-  composes: portfolioLogo;
-  height: 40px;
 }
 @media bp-md {
   .sectionPortfolio {
@@ -160,18 +138,11 @@
   .sectionPortfolio {
     padding: calc(spacing-md * 2) 0;
   }
-  .portfolioCustomers {
+  .portfolioPartners {
     margin: 0 0 10px;
-    grid-template-columns: repeat(5, 1fr);
   }
   .portfolioText {
     padding-left: spacing-lg;
-  }
-  .portfolioLogo {
-    height: 40px;
-  }
-  .portfolioLogo4 {
-    height: 60px;
   }
 }
 
@@ -386,52 +357,6 @@
     height: 350px;
   }
 }
-
-
-
-/* Highlights */
-.sectionHighlights {
-  composes: container from "./_shared.module.css";
-}
-.highlightsContent {
-  composes: content from "./_shared.module.css";
-  padding: spacing-sm;
-  text-align: center;
-}
-.sectionHighlights .carousel {
-  margin: spacing-sm 0;
-}
-.sectionHighlights .carouselVideo {
-  margin: 0 3px;
-}
-.sectionHighlights .highlightsCards {
-  display: none;
-}
-@media bp-md {
-  .highlightsContent {
-    padding: spacing-md spacing-sm;
-    text-align: left;
-  }
-  .sectionHighlights .carousel {
-    display: none;
-  }
-  .sectionHighlights .highlightsCards {
-    margin-top: spacing-sm;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: spacing-sm;
-  }
-}
-@media bp-lg {
-  .highlightsContent {
-    padding: spacing-lg spacing-sm;
-  }
-  .sectionHighlights .highlightsCards {
-    margin-bottom: spacing-sm;
-    column-gap: spacing-md;
-  }
-}
-
 
 
 /* Contact */

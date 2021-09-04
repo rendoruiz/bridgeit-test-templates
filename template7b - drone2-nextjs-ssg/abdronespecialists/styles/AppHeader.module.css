@@ -106,6 +106,7 @@
 .navigationIconDrone svg {
   height: 100%;
   width: auto;
+  fill: color-secondary;
 }
 
 .mediaLinks {

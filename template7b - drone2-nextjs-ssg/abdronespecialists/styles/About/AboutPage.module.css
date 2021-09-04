@@ -1,0 +1,126 @@
+@value border-line from "./../_variables.css";
+@value spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
+.about {
+  display: grid;
+}
+
+.divider,
+.highlights {
+  display: none;
+}
+
+.bannerContent {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+.bannerHeading,
+.heading2 {
+  composes: textHeading2 from "./../_shared.module.css";
+}
+.bannerHeading {
+  font-size: 1.25rem;
+  letter-spacing: 0.25px;
+  display: grid;
+  text-align: center;
+}
+.bannerSubheading,
+.heading3 {
+  composes: textHeading3 from "./../_shared.module.css";
+}
+.bannerSubheading {
+  font-size: 1rem;
+  margin: spacing-sm 0 10px;
+}
+.partners {
+  width: 80%;
+  max-width: 380px;
+}
+
+.aboutContent {
+  composes: content from "./../_shared.module.css";
+  composes: textBody from "./../_shared.module.css";
+  justify-self: center;
+  padding: spacing-md spacing-sm;
+  display: grid;
+  row-gap: spacing-sm;
+}
+.heading2 {
+  position: relative;
+}
+.heading2::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -10px;
+  border-left: border-line;
+}
+.aboutContent :not(.heading3) {
+  line-height: 1.7;
+}
+
+.profiles {
+  margin: spacing-md 0;
+  display: grid;
+  row-gap: spacing-lg;
+}
+.profileItem {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+.profileImage {
+  margin-bottom: 10px;
+  width: 230px;
+  height: 230px;
+}
+.profileRole {
+  letter-spacing: 0.5px;
+}
+
+
+@media bp-md {
+  .bannerHeading {
+    letter-spacing: 1px;
+    font-size: 2rem;
+  }
+  .bannerSubheading {
+    font-size: 1.25rem;
+  }
+  .partners {
+    max-width: 500px;
+  }
+  .divider,
+  .highlights {
+    display: grid;
+  }
+  .heading2::after {
+    content: none;
+  }
+  .profiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media bp-lg {
+  .bannerHeading {
+    font-size: 2.25rem;
+    display: flex;
+  }
+  .bannerSubheading {
+    margin: spacing-sm 0;
+  }
+  .aboutContent {
+    padding: spacing-lg spacing-md;
+  }
+  .profiles {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    column-gap: spacing-lg;
+  }
+  .profileImage {
+    margin-bottom: 15px;
+  }
+}

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { Accordion } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons'
@@ -8,12 +9,15 @@ import MainLayout from '../components/layouts/MainLayout'
 import Image from '../components/Image'
 import Video from '../components/Video'
 import Carousel from '../components/Carousel'
-
-import styles from '../styles/Home.module.css'
 import DroneCard from '../components/DroneCard'
 import VideoModal from '../components/VideoModal'
 import Form from '../components/Form'
-import Link from 'next/link'
+import Partners from '../components/About/Partners'
+import DroneList from '../components/DroneList'
+
+import styles from '../styles/Home.module.css'
+import Highlights from '../components/About/Highlights'
+import Divider from '../components/Divider'
 
 export default function Home() {
   return (
@@ -63,48 +67,7 @@ export default function Home() {
             <strong>Don't know how to obtain proper permits and approvals?</strong> Let us handle it! We coordinate with Nav Canada for all flights in control zones near major airports and have experience coordinating drone operations and flight plans with National & Provincial Parks, Transport Canada, and Municipalities.
           </p>
           <h3 className={styles.heading3}>Trusted by:</h3>
-          <div className={styles.portfolioCustomers}>
-            <Image 
-              prefix="logo-disney-white"
-              fileExtension="png"
-              title="H4H: Horsepower For Hope logo"
-              isContained
-              className={styles.portfolioLogo}
-              noMd
-            />
-            <Image 
-              prefix="logo-fx-white"
-              fileExtension="png"
-              title="Kids with Cancer Society logo"
-              isContained
-              className={styles.portfolioLogo}
-              noMd
-            />
-            <Image 
-              prefix="logo-cbc-white"
-              fileExtension="png"
-              title="FX logo"
-              isContained
-              className={styles.portfolioLogo}
-              noMd
-            />
-            <Image 
-              prefix="logo-h4h-white"
-              fileExtension="png"
-              title="Disney logo"
-              isContained
-              className={styles.portfolioLogo4}
-              noMd
-            />
-            <Image 
-              prefix="logo-kwcs-white"
-              fileExtension="png"
-              title="CBC logo"
-              isContained
-              className={styles.portfolioLogo}
-              noMd
-            />
-          </div>
+          <Partners className={styles.portfolioPartners} />
           <Button
             text="Portfolio"
             href="/"
@@ -156,46 +119,10 @@ export default function Home() {
               heading="Indoor FPV"
               body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae quia suscipit ratione repellendus facilis."
               href="/"
-            />
+            />  
           </Carousel>
           <div className={styles.droneCards}>
-            <DroneCard 
-              imagePrefix="equipment-dji-inspire-2"
-              imageTitle="DJI Inspire 2 image"
-              heading="DJI Inspire 2"
-              body="Image quality, power and intelligence to meet the needs of professional filmmakers and enterprises around the globe."
-              href="/"
-            />
-            <DroneCard 
-              imagePrefix="equipment-zenmuse-x7"
-              imageTitle="Zenmuse X7 image"
-              heading="Zenmuse X7"
-              body="The Zenmuse X7 is a compact Super 35 camera with an integrated gimbal made for high-end filmmaking."
-              href="/"
-              fileExtension="png"
-            />
-            <DroneCard 
-              imagePrefix="equipment-indemnis-nexus"
-              imageTitle="Indemnis Nexus image"
-              heading="Indemnis Nexus"
-              body="The Nexus by Indemnis is the first UAV recovery system to be proven reliable in any failure situation."
-              href="/"
-              fileExtension="png"
-            />
-            <DroneCard 
-              imagePrefix="equipment-outdoor-fpv"
-              imageTitle="Outdoor FPV image"
-              heading="Outdoor FPV"
-              body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae quia suscipit ratione repellendus facilis."
-              href="/"
-            />
-            <DroneCard 
-              imagePrefix="equipment-indoor-fpv"
-              imageTitle="Indoor FPV image"
-              heading="Indoor FPV"
-              body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae quia suscipit ratione repellendus facilis."
-              href="/"
-            />
+            <DroneList />
           </div>
         </div>
       </section>
@@ -437,55 +364,11 @@ export default function Home() {
         </div>
       </section>
       
-      <div className={styles.sectionSeparator}></div>
+      <Divider />
 
-      <section className={styles.sectionHighlights}>
-        <div className={styles.highlightsContent}>
-          <h2 className={styles.heading2}>Highlights</h2>
-          <Carousel  
-            className={styles.carousel}
-            noArrows
-          >
-            <VideoModal 
-              imagePrefix="highlights-pv1"
-              title="highlight video"
-              youtubeEmbedId="ifO6DECu6-k"
-              className={styles.carouselVideo}
-            />
-            <VideoModal 
-              imagePrefix="highlights-pv2"
-              title="highlight video"
-              youtubeEmbedId="ohsQcJyELi0"
-              className={styles.carouselVideo}
-            />
-            <VideoModal 
-              imagePrefix="highlights-pv3"
-              title="highlight video"
-              youtubeEmbedId="Zi_trzln4ss"
-              className={styles.carouselVideo}
-            />
-          </Carousel>
-          <div className={styles.highlightsCards}>
-            <VideoModal 
-              imagePrefix="highlights-pv1"
-              title="highlight video"
-              youtubeEmbedId="ifO6DECu6-k"
-            />
-            <VideoModal 
-              imagePrefix="highlights-pv2"
-              title="highlight video"
-              youtubeEmbedId="ohsQcJyELi0"
-            />
-            <VideoModal 
-              imagePrefix="highlights-pv3"
-              title="highlight video"
-              youtubeEmbedId="Zi_trzln4ss"
-            />
-          </div>
-        </div>
-      </section>
+      <Highlights />
 
-      <div className={styles.sectionSeparator}></div>
+      <Divider />
 
       <section className={styles.sectionContact}>
         <div className={styles.contactNotice}>
