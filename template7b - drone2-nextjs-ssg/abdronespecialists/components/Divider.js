@@ -1,8 +1,8 @@
 import styles from '../styles/Divider.module.css';
 
-const Divider = ({ className}) => {
+const Divider = ({ className, isDark }) => {
   return ( 
-    <div className={styles.divider + (!className ? '' : ` ${className}`)}></div>
+    <div className={(!isDark ? styles.divider : styles.dark) + (!className ? '' : ` ${className}`)} />
   );
 }
  

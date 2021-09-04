@@ -3,9 +3,9 @@ import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faBookmark, faCamera, faEnvelope, faHome, faUserFriends } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 import styles from '../styles/AppHeader.module.css';
+import ExternalMediaLinks from './Contact/ExternalMediaLinks';
 
 const AppHeader = () => { 
   const [isNavigationOpen, setIsNavigationOpen] = useState(null);
@@ -53,7 +53,7 @@ const AppHeader = () => {
             </a>
           </Link>
           <Link href="/about">
-            <a className={styles.navigationItem + setActive('/about', true)}>
+            <a className={styles.navigationItem + setActive('/about')}>
               <FontAwesomeIcon icon={faUserFriends} className={styles.navigationIcon} />
               About
             </a>
@@ -80,37 +80,15 @@ const AppHeader = () => {
               Equipment
             </a>
           </Link>
-          <Link href="/">
-            <a className={styles.navigationItem + setActive('')}>
+          <Link href="/contact">
+            <a className={styles.navigationItem + setActive('/contact')}>
               <FontAwesomeIcon icon={faEnvelope} className={styles.navigationIcon} />
               Contact<span className={styles.mobile}>&nbsp;Us</span>
             </a>
           </Link>
         </nav>
-
-        <div className={styles.mediaLinks}>
-          <a 
-            className={styles.linkItem} 
-            href="https://www.youtube.com/channel/UCz8CmyohSEjXX0vGBF4YapQ"
-            title="youtube page"
-          >
-            <FontAwesomeIcon icon={faYoutube} className={styles.mediaIcon} />
-          </a>
-          <a 
-            className={styles.linkItem} 
-            href="https://www.facebook.com/Alberta-Drone-Specialists-108741628175831"
-            title="facebook page"
-          >
-            <FontAwesomeIcon icon={faFacebook} className={styles.mediaIcon} />
-          </a>
-          <a 
-            className={styles.linkItem} 
-            href="https://www.instagram.com/abdronespecialists/"
-            title="instagram page"
-          >
-            <FontAwesomeIcon icon={faInstagram} className={styles.mediaIcon} />
-          </a>
-        </div>
+        
+        <ExternalMediaLinks className={styles.mediaLinks} />
       </div>
     </header>
   );

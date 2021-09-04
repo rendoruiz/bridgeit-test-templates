@@ -1,0 +1,72 @@
+@value color-shade-darker from "./../_variables.css";
+@value max-content-width-half, spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
+.contact {
+  composes: themeDark from "./../_shared.module.css";
+  display: grid;
+}
+.sideContent {
+  composes: captionedMedia from "./../_shared.module.css";
+  height: 400px;
+}
+.textContainer {
+  background: color-shade-darker;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.sideText {
+  padding: 0 spacing-sm;
+  width: 100%;
+  max-width: max-content-width-half;
+  display: grid;
+  align-content: center;
+  align-items: center;
+  row-gap: spacing-sm;
+}
+.heading {
+  composes: textHeading2 from "./../_shared.module.css";
+  display: grid;
+}
+.form {
+  justify-self: center;
+  padding: spacing-md spacing-sm;
+  width: 100%;
+  max-width: max-content-width-half;
+}
+@media bp-md {
+  .sideContent {
+    height: 800px;
+  }
+  .contact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .textContainer {
+    justify-content: unset;
+  }
+  .sideText {
+    justify-self: flex-end;
+  }
+  .subtitle {
+    width: 350px;
+  }
+  .form {
+    justify-self: flex-start;
+    padding: 0 spacing-md;
+  }
+}
+@media bp-lg {
+  .sideContent {
+    height: 900px;
+  }
+  .textContainer {
+    padding-right: 0;
+  }
+  .sideText {
+    padding-left: spacing-md;
+  }
+  .form {
+    padding: spacing-sm spacing-lg;
+  }
+}

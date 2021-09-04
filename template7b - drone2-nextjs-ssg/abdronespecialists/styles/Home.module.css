@@ -66,10 +66,14 @@
   .bannerText p {
     display: grid;
   }
+  .mainBannerContext {
+    padding-left: spacing-md;
+  }
 }
 @media bp-xl {
   .bannerText {
     font-size: 2.25rem;
+    max-width: calc(max-content-width-half - spacing-md);
   }
   .mainBannerContext {
     padding-right: 0;
@@ -143,6 +147,7 @@
   }
   .portfolioText {
     padding-left: spacing-lg;
+    padding-right: spacing-md;
   }
 }
 
@@ -168,7 +173,7 @@
 }
 @media bp-lg {
   .equipmentContent {
-    padding: spacing-lg spacing-sm;
+    padding: spacing-lg spacing-md;
   }
   .sectionEquipment .heading2 {
     justify-self: flex-start;
@@ -330,7 +335,7 @@
 }
 @media bp-lg {
   .servicesContent {
-    padding: spacing-lg spacing-sm;
+    padding: spacing-lg spacing-md;
   }
   .servicesContent > .heading2 {
     margin-bottom: spacing-md;
@@ -358,79 +363,11 @@
   }
 }
 
-
-/* Contact */
-.sectionContact {
+.contact {
   padding: calc(spacing-md * 2) 0 spacing-sm;
-  display: grid;
-}
-.contactNotice {
-  composes: captionedMedia from "./_shared.module.css";
-}
-.contactImage {
-  height: 400px;
-}
-.contactContext {
-  padding: 0 spacing-sm;
-  background: color-shade-darker;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-.contactText {
-  width: 100%;
-  max-width: max-content-width-half;
-  display: grid;
-  align-content: center;
-  align-items: center;
-  row-gap: spacing-sm;
-}
-.contactTextHeading {
-  composes: textHeading2 from "./_shared.module.css";
-  display: grid;
-}
-.form {
-  justify-self: center;
-  padding: spacing-md spacing-sm;
-  width: 100%;
-  max-width: max-content-width-half;
 }
 @media bp-md {
-  .sectionContact {
+  .contact {
     padding: 0;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .contactImage {
-    height: 800px;
-  }
-  .contactContext {
-    justify-content: unset;
-  }
-  .contactContext p {
-    width: 350px;
-  }
-  .contactText {
-    justify-self: flex-end;
-  }
-  .form {
-    justify-self: flex-start;
-    padding: 0 spacing-md;
-  }
-}
-@media bp-lg {
-  .contactImage {
-    height: 900px;
-  }
-  .contactContext {
-    padding-right: 0;
-  }
-  .form {
-    padding: spacing-sm spacing-lg;
-  }
-}
-@media bp-xl {
-  .contactText {
-    padding-left: spacing-sm;
   }
 }

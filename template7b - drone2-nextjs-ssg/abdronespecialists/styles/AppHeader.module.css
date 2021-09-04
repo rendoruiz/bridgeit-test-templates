@@ -1,6 +1,6 @@
 @value color-dark, color-light, color-primary, color-secondary, color-modal-overlay from "./_variables.css";
 @value font-primary from "./_variables.css";
-@value header-height-sm, header-height-lg, spacing-sm, modal-z-elevation from "./_variables.css";
+@value header-height-sm, header-height-lg, spacing-sm, spacing-md modal-z-elevation from "./_variables.css";
 @value bp-lg from "./_variables.css";
 
 .mobile {
@@ -116,6 +116,7 @@
 @media bp-lg {
   .content {
     height: header-height-lg;
+    padding: 0 spacing-md;
   }
   .menuButton {
     display: none;
@@ -158,15 +159,6 @@
 
   .mediaLinks {
     display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .linkItem {
-    composes: link from "./_shared.module.css";
-  }
-  .mediaIcon {
-    width: 20px !important;
-    height: 20px !important;
   }
 
   .active {

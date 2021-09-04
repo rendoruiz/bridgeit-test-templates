@@ -1,0 +1,121 @@
+@value color-primary, color-secondary from "./../_variables.css";
+@value spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
+.heading3 {
+  composes: textHeading3 from "./../_shared.module.css";
+}
+
+.bannerContent {
+  composes: textTitle from "./../_shared.module.css";
+  font-size: 2.5rem;
+  display: grid;
+  place-items: center;
+}
+.dividerTop {
+  height: spacing-md;
+}
+
+.cards {
+  composes: themeLight from "./../_shared.module.css";
+  composes: container from "./../_shared.module.css";
+}
+.cardsContent {
+  composes: content from "./../_shared.module.css";
+  composes: themeLight from "./../_shared.module.css";
+  padding: spacing-md spacing-sm;
+  display: grid;
+  row-gap: spacing-md;
+}
+.cardItem {
+  composes: card from "./../_shared.module.css";
+  composes: textBody from "./../_shared.module.css";
+  min-height: 150px;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+}
+.followCard,
+.phoneCard,
+.hoursCard {
+  composes: cardItem;
+  row-gap: 5px;
+}
+.followCard,
+.hoursCard {
+  composes: cardItem;
+  cursor: unset;
+}
+.followCard {
+  row-gap: spacing-sm;
+}
+.linkIcons {
+  width: 40px;
+  height: 30px;
+  transition: color 200ms ease-out;
+}
+.linkIcons,
+.linkIcons:visited {
+  color: color-secondary;
+}
+.linkIcons:hover,
+.linkIcons:active {
+  color: color-primary;
+}
+
+.dividerBottom {
+  display: none;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: color-secondary;
+}
+.svg {
+  width: inherit !important;
+  height: inherit !important;
+}
+.hoursText {
+  display: grid;
+  letter-spacing: 0.5px;
+}
+
+@media bp-md {
+  .dividerTop,
+  .banner {
+    display: none;
+  }
+  .cardsContent {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: spacing-sm;
+  }
+  .cardItem {
+    min-height: 160px;
+  }
+  .phoneCard {
+    order: -1;
+  }
+  .icon {
+    width: 26px;
+    height: 26px;
+  }
+  .dividerBottom {
+    display: block;
+  }
+}
+@media bp-lg {
+  .cardsContent {
+    padding: spacing-lg spacing-md;
+    column-gap: spacing-md;
+  }
+  .cardItem {
+    min-height: 200px;
+  }
+  .phoneCard .icon,
+  .hoursCard .icon {
+    margin-bottom: 5px;
+  }
+}
