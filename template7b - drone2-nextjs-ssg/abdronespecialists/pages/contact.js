@@ -50,7 +50,7 @@ const ContactPage = () => {
             </a>
             <div className={styles.hoursCard}>
               <h3 className={styles.heading3}>Office Hours</h3>
-              <div class={styles.icon}>
+              <div className={styles.icon}>
                 <FontAwesomeIcon 
                   icon={faClock} 
                   className={styles.svg} 
