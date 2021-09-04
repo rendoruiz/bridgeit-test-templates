@@ -3,17 +3,17 @@
 @value bp-md, bp-lg, bp-xl from "./../_variables.css";
 
 /* Contact */
-.sectionContact {
+.contact {
   padding: calc(spacing-md * 2) 0 spacing-sm;
   display: grid;
 }
-.contactNotice {
+.sideContent {
   composes: captionedMedia from "./../_shared.module.css";
 }
-.contactImage {
+.background {
   height: 400px;
 }
-.contactContext {
+.textContainer {
   padding: 0 spacing-sm;
   background: color-shade-darker;
   display: grid;
@@ -21,7 +21,7 @@
   align-content: center;
   align-items: center;
 }
-.contactText {
+.sideText {
   width: 100%;
   max-width: max-content-width-half;
   display: grid;
@@ -29,7 +29,7 @@
   align-items: center;
   row-gap: spacing-sm;
 }
-.contactTextHeading {
+.heading {
   composes: textHeading2 from "./../_shared.module.css";
   display: grid;
 }
@@ -40,20 +40,20 @@
   max-width: max-content-width-half;
 }
 @media bp-md {
-  .sectionContact {
+  .contact {
     padding: 0;
     grid-template-columns: repeat(2, 1fr);
   }
-  .contactImage {
+  .background {
     height: 800px;
   }
-  .contactContext {
+  .textContainer {
     justify-content: unset;
   }
-  .contactContext p {
+  .subtitle {
     width: 350px;
   }
-  .contactText {
+  .sideText {
     justify-self: flex-end;
   }
   .form {
@@ -62,10 +62,10 @@
   }
 }
 @media bp-lg {
-  .contactImage {
+  .background {
     height: 900px;
   }
-  .contactContext {
+  .textContainer {
     padding-right: 0;
   }
   .form {
@@ -73,7 +73,7 @@
   }
 }
 @media bp-xl {
-  .contactText {
+  .sideText {
     padding-left: spacing-sm;
   }
 }
