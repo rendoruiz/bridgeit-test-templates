@@ -1,0 +1,79 @@
+@value color-dark, color-light, color-primary, color-secondary, color-shade, color-shade-darker, color-button from "./../_variables.css";
+@value max-content-width-half, corner-rounding, header-height-sm, header-height-lg, spacing-sm, spacing-md, spacing-lg, border-line, font-primary from "./../_variables.css";
+@value bp-md, bp-lg, bp-xl from "./../_variables.css";
+
+/* Contact */
+.sectionContact {
+  padding: calc(spacing-md * 2) 0 spacing-sm;
+  display: grid;
+}
+.contactNotice {
+  composes: captionedMedia from "./../_shared.module.css";
+}
+.contactImage {
+  height: 400px;
+}
+.contactContext {
+  padding: 0 spacing-sm;
+  background: color-shade-darker;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.contactText {
+  width: 100%;
+  max-width: max-content-width-half;
+  display: grid;
+  align-content: center;
+  align-items: center;
+  row-gap: spacing-sm;
+}
+.contactTextHeading {
+  composes: textHeading2 from "./../_shared.module.css";
+  display: grid;
+}
+.form {
+  justify-self: center;
+  padding: spacing-md spacing-sm;
+  width: 100%;
+  max-width: max-content-width-half;
+}
+@media bp-md {
+  .sectionContact {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contactImage {
+    height: 800px;
+  }
+  .contactContext {
+    justify-content: unset;
+  }
+  .contactContext p {
+    width: 350px;
+  }
+  .contactText {
+    justify-self: flex-end;
+  }
+  .form {
+    justify-self: flex-start;
+    padding: 0 spacing-md;
+  }
+}
+@media bp-lg {
+  .contactImage {
+    height: 900px;
+  }
+  .contactContext {
+    padding-right: 0;
+  }
+  .form {
+    padding: spacing-sm spacing-lg;
+  }
+}
+@media bp-xl {
+  .contactText {
+    padding-left: spacing-sm;
+  }
+}

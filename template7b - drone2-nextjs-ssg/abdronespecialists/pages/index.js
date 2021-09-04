@@ -18,6 +18,7 @@ import DroneList from '../components/DroneList'
 import styles from '../styles/Home.module.css'
 import Highlights from '../components/About/Highlights'
 import Divider from '../components/Divider'
+import ContactPanel from '../components/Contact/ContactPanel'
 
 export default function Home() {
   return (
@@ -370,26 +371,7 @@ export default function Home() {
 
       <Divider />
 
-      <section className={styles.sectionContact}>
-        <div className={styles.contactNotice}>
-          <Image 
-            prefix="home-contact-bg"
-            title="race car image"
-            noLg
-            className={styles.contactImage}
-          />
-          <div className={styles.contactContext}>
-            <div className={styles.contactText}>
-              <span className={styles.contactTextHeading}>
-                <span>We're always ready</span>
-                <span> to take on new projects.</span>
-              </span>
-              <p>Keep scrolling to send us a quick message and we will get back to you within 24 hours. Thank you for choosing Alberta Drone Specialists.</p>
-            </div>
-          </div>
-        </div>
-        <Form className={styles.form} />
-      </section>
+      <ContactPanel />
     </MainLayout>
   )
 }
