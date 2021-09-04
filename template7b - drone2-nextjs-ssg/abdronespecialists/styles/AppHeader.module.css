@@ -1,6 +1,6 @@
 @value color-dark, color-light, color-primary, color-secondary, color-modal-overlay from "./_variables.css";
 @value font-primary from "./_variables.css";
-@value header-height-sm, header-height-lg, spacing-sm, spacing-md modal-z-elevation from "./_variables.css";
+@value header-height-sm, header-height-lg, spacing-sm, spacing-md, modal-z-elevation from "./_variables.css";
 @value bp-lg from "./_variables.css";
 
 .mobile {
