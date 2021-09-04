@@ -1,5 +1,10 @@
+@value border-line from "./../_variables.css";
 @value spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
 @value bp-md, bp-lg from "./../_variables.css";
+
+.about {
+  display: grid;
+}
 
 .divider,
 .highlights {
@@ -11,15 +16,21 @@
   justify-items: center;
   align-content: center;
 }
-.bannerHeading {
+.bannerHeading,
+.heading2 {
   composes: textHeading2 from "./../_shared.module.css";
+}
+.bannerHeading {
   font-size: 1.25rem;
   letter-spacing: 0.25px;
   display: grid;
   text-align: center;
 }
-.bannerSubheading {
+.bannerSubheading,
+.heading3 {
   composes: textHeading3 from "./../_shared.module.css";
+}
+.bannerSubheading {
   font-size: 1rem;
   margin: spacing-sm 0 10px;
 }
@@ -28,6 +39,44 @@
   max-width: 380px;
 }
 
+.aboutContent {
+  composes: textBody from "./../_shared.module.css";
+  margin: spacing-sm;
+  display: grid;
+  row-gap: spacing-sm;
+}
+.heading2 {
+  position: relative;
+}
+.heading2::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -10px;
+  border-left: border-line;
+}
+.aboutContent :not(.heading3) {
+  line-height: 1.7;
+}
+
+.profiles {
+  margin: spacing-md 0;
+  display: grid;
+  row-gap: spacing-lg;
+}
+.profileItem {
+  display: grid;
+  justify-items: center;
+}
+.profileImage {
+  margin-bottom: 10px;
+  width: 230px;
+  height: 230px;
+}
+.profileRole {
+  letter-spacing: 0.5px;
+}
 
 
 @media bp-md {

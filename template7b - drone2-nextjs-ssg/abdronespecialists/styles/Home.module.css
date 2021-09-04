@@ -1,5 +1,5 @@
 @value color-dark, color-light, color-primary, color-secondary, color-shade, color-shade-darker, color-button from "./_variables.css";
-@value max-content-width-half, corner-rounding, header-height-sm, header-height-lg, spacing-sm, spacing-md, spacing-lg, font-primary from "./_variables.css";
+@value max-content-width-half, corner-rounding, header-height-sm, header-height-lg, spacing-sm, spacing-md, spacing-lg, border-line, font-primary from "./_variables.css";
 @value bp-md, bp-lg, bp-xl from "./_variables.css";
 
 .heading2 {
@@ -50,7 +50,7 @@
   }
   .bannerText {
     padding: spacing-md 0 spacing-md spacing-sm;
-    border-left: 2px solid color-light;
+    border-left: border-line;
     width: 100%;
     max-width: max-content-width-half;
     justify-self: flex-end;

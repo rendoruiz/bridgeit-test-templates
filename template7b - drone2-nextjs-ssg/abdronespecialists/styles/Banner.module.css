@@ -3,7 +3,7 @@
 
 .banner {
   composes: captionedMedia from "./_shared.module.css";
-  height: 270px;
+  height: 250px;
 }
 .fullHeight {
   height: clamp(300px, calc(90vh - header-height-sm), 900px);

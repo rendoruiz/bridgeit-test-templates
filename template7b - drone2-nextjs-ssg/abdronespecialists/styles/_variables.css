@@ -29,6 +29,7 @@
 @value max-content-width-half: calc(max-content-width / 2);
 @value corner-rounding: 10px;
 @value box-shadow: 0 3px 10px;
+@value border-line: 2px solid color-light;
 
 
 /* breakpoints */
