@@ -8,23 +8,17 @@
 }
 
 .text {
+  composes: card from "./_shared.module.css";
   justify-self: center;
   margin-bottom: 16px;
   padding: 10px 5px 10px 15px;
-  border-radius: corner-rounding;
   width: 80%;
   letter-spacing: 0.5px;
-  box-shadow: box-shadow color-box-shadow;
-  transition: box-shadow 200ms ease-out;
   display: grid;
   grid-template-rows: auto 1fr;
   grid-template-columns: 1fr auto;
   row-gap: 10px;
   column-gap: 10px;
-}
-.text:hover,
-.text:active {
-  box-shadow: box-shadow color-box-shadow-active;
 }
 .text:hover .icon,
 .text:active .icon {
