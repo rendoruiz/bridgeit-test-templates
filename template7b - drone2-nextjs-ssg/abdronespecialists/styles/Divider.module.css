@@ -1,10 +1,14 @@
-@value color-light from "./_variables.css";
+@value color-light, color-dark from "./_variables.css";
 @value spacing-sm, spacing-md from "./_variables.css";
 @value bp-md from "./_variables.css";
 
 .divider {
   height: spacing-sm;
   background: color-light;
+}
+.dark {
+  composes: divider;
+  background-color: color-dark;
 }
 @media bp-md {
   .divider {
