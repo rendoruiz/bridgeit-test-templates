@@ -1,6 +1,7 @@
 import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '../styles/AppFooter.module.css';
+import ExternalMediaLinks from './Contact/ExternalMediaLinks';
 
 const AppFooter = () => {
   return ( 
@@ -13,6 +14,8 @@ const AppFooter = () => {
         </div>
         <div className={styles.mediaSection}>
           <span className={styles.mediaBlurb}>Let's get social.</span>
+          <ExternalMediaLinks 
+          />
           <div className={styles.externalLinks}>
             <a href="https://www.youtube.com/channel/UCz8CmyohSEjXX0vGBF4YapQ" target="_blank" rel="noreferrer" title="YouTube channel link">
               <FontAwesomeIcon icon={faYoutube} className={styles.icon} />

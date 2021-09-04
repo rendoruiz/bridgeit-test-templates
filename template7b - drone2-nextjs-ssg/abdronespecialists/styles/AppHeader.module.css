@@ -158,15 +158,6 @@
 
   .mediaLinks {
     display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .linkItem {
-    composes: link from "./_shared.module.css";
-  }
-  .mediaIcon {
-    width: 20px !important;
-    height: 20px !important;
   }
 
   .active {
