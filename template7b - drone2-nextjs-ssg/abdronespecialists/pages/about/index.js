@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 import Highlights from "../../components/About/Highlights";
 import Partners from "../../components/About/Partners";
 import Banner from "../../components/Banner";
@@ -10,6 +12,10 @@ import styles from '../../styles/About/AboutPage.module.css'
 const AboutPage = () => {
   return ( 
     <MainLayout>
+      <Head>
+        <title>About Us - Alberta Drone Specialists</title>
+      </Head>
+      
       <div className={styles.about}>
         <Banner imagePrefix="about-banner">
           <div className={styles.bannerContent}>
