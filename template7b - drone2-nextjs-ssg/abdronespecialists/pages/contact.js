@@ -19,7 +19,7 @@ const ContactPage = () => {
         <title>Contact Us - Alberta Drone Specialists</title>
       </Head>
 
-      <div className={styles.contact}>
+      <div>
         <Banner imagePrefix="about-banner" className={styles.banner}>
           <div className={styles.bannerContent}>
             <span>Contact Us</span>
@@ -30,35 +30,37 @@ const ContactPage = () => {
         <ContactPanel />
 
         <div className={styles.cards}>
-          <div className={styles.followCard}>
-            <h3 className={styles.heading3}>Follow Us</h3>
-            <ExternalMediaLinks iconClassName={styles.linkIcons} />
-          </div>
-          <a 
-            href="tel:+7809383090" 
-            className={styles.phoneCard}
-          >
-            <h3 className={styles.heading3}>Phone</h3>
-            <div class={styles.icon}>
-              <FontAwesomeIcon 
-                icon={faMobileAlt} 
-                className={styles.svg} 
-              />
+          <div className={styles.cardsContent}>
+            <div className={styles.followCard}>
+              <h3 className={styles.heading3}>Follow Us</h3>
+              <ExternalMediaLinks iconClassName={styles.linkIcons} />
             </div>
-            <span>(780) 938-3090</span>
-          </a>
-          <div className={styles.hoursCard}>
-            <h3 className={styles.heading3}>Office Hours</h3>
-            <div class={styles.icon}>
-              <FontAwesomeIcon 
-                icon={faClock} 
-                className={styles.svg} 
-              />
+            <a 
+              href="tel:+7809383090" 
+              className={styles.phoneCard}
+            >
+              <h3 className={styles.heading3}>Phone</h3>
+              <div class={styles.icon}>
+                <FontAwesomeIcon 
+                  icon={faMobileAlt} 
+                  className={styles.svg} 
+                />
+              </div>
+              <span>(780) 938-3090</span>
+            </a>
+            <div className={styles.hoursCard}>
+              <h3 className={styles.heading3}>Office Hours</h3>
+              <div class={styles.icon}>
+                <FontAwesomeIcon 
+                  icon={faClock} 
+                  className={styles.svg} 
+                />
+              </div>
+              <p className={styles.hoursText}>
+                <span>Mon-Fri</span>
+                <span>9 am. to 5 pm.</span>
+              </p>
             </div>
-            <p className={styles.hoursText}>
-              <span>Mon-Fri</span>
-              <span>9 am. to 5 pm.</span>
-            </p>
           </div>
         </div>
 

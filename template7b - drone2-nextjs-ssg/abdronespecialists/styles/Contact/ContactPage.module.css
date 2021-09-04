@@ -7,7 +7,6 @@
   composes: textHeading3 from "./../_shared.module.css";
 }
 
-
 .bannerContent {
   composes: textTitle from "./../_shared.module.css";
   font-size: 2.5rem;
@@ -19,6 +18,11 @@
 }
 
 .cards {
+  composes: themeLight from "./../_shared.module.css";
+  composes: container from "./../_shared.module.css";
+}
+.cardsContent {
+  composes: content from "./../_shared.module.css";
   composes: themeLight from "./../_shared.module.css";
   padding: spacing-md spacing-sm;
   display: grid;
@@ -48,20 +52,6 @@
 .followCard {
   row-gap: spacing-sm;
 }
-.icon {
-  width: 20px;
-  height: 20px;
-  color: color-secondary;
-}
-.svg {
-  width: inherit !important;
-  height: inherit !important;
-}
-.hoursText {
-  display: grid;
-  letter-spacing: 0.5px;
-}
-
 .linkIcons {
   width: 40px;
   height: 30px;
@@ -80,12 +70,26 @@
   display: none;
 }
 
+.icon {
+  width: 20px;
+  height: 20px;
+  color: color-secondary;
+}
+.svg {
+  width: inherit !important;
+  height: inherit !important;
+}
+.hoursText {
+  display: grid;
+  letter-spacing: 0.5px;
+}
+
 @media bp-md {
   .dividerTop,
   .banner {
     display: none;
   }
-  .cards {
+  .cardsContent {
     grid-template-columns: repeat(3, 1fr);
     column-gap: spacing-sm;
   }
@@ -104,7 +108,7 @@
   }
 }
 @media bp-lg {
-  .cards {
+  .cardsContent {
     padding: spacing-lg spacing-md;
     column-gap: spacing-md;
   }

@@ -3,6 +3,7 @@
 @value bp-md, bp-lg from "./../_variables.css";
 
 .contact {
+  composes: themeDark from "./../_shared.module.css";
   display: grid;
 }
 .sideContent {
