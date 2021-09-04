@@ -357,3 +357,12 @@
     height: 350px;
   }
 }
+
+.contact {
+  padding: calc(spacing-md * 2) 0 spacing-sm;
+}
+@media bp-md {
+  .contact {
+    padding: 0;
+  }
+}

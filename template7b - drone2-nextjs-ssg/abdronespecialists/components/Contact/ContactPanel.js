@@ -3,15 +3,14 @@ import Image from "../Image";
 
 import styles from '../../styles/Contact/ContactPanel.module.css'
 
-const ContactPanel = () => {
+const ContactPanel = ({ className }) => {
   return ( 
-    <section className={styles.contact}>
+    <section className={styles.contact + (!className ? '' : ` ${className}`) }>
       <div className={styles.sideContent}>
         <Image 
           prefix="home-contact-bg"
           title="race car image"
           noLg
-          className={styles.background}
         />
         <div className={styles.textContainer}>
           <div className={styles.sideText}>

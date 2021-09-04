@@ -2,15 +2,11 @@
 @value max-content-width-half, corner-rounding, header-height-sm, header-height-lg, spacing-sm, spacing-md, spacing-lg, border-line, font-primary from "./../_variables.css";
 @value bp-md, bp-lg, bp-xl from "./../_variables.css";
 
-/* Contact */
 .contact {
-  padding: calc(spacing-md * 2) 0 spacing-sm;
   display: grid;
 }
 .sideContent {
   composes: captionedMedia from "./../_shared.module.css";
-}
-.background {
   height: 400px;
 }
 .textContainer {
@@ -40,12 +36,11 @@
   max-width: max-content-width-half;
 }
 @media bp-md {
-  .contact {
-    padding: 0;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .background {
+  .sideContent {
     height: 800px;
+  }
+  .contact {
+    grid-template-columns: repeat(2, 1fr);
   }
   .textContainer {
     justify-content: unset;
@@ -62,7 +57,7 @@
   }
 }
 @media bp-lg {
-  .background {
+  .sideContent {
     height: 900px;
   }
   .textContainer {

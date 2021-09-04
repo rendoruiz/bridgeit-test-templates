@@ -371,7 +371,7 @@ export default function Home() {
 
       <Divider />
 
-      <ContactPanel />
+      <ContactPanel className={styles.contact} />
     </MainLayout>
   )
 }
