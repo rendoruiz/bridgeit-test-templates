@@ -1,13 +1,13 @@
 import Head from 'next/head'
 
-import Highlights from "../../components/About/Highlights";
-import Partners from "../../components/About/Partners";
-import Banner from "../../components/Banner";
-import Divider from "../../components/Divider";
-import MainLayout from "../../components/layouts/MainLayout";
-import Image from '../../components/Image'
+import Highlights from "../components/About/Highlights";
+import Partners from "../components/About/Partners";
+import Banner from "../components/Banner";
+import Divider from "../components/Divider";
+import MainLayout from "../components/layouts/MainLayout";
+import Image from '../components/Image'
 
-import styles from '../../styles/About/AboutPage.module.css'
+import styles from '../styles/About/AboutPage.module.css'
 
 const AboutPage = () => {
   return ( 
