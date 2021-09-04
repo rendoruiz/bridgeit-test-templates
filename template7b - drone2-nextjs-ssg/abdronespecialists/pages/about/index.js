@@ -11,7 +11,6 @@ const AboutPage = () => {
   return ( 
     <MainLayout>
       <div className={styles.about}>
-
         <Banner imagePrefix="about-banner">
           <div className={styles.bannerContent}>
             <p className={styles.bannerHeading}>
@@ -24,7 +23,7 @@ const AboutPage = () => {
         </Banner>
 
         <div className={styles.aboutContent}>
-          <h2 className={styles.heading2}>About Us</h2>
+          <h2 className={styles.heading2}>About Us.</h2>
           <h3 className={styles.heading3}>We love to fly.</h3>
           <p>
             Alberta Drone Specialists goes above and beyond other drone companies. Simply put, we love to fly, and it shows in our constant growth and dedication to improving our skills and technology. Our pilots use cutting-edge drone equipment and cameras, and have provided services to various industries that are in demand of high-quality aerial content. We provide unparalleled quality in our aerials and offer new innovative services using the latest developments in drone technology. 

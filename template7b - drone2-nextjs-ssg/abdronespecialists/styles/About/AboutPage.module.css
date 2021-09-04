@@ -69,7 +69,8 @@
 }
 .profileItem {
   display: grid;
-  justify-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .profileImage {
   margin-bottom: 10px;
@@ -110,5 +111,16 @@
   }
   .bannerSubheading {
     margin: spacing-sm 0;
+  }
+  .aboutContent {
+    padding: spacing-lg spacing-md;
+  }
+  .profiles {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    column-gap: spacing-lg;
+  }
+  .profileImage {
+    margin-bottom: 15px;
   }
 }
