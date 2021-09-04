@@ -123,4 +123,7 @@
   .profileImage {
     margin-bottom: 15px;
   }
+  .highlightsContent {
+    padding: spacing-lg spacing-md;
+  }
 }
