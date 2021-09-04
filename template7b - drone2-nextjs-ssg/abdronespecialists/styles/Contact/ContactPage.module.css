@@ -49,9 +49,13 @@
   row-gap: spacing-sm;
 }
 .icon {
-  width: 20px !important;
-  height: 20px !important;
+  width: 20px;
+  height: 20px;
   color: color-secondary;
+}
+.svg {
+  width: inherit !important;
+  height: inherit !important;
 }
 .hoursText {
   display: grid;
@@ -81,7 +85,34 @@
   .banner {
     display: none;
   }
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: spacing-sm;
+  }
+  .cardItem {
+    min-height: 160px;
+  }
+  .phoneCard {
+    order: -1;
+  }
+  .icon {
+    width: 26px;
+    height: 26px;
+  }
   .dividerBottom {
     display: block;
+  }
+}
+@media bp-lg {
+  .cards {
+    padding: spacing-lg spacing-md;
+    column-gap: spacing-md;
+  }
+  .cardItem {
+    min-height: 200px;
+  }
+  .phoneCard .icon,
+  .hoursCard .icon {
+    margin-bottom: 5px;
   }
 }

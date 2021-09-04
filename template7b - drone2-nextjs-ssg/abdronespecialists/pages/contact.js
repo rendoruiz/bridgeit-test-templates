@@ -39,18 +39,22 @@ const ContactPage = () => {
             className={styles.phoneCard}
           >
             <h3 className={styles.heading3}>Phone</h3>
-            <FontAwesomeIcon 
-              icon={faMobileAlt} 
-              className={styles.icon} 
-            />
+            <div class={styles.icon}>
+              <FontAwesomeIcon 
+                icon={faMobileAlt} 
+                className={styles.svg} 
+              />
+            </div>
             <span>(780) 938-3090</span>
           </a>
           <div className={styles.hoursCard}>
             <h3 className={styles.heading3}>Office Hours</h3>
-            <FontAwesomeIcon 
-              icon={faClock} 
-              className={styles.icon} 
-            />
+            <div class={styles.icon}>
+              <FontAwesomeIcon 
+                icon={faClock} 
+                className={styles.svg} 
+              />
+            </div>
             <p className={styles.hoursText}>
               <span>Mon-Fri</span>
               <span>9 am. to 5 pm.</span>
