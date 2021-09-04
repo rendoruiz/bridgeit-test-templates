@@ -40,7 +40,7 @@ const ContactPage = () => {
               className={styles.phoneCard}
             >
               <h3 className={styles.heading3}>Phone</h3>
-              <div class={styles.icon}>
+              <div className={styles.icon}>
                 <FontAwesomeIcon 
                   icon={faMobileAlt} 
                   className={styles.svg} 
