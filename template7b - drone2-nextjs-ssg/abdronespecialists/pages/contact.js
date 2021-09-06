@@ -33,7 +33,7 @@ const ContactPage = () => {
           <div className={styles.cardsContent}>
             <div className={styles.followCard}>
               <h3 className={styles.heading3}>Follow Us</h3>
-              <ExternalMediaLinks iconClassName={styles.linkIcons} />
+              <ExternalMediaLinks className={styles.externalIcons} iconClassName={styles.externalIcon} />
             </div>
             <a 
               href="tel:+1-780-938-3090" 

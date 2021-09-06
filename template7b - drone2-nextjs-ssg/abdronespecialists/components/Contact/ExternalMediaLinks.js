@@ -3,7 +3,7 @@ import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg
 
 import styles from '../../styles/Contact/ExternalMediaLinks.module.css';
 
-const ExternalMediaLinks = ({ className }) => {
+const ExternalMediaLinks = ({ className, iconClassName }) => {
   return ( 
     <div className={styles.externalLinks + (!className ? '' : ` ${className}`)}>
       <a 
@@ -12,7 +12,7 @@ const ExternalMediaLinks = ({ className }) => {
         title="YouTube channel link"
         className={styles.link}
       >
-        <FontAwesomeIcon icon={faYoutube} />
+        <FontAwesomeIcon icon={faYoutube} className={iconClassName} />
       </a>
       <a 
         href="https://www.facebook.com/Alberta-Drone-Specialists-108741628175831" 
@@ -20,7 +20,7 @@ const ExternalMediaLinks = ({ className }) => {
         title="Facebook page link"
         className={styles.link}
       >
-        <FontAwesomeIcon icon={faFacebook} />
+        <FontAwesomeIcon icon={faFacebook} className={iconClassName} />
       </a>
       <a 
         href="https://www.instagram.com/abdronespecialists/" 
@@ -28,7 +28,7 @@ const ExternalMediaLinks = ({ className }) => {
         title="Instagram page link"
         className={styles.link}
       >
-        <FontAwesomeIcon icon={faInstagram} />
+        <FontAwesomeIcon icon={faInstagram} className={iconClassName} />
       </a>
     </div>
   );
