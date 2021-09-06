@@ -33,6 +33,7 @@ const FormInput = ({ label, type, inputName, icon, placeholder, autoCapitalize, 
           <FontAwesomeIcon 
             icon={icon} 
             className={styles.icon} 
+            fixedWidth
           />
         )}
       </div>
