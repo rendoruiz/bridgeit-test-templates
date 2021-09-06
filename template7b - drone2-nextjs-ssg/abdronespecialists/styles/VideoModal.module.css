@@ -1,4 +1,6 @@
-@value color-light, color-dark, color-primary, color-secondary, corner-rounding from "./_variables.css";
+@value color-light, color-dark, color-primary, color-secondary from "./_variables.css";
+@value font-secondary, corner-rounding from "./_variables.css";
+@value spacing-md from "./_variables.css";
 
 .videoPreview {
   composes: captionedMedia from "./_shared.module.css";
@@ -29,6 +31,24 @@
   height: 18px;
 }
 
+.closeButton {
+  margin-top: calc(spacing-md * -1);
+  border: none;
+  height: spacing-md;
+  font-family: font-secondary;
+  font-size: 20px;
+  font-weight: bold;
+  color: color-light;
+  background: none;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 5px;
+}
+.closeButtonIcon {
+  font-size: 30px;
+}
+
 .videoWrapper {
   padding-top:56.25%;
   background: color-dark;
@@ -42,4 +62,3 @@
   top: 0;
   left: 0;
 }
-

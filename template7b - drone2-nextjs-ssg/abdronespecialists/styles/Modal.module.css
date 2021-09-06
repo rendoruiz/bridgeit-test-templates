@@ -1,10 +1,28 @@
-@value color-modal-overlay, spacing-sm from "./_variables.css";
+@value color-modal-overlay, max-content-width from "./_variables.css";
+@value spacing-sm, spacing-md, spacing-lg from "./_variables.css";
+@value bp-sm, bp-xl from "./_variables.css";
 
 .overlay {
-  padding: spacing-sm 0;
+  padding: spacing-md 0;
   background: color-modal-overlay;
+  /* position: relative; */
+  display: grid;
+  place-items: center;
+  overflow-y: scroll
 }
-
 .modal {
   display: grid;
+  width: 100%;
+}
+
+@media bp-sm {
+  .modal {
+    max-width: 90vw;
+  }
+}
+@media bp-xl {
+  .modal {
+    max-width: max-content-width;
+    padding: 0 spacing-md;
+  }
 }
