@@ -159,6 +159,7 @@
 
   .mediaLinks {
     display: flex;
+    font-size: 20px;
   }
 
   .active {

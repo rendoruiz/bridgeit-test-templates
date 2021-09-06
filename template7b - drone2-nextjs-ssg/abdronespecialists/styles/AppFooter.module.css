@@ -43,11 +43,7 @@
 }
 .externalLinks {
   gap: 15px;
-}
-.icon {
-  composes: link from "./_shared.module.css";
-  width: 16px;
-  height: 16px;
+  font-size: 16px;
 }
 
 @media bp-md {
@@ -76,11 +72,12 @@
   }
   .externalLinks {
     gap: spacing-sm;
+    font-size: 18px;
   }
-  .icon {
+  /* .icon {
     width: 18px;
     height: 18px;
-  }
+  } */
 }
 @media bp-lg {
   .content {
@@ -90,8 +87,11 @@
   .creditSection {
     row-gap: 8px;
   }
-  .icon {
+  .externalLinks {
+    font-size: 20px;
+  }
+  /* .icon {
     width: 20px;
     height: 20px;
-  }
+  } */
 }
