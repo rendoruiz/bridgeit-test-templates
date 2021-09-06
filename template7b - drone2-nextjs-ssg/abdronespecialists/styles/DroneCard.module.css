@@ -8,7 +8,7 @@
 }
 
 .text {
-  composes: card from "./_shared.module.css";
+  composes: actionCard from "./_shared.module.css";
   justify-self: center;
   margin-bottom: 16px;
   padding: 10px 5px 10px 15px;

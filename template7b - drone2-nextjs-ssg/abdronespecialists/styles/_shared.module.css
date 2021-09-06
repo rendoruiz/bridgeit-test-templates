@@ -16,11 +16,14 @@
   border: none;
   border-radius: corner-rounding;
   box-shadow: box-shadow color-box-shadow;
-  transition: box-shadow 200ms ease-out;
-  cursor: pointer;
 }
-.card:hover,
-.card:active {
+.actionCard {
+  composes: card;
+  cursor: pointer;
+  transition: box-shadow 200ms ease-out;
+}
+.actionCard:hover,
+.actionCard:active {
   box-shadow: box-shadow color-box-shadow-active;
 }
 

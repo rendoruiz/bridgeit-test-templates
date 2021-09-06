@@ -28,24 +28,26 @@
   row-gap: spacing-md;
 }
 .cardItem {
-  composes: card from "./../_shared.module.css";
-  composes: textBody from "./../_shared.module.css";
   min-height: 150px;
-  display: grid;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  text-align: center;
 }
 .followCard,
 .phoneCard,
 .hoursCard {
   composes: cardItem;
+  composes: textBody from "./../_shared.module.css";
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
   row-gap: 5px;
+}
+.phoneCard {
+  composes: actionCard from "./../_shared.module.css";
 }
 .followCard,
 .hoursCard {
-  composes: cardItem;
+  composes: card from "./../_shared.module.css";
   cursor: unset;
 }
 .followCard {
