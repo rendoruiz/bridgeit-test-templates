@@ -76,9 +76,10 @@
   color: unset;
 }
 .accordion-header button.accordion-button {
-  display: flex;
+  display: grid;
   justify-content: space-between;
-  align-items: center;
+  align-content: center;
+  grid-template-columns: 1fr auto;
 }
 .accordion-header button.accordion-button::after {
   content: none;
