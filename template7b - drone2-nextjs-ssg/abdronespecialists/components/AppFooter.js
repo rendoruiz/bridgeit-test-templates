@@ -12,10 +12,7 @@ const AppFooter = () => {
         </div>
         <div className={styles.mediaSection}>
           <span className={styles.mediaBlurb}>Let's get social.</span>
-          <ExternalMediaLinks 
-            className={styles.externalLinks} 
-            iconClassName={styles.icon} 
-          />
+          <ExternalMediaLinks className={styles.externalLinks} />
         </div>
         <div className={styles.creditSection}>
           <span>&copy; Alberta Drone Specialists Ltd. 2021 All Rights Reserved</span>

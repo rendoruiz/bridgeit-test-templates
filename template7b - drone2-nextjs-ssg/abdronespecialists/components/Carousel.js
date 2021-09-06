@@ -17,7 +17,6 @@ const Carousel = ({ children, infinite, noDots, noArrows, className }) => {
         <FontAwesomeIcon 
           icon={faChevronLeft} 
           onClick={onClick}
-          className={styles.buttonIcon}
         />
       </button>
     )
@@ -31,7 +30,6 @@ const Carousel = ({ children, infinite, noDots, noArrows, className }) => {
         <FontAwesomeIcon 
           icon={faChevronRight} 
           onClick={onClick}
-          className={styles.buttonIcon}
         />
       </button>
     )

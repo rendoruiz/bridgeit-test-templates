@@ -13,15 +13,12 @@
 .button {
   border: none;
   background: none;
+  font-size: 28px;
   color: color-button-faded;
   transition: color 200ms ease-in-out;
 }
 .button:active {
   color: color-button;
-}
-.buttonIcon {
-  width: 28px !important;
-  height: 28px;
 }
 
 .inactiveButton {

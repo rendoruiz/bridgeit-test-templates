@@ -11,12 +11,13 @@
 }
 .playButton {
   place-self: center;
-  padding-left: 2px;
+  padding-left: 4px;
   border: none;
   border-radius: 100%;
   width: 45px;
   height: 45px;
   background: color-primary;
+  font-size: 18px;
   color: color-light;
   display: grid;
   place-items: center;
@@ -25,10 +26,6 @@
 .videoPreview:hover .playButton,
 .videoPreview:active .playButton {
   background: color-secondary;
-}
-.buttonIcon {
-  width: 18px !important;
-  height: 18px;
 }
 
 .closeButton {

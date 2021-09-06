@@ -48,25 +48,25 @@ const AppHeader = () => {
         >
           <Link href="/">
             <a className={styles.navigationItem + setActive('/')}>
-              <FontAwesomeIcon icon={faHome} className={styles.navigationIcon} />
+              <FontAwesomeIcon icon={faHome} className={styles.navigationIcon} fixedWidth />
               Home
             </a>
           </Link>
           <Link href="/about">
             <a className={styles.navigationItem + setActive('/about')}>
-              <FontAwesomeIcon icon={faUserFriends} className={styles.navigationIcon} />
+              <FontAwesomeIcon icon={faUserFriends} className={styles.navigationIcon} fixedWidth />
               About
             </a>
           </Link>
           <Link href="/">
             <a className={styles.navigationItem + setActive('')}>
-              <FontAwesomeIcon icon={faCamera} className={styles.navigationIcon} />
+              <FontAwesomeIcon icon={faCamera} className={styles.navigationIcon} fixedWidth />
               Services
             </a>
           </Link>
           <Link href="/">
             <a className={styles.navigationItem + setActive('')}>
-              <FontAwesomeIcon icon={faBookmark} className={styles.navigationIcon} />
+              <FontAwesomeIcon icon={faBookmark} className={styles.navigationIcon} fixedWidth />
               Portfolio
             </a>
           </Link>
@@ -82,7 +82,7 @@ const AppHeader = () => {
           </Link>
           <Link href="/contact">
             <a className={styles.navigationItem + setActive('/contact')}>
-              <FontAwesomeIcon icon={faEnvelope} className={styles.navigationIcon} />
+              <FontAwesomeIcon icon={faEnvelope} className={styles.navigationIcon} fixedWidth />
               Contact<span className={styles.mobile}>&nbsp;Us</span>
             </a>
           </Link>

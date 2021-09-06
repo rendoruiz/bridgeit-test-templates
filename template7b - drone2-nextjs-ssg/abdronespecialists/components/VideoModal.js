@@ -35,10 +35,7 @@ const VideoModal = ({ imagePrefix, buttonText, children, youtubeEmbedId, title, 
             noLg
           />
           <div className={styles.playButton}>
-            <FontAwesomeIcon 
-              icon={faPlay} 
-              className={styles.buttonIcon} 
-            />
+            <FontAwesomeIcon icon={faPlay} />
           </div>
         </div>
       ) : buttonText ? (

@@ -29,10 +29,9 @@
   transform: scale(0.975);
 }
 .buttonIcon {
-  width: 0.9rem !important;
-  height: 0.9rem;
-  margin-left: 10px;
-  margin-right: -8px;
+  font-size: 0.9rem;
+  margin-left: 14px;
+  margin-right: -3px;
 }
 
 @media bp-md {
@@ -40,8 +39,7 @@
     font-size: 1.1rem;
   }
   .buttonIcon {
-    width: 1.1rem !important;
-    height: 1.1rem;
+    font-size: 1.1rem;
   }
 }
 

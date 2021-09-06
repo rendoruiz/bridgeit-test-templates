@@ -206,11 +206,13 @@
   line-height: 1.5;
 }
 .accordionIcon {
-  padding: 5px;
   border-radius: 100%;
-  width: 25px !important;
+  width: 25px;
   height: 25px;
   background: color-button;
+  font-size: 14px;
+  display: grid;
+  place-items: center;
 }
 .sectionServices button {
   padding: 10px spacing-sm;
@@ -287,13 +289,10 @@
   background: color-primary;
   width: 35px;
   height: 35px;
+  font-size: 18px;
   transition: background 200ms ease-out;
   display: grid;
   place-items: center;
-}
-.cardButtonIcon {
-  width: 18px !important;
-  height: 18px;
 }
 .heading3 + .cardButton {
   margin-top: 10px;

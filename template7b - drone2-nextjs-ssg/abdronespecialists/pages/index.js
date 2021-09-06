@@ -134,7 +134,9 @@ export default function Home() {
             <Accordion.Item eventKey="0">
               <Accordion.Header>
                 <h3 className={styles.heading3}>Film & TV</h3>
-                <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
+                <div className={styles.accordionIcon}>
+                  <FontAwesomeIcon icon={faAngleDown} />
+                </div>
               </Accordion.Header>
               <Accordion.Body className={styles.accordionBody}>
                 <p>Professional drone crew services for films, television & commercials.</p>
@@ -157,7 +159,9 @@ export default function Home() {
             <Accordion.Item eventKey="1">
               <Accordion.Header>
                 <h3 className={styles.heading3}>FPV</h3>
-                <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
+                <div className={styles.accordionIcon}>
+                  <FontAwesomeIcon icon={faAngleDown} />
+                </div>
               </Accordion.Header>
               <Accordion.Body className={styles.accordionBody}>
                 <p>Exceptional indoor & outdoor FPV footage.</p>
@@ -180,7 +184,9 @@ export default function Home() {
             <Accordion.Item eventKey="2">
               <Accordion.Header>
                 <h3 className={styles.heading3}>Construction</h3>
-                <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
+                <div className={styles.accordionIcon}>
+                  <FontAwesomeIcon icon={faAngleDown} />
+                </div>
               </Accordion.Header>
               <Accordion.Body className={styles.accordionBody}>
                 <p>Construction progress monitoring.</p>
@@ -203,7 +209,9 @@ export default function Home() {
             <Accordion.Item eventKey="3">
               <Accordion.Header>
                 <h3 className={styles.heading3}>Commercial Real Estate</h3>
-                <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
+                <div className={styles.accordionIcon}>
+                  <FontAwesomeIcon icon={faAngleDown} />
+                </div>
               </Accordion.Header>
               <Accordion.Body className={styles.accordionBody}>
                 <p>Showcase your properties from new heights.</p>
@@ -226,7 +234,9 @@ export default function Home() {
             <Accordion.Item eventKey="4">
               <Accordion.Header>
                 <h3 className={styles.heading3}>Aerial Photography & Videography</h3>
-                <FontAwesomeIcon icon={faAngleDown} className={styles.accordionIcon} />
+                <div className={styles.accordionIcon}>
+                  <FontAwesomeIcon icon={faAngleDown} />
+                </div>
               </Accordion.Header>
               <Accordion.Body className={styles.accordionBody}>
                 <p>Showcase your properties from new heights.</p>
@@ -263,10 +273,7 @@ export default function Home() {
                   <h3 className={styles.heading2}>Film/TV</h3>
                   <span>Film, TV, & commercials.</span>
                   <div className={styles.cardButton}>
-                    <FontAwesomeIcon 
-                      icon={faAngleRight} 
-                      className={styles.cardButtonIcon} 
-                    />
+                    <FontAwesomeIcon icon={faAngleRight} />
                   </div>
                 </div>
               </a>
@@ -286,10 +293,7 @@ export default function Home() {
                   <h3 className={styles.heading2}>FPV</h3>
                   <span>Indoor and outdoor <br />precision filming.</span>
                   <div className={styles.cardButton}>
-                    <FontAwesomeIcon 
-                      icon={faAngleRight} 
-                      className={styles.cardButtonIcon} 
-                    />
+                    <FontAwesomeIcon icon={faAngleRight} />
                   </div>
                 </div>
               </a>
@@ -308,10 +312,7 @@ export default function Home() {
                 <div className={styles.cardText}>
                   <h3 className={styles.heading3}>Construction</h3>
                   <div className={styles.cardButton}>
-                    <FontAwesomeIcon 
-                      icon={faAngleRight} 
-                      className={styles.cardButtonIcon} 
-                    />
+                    <FontAwesomeIcon icon={faAngleRight} />
                   </div>
                 </div>
               </a>
@@ -330,10 +331,7 @@ export default function Home() {
                 <div className={styles.cardText}>
                   <h3 className={styles.heading3}>Commercial Real Estate</h3>
                   <div className={styles.cardButton}>
-                    <FontAwesomeIcon 
-                      icon={faAngleRight} 
-                      className={styles.cardButtonIcon} 
-                    />
+                    <FontAwesomeIcon icon={faAngleRight} />
                   </div>
                 </div>
               </a>
@@ -352,10 +350,7 @@ export default function Home() {
                 <div className={styles.cardText}>
                   <h3 className={styles.heading3}>Aerial Photography <br />& Videography</h3>
                   <div className={styles.cardButton}>
-                    <FontAwesomeIcon 
-                      icon={faAngleRight} 
-                      className={styles.cardButtonIcon} 
-                    />
+                    <FontAwesomeIcon icon={faAngleRight} />
                   </div>
                 </div>
               </a>
