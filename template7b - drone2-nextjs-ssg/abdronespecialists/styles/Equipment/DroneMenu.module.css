@@ -13,11 +13,12 @@
   background: none;
   font-size: 1.4rem;
   color: color-light;
-  transition: color 200ms ease-out;
+  transition: color 200ms ease-out, transform 200ms ease-out;
   text-transform: uppercase;
 }
 .toggle.active {
   color: color-secondary;
+  transform: translateX(-5px);
 }
 .menu {
   padding: 8px 0;
