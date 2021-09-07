@@ -16,6 +16,7 @@
   font-size: 28px;
   color: color-button-faded;
   transition: color 200ms ease-in-out;
+  cursor: pointer;
 }
 .button:active {
   color: color-button;
@@ -45,6 +46,7 @@
   font-size: 0;
   line-height: 0;
   transition: background 200ms ease-in-out;
+  cursor: pointer;
 }
 .dotList li:global(.slick-active) button {
   background: color-button;
