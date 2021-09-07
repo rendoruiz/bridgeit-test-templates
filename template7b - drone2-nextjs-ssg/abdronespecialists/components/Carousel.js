@@ -5,9 +5,8 @@ import { useRef, useState } from "react";
 
 import styles from '../styles/Carousel.module.css';
 
-const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef }) => {
+const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef, carouselInitialSlide }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  // const sliderRef = useRef();
 
   const PrevArrow = ({ onClick }) => {
     return (
@@ -47,7 +46,8 @@ const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
     dotsClass: styles.dotList,
-    appendDots: dots => (<ul>{ dots }</ul>)
+    appendDots: dots => (<ul>{ dots }</ul>),
+    initialSlide: carouselInitialSlide ?? 0
   };
 
   return !children ? null : ( 
