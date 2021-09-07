@@ -1,6 +1,6 @@
 @value color-primary, color-button, color-shade, color-box-shadow, color-box-shadow-active from "./_variables.css";
 @value corner-rounding, box-shadow, spacing-sm from "./_variables.css";
-@value bp-lg from "./_variables.css";
+@value bp-md, bp-lg from "./_variables.css";
 
 .drone {
   display: grid;
@@ -8,7 +8,7 @@
 }
 
 .heading {
-  composes: heading3 from "./_shared.module.css";
+  composes: textHeading3 from "./_shared.module.css";
 }
 
 .actionCard {
@@ -46,7 +46,7 @@
 }
 
 .longLayout {
-  row-gap: spaicing-sm;
+  row-gap: spacing-sm;
 }
 .textCard {
   composes: card from "./_shared.module.css";
@@ -65,6 +65,13 @@
   letter-spacing: 0.5px;
 }
 
+
+@media bp-md {
+  .textCard {
+    margin: spacing-sm;
+    padding: spacing-sm;
+  }
+}
 @media bp-lg {
   .drone {
     grid-template-rows: 220px auto;
