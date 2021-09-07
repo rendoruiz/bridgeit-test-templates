@@ -1,0 +1,5 @@
+@value spacing-sm from "./../_variables.css";
+
+.carousel {
+  padding: 0 spacing-sm;
+}

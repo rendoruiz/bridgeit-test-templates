@@ -165,23 +165,20 @@
   justify-items: center;
   row-gap: spacing-md;
 }
-.sectionEquipment .carousel {
-  padding: 0 spacing-sm;
-}
-.droneCards {
+.equipmentCards {
   display: none;
 }
 @media bp-lg {
   .equipmentContent {
     padding: spacing-lg spacing-md;
   }
-  .sectionEquipment .heading2 {
+  .equipmentContent .heading2 {
     justify-self: flex-start;
   }
-  .sectionEquipment .carousel {
+  .equipmentCarousel {
     display: none;
   }
-  .droneCards {
+  .equipmentCards {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     column-gap: spacing-sm;
