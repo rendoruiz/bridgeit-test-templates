@@ -43,9 +43,9 @@ const DronesPanel = ({ carouselClassName, cardClassName, noArrows, infinite, car
     },
     {
       imagePrefix: 'equipment-outdoor-fpv',
-      imageTitle: 'Outdoor FPV image',
-      heading: 'Outdoor FPV',
-      shortText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae quia suscipit ratione repellendus facilis.',
+      imageTitle: 'iFlight Cidora SL5 image',
+      heading: 'iFlight Cidora SL5',
+      shortText: 'The Cidora SL5 V2.1 HD w/ DJI Air Unit BNF features the new DJI FPV system and makes flying FPV truly breathtaking.',
       longText: [
         'The Cidora SL5 V2.1 HD w/ DJI Air Unit BNF features the amazing new DJI FPV system and makes flying FPV truly breathtaking.',
         'With the 720p video shown at 120fps through the goggles, DJI has set the bar at a new high for clarity and image quality in an FPV system.',
@@ -55,9 +55,9 @@ const DronesPanel = ({ carouselClassName, cardClassName, noArrows, infinite, car
     },
     {
       imagePrefix: 'equipment-indoor-fpv',
-      imageTitle: 'Indoor FPV image',
-      heading: 'Indoor FPV',
-      shortText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae quia suscipit ratione repellendus facilis.',
+      imageTitle: 'GEPRC CineLog30 image',
+      heading: 'GEPRC CineLog30',
+      shortText: 'GEPRC CineLog 30 is the best sub-250g FPV pusher drone with incredibly stable, HD video.',
       longText: [
         'The latest 3-inch Quadcopter developed by GEPRC is the best sub-250g FPV pusher drone with incredibly stable, HD video.',
         'CineLog30 is developed from CingLog25 and has stronger 1404-3850kv motors, T3 x 3 x 3 propellers and a newly developed GEP-CL30 high-impact carbon frame with ultra light fuselage weight.',
