@@ -1,0 +1,83 @@
+@value header-height-sm, header-height-lg from "./../_variables.css";
+@value spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
+.heading {
+  composes: textHeading2 from "./../_shared.module.css";
+}
+.banner {
+  composes: captionedMedia from "./../_shared.module.css";
+}
+.bannerImage {
+  height: 240px;
+}
+.banner .heading {
+  font-size: 2.5rem;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.divider.topDivider,
+.divider.bottomDivider {
+  height: 50px;
+}
+
+.desktopHeadingContainer {
+  composes: themeDark from "./../_shared.module.css";
+  composes: container from "./../_shared.module.css";
+  display: none;
+}
+.headingContent {
+  composes: content from "./../_shared.module.css";
+}
+
+.carouselContainer {
+  composes: themeLight from "./../_shared.module.css";
+  composes: container from "./../_shared.module.css";
+}
+.carousel {
+  composes: content from "./../_shared.module.css";
+  padding: spacing-sm spacing-sm spacing-md
+}
+
+@media bp-md {
+  .banner .heading,
+  .topDivider {
+    display: none;
+  }
+  .bannerImage {
+    height: clamp(300px, calc(80vh - header-height-sm), 700px);
+  }
+  .desktopHeadingContainer {
+    display: grid;
+  }
+  .headingContent {
+    display: flex;
+    align-items: center;
+    padding: spacing-sm;
+    justify-content: space-between;
+  }
+  .desktopHeadingContainer,
+  .divider.bottomDivider {
+    height: 120px;
+  }
+}
+
+@media bp-lg {
+  .bannerImage {
+    height: clamp(300px, calc(80vh - header-height-lg), 700px);
+  }
+  .headingContent {
+    padding: spacing-sm spacing-md;
+  }
+  .desktopHeadingContainer {
+    height: 150px;
+  }
+  .carousel {
+    padding: spacing-md spacing-md spacing-lg;
+  }
+}

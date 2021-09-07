@@ -93,3 +93,10 @@ img {
 .ReactModal__Html--open {
   overflow: hidden;
 }
+
+
+
+
+.slick-list {
+  transition: height 200ms ease-out 0s;
+}

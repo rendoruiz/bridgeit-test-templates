@@ -4,9 +4,12 @@ import Slider from "react-slick";
 import { useRef, useState } from "react";
 
 import styles from '../styles/Carousel.module.css';
+import { useRouter } from "next/dist/client/router";
+import classNames from "classnames";
 
-const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef, carouselInitialSlide }) => {
+const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef, carouselInitialSlide, fade, asNavFor, isStatic, routePrefix, adaptiveHeight, arrowsMd }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const router = useRouter();
 
   const PrevArrow = ({ onClick }) => {
     return (
@@ -35,6 +38,12 @@ const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef
     )
   }
 
+  const routeAfterChange = (n) => {
+    if (routePrefix) {
+      router.push(routePrefix + n, undefined, { shallow: true });
+    }
+  }
+
   var defaultConfig = {
     dots: !noDots,
     arrows: !noArrows,
@@ -43,18 +52,23 @@ const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef
     slidesToShow: 1,
     slidesToScroll: 1,
     beforeChange: (current, next) => setCurrentSlide(next),
+    afterChange: (i) => routeAfterChange(i),
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
     dotsClass: styles.dotList,
     appendDots: dots => (<ul>{ dots }</ul>),
-    initialSlide: carouselInitialSlide ?? 0
+    initialSlide: carouselInitialSlide ?? 0,
+    fade: fade ?? false,
+    asNavFor: asNavFor,
+    draggable: isStatic ? false : true,
+    adaptiveHeight: adaptiveHeight ?? false
   };
 
   return !children ? null : ( 
     <Slider
       ref={carouselRef}
       {...defaultConfig}
-      className={styles.carousel + (!className ? '' : ` ${className}`) + (!noArrows ? '' : ` ${styles.noArrows}`)}
+      className={classNames(styles.carousel, className, !noArrows ? null : styles.noArrows, !arrowsMd ? null : styles.arrowsMd)}
     >
       { children }
     </Slider>

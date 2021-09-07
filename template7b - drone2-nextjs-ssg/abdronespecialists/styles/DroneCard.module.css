@@ -1,13 +1,17 @@
-@value color-button, color-shade, color-box-shadow, color-box-shadow-active from "./_variables.css";
+@value color-primary, color-button, color-shade, color-box-shadow, color-box-shadow-active from "./_variables.css";
 @value corner-rounding, box-shadow, spacing-sm from "./_variables.css";
-@value bp-lg from "./_variables.css";
+@value bp-md, bp-lg from "./_variables.css";
 
-.droneCard {
+.drone {
   display: grid;
   grid-template-rows: 250px auto;
 }
 
-.text {
+.heading {
+  composes: textHeading3 from "./_shared.module.css";
+}
+
+.actionCard {
   composes: actionCard from "./_shared.module.css";
   justify-self: center;
   margin-bottom: 16px;
@@ -20,16 +24,15 @@
   row-gap: 10px;
   column-gap: 10px;
 }
-.text:hover .icon,
-.text:active .icon {
+.actionCard:hover .icon,
+.actionCard:active .icon {
   margin-right: 0;
   margin-left: 5px;
 }
-.heading {
-  composes: heading3 from "./_shared.module.css";
+.actionCard .heading {
   font-weight: normal;
 }
-.body {
+.subtitle {
   composes: textSubtitle from "./_shared.module.css";
 }
 .icon {
@@ -42,14 +45,46 @@
   transition: margin 200ms ease-out;
 }
 
-@media bp-lg {
-  .droneCard {
-    grid-template-rows: 220px auto;
-  }
-  .imageContainer {
+.longLayout {
+  row-gap: spacing-sm;
+}
+.textCard {
+  composes: card from "./_shared.module.css";
+  margin: 10px;
+  padding: 15px;
+  display: grid;
+  row-gap: spacing-sm;
+}
+.textCard .heading {
+  color: color-primary;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.body {
+  composes: textBody from "./_shared.module.css";
+  letter-spacing: 0.5px;
+}
+
+
+@media bp-md {
+  .textCard {
+    margin: spacing-sm;
     padding: spacing-sm;
   }
-  .text {
+}
+@media bp-lg {
+  .drone.longLayout {
+    grid-template-rows: unset;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+  }
+  .drone {
+    grid-template-rows: 220px auto;
+  }
+  .droneImage {
+    padding: spacing-sm;
+  }
+  .actionCard {
     width: 95%;
     row-gap: 5px;
   }
