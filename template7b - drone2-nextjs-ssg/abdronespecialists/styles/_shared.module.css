@@ -17,6 +17,10 @@
   border-radius: corner-rounding;
   box-shadow: box-shadow color-box-shadow;
 }
+.heavyCard {
+  composes: card;
+  box-shadow: box-shadow color-box-shadow-active;
+}
 .actionCard {
   composes: card;
   cursor: pointer;
