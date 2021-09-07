@@ -27,15 +27,20 @@
 }
 
 .button {
+  padding: 5px;
   border: none;
   background: none;
   font-size: 28px;
   color: color-button-faded;
-  transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out, transform 200ms ease-out;
   cursor: pointer;
 }
+.button:hover,
 .button:active {
   color: color-button;
+}
+.button:active {
+  transform: scale(0.90);
 }
 
 .inactiveButton {

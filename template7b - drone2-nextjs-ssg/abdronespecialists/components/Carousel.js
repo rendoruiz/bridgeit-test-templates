@@ -16,11 +16,9 @@ const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef
       <button 
         className={((currentSlide > 0) || infinite) ? styles.button : styles.inactiveButton}
         title="carousel back button"
+        onClick={onClick}
       >
-        <FontAwesomeIcon 
-          icon={faChevronLeft} 
-          onClick={onClick}
-        />
+        <FontAwesomeIcon icon={faChevronLeft} />
       </button>
     )
   }
@@ -29,11 +27,9 @@ const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef
       <button 
         className={((currentSlide + 1 < children.length) || infinite) ? styles.button : styles.inactiveButton}
         title="carousel next button"
+        onClick={onClick}
       >
-        <FontAwesomeIcon 
-          icon={faChevronRight} 
-          onClick={onClick}
-        />
+        <FontAwesomeIcon icon={faChevronRight} />
       </button>
     )
   }

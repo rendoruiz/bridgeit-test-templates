@@ -8,9 +8,6 @@
   grid-template-rows: 250px auto;
 }
 
-.heading {
-}
-
 .actionCard {
   composes: actionCard from "./../_shared.module.css";
   justify-self: center;
