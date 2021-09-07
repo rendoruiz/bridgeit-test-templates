@@ -1,4 +1,5 @@
 @value color-button, color-button-faded from "./_variables.css";
+@value bp-md from "./_variables.css";
 
 .carousel {
   display: grid;
@@ -8,6 +9,21 @@
 }
 .noArrows {
   grid-template-columns: unset;
+}
+
+.arrowsMd {
+  grid-template-columns: unset;
+}
+.arrowsMd .button {
+  display: none;
+}
+@media bp-md {
+  .arrowsMd {
+    grid-template-columns: auto 1fr auto;
+  }
+  .arrowsMd .button {
+    display: block;
+  }
 }
 
 .button {

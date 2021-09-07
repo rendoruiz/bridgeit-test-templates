@@ -5,8 +5,9 @@ import { useRef, useState } from "react";
 
 import styles from '../styles/Carousel.module.css';
 import { useRouter } from "next/dist/client/router";
+import classNames from "classnames";
 
-const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef, carouselInitialSlide, fade, asNavFor, isStatic, routePrefix }) => {
+const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef, carouselInitialSlide, fade, asNavFor, isStatic, routePrefix, adaptiveHeight, arrowsMd }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const router = useRouter();
 
@@ -59,14 +60,15 @@ const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef
     initialSlide: carouselInitialSlide ?? 0,
     fade: fade ?? false,
     asNavFor: asNavFor,
-    draggable: isStatic ? false : true
+    draggable: isStatic ? false : true,
+    adaptiveHeight: adaptiveHeight ?? false
   };
 
   return !children ? null : ( 
     <Slider
       ref={carouselRef}
       {...defaultConfig}
-      className={styles.carousel + (!className ? '' : ` ${className}`) + (!noArrows ? '' : ` ${styles.noArrows}`)}
+      className={classNames(styles.carousel, className, !noArrows ? null : styles.noArrows, !arrowsMd ? null : styles.arrowsMd)}
     >
       { children }
     </Slider>
