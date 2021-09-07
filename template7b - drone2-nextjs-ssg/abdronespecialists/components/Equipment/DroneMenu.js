@@ -13,8 +13,13 @@ const DroneMenu = ({ className }) => {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  console.log(router.query.id)
+
   const setActiveMenuItem = (id) => {
-    if (router.query.id === id) {
+    if (!router.query.id && id === 0) {
+      return styles.active;
+    }
+    else if (router.query.id == id) {
       return styles.active;
     }
     return null;
@@ -26,19 +31,19 @@ const DroneMenu = ({ className }) => {
 
       <div className={classNames(styles.menu, isMenuOpen ? styles.active : null)} onClick={toggleMenu}>
         <Link href="/equipment?id=0" shallow>
-          <a className={classNames(styles.menuItem, setActiveMenuItem('0'))}>DJI Inspire 2</a>
+          <a className={classNames(styles.menuItem, setActiveMenuItem(0))}>DJI Inspire 2</a>
         </Link>
         <Link href="/equipment?id=1" shallow>
-          <a className={classNames(styles.menuItem, setActiveMenuItem('1'))}>Zenmuse X7</a>
+          <a className={classNames(styles.menuItem, setActiveMenuItem(1))}>Zenmuse X7</a>
         </Link>
         <Link href="/equipment?id=2" shallow>
-          <a className={classNames(styles.menuItem, setActiveMenuItem('2'))}>Indemnis Nexus</a>
+          <a className={classNames(styles.menuItem, setActiveMenuItem(2))}>Indemnis Nexus</a>
         </Link>
         <Link href="/equipment?id=3" shallow>
-          <a className={classNames(styles.menuItem, setActiveMenuItem('3'))}>Outdoor FPV</a>
+          <a className={classNames(styles.menuItem, setActiveMenuItem(3))}>Outdoor FPV</a>
         </Link>
         <Link href="/equipment?id=4" shallow>
-          <a className={classNames(styles.menuItem, setActiveMenuItem('4'))}>Indoor FPV</a>
+          <a className={classNames(styles.menuItem, setActiveMenuItem(4))}>Indoor FPV</a>
         </Link>
       </div>
     </div>
