@@ -1,6 +1,5 @@
-@value color-primary, color-secondary from "./../_variables.css";
 @value header-height-sm, header-height-lg from "./../_variables.css";
-@value spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
+@value spacing-sm, spacing-md from "./../_variables.css";
 @value bp-md, bp-lg from "./../_variables.css";
 
 .heading {
@@ -22,10 +21,10 @@
   letter-spacing: 1px;
 }
 
-.divider {
+.divider.topDivider,
+.divider.bottomDivider {
   height: 50px;
 }
-
 
 .desktopHeadingContainer {
   composes: themeDark from "./../_shared.module.css";
@@ -35,7 +34,6 @@
 .headingContent {
   composes: content from "./../_shared.module.css";
 }
-
 
 .carouselContainer {
   composes: themeLight from "./../_shared.module.css";
@@ -63,7 +61,19 @@
     justify-content: space-between;
   }
   .desktopHeadingContainer,
-  .bottomDivider {
+  .divider.bottomDivider {
     height: 120px;
+  }
+}
+
+@media bp-lg {
+  .bannerImage {
+    height: clamp(300px, calc(80vh - header-height-lg), 700px);
+  }
+  .headingContent {
+    padding: spacing-sm spacing-md;
+  }
+  .desktopHeadingContainer {
+    height: 150px;
   }
 }

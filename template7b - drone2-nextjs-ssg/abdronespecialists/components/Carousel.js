@@ -4,9 +4,11 @@ import Slider from "react-slick";
 import { useRef, useState } from "react";
 
 import styles from '../styles/Carousel.module.css';
+import { useRouter } from "next/dist/client/router";
 
-const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef, carouselInitialSlide, fade, asNavFor, isStatic }) => {
+const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef, carouselInitialSlide, fade, asNavFor, isStatic, routePrefix }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const router = useRouter();
 
   const PrevArrow = ({ onClick }) => {
     return (
@@ -35,6 +37,12 @@ const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef
     )
   }
 
+  const routeAfterChange = (n) => {
+    if (routePrefix) {
+      router.push(routePrefix + n, undefined, { shallow: true });
+    }
+  }
+
   var defaultConfig = {
     dots: !noDots,
     arrows: !noArrows,
@@ -43,6 +51,7 @@ const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef
     slidesToShow: 1,
     slidesToScroll: 1,
     beforeChange: (current, next) => setCurrentSlide(next),
+    afterChange: (i) => routeAfterChange(i),
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
     dotsClass: styles.dotList,

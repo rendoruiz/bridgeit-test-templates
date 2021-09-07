@@ -73,7 +73,7 @@ const EquipmentPage = () => {
         </div>
 
         <div className={styles.carouselContainer}>
-          <DronesPanel carouselClassName={styles.carousel} carouselRef={droneRef} carouselInitialSlide={router.query.id} carouselOnly infinite isLongText carouselAsNavFor={banner} />
+          <DronesPanel carouselClassName={styles.carousel} carouselRef={droneRef} carouselInitialSlide={router.query.id} carouselOnly isLongText carouselAsNavFor={banner} carouselRoutePrefix="/equipment?id=" />
         </div>
 
         <Divider isDark className={classNames(styles.divider, styles.bottomDivider)} />
