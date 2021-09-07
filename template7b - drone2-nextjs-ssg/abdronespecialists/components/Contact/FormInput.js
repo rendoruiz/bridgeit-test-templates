@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from '../styles/Form.module.css';
+
+import styles from '../../styles/Contact/Form.module.css';
 
 const FormInput = ({ label, type, inputName, icon, placeholder, autoCapitalize, autoComplete="off" }) => {
   return (!type || !label) ? null : (

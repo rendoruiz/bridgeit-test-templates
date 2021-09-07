@@ -1,6 +1,6 @@
-@value color-light, color-button, color-primary from "./_variables.css";
-@value spacing-sm, spacing-md, corner-rounding from "./_variables.css";
-@value bp-md, bp-lg from "./_variables.css";
+@value color-light, color-button, color-primary from "../_variables.css";
+@value spacing-sm, spacing-md, corner-rounding from "../_variables.css";
+@value bp-md, bp-lg from "../_variables.css";
 @value color-placeholder: rgb(150, 150, 150);
 
 .form {
@@ -9,13 +9,13 @@
 }
 
 .heading {
-  composes: textHeading2 from "./_shared.module.css";
+  composes: textHeading2 from "../_shared.module.css";
   text-align: center;
   margin-bottom: spacing-md;
 }
 
 .label {
-  composes: textBody from "./_shared.module.css";
+  composes: textBody from "../_shared.module.css";
   margin-bottom: 10px;
 }
 .label + .inputField {
@@ -23,7 +23,7 @@
 }
 
 .inputField {
-  composes: textBody from "./_shared.module.css";
+  composes: textBody from "../_shared.module.css";
   border-radius: corner-rounding;
   background: color-light;
   display: grid;
@@ -54,7 +54,7 @@
 }
 
 .button {
-  composes: button from "./Button.module.css";
+  composes: button from "../Button.module.css";
   margin-top: 10px;
 }
 

@@ -1,4 +1,4 @@
-import Form from "../Form";
+import Form from "./Form";
 import Image from "../Image";
 
 import styles from '../../styles/Contact/ContactPanel.module.css'

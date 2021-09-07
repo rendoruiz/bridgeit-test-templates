@@ -3,8 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames';
 import Link from 'next/link';
 
-import styles from '../styles/DroneCard.module.css';
-import Image from './Image';
+import Image from '../Image';
+
+import styles from '../../styles/Equipment/DroneCard.module.css';
 
 const DroneCard = ({ imagePrefix, imageTitle, heading, shortText, longText, href, fileExtension, isLongText }) => {
 
