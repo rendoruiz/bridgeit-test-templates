@@ -8,6 +8,8 @@ import Image from "../components/Image";
 
 import styles from '../styles/Equipment/EquipmentPage.module.css'
 import { useRouter } from 'next/dist/client/router';
+import Divider from '../components/Divider';
+import classNames from 'classnames';
 
 const EquipmentPage = () => {
   const router = useRouter();
@@ -55,14 +57,11 @@ const EquipmentPage = () => {
             <div className={styles.bannerImage}>
               <Image prefix="equipment-bg-2" isStatic />
             </div>
-            {/* <Image prefix="equipment-bg-1" isStatic className={styles.bannerImage} isContained /> */}
-            {/* <Image prefix="equipment-bg-2" isStatic className={styles.bannerImage} isContained />
-            <Image prefix="equipment-bg-2" isStatic className={styles.bannerImage} isContained />
-            <Image prefix="equipment-bg-2" isStatic className={styles.bannerImage} isContained />
-            <Image prefix="equipment-bg-2" isStatic className={styles.bannerImage} isContained /> */}
           </Carousel>
           <h2 className={styles.heading}>Equipment</h2>
         </div>
+
+        <Divider isDark className={classNames(styles.divider, styles.topDivider)} />
 
         <div className={styles.desktopHeadingContainer}>
           <div className={styles.headingContent}>
@@ -75,9 +74,13 @@ const EquipmentPage = () => {
           </div>
         </div>
 
+        
+
         <div className={styles.carouselContainer}>
           <DronesPanel carouselClassName={styles.carousel} carouselRef={droneRef} carouselInitialSlide={router.query.id} carouselOnly infinite isLongText carouselAsNavFor={banner} />
         </div>
+
+        <Divider isDark className={classNames(styles.divider, styles.topDivider)} />
       </div>
     </MainLayout>
   );

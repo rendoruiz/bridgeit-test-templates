@@ -10,12 +10,28 @@
   composes: captionedMedia from "./../_shared.module.css";
 }
 .bannerImage {
-  height: clamp(300px, calc(90vh - header-height-sm), 900px);
+  height: 240px;
+  /* height: clamp(300px, calc(90vh - header-height-sm), 900px); */
 }
+.banner .heading {
+  font-size: 2.5rem;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.divider {
+  height: 50px;
+}
+
 
 .desktopHeadingContainer {
   composes: themeDark from "./../_shared.module.css";
   composes: container from "./../_shared.module.css";
+  display: none;
 }
 .headingContent {
   composes: content from "./../_shared.module.css";
@@ -29,3 +45,4 @@
 .carousel {
   composes: content from "./../_shared.module.css";
 }
+
