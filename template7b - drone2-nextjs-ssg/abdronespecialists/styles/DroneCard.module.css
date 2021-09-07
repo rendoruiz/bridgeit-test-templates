@@ -8,7 +8,6 @@
 }
 
 .heading {
-  composes: textHeading3 from "./_shared.module.css";
 }
 
 .actionCard {
@@ -29,7 +28,8 @@
   margin-right: 0;
   margin-left: 5px;
 }
-.actionCard .heading {
+.actionHeading {
+  composes: textTitle from "./_shared.module.css";
   font-weight: normal;
 }
 .subtitle {
@@ -55,7 +55,8 @@
   display: grid;
   row-gap: spacing-sm;
 }
-.textCard .heading {
+.textHeading{
+  composes: textHeading3 from "./_shared.module.css";
   color: color-primary;
   letter-spacing: 1px;
   text-align: center;

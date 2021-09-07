@@ -7,7 +7,7 @@ import styles from '../styles/Carousel.module.css';
 import { useRouter } from "next/dist/client/router";
 import classNames from "classnames";
 
-const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef, carouselInitialSlide, fade, asNavFor, isStatic, routePrefix, adaptiveHeight, arrowsMd }) => {
+const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef, carouselInitialSlide, fade, asNavFor, isStatic, adaptiveHeight, arrowsMd }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const router = useRouter();
 
@@ -39,8 +39,8 @@ const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef
   }
 
   const routeAfterChange = (n) => {
-    if (routePrefix) {
-      router.push(routePrefix + n, undefined, { shallow: true });
+    if (router.query.id !== n && router.asPath.includes('/equipment')) {
+      router.push('/equipment?id=' + n, undefined, { shallow: true });
     }
   }
 

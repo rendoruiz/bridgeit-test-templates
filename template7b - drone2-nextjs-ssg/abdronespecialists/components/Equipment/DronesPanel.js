@@ -1,11 +1,12 @@
 import classNames from "classnames";
+import { useEffect } from "react";
 
 import Carousel from '../../components/Carousel'
 import DroneCard from '../../components/DroneCard'
 
 import styles from '../../styles/Equipment/DronesPanel.module.css'
 
-const DronesPanel = ({ carouselClassName, cardClassName, noArrows, infinite, carouselOnly, carouselRef, carouselInitialSlide, isLongText, carouselAsNavFor, carouselRoutePrefix, carouselAdaptiveHeight }) => {
+const DronesPanel = ({ carouselClassName, cardClassName, noArrows, infinite, carouselOnly, carouselRef, carouselInitialSlide, isLongText, carouselAsNavFor, carouselAdaptiveHeight }) => {
   const droneList = [
     {
       imagePrefix: 'equipment-dji-inspire-2',
@@ -91,7 +92,6 @@ const DronesPanel = ({ carouselClassName, cardClassName, noArrows, infinite, car
       carouselRef={carouselRef}
       carouselInitialSlide={carouselInitialSlide}
       asNavFor={carouselAsNavFor}
-      routePrefix={carouselRoutePrefix}
       adaptiveHeight={carouselAdaptiveHeight}
       arrowsMd
     >

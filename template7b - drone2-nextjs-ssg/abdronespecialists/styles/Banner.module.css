@@ -22,6 +22,6 @@
 @media bp-lg {
   .banner,
   .fullHeight {
-    height: max(600px, calc(95vh - header-height-lg));
+    height: clamp(600px, calc(85vh - header-height-lg), 900px);
   }
 }
