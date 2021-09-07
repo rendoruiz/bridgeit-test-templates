@@ -1,11 +1,31 @@
 @value color-primary, color-secondary from "./../_variables.css";
+@value header-height-sm, header-height-lg from "./../_variables.css";
 @value spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
 @value bp-md, bp-lg from "./../_variables.css";
 
-/* .heading3 {
-  composes: textHeading3 from "./../_shared.module.css";
-} */
+.heading {
+  composes: textHeading2 from "./../_shared.module.css";
+}
+.banner {
+  composes: captionedMedia from "./../_shared.module.css";
+}
+.bannerImage {
+  height: clamp(300px, calc(90vh - header-height-sm), 900px);
+}
 
-.carousel {
+.desktopHeadingContainer {
+  composes: themeDark from "./../_shared.module.css";
+  composes: container from "./../_shared.module.css";
+}
+.headingContent {
+  composes: content from "./../_shared.module.css";
+}
+
+
+.carouselContainer {
   composes: themeLight from "./../_shared.module.css";
+  composes: container from "./../_shared.module.css";
+}
+.carousel {
+  composes: content from "./../_shared.module.css";
 }

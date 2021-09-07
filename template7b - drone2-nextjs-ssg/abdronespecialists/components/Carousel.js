@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 
 import styles from '../styles/Carousel.module.css';
 
-const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef, carouselInitialSlide, fade, asNavFor }) => {
+const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef, carouselInitialSlide, fade, asNavFor, isStatic }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const PrevArrow = ({ onClick }) => {
@@ -49,7 +49,8 @@ const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef
     appendDots: dots => (<ul>{ dots }</ul>),
     initialSlide: carouselInitialSlide ?? 0,
     fade: fade ?? false,
-    asNavFor: asNavFor
+    asNavFor: asNavFor,
+    draggable: isStatic ? false : true
   };
 
   return !children ? null : ( 
