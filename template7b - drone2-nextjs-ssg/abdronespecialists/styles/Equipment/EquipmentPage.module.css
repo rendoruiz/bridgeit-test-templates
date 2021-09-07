@@ -77,4 +77,7 @@
   .desktopHeadingContainer {
     height: 150px;
   }
+  .carousel {
+    padding: spacing-md spacing-md spacing-lg;
+  }
 }

@@ -73,6 +73,11 @@
   }
 }
 @media bp-lg {
+  .drone.longLayout {
+    grid-template-rows: unset;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+  }
   .drone {
     grid-template-rows: 220px auto;
   }
