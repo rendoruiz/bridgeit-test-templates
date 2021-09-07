@@ -15,6 +15,7 @@
   color: color-light;
   transition: color 200ms ease-out, transform 200ms ease-out;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .toggle.active {
   color: color-secondary;
@@ -38,6 +39,7 @@
   display: grid;
   padding: 8px 10px;
   transition: background 100ms ease-out;
+  cursor: pointer;
 }
 .menuItem:hover,
 .menuItem:active {
