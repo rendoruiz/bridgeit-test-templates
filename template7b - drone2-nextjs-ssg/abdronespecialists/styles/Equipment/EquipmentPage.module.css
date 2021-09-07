@@ -1,0 +1,11 @@
+@value color-primary, color-secondary from "./../_variables.css";
+@value spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
+/* .heading3 {
+  composes: textHeading3 from "./../_shared.module.css";
+} */
+
+.carousel {
+  composes: themeLight from "./../_shared.module.css";
+}

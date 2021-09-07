@@ -31,10 +31,6 @@ const DroneCard = ({ imagePrefix, imageTitle, heading, shortText, longText, href
     }
   }
 
-  const getImage = () => {
-
-  }
-
   return ( 
     <div className={styles.drone}>
       <div className={styles.droneImage}>

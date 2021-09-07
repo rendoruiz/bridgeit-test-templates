@@ -1,10 +1,10 @@
 
 import styles from '../styles/Image.module.css';
 
-const Image = ({ prefix, title, isContained, className, noMd, noLg, fileExtension }) => {
+const Image = ({ prefix, title, isContained, className, noMd, noLg, isStatic, fileExtension }) => {
   return !prefix ? null : ( 
     <picture className={styles.picture + (!className ? "" : ` ${className}`)}>
-      { noLg ? null : (
+      { (isStatic || noLg) ? null : (
         <source 
           srcSet={`/images/${prefix}-lg.${fileExtension ?? "jpg"}`} 
           media="(min-width: 1024px)" 
@@ -12,7 +12,7 @@ const Image = ({ prefix, title, isContained, className, noMd, noLg, fileExtensio
           className={!isContained ? styles.imageCover : styles.imageContain}
         />
       )} 
-      { noMd ? null : (
+      { (isStatic || noMd) ? null : (
         <source 
           srcSet={`/images/${prefix}-md.${fileExtension ?? "jpg"}`} 
           media="(min-width: 768px)" 
@@ -21,7 +21,7 @@ const Image = ({ prefix, title, isContained, className, noMd, noLg, fileExtensio
         />
       )}
       <img 
-        src={`/images/${prefix}-sm.${fileExtension ?? "jpg"}`} 
+        src={`/images/${prefix}${!isStatic ? "-sm" : ""}.${fileExtension ?? "jpg"}`} 
         alt={title ?? "untitled image"} 
         className={!isContained ? styles.imageCover : styles.imageContain}
       />
