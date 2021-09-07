@@ -1,6 +1,6 @@
-@value color-primary, color-button, color-shade, color-box-shadow, color-box-shadow-active from "./_variables.css";
-@value corner-rounding, box-shadow, spacing-sm, spacing-md from "./_variables.css";
-@value bp-md, bp-lg from "./_variables.css";
+@value color-primary, color-button, color-shade, color-box-shadow, color-box-shadow-active from "./../_variables.css";
+@value corner-rounding, box-shadow, spacing-sm, spacing-md from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
 
 .drone {
   display: grid;
@@ -11,7 +11,7 @@
 }
 
 .actionCard {
-  composes: actionCard from "./_shared.module.css";
+  composes: actionCard from "./../_shared.module.css";
   justify-self: center;
   margin-bottom: 16px;
   padding: 10px 5px 10px 15px;
@@ -29,11 +29,11 @@
   margin-left: 5px;
 }
 .actionHeading {
-  composes: textTitle from "./_shared.module.css";
+  composes: textTitle from "./../_shared.module.css";
   font-weight: normal;
 }
 .subtitle {
-  composes: textSubtitle from "./_shared.module.css";
+  composes: textSubtitle from "./../_shared.module.css";
 }
 .icon {
   align-self: center;
@@ -49,20 +49,20 @@
   row-gap: spacing-sm;
 }
 .textCard {
-  composes: heavyCard from "./_shared.module.css";
+  composes: heavyCard from "./../_shared.module.css";
   margin: 10px;
   padding: 15px;
   display: grid;
   row-gap: spacing-sm;
 }
 .textHeading{
-  composes: textHeading3 from "./_shared.module.css";
+  composes: textHeading3 from "./../_shared.module.css";
   color: color-primary;
   letter-spacing: 1px;
   text-align: center;
 }
 .body {
-  composes: textBody from "./_shared.module.css";
+  composes: textBody from "./../_shared.module.css";
   letter-spacing: 0.5px;
 }
 

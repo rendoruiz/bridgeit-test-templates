@@ -1,7 +1,7 @@
 import classNames from "classnames";
 
 import Carousel from '../../components/Carousel'
-import DroneCard from '../../components/DroneCard'
+import DroneCard from './DroneCard'
 
 import styles from '../../styles/Equipment/DronesPanel.module.css'
 
