@@ -1,12 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import Slider from "react-slick";
+import { useRef, useState } from "react";
 
 import styles from '../styles/Carousel.module.css';
-import { useState } from "react";
 
-const Carousel = ({ children, infinite, noDots, noArrows, className }) => {
+const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  // const sliderRef = useRef();
 
   const PrevArrow = ({ onClick }) => {
     return (
@@ -51,6 +52,7 @@ const Carousel = ({ children, infinite, noDots, noArrows, className }) => {
 
   return !children ? null : ( 
     <Slider
+      ref={carouselRef}
       {...defaultConfig}
       className={styles.carousel + (!className ? '' : ` ${className}`) + (!noArrows ? '' : ` ${styles.noArrows}`)}
     >

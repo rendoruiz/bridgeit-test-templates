@@ -5,7 +5,7 @@ import DroneCard from '../../components/DroneCard'
 
 import styles from '../../styles/Equipment/DronesPanel.module.css'
 
-const DronesPanel = ({ carouselClassName, cardClassName, noArrows, infinite, carouselOnly }) => {
+const DronesPanel = ({ carouselClassName, cardClassName, noArrows, infinite, carouselOnly, carouselRef }) => {
   const droneList = [
     {
       imagePrefix: 'equipment-dji-inspire-2',
@@ -65,6 +65,7 @@ const DronesPanel = ({ carouselClassName, cardClassName, noArrows, infinite, car
       className={classNames(styles.carousel, carouselClassName)} 
       noArrows={noArrows}
       infinite={infinite}
+      carouselRef={carouselRef}
     >
       { getDrones('carousel') }
     </Carousel>
