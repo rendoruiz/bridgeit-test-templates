@@ -1,8 +1,9 @@
-import FormInput from "./FormInput"
-
-import styles from '../styles/Form.module.css';
 import { faEnvelope, faUser } from "@fortawesome/free-solid-svg-icons";
-import Button from "./Button";
+
+import FormInput from "./FormInput"
+import Button from "../Button";
+
+import styles from '../../styles/Contact/Form.module.css';
 
 const Form = ({ className }) => {
   return ( 
