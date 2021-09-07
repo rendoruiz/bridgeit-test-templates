@@ -19,7 +19,7 @@ const DroneCard = ({ imagePrefix, imageTitle, heading, body, href, fileExtension
         />
       </div>
       
-      <Link href={href ?? "/"}>
+      <Link href={href}>
         <a className={styles.text}>
           <h3 className={styles.heading}>{ heading }</h3>
           <p className={styles.body}>{ body }</p>

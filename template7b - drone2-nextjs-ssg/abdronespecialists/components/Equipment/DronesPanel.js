@@ -12,14 +12,14 @@ const DronesPanel = ({ carouselClassName, cardClassName, noArrows, infinite, car
       imageTitle: 'DJI Inspire 2 image',
       heading: 'DJI Inspire 2',
       bodyText: 'Image quality, power and intelligence to meet the needs of professional filmmakers and enterprises around the globe.',
-      href: '/'
+      hrefId: '0'
     },
     {
       imagePrefix: 'equipment-zenmuse-x7',
       imageTitle: 'Zenmuse X7 image',
       heading: 'Zenmuse X7',
       bodyText: 'The Zenmuse X7 is a compact Super 35 camera with an integrated gimbal made for high-end filmmaking.',
-      href: '/',
+      hrefId: '1',
       fileExtension: 'png'
     },
     {
@@ -27,7 +27,7 @@ const DronesPanel = ({ carouselClassName, cardClassName, noArrows, infinite, car
       imageTitle: 'Indemnis Nexus image',
       heading: 'Indemnis Nexus',
       bodyText: 'The Nexus by Indemnis is the first UAV recovery system to be proven reliable in any failure situation.',
-      href: '/',
+      hrefId: '2',
       fileExtension: 'png'
     },
     {
@@ -35,26 +35,26 @@ const DronesPanel = ({ carouselClassName, cardClassName, noArrows, infinite, car
       imageTitle: 'Outdoor FPV image',
       heading: 'Outdoor FPV',
       bodyText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae quia suscipit ratione repellendus facilis.',
-      href: '/'
+      hrefId: '3'
     },
     {
       imagePrefix: 'equipment-indoor-fpv',
       imageTitle: 'Indoor FPV image',
       heading: 'Indoor FPV',
       bodyText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci molestiae quia suscipit ratione repellendus facilis.',
-      href: '/'
+      hrefId: '4'
     }
   ];
 
   const getDrones = (keyPrefix) => {
-    return droneList.map((drone, index) => (
+    return droneList.map((drone, index) => ( 
       <DroneCard 
         key={keyPrefix + index}
         imagePrefix={drone.imagePrefix}
         imageTitle={drone.imageTitle}
         heading={drone.heading}
         body={drone.bodyText}
-        href={drone.href}
+        href={"/equipment?id=" + drone.hrefId}
         fileExtension={drone.fileExtension}
       />
     ));

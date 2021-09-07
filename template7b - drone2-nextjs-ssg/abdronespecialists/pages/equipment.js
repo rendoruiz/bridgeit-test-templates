@@ -1,18 +1,24 @@
 import Head from 'next/head'
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import DronesPanel from '../components/Equipment/DronesPanel';
 import Slider from "react-slick";
 
 import MainLayout from "../components/layouts/MainLayout";
 
 import styles from '../styles/Equipment/EquipmentPage.module.css'
+import { useRouter } from 'next/dist/client/router';
 
 const EquipmentPage = () => {
+  const router = useRouter();
   const droneRef = useRef();
 
   const navCarousel = (index) => {
     droneRef.current.slickGoTo(index);
   }
+
+  useEffect(() => {
+    navCarousel(router.query.id);
+  }, [router.query.id])
 
   return ( 
     <MainLayout>
@@ -22,11 +28,11 @@ const EquipmentPage = () => {
 
       <div>
         <div>
-          <button onClick={() => navCarousel(0)}>1</button>
-          <button onClick={() => navCarousel(1)}>2</button>
-          <button onClick={() => navCarousel(2)}>3</button>
-          <button onClick={() => navCarousel(3)}>4</button>
-          <button onClick={() => navCarousel(4)}>5</button>
+          <button onClick={() => router.push('/equipment?id=0', undefined, { shallow: true })}>1</button>
+          <button onClick={() => router.push('/equipment?id=1', undefined, { shallow: true })}>2</button>
+          <button onClick={() => router.push('/equipment?id=2', undefined, { shallow: true })}>3</button>
+          <button onClick={() => router.push('/equipment?id=3', undefined, { shallow: true })}>4</button>
+          <button onClick={() => router.push('/equipment?id=4', undefined, { shallow: true })}>5</button>
           <DronesPanel carouselRef={droneRef} carouselOnly />
         </div>
       </div>
