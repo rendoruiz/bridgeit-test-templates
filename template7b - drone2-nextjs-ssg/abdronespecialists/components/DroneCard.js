@@ -12,7 +12,7 @@ const DroneCard = ({ imagePrefix, imageTitle, heading, shortText, longText, href
     if (isLongText) {
       return (
         <div className={styles.textCard}>
-          <h3 className={styles.heading}>{ heading }</h3>
+          <h3 className={styles.textHeading}>{ heading }</h3>
           { longText.map((text, index) => <p key={heading+index} className={styles.body}>{text}</p> ) }
         </div>
       )
@@ -20,7 +20,7 @@ const DroneCard = ({ imagePrefix, imageTitle, heading, shortText, longText, href
       return (
         <Link href={href} shallow>
           <a className={styles.actionCard}>
-            <h3 className={styles.heading}>{ heading }</h3>
+            <h3 className={styles.actionHeading}>{ heading }</h3>
             <p className={styles.subtitle}>{ shortText }</p>
             <FontAwesomeIcon 
               icon={faAngleRight}
