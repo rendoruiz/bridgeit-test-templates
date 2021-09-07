@@ -16,7 +16,6 @@
 @value color-box-shadow: rgba(0, 0, 0, 0.075);
 @value color-box-shadow-active: rgba(0, 0, 0, 0.3);
 
-
 /* shared properties */
 @value spacing-sm: 20px;
 @value spacing-md: 40px;
