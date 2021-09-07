@@ -1,16 +1,16 @@
 import Head from 'next/head'
 import { useEffect, useRef, useState } from 'react';
 import DronesPanel from '../components/Equipment/DronesPanel';
+import classNames from 'classnames';
+import { useRouter } from 'next/dist/client/router';
 
 import MainLayout from "../components/layouts/MainLayout";
 import Carousel from "../components/Carousel";
 import Image from "../components/Image";
+import Divider from '../components/Divider';
+import DroneMenu from '../components/Equipment/DroneMenu';
 
 import styles from '../styles/Equipment/EquipmentPage.module.css'
-import { useRouter } from 'next/dist/client/router';
-import Divider from '../components/Divider';
-import classNames from 'classnames';
-import DroneMenu from '../components/Equipment/DroneMenu';
 
 const EquipmentPage = () => {
   const router = useRouter();

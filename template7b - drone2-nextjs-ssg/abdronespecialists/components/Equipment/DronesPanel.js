@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import { useEffect } from "react";
 
 import Carousel from '../../components/Carousel'
 import DroneCard from '../../components/DroneCard'
