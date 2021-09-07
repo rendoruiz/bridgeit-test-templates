@@ -1,16 +1,15 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faClock } from '@fortawesome/free-regular-svg-icons';
 
 import MainLayout from "../components/layouts/MainLayout";
 import Banner from '../components/Banner';
 import ContactPanel from '../components/Contact/ContactPanel';
 import Divider from '../components/Divider'
+import ExternalMediaLinks from '../components/Contact/ExternalMediaLinks';
 
 import styles from '../styles/Contact/ContactPage.module.css'
-import ExternalMediaLinks from '../components/Contact/ExternalMediaLinks';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
-import { faClock } from '@fortawesome/free-regular-svg-icons';
 
 const ContactPage = () => {
   return ( 
