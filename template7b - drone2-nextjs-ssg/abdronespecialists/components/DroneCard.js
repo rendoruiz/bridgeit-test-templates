@@ -1,5 +1,6 @@
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import classNames from 'classnames';
 import Link from 'next/link';
 
 import styles from '../styles/DroneCard.module.css';
@@ -32,7 +33,7 @@ const DroneCard = ({ imagePrefix, imageTitle, heading, shortText, longText, href
   }
 
   return ( 
-    <div className={styles.drone}>
+    <div className={classNames(styles.drone, isLongText ? styles.longLayout : null)}>
       <div className={styles.droneImage}>
         <Image 
           prefix={imagePrefix} 

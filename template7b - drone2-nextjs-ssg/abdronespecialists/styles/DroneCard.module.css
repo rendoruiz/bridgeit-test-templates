@@ -1,10 +1,14 @@
-@value color-button, color-shade, color-box-shadow, color-box-shadow-active from "./_variables.css";
+@value color-primary, color-button, color-shade, color-box-shadow, color-box-shadow-active from "./_variables.css";
 @value corner-rounding, box-shadow, spacing-sm from "./_variables.css";
 @value bp-lg from "./_variables.css";
 
 .drone {
   display: grid;
   grid-template-rows: 250px auto;
+}
+
+.heading {
+  composes: heading3 from "./_shared.module.css";
 }
 
 .actionCard {
@@ -25,8 +29,7 @@
   margin-right: 0;
   margin-left: 5px;
 }
-.heading {
-  composes: heading3 from "./_shared.module.css";
+.actionCard .heading {
   font-weight: normal;
 }
 .subtitle {
@@ -40,6 +43,26 @@
   font-size: 25px;
   color: color-button;
   transition: margin 200ms ease-out;
+}
+
+.longLayout {
+  row-gap: spaicing-sm;
+}
+.textCard {
+  composes: card from "./_shared.module.css";
+  margin: 10px;
+  padding: 15px;
+  display: grid;
+  row-gap: spacing-sm;
+}
+.textCard .heading {
+  color: color-primary;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.body {
+  composes: textBody from "./_shared.module.css";
+  letter-spacing: 0.5px;
 }
 
 @media bp-lg {
