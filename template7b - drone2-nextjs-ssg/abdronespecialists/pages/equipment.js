@@ -10,6 +10,7 @@ import styles from '../styles/Equipment/EquipmentPage.module.css'
 import { useRouter } from 'next/dist/client/router';
 import Divider from '../components/Divider';
 import classNames from 'classnames';
+import DroneMenu from '../components/Equipment/DroneMenu';
 
 const EquipmentPage = () => {
   const router = useRouter();
@@ -66,21 +67,16 @@ const EquipmentPage = () => {
         <div className={styles.desktopHeadingContainer}>
           <div className={styles.headingContent}>
             <h2 className={styles.heading}>Equipment</h2>
-            <button onClick={() => router.push('/equipment?id=0', undefined, { shallow: true })}>1</button>
-            <button onClick={() => router.push('/equipment?id=1', undefined, { shallow: true })}>2</button>
-            <button onClick={() => router.push('/equipment?id=2', undefined, { shallow: true })}>3</button>
-            <button onClick={() => router.push('/equipment?id=3', undefined, { shallow: true })}>4</button>
-            <button onClick={() => router.push('/equipment?id=4', undefined, { shallow: true })}>5</button>
+
+            <DroneMenu className={styles.menu} />
           </div>
         </div>
-
-        
 
         <div className={styles.carouselContainer}>
           <DronesPanel carouselClassName={styles.carousel} carouselRef={droneRef} carouselInitialSlide={router.query.id} carouselOnly infinite isLongText carouselAsNavFor={banner} />
         </div>
 
-        <Divider isDark className={classNames(styles.divider, styles.topDivider)} />
+        <Divider isDark className={classNames(styles.divider, styles.bottomDivider)} />
       </div>
     </MainLayout>
   );

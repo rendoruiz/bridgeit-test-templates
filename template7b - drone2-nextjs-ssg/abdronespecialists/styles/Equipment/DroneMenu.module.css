@@ -1,0 +1,58 @@
+@value spacing-sm, box-shadow from "./../_variables.css";
+@value color-light, color-dark, color-secondary, color-shade-darker, color-box-shadow-active from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
+.container {
+  position: relative;
+}
+.toggle {
+  composes: bodyText from "./../_shared.module.css";
+  margin: none;
+  padding: none;
+  border: none;
+  background: none;
+  font-size: 1.4rem;
+  color: color-light;
+  transition: color 200ms ease-out;
+  text-transform: uppercase;
+}
+.toggle.active {
+  color: color-secondary;
+}
+.menu {
+  padding: 8px 0;
+  width: 170px;
+  background: color-shade-darker;
+  box-shadow: box-shadow color-box-shadow-active;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  display: none;
+}
+.menu.active {
+  display: grid;
+}
+.menuItem {
+  display: grid;
+  padding: 8px 10px;
+  transition: background 100ms ease-out;
+}
+.menuItem:hover,
+.menuItem:active {
+  background: color-secondary;
+  color: color-dark;
+}
+.menuItem.active {
+  background: color-light;
+  color: color-dark;
+}
+
+@media bp-md {
+
+}
+@media bp-lg {
+  .toggle {
+    font-size: 1.5rem;
+  }
+}

@@ -11,7 +11,6 @@
 }
 .bannerImage {
   height: 240px;
-  /* height: clamp(300px, calc(90vh - header-height-sm), 900px); */
 }
 .banner .heading {
   font-size: 2.5rem;
@@ -46,3 +45,25 @@
   composes: content from "./../_shared.module.css";
 }
 
+@media bp-md {
+  .banner .heading,
+  .topDivider {
+    display: none;
+  }
+  .bannerImage {
+    height: clamp(300px, calc(80vh - header-height-sm), 700px);
+  }
+  .desktopHeadingContainer {
+    display: grid;
+  }
+  .headingContent {
+    display: flex;
+    align-items: center;
+    padding: spacing-sm;
+    justify-content: space-between;
+  }
+  .desktopHeadingContainer,
+  .bottomDivider {
+    height: 120px;
+  }
+}
