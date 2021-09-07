@@ -2,12 +2,12 @@
 @value corner-rounding, box-shadow, spacing-sm from "./_variables.css";
 @value bp-lg from "./_variables.css";
 
-.droneCard {
+.drone {
   display: grid;
   grid-template-rows: 250px auto;
 }
 
-.text {
+.actionCard {
   composes: actionCard from "./_shared.module.css";
   justify-self: center;
   margin-bottom: 16px;
@@ -20,8 +20,8 @@
   row-gap: 10px;
   column-gap: 10px;
 }
-.text:hover .icon,
-.text:active .icon {
+.actionCard:hover .icon,
+.actionCard:active .icon {
   margin-right: 0;
   margin-left: 5px;
 }
@@ -29,7 +29,7 @@
   composes: heading3 from "./_shared.module.css";
   font-weight: normal;
 }
-.body {
+.subtitle {
   composes: textSubtitle from "./_shared.module.css";
 }
 .icon {
@@ -43,13 +43,13 @@
 }
 
 @media bp-lg {
-  .droneCard {
+  .drone {
     grid-template-rows: 220px auto;
   }
-  .imageContainer {
+  .droneImage {
     padding: spacing-sm;
   }
-  .text {
+  .actionCard {
     width: 95%;
     row-gap: 5px;
   }

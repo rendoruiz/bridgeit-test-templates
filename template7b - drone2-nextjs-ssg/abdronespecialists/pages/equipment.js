@@ -32,7 +32,7 @@ const EquipmentPage = () => {
           <button onClick={() => router.push('/equipment?id=2', undefined, { shallow: true })}>3</button>
           <button onClick={() => router.push('/equipment?id=3', undefined, { shallow: true })}>4</button>
           <button onClick={() => router.push('/equipment?id=4', undefined, { shallow: true })}>5</button>
-          <DronesPanel carouselRef={droneRef} carouselInitialSlide={router.query.id} carouselOnly infinite />
+          <DronesPanel carouselRef={droneRef} carouselInitialSlide={router.query.id} carouselOnly infinite isLongText />
         </div>
       </div>
     </MainLayout>
