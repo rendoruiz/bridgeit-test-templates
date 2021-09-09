@@ -3,7 +3,7 @@ import styles from '../styles/Banner.module.css';
 import Image from '../components/Image'
 import Video from '../components/Video'
 
-const Banner = ({ children, imagePrefix, fileExtension, videoPrefix, title, className, mdContentHalf, fullHeight }) => {
+const Banner = ({ children, imagePrefix, fileExtension, videoPrefix, title, className, mdContentHalf, fullHeight, isStatic }) => {
   const setImageBackground = () => {
     return (
       <Image 
@@ -11,6 +11,7 @@ const Banner = ({ children, imagePrefix, fileExtension, videoPrefix, title, clas
         className={styles.background}
         fileExtension={fileExtension}
         title={title}
+        isStatic={isStatic}
       />
     )
   }
