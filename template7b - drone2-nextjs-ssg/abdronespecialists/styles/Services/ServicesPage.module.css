@@ -1,7 +1,7 @@
 @value spacing-sm, spacing-md from "../_variables.css";
+@value bp-sm, bp-md from "../_variables.css";
 
 .bannerContext {
-  letter-spacing: 1px;
   display: grid;
   justify-items: center;
   align-content: center;
@@ -9,10 +9,12 @@
 .heading2 {
   composes: textHeading2 from "../_shared.module.css";
   font-size: 2.5rem;
+  letter-spacing: 1px;
 }
 .subtitle {
   composes: textBody from "../_shared.module.css";
   font-size: 1rem;
+  letter-spacing: 1px;
 }
 
 .container {
@@ -23,4 +25,29 @@
   padding: spacing-md spacing-sm;
   display: grid;
   row-gap: spacing-sm;
+}
+.contentHeading {
+  display: none;
+}
+
+@media bp-md {
+  .bannerContext {
+    display: none;
+  }
+  .content {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(6, 1fr);
+    gap: spacing-md;
+  }
+  .contentHeading {
+    grid-column: span 6;
+    margin-bottom: spacing-sm;
+    display: grid;
+  }
+  .content > .card:nth-of-type(n+1):nth-of-type(-n+2) {
+    grid-column: span 3;
+  }
+  .content > .card:nth-of-type(n+3):nth-of-type(-n+5) {
+    grid-column: span 2;
+  }
 }

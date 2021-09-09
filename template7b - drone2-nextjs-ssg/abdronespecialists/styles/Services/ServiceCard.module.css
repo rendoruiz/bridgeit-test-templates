@@ -1,5 +1,4 @@
 @value color-primary, color-secondary from "../_variables.css";
-
 @value spacing-sm, spacing-md from "../_variables.css";
 
 .card {

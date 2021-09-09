@@ -51,6 +51,7 @@ const ServicesPage = () => {
         routeTo={service.routeTo}
         icon={service.icon}
         svgIcon={service.svgIcon}
+        className={styles.card}
       />
     ));
   }
@@ -65,12 +66,16 @@ const ServicesPage = () => {
         <Banner className={styles.banner} imagePrefix="services-banner" isStatic>
           <div className={styles.bannerContext}>
             <h2 className={styles.heading2}>Services</h2>
-            <span className={styles.subtitle}>We make your vision a reality</span>
+            <span className={styles.subtitle}>We make your vision a reality.</span>
           </div>
         </Banner>
 
         <div className={styles.container}>
           <div className={styles.content}>
+            <div className={styles.contentHeading}>
+              <h2 className={styles.heading2}>Services</h2>
+              <span className={styles.subtitle}>We make your vision a reality.</span>
+            </div>
             { getCards() }
           </div>
         </div>
