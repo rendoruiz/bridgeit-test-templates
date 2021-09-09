@@ -4,7 +4,7 @@ import ServicesLayout from "../../components/Services/ServicesLayout";
 
 const AerialServicePage = () => {
   return ( 
-    <ServicesLayout withNavigation>
+    <ServicesLayout withNavigation heading="Aerial Photography & Videography">
       <Head>
         <title>Aerial Photography & Videography Service - Alberta Drone Specialists</title>
       </Head>

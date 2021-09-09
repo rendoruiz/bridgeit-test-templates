@@ -34,16 +34,23 @@
 .link {
   transition: color 200ms ease-out;
 }
-.link,
-.link:visited {
+.link .icon,
+.link:visited .icon {
   color: color-light
 }
-.link:hover,
-.link:active {
+.link:hover .icon,
+.link:active .icon {
   color: color-secondary
 }
-.link.active {
+.link:hover .svgIcon,
+.link:active .svgIcon {
+  fill: color-secondary;
+}
+.link.active .icon {
   color: color-primary;
+}
+.link.active .svgIcon {
+  fill: color-primary;
 }
 .icon {
   font-size: 28px;
@@ -51,9 +58,6 @@
 .linkText {
   display: none;
 }
-
-
-
 .svgIcon {
   width: 28px;
   height: 28px;
@@ -61,13 +65,6 @@
   transition: fill 200ms ease-out;
   display: grid;
   align-items: center;
-}
-.svgIcon:hover,
-.svgIcon:active {
-  fill: color-secondary;
-}
-.svgIcon.active {
-  fill: color-primary;
 }
 
 .separator {

@@ -34,8 +34,8 @@ const ServicesNavigation = ({ className }) => {
         </Link>
         <div className={styles.separator} />
         <Link href="/services/fpv">
-          <a className={classNames(styles.link, styles.svgIcon, setActive('/services/fpv'))}>
-            <DroneIcon className={styles.icon} />
+          <a className={classNames(styles.link, setActive('/services/fpv'))}>
+            <DroneIcon className={classNames(styles.icon, styles.svgIcon)} />
             <span className={styles.linkText}>FPV</span>
           </a>
         </Link>

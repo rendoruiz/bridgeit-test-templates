@@ -4,7 +4,7 @@ import ServicesLayout from "../../components/Services/ServicesLayout";
 
 const FpvServicePage = () => {
   return ( 
-    <ServicesLayout withNavigation>
+    <ServicesLayout withNavigation heading="FPV">
       <Head>
         <title>FPV Service - Alberta Drone Specialists</title>
       </Head>
