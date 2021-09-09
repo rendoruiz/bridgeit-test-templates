@@ -1,0 +1,15 @@
+.bannerContext {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+.heading2 {
+  composes: textHeading2 from "../_shared.module.css";
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+.subtitle {
+  composes: textBody from "../_shared.module.css";
+  font-size: 1rem;
+  letter-spacing: 1px;
+}

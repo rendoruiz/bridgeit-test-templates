@@ -4,9 +4,10 @@ import { faBookmark, faBuilding, faCamera, faEnvelope, faHome, faPlayCircle, faT
 
 import MainLayout from "../../components/layouts/MainLayout";
 import ServiceCard from '../../components/Services/ServiceCard';
+import DroneIcon from '../../components/DroneIcon';
 
 import styles from '../../styles/Services/ServicesPage.module.css'
-import DroneIcon from '../../components/DroneIcon';
+import ServicesLayout from '../../components/Services/ServicesLayout';
 
 const ServicesPage = () => {
   const servicesData = [
@@ -57,30 +58,21 @@ const ServicesPage = () => {
   }
 
   return ( 
-    <MainLayout>
+    <ServicesLayout>
       <Head>
         <title>Our Services - Alberta Drone Specialists</title>
       </Head>
 
-      <div>
-        <Banner className={styles.banner} imagePrefix="services-banner" isStatic>
-          <div className={styles.bannerContext}>
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <div className={styles.contentHeading}>
             <h2 className={styles.heading2}>Services</h2>
             <span className={styles.subtitle}>We make your vision a reality.</span>
           </div>
-        </Banner>
-
-        <div className={styles.container}>
-          <div className={styles.content}>
-            <div className={styles.contentHeading}>
-              <h2 className={styles.heading2}>Services</h2>
-              <span className={styles.subtitle}>We make your vision a reality.</span>
-            </div>
-            { getCards() }
-          </div>
+          { getCards() }
         </div>
       </div>
-    </MainLayout>
+    </ServicesLayout>
   );
 }
  
