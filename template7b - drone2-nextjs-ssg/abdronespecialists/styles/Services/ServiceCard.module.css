@@ -6,6 +6,7 @@
   composes: card from "../_shared.module.css";
   composes: themeLight from "../_shared.module.css";
   composes: textBody from "../_shared.module.css";
+  padding: spacing-sm;
   display: grid;
   row-gap: 10px;
   cursor: pointer;
@@ -45,7 +46,6 @@
 
 @media bp-lg {
   .card {
-
     padding: spacing-md;
     row-gap: 15px;
   }
