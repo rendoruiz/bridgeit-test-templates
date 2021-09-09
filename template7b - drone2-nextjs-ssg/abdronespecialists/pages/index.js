@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 import Button from '../components/Button'
-import MainLayout from '../components/layouts/MainLayout'
+import MainLayout from '../components/MainLayout'
 import Image from '../components/Image'
 import Video from '../components/Video'
 import Carousel from '../components/Carousel'

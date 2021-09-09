@@ -2,7 +2,7 @@ import { useRouter } from "next/dist/client/router";
 import { useEffect } from "react";
 import Link from 'next/link'
 
-import MainLayout from "../components/layouts/MainLayout";
+import MainLayout from "../components/MainLayout";
 
 import styles from '../styles/404.module.css'
 

@@ -4,7 +4,7 @@ import DronesPanel from '../components/Equipment/DronesPanel';
 import classNames from 'classnames';
 import { useRouter } from 'next/dist/client/router';
 
-import MainLayout from "../components/layouts/MainLayout";
+import MainLayout from "../components/MainLayout";
 import Carousel from "../components/Carousel";
 import Image from "../components/Image";
 import Divider from '../components/Divider';

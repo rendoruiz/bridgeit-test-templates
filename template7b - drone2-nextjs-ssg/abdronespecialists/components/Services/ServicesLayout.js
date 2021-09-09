@@ -1,5 +1,5 @@
 import Banner from "../Banner";
-import MainLayout from "../layouts/MainLayout";
+import MainLayout from "../MainLayout";
 
 import styles from '../../styles/Services/ServicesLayout.module.css'
 

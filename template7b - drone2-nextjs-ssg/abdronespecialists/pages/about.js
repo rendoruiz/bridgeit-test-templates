@@ -4,7 +4,7 @@ import Highlights from "../components/About/Highlights";
 import Partners from "../components/About/Partners";
 import Banner from "../components/Banner";
 import Divider from "../components/Divider";
-import MainLayout from "../components/layouts/MainLayout";
+import MainLayout from "../components/MainLayout";
 import Image from '../components/Image'
 
 import styles from '../styles/About/AboutPage.module.css'
