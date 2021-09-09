@@ -1,15 +1,14 @@
 @value color-primary, color-secondary from "../_variables.css";
-@value spacing-sm, spacing-md from "../_variables.css";
+@value corner-rounding, spacing-sm, spacing-md from "../_variables.css";
 @value bp-lg from "../_variables.css";
 
 .card {
-  composes: card from "../_shared.module.css";
   composes: themeLight from "../_shared.module.css";
   composes: textBody from "../_shared.module.css";
   padding: spacing-sm;
+  border-radius: corner-rounding;
   display: grid;
   row-gap: 10px;
-  cursor: pointer;
 }
 
 .icon {
@@ -30,17 +29,21 @@
 .body {
   line-height: 1.5;
 }
-.linkText {
+.link {
+  justify-self: flex-start;
   margin-top: 10px;
   font-weight: bold;
-  color: color-secondary;
   transition: color 200ms ease-out;
 }
-.card:hover .linkText,
-.card:active .linkText {
+.link,
+.link:visited {
+  color: color-secondary;
+}
+.link:hover,
+.link:active {
   color: color-primary
 }
-.linkTextIcon {
+.linkIcon {
   margin-left: 0.5rem;
 }
 
