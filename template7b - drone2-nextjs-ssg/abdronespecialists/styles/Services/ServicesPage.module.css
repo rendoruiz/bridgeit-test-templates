@@ -1,5 +1,5 @@
-@value spacing-sm, spacing-md from "../_variables.css";
-@value bp-sm, bp-md from "../_variables.css";
+@value spacing-sm, spacing-md, spacing-lg from "../_variables.css";
+@value bp-md, bp-lg from "../_variables.css";
 
 .bannerContext {
   display: grid;
@@ -49,5 +49,17 @@
   }
   .content > .card:nth-of-type(n+3):nth-of-type(-n+5) {
     grid-column: span 2;
+  }
+}
+@media bp-lg {
+  .bannerContext {
+    display: none;
+  }
+  .content {
+    padding: spacing-lg spacing-md;
+    gap: spacing-lg;
+  }
+  .contentHeading {
+    margin-bottom: spacing-sm;
   }
 }

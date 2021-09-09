@@ -1,11 +1,11 @@
 @value color-primary, color-secondary from "../_variables.css";
 @value spacing-sm, spacing-md from "../_variables.css";
+@value bp-lg from "../_variables.css";
 
 .card {
   composes: card from "../_shared.module.css";
   composes: themeLight from "../_shared.module.css";
   composes: textBody from "../_shared.module.css";
-  padding: spacing-sm;
   display: grid;
   row-gap: 10px;
   cursor: pointer;
@@ -41,4 +41,21 @@
 }
 .linkTextIcon {
   margin-left: 0.5rem;
+}
+
+@media bp-lg {
+  .card {
+
+    padding: spacing-md;
+    row-gap: 15px;
+  }
+  .icon,
+  .svgIcon {
+    font-size: 26px;
+  }
+  .svgIcon {
+    width: 26px;
+    height: 26px;
+    fill: color-primary;
+  }
 }
