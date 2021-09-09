@@ -6,6 +6,7 @@ import MainLayout from "../../components/layouts/MainLayout";
 import ServiceCard from '../../components/Services/ServiceCard';
 
 import styles from '../../styles/Services/ServicesPage.module.css'
+import DroneIcon from '../../components/DroneIcon';
 
 const ServicesPage = () => {
   const servicesData = [
@@ -19,7 +20,7 @@ const ServicesPage = () => {
       title: 'FPV',
       body: 'Custom-built FPV drones operated by talented our pilots that allow for complete freedom for our cameras. Popular FPV shots include diving buildings, chasing subjects, flying in tight spaces, and anything else you can imagine. Our FPV services open the door for exciting, jaw-dropping shots.',
       routeTo: '/services/fpv',
-      icon: faCamera
+      svgIcon: <DroneIcon />
     },
     {
       title: 'Construction',
@@ -49,6 +50,7 @@ const ServicesPage = () => {
         body={service.body}
         routeTo={service.routeTo}
         icon={service.icon}
+        svgIcon={service.svgIcon}
       />
     ));
   }

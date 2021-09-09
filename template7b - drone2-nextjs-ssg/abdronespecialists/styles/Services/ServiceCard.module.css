@@ -13,11 +13,22 @@
 }
 
 .icon {
-  font-size: 20px;
   color: color-primary;
+}
+.icon,
+.svgIcon {
+  font-size: 20px;
+}
+.svgIcon {
+  width: 20px;
+  height: 20px;
+  fill: color-primary;
 }
 .heading {
   composes: textHeading3 from "../_shared.module.css";
+}
+.body {
+  line-height: 1.5;
 }
 .linkText {
   margin-top: 10px;
