@@ -58,14 +58,14 @@ const AppHeader = () => {
               About
             </a>
           </Link>
-          <Link href="/">
-            <a className={styles.navigationItem + setActive('')}>
+          <Link href="/services">
+            <a className={styles.navigationItem + setActive('/services', true)}>
               <FontAwesomeIcon icon={faCamera} className={styles.navigationIcon} fixedWidth />
               Services
             </a>
           </Link>
-          <Link href="/">
-            <a className={styles.navigationItem + setActive('')}>
+          <Link href="/portfolio">
+            <a className={styles.navigationItem + setActive('/portfolio', true)}>
               <FontAwesomeIcon icon={faBookmark} className={styles.navigationIcon} fixedWidth />
               Portfolio
             </a>

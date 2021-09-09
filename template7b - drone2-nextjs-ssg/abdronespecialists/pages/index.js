@@ -69,7 +69,7 @@ export default function Home() {
           <Partners className={styles.portfolioPartners} />
           <Button
             text="Portfolio"
-            href="/"
+            href="/portfolio"
           />
         </div>
       </section>
@@ -102,7 +102,7 @@ export default function Home() {
                 <p>Professional drone crew services for films, television & commercials.</p>
                 <Button
                   text="Explore Film & TV"
-                  href="/"
+                  href="/services/filmtv"
                   className={styles.accordionLink}
                   iconClassName={styles.accordionLinkIcon}
                   title="Film & TV service page"
@@ -127,7 +127,7 @@ export default function Home() {
                 <p>Exceptional indoor & outdoor FPV footage.</p>
                 <Button
                   text="Explore FPV"
-                  href="/"
+                  href="/services/fpv"
                   className={styles.accordionLink}
                   iconClassName={styles.accordionLinkIcon}
                   title="FPV service page"
@@ -152,7 +152,7 @@ export default function Home() {
                 <p>Construction progress monitoring.</p>
                 <Button
                   text="Explore Construction"
-                  href="/"
+                  href="/services/construction"
                   className={styles.accordionLink}
                   iconClassName={styles.accordionLinkIcon}
                   title="Construction service page"
@@ -177,7 +177,7 @@ export default function Home() {
                 <p>Showcase your properties from new heights.</p>
                 <Button
                   text="Explore Commercial Real Estate"
-                  href="/"
+                  href="/services/realestate"
                   className={styles.accordionLink}
                   iconClassName={styles.accordionLinkIcon}
                   title="Commercial Real Estate service page"
@@ -202,7 +202,7 @@ export default function Home() {
                 <p>Showcase your properties from new heights.</p>
                 <Button
                   text="Explore Aerial Photography & Videography"
-                  href="/"
+                  href="/services/aerial"
                   className={styles.accordionLink}
                   iconClassName={styles.accordionLinkIcon}
                   title="Aerial Photography & Videography service page"
@@ -218,7 +218,7 @@ export default function Home() {
             </Accordion.Item>
           </Accordion>
           <div className={styles.servicesCards}>
-            <Link href="/">
+            <Link href="/services/filmtv">
               <a 
                 className={styles.serviceCard + ` ${styles.cardSpan3}`}
                 title=" service page link"
@@ -238,7 +238,7 @@ export default function Home() {
                 </div>
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/services/fpv">
               <a 
                 className={styles.serviceCard + ` ${styles.cardSpan3}`}
                 title=" service page link"
@@ -258,7 +258,7 @@ export default function Home() {
                 </div>
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/services/construction">
               <a 
                 className={styles.serviceCard + ` ${styles.cardSpan2}`}
                 title=" service page link"
@@ -277,7 +277,7 @@ export default function Home() {
                 </div>
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/services/realestate">
               <a 
                 className={styles.serviceCard + ` ${styles.cardSpan2}`}
                 title=" service page link"
@@ -296,7 +296,7 @@ export default function Home() {
                 </div>
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/services/aerial">
               <a 
                 className={styles.serviceCard + ` ${styles.cardSpan2}`}
                 title=" service page link"
