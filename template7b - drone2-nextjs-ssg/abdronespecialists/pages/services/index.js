@@ -1,8 +1,6 @@
 import Head from 'next/head'
-import Banner from '../../components/Banner';
-import { faBookmark, faBuilding, faCamera, faEnvelope, faHome, faPlayCircle, faTools, faUserFriends } from '@fortawesome/free-solid-svg-icons';
+import { faBuilding, faCamera, faPlayCircle, faTools } from '@fortawesome/free-solid-svg-icons';
 
-import MainLayout from "../../components/layouts/MainLayout";
 import ServiceCard from '../../components/Services/ServiceCard';
 import DroneIcon from '../../components/DroneIcon';
 
