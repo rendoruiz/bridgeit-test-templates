@@ -9,9 +9,9 @@ import Carousel from "../components/Carousel";
 import Image from "../components/Image";
 import Divider from '../components/Divider';
 import DroneMenu from '../components/Equipment/DroneMenu';
+import Banner from '../components/Banner';
 
 import styles from '../styles/Equipment/EquipmentPage.module.css'
-import Banner from '../components/Banner';
 
 const EquipmentPage = () => {
   const router = useRouter();

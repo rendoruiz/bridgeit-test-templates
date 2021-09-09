@@ -1,0 +1,34 @@
+@value color-primary, color-secondary from "../_variables.css";
+
+@value spacing-sm, spacing-md from "../_variables.css";
+
+.card {
+  composes: card from "../_shared.module.css";
+  composes: themeLight from "../_shared.module.css";
+  composes: textBody from "../_shared.module.css";
+  padding: spacing-sm;
+  display: grid;
+  row-gap: 10px;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 20px;
+  color: color-primary;
+}
+.heading {
+  composes: textHeading3 from "../_shared.module.css";
+}
+.linkText {
+  margin-top: 10px;
+  font-weight: bold;
+  color: color-secondary;
+  transition: color 200ms ease-out;
+}
+.card:hover .linkText,
+.card:active .linkText {
+  color: color-primary
+}
+.linkTextIcon {
+  margin-left: 0.5rem;
+}
