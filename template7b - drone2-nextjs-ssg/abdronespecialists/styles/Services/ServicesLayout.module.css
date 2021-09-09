@@ -1,14 +1,26 @@
-@value bp-md from "../_variables.css";
+@value spacing-sm, spacing-md, spacing-lg from "../_variables.css";
+@value bp-md, bp-lg from "../_variables.css";
+
+.container {
+  composes: container from "../_shared.module.css";
+}
+.headingContent,
+.content {
+  composes: content from "../_shared.module.css";
+  padding: spacing-md spacing-sm;
+}
+.heading2 {
+  composes: textHeading2 from "../_shared.module.css";
+  letter-spacing: 1px;
+}
 
 .bannerContext {
   display: grid;
   justify-items: center;
   align-content: center;
 }
-.heading2 {
-  composes: textHeading2 from "../_shared.module.css";
+.bannerContext .heading2 {
   font-size: 2.5rem;
-  letter-spacing: 1px;
 }
 .subtitle {
   composes: textBody from "../_shared.module.css";
@@ -16,8 +28,28 @@
   letter-spacing: 1px;
 }
 
+.headingContent .heading2 {
+  display: none;
+}
+
 @media bp-md {
   .bannerContext {
     display: none;
+  }
+
+  .headingContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .headingContent .heading2 {
+    display: inline-block;
+  }
+}
+
+@media bp-lg {
+  .headingContent,
+  .content {
+    padding: spacing-lg spacing-md;
   }
 }

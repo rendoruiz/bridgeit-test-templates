@@ -1,0 +1,122 @@
+@value bp-md, bp-lg from "../_variables.css";
+@value spacing-sm, box-shadow from "./../_variables.css";
+@value color-light, color-dark, color-primary, color-secondary, color-shade-darker, color-box-shadow-active from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
+.container {
+  position: relative;
+}
+.toggle {
+  composes: bodyText from "./../_shared.module.css";
+  margin: none;
+  padding: none;
+  border: none;
+  background: none;
+  font-size: 1.4rem;
+  color: color-light;
+  text-transform: uppercase;
+  transition: color 200ms ease-out, transform 200ms ease-out;
+  display: none;
+  cursor: pointer;
+}
+.toggle.active {
+  color: color-secondary;
+  transform: translateX(-5px);
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr auto) 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.link {
+  transition: color 200ms ease-out;
+}
+.link,
+.link:visited {
+  color: color-light
+}
+.link:hover,
+.link:active {
+  color: color-secondary
+}
+.link.active {
+  color: color-primary;
+}
+.icon {
+  font-size: 28px;
+}
+.linkText {
+  display: none;
+}
+
+
+
+.svgIcon {
+  width: 28px;
+  height: 28px;
+  fill: color-light;
+  transition: fill 200ms ease-out;
+  display: grid;
+  align-items: center;
+}
+.svgIcon:hover,
+.svgIcon:active {
+  fill: color-secondary;
+}
+.svgIcon.active {
+  fill: color-primary;
+}
+
+.separator {
+  width: 3px;
+  height: 100%;
+  background: color-light;
+}
+
+@media bp-md {
+  .toggle {
+    display: block;
+  }
+  .menu {
+    padding: 8px 0;
+    width: 250px;
+    background: color-shade-darker;
+    box-shadow: box-shadow color-box-shadow-active;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    display: none;
+    grid-template-columns: unset;
+    justify-items: unset;
+    align-items: unset;
+  }
+  .menu.active {
+    display: grid;
+  }
+  .link {
+    display: grid;
+    padding: 8px 10px;
+    transition: background 100ms ease-out;
+  }
+  .link:hover,
+  .link:active {
+    background: color-secondary;
+    color: color-dark;
+  }
+  .link.active {
+    background: color-light;
+    color: color-dark;
+  }
+  .icon {
+    display: none;
+  }
+  .linkText {
+    display: inline-block;
+  }
+
+}
+

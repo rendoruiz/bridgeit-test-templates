@@ -41,7 +41,8 @@
 }
 .link:hover,
 .link:active {
-  color: color-primary
+  color: color-primary;
+  text-decoration: underline;
 }
 .linkIcon {
   margin-left: 0.5rem;

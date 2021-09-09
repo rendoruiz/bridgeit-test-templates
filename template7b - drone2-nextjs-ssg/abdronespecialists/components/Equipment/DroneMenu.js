@@ -13,7 +13,7 @@ const DroneMenu = ({ className }) => {
     setIsMenuOpen(!isMenuOpen);
   }
 
-  console.log(router.query.id)
+  // console.log(router.query.id)
 
   const setActiveMenuItem = (id) => {
     if (!router.query.id && id === 0) {

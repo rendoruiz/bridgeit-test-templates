@@ -56,20 +56,16 @@ const ServicesPage = () => {
   }
 
   return ( 
-    <ServicesLayout>
+    <ServicesLayout contentClassName={styles.content}>
       <Head>
         <title>Our Services - Alberta Drone Specialists</title>
       </Head>
 
-      <div className={styles.container}>
-        <div className={styles.content}>
-          <div className={styles.contentHeading}>
-            <h2 className={styles.heading2}>Services</h2>
-            <span className={styles.subtitle}>We make your vision a reality.</span>
-          </div>
-          { getCards() }
-        </div>
+      <div className={styles.contentHeading}>
+        <h2 className={styles.heading2}>Services</h2>
+        <span className={styles.subtitle}>We make your vision a reality.</span>
       </div>
+      { getCards() }
     </ServicesLayout>
   );
 }
