@@ -1,0 +1,49 @@
+@value header-height-sm, header-height-lg from "./../_variables.css";
+@value spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
+
+.heading2 {
+  composes: textHeading2 from "./../_shared.module.css";
+}
+.heading3 {
+  composes: textHeading3 from "./../_shared.module.css";
+}
+.banner {
+  composes: captionedMedia from "./../_shared.module.css";
+}
+.banner {
+  composes: captionedMedia from "./../_shared.module.css";
+}
+.bannerContent {
+  display: grid;
+  place-items: center;
+}
+.banner .heading2 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+@media bp-md {
+
+}
+
+
+.container {
+  composes: container from "./../_shared.module.css";
+}
+.content {
+  composes: content from "./../_shared.module.css";
+  padding: spacing-md spacing-sm;
+  display: grid;
+  row-gap: spacing-md;
+}
+.partnerContent {
+  display: grid;
+  row-gap: 10px;
+}
+
+@media bp-md {
+  .partnerContent {
+    display: none;
+  }
+}

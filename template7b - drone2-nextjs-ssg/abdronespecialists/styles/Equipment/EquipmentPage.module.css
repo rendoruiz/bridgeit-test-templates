@@ -44,7 +44,7 @@
 }
 
 @media bp-md {
-  .banner .heading,
+  .bannerContent,
   .topDivider {
     display: none;
   }

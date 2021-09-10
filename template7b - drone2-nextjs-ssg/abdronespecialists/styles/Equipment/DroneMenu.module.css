@@ -1,6 +1,6 @@
-@value spacing-sm, box-shadow from "./../_variables.css";
+@value box-shadow from "./../_variables.css";
 @value color-light, color-dark, color-secondary, color-shade-darker, color-box-shadow-active from "./../_variables.css";
-@value bp-md, bp-lg from "./../_variables.css";
+@value bp-lg from "./../_variables.css";
 
 .container {
   position: relative;
@@ -51,9 +51,6 @@
   color: color-dark;
 }
 
-@media bp-md {
-
-}
 @media bp-lg {
   .toggle {
     font-size: 1.5rem;

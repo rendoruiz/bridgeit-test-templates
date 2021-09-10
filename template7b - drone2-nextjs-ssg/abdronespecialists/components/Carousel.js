@@ -7,7 +7,7 @@ import classNames from "classnames";
 
 import styles from '../styles/Carousel.module.css';
 
-const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef, carouselInitialSlide, fade, asNavFor, isStatic, adaptiveHeight, arrowsMd }) => {
+const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef, carouselInitialSlide, fade, asNavFor, notDraggable, notSwipable, adaptiveHeight, arrowsMd, isVertical }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const router = useRouter();
 
@@ -60,8 +60,10 @@ const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef
     initialSlide: carouselInitialSlide ?? 0,
     fade: fade ?? false,
     asNavFor: asNavFor,
-    draggable: isStatic ? false : true,
-    adaptiveHeight: adaptiveHeight ?? false
+    draggable: notDraggable ? false : true,
+    swipe: notSwipable ? false : true,
+    adaptiveHeight: adaptiveHeight ?? false,
+    vertical: isVertical ? true : false
   };
 
   return !children ? null : ( 

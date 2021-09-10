@@ -1,0 +1,23 @@
+.content {
+  display: grid;
+}
+.categoryItem {
+  grid-row: 1;
+  grid-column: 1;
+  height: 0;
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+}
+.categoryItem.active {
+  height: unset;
+  opacity: 1;
+  position: relative;
+  z-index: 10;
+}
+.heading {
+  composes: textHeading3 from "./../_shared.module.css";
+  margin-bottom: 10px;
+}
+.carouselItem {
+  margin: 3px;
+}
