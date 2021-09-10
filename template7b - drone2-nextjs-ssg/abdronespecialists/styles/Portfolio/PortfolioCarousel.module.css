@@ -30,4 +30,7 @@
   .carouselItem {
     height: 400px;
   }
+  .content {
+    display: none;
+  }
 }

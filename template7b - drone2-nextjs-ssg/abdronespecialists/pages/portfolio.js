@@ -9,8 +9,10 @@ import Carousel from '../components/Carousel'
 import styles from '../styles/Portfolio/PortfolioPage.module.css'
 import PortfolioCarousel from '../components/Portfolio/PortfolioCarousel';
 import ExternalMediaLinks from '../components/Contact/ExternalMediaLinks';
+import { useRouter } from 'next/dist/client/router';
 
 const PortfolioPage = () => {
+  const router = useRouter();
   const portfolioData = [
     {
       title: 'Film & TV',
@@ -59,6 +61,15 @@ const PortfolioPage = () => {
     }
   ]
 
+  const setHeading = () => {
+    const heading = portfolioData[router.query.id ?? 0];
+    if (heading) {
+      return heading.title;
+    } else {
+      router.push('/portfolio', undefined, { shallow: true });
+    }
+  }
+
   return ( 
     <MainLayout>
       <Head>
@@ -76,6 +87,8 @@ const PortfolioPage = () => {
 
         <div className={styles.container}>
           <div className={styles.content}>
+            <h2 className={styles.heading2}>{ setHeading() }</h2>
+
             <PortfolioNavigation className={styles.navigation} />
 
             <PortfolioCarousel data={portfolioData} />
