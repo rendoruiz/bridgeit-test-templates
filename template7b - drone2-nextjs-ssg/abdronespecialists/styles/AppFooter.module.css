@@ -41,6 +41,9 @@
 .mediaBlurb {
   font-size: 0.7rem;
   letter-spacing: 0.5px;
+  word-break: keep-all;
+  text-align: center;
+  display: block;
 }
 .externalLinks {
   gap: 15px;
