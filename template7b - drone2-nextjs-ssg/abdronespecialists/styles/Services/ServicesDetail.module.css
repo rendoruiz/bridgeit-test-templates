@@ -1,0 +1,35 @@
+@value bp-md, bp-lg from "../_variables.css";
+@value spacing-sm, spacing-md, spacing-lg box-shadow, corner-rounding, border-line from "./../_variables.css";
+@value color-light, color-dark, color-primary, color-secondary, color-shade-darker, color-box-shadow-active from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
+.content {
+
+}
+
+.carouselContainer {
+  margin-top: spacing-lg;
+  display: grid;
+  row-gap: spacing-sm;
+}
+.heading {
+  composes: textHeading2 from "./../_shared.module.css";
+  position: relative;
+}
+.heading::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -10px;
+  border-left: border-line;
+}
+.carouselItem {
+  margin: 5px;
+}
+
+@media bp-md {
+  .carouselContainer {
+    display: none;
+  }
+}

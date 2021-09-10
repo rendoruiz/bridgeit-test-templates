@@ -28,6 +28,9 @@
   letter-spacing: 1px;
 }
 
+.headingContent {
+  padding-bottom: 0;
+}
 .headingContent .heading2 {
   display: none;
 }

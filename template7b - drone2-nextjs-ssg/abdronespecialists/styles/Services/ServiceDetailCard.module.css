@@ -1,0 +1,66 @@
+@value bp-md, bp-lg from "../_variables.css";
+@value spacing-sm, spacing-md, box-shadow, corner-rounding from "./../_variables.css";
+@value color-light, color-dark, color-primary, color-secondary, color-shade-darker, color-box-shadow-active from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
+
+.card {
+  composes: themeLight from "./../_shared.module.css";
+  composes: textBody from "./../_shared.module.css";
+  padding: spacing-sm;
+  border-radius: corner-rounding;
+  display: grid;
+  row-gap: 8px;
+}
+
+
+.icon {
+  color: color-primary;
+  display: none;
+}
+.icon,
+.svgIcon {
+  font-size: 30px;
+}
+.svgIcon {
+  width: 30px;
+  height: 30px;
+  fill: color-primary;
+}
+
+
+.heading2 {
+  composes: textHeading2 from "./../_shared.module.css";
+}
+.subtitle {
+  font-weight: bold;
+}
+
+
+.button {
+  margin-top: spacing-sm;
+}
+
+
+@media bp-md {
+  .card {
+    padding: spacing-md spacing-sm;
+    row-gap: spacing-sm;
+  }
+  .icon {
+    display: block;
+  }
+  .heading2 {
+    display: none;
+  }
+  .button {
+    justify-self: flex-start;
+    margin-top: 10px;
+  }
+}
+
+@media bp-lg {
+  .card {
+    padding: spacing-md;
+  }
+}
