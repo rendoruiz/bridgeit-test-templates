@@ -20,10 +20,10 @@
 }
 .link,
 .link:visited {
-  color: color-secondary;
-  transition: color 200ms ease-out;
+  font-weight: bold;
+  color: color-primary;
 }
 .link:hover,
 .link:active {
-  color: color-primary;
+  text-decoration: underline;
 }
