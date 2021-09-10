@@ -10,39 +10,15 @@ import styles from '../../styles/Portfolio/PortfolioCarousel.module.css'
 
 const PortfolioCarousel = ({ className, data }) => {
   const router = useRouter();
-  const mainCarouselRef = useRef();
 
-  useEffect(() => {
-    navigateMainCarousel(router.query.id);
-  }, [router.query.id]);
-
-  const navigateMainCarousel = (index) => {
-    mainCarouselRef.current.slickGoTo(index);
-  }
-
-  const getMainCarousel = () => {
-    return data.map((category) => (
-      <div className={styles.mainCarouselItem}>
-        <h3 className={styles.heading}>{ category.title }</h3>
-        <Carousel adaptiveHeight noArrows>
-          { [category.primaryMedia, ...category.secondaryMediaList].map((media, i) => getMediaListCarousel(media, i)) }
-          {/* <VideoModal 
-            imagePrefix="highlights-pv3"
-            title="highlight video"
-            youtubeEmbedId="Zi_trzln4ss"
-          /> */}
-        </Carousel>
-      </div>
-    ))
-  }
-
-  const getMediaListCarousel = (media, i) => {
+  const getMediaItem= (media) => {
     if (media.type === 'video') {
       return (
         <VideoModal 
           imagePrefix={media.imagePrefix}
           youtubeEmbedId={media.youtubeEmbedId}
-          title="lel"
+          title={media.title ?? "untitled media"}
+          className={styles.carouselItem}
         />
       )
     } else if (media.type === 'image') {
@@ -52,20 +28,30 @@ const PortfolioCarousel = ({ className, data }) => {
     }
   }
 
-  const mainCarouselProperties = {
-    carouselRef: mainCarouselRef, 
-    carouselInitialSlide: router.query.id, 
-    // noArrows: true, 
-    // noDots: true, 
-    // adaptiveHeight: true, 
-    // fade: true
+  const setActive = (id) => {
+    if (!router.query.id && id === 0) {
+      return styles.active;
+    }
+    else if (router.query.id == id) {
+      return styles.active;
+    }
+    return null;
+  }
+
+  const getCategories = () => {
+    return data.map((category, categoryIndex) => (
+      <div className={classNames(styles.categoryItem, setActive(categoryIndex))}>
+        <h3 className={styles.heading}>{ category.title }</h3>
+        <Carousel noArrows>
+          { [category.primaryMedia, ...category.secondaryMediaList].map((media) => getMediaItem(media)) }
+        </Carousel>
+      </div>
+    ))
   }
 
   return !data ? null : ( 
     <div className={classNames(styles.content, className)}>
-      <Carousel {...mainCarouselProperties} notSwipable noArrows noDots adaptiveHeight>
-        { getMainCarousel() }
-      </Carousel>
+      { getCategories() }
     </div>
   );
 }
