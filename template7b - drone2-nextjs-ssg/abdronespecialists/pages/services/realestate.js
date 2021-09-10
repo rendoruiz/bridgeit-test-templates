@@ -40,6 +40,7 @@ const RealEstateServicePage = () => {
         subtitle={data.subtitle}
         body={data.detailText ?? data.summaryText}
         icon={data.icon}
+        svgIcon={data.svgIcon}
       />
 
       <div className={styles.mediaSecondaries}>
