@@ -40,7 +40,11 @@ const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef
     }
   }
 
+  //https://github.com/akiran/react-slick/issues/1262
+  // NOTE: afterChange will not work when adaptiveheight is set and custom arrows are used.
+
   var defaultConfig = {
+    ref: carouselRef,
     dots: !noDots,
     arrows: !noArrows,
     infinite: infinite,
@@ -62,7 +66,6 @@ const Carousel = ({ children, infinite, noDots, noArrows, className, carouselRef
 
   return !children ? null : ( 
     <Slider
-      ref={carouselRef}
       {...defaultConfig}
       className={classNames(styles.carousel, className, !noArrows ? null : styles.noArrows, !arrowsMd ? null : styles.arrowsMd)}
     >

@@ -78,7 +78,7 @@ const EquipmentPage = () => {
         </div>
 
         <div className={styles.carouselContainer}>
-          <DronesPanel carouselClassName={styles.carousel} carouselRef={droneRef} carouselInitialSlide={router.query.id} carouselOnly isLongText carouselAdaptiveHeight />
+          <DronesPanel carouselClassName={styles.carousel} carouselRef={droneRef} carouselInitialSlide={router.query.id} carouselOnly isLongText infinite />
         </div>
 
         <Divider isDark className={classNames(styles.divider, styles.bottomDivider)} />

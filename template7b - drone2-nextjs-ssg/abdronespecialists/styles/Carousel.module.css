@@ -46,6 +46,7 @@
 .inactiveButton {
   composes: button;
   color: transparent;
+  pointer-events: none;
 }
 .inactiveButton:active {
   color: transparent;

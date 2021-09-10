@@ -40,10 +40,10 @@ const DroneMenu = ({ className }) => {
           <a className={classNames(styles.menuItem, setActiveMenuItem(2))}>Indemnis Nexus</a>
         </Link>
         <Link href="/equipment?id=3" shallow>
-          <a className={classNames(styles.menuItem, setActiveMenuItem(3))}>Outdoor FPV</a>
+          <a className={classNames(styles.menuItem, setActiveMenuItem(3))}>iFlight Cidora SL5</a>
         </Link>
         <Link href="/equipment?id=4" shallow>
-          <a className={classNames(styles.menuItem, setActiveMenuItem(4))}>Indoor FPV</a>
+          <a className={classNames(styles.menuItem, setActiveMenuItem(4))}>GEPRC CineLog30</a>
         </Link>
       </div>
     </div>
