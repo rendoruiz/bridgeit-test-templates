@@ -31,6 +31,28 @@
 .carouselItem {
   margin: 5px;
 }
+.blurb {
+  composes: textBody from "./../_shared.module.css";
+  letter-spacing: 1px;
+  display: none;
+}
+.blurbHeading {
+  composes: textHeading3 from "./../_shared.module.css";
+}
+.subtitle {
+  composes: textSubtitle from "./../_shared.module.css";
+  margin-top: spacing-sm;
+  letter-spacing: 0.5px;
+}
+.blurbLink,
+.blurbLink:visited {
+  font-weight: bold;
+  color: color-primary;
+}
+.blurbLink:hover,
+.blurbLink:active {
+  text-decoration: underline;
+}
 
 @media bp-md {
   .carouselContainer {
@@ -54,6 +76,11 @@
   }
   .mediaSecondary {
     height: 200px;
+  }
+  .blurb {
+    grid-column: span 2;
+    display: grid;
+    row-gap: 10px;
   }
 }
 

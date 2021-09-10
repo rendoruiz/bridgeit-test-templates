@@ -4,10 +4,9 @@ import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import ServicesLayout from "../../components/Services/ServicesLayout";
 import ServiceDetailCard from '../../components/Services/ServiceDetailCard';
 import Carousel from '../../components/Carousel'
+import VideoModal from '../../components/VideoModal';
 
 import styles from '../../styles/Services/ServicesDetail.module.css';
-import VideoModal from '../../components/VideoModal';
-import Partners from '../../components/About/Partners';
 
 const FilmTvServicePage = () => {
   const data = {
@@ -23,7 +22,7 @@ const FilmTvServicePage = () => {
     <ServicesLayout 
       withNavigation 
       withPartners 
-      heading="Film & TV" 
+      heading={data.title} 
       contentClassName={styles.content}
     >
       <Head>
