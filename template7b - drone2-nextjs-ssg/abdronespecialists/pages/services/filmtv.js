@@ -7,6 +7,7 @@ import Carousel from '../../components/Carousel'
 
 import styles from '../../styles/Services/ServicesDetail.module.css';
 import VideoModal from '../../components/VideoModal';
+import Partners from '../../components/About/Partners';
 
 const FilmTvServicePage = () => {
   const data = {
@@ -19,10 +20,22 @@ const FilmTvServicePage = () => {
   }
 
   return ( 
-    <ServicesLayout withNavigation heading="Film & TV" contentClassName={styles.content}>
+    <ServicesLayout 
+      withNavigation 
+      withPartners 
+      heading="Film & TV" 
+      contentClassName={styles.content}
+    >
       <Head>
         <title>Film & TV Service - Alberta Drone Specialists</title>
       </Head>
+      
+      <VideoModal 
+        imagePrefix="highlights-pv1"
+        title="highlight video"
+        youtubeEmbedId="ifO6DECu6-k"
+        className={styles.mediaPrimary}
+      />
       
       <ServiceDetailCard
         heading={data.title}
@@ -30,6 +43,33 @@ const FilmTvServicePage = () => {
         body={data.detailText ?? data.summaryText}
         icon={data.icon}
       />
+
+      <div className={styles.mediaSecondaries}>
+        <VideoModal 
+          imagePrefix="highlights-pv1"
+          title="highlight video"
+          youtubeEmbedId="ifO6DECu6-k"
+          className={styles.mediaSecondary}
+        />
+        <VideoModal 
+          imagePrefix="highlights-pv1"
+          title="highlight video"
+          youtubeEmbedId="ifO6DECu6-k"
+          className={styles.mediaSecondary}
+        />
+        <VideoModal 
+          imagePrefix="highlights-pv1"
+          title="highlight video"
+          youtubeEmbedId="ifO6DECu6-k"
+          className={styles.mediaSecondary}
+        />
+        <VideoModal 
+          imagePrefix="highlights-pv1"
+          title="highlight video"
+          youtubeEmbedId="ifO6DECu6-k"
+          className={styles.mediaSecondary}
+        />
+      </div>
 
       <div className={styles.carouselContainer}>
         <h2 className={styles.heading}>Our Work</h2>

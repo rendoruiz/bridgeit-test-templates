@@ -7,6 +7,10 @@
 
 }
 
+.mediaPrimary,
+.mediaSecondaries {
+  display: none;
+}
 .carouselContainer {
   margin-top: spacing-lg;
   display: grid;
@@ -31,5 +35,40 @@
 @media bp-md {
   .carouselContainer {
     display: none;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: spacing-md;
+    column-gap: spacing-sm;
+  }
+  .mediaPrimary {
+    display: grid;
+    height: 100%;
+  }
+  .mediaSecondaries {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: spacing-sm;
+  }
+  .mediaSecondary {
+    height: 200px;
+  }
+}
+
+@media bp-lg {
+  .content {
+    row-gap: spacing-lg;
+  }
+  .mediaPrimary {
+    display: grid;
+    height: 500px;
+  }
+  .mediaSecondaries {
+    column-gap: spacing-md;
+  }
+  .mediaSecondary {
+    height: 240px;
   }
 }
