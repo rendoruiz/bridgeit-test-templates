@@ -1,6 +1,6 @@
 @value color-primary, color-secondary from "../_variables.css";
 @value corner-rounding, spacing-sm, spacing-md from "../_variables.css";
-@value bp-lg from "../_variables.css";
+@value bp-md, bp-lg from "../_variables.css";
 
 .card {
   composes: themeLight from "../_shared.module.css";
@@ -16,11 +16,11 @@
 }
 .icon,
 .svgIcon {
-  font-size: 20px;
+  font-size: 24px;
 }
 .svgIcon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   fill: color-primary;
 }
 .heading {
@@ -48,6 +48,12 @@
   margin-left: 0.5rem;
 }
 
+@media bp-md {
+  .card {
+    grid-template-rows: auto auto 1fr auto;
+  }
+}
+
 @media bp-lg {
   .card {
     padding: spacing-md;
@@ -55,11 +61,11 @@
   }
   .icon,
   .svgIcon {
-    font-size: 26px;
+    font-size: 30px;
   }
   .svgIcon {
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     fill: color-primary;
   }
 }

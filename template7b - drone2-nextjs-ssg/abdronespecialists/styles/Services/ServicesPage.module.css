@@ -41,6 +41,7 @@
   }
   .content > .card:nth-child(n+2):nth-child(-n+3) {
     grid-column: span 3;
+    padding:  spacing-sm spacing-sm spacing-md;
   }
   .content > .card:nth-child(n+4):nth-child(-n+6) {
     grid-column: span 2;
@@ -49,6 +50,9 @@
 @media bp-lg {
   .content {
     gap: spacing-lg;
+  }
+  .content > .card:nth-child(n+2):nth-child(-n+3) {
+    padding:  spacing-md spacing-md spacing-lg;
   }
   .contentHeading {
     margin-bottom: spacing-sm;

@@ -1,7 +1,5 @@
-@value color-secondary, color-primary from "./_variables.css";
+@value color-primary from "./_variables.css";
 @value spacing-sm, spacing-md from "./_variables.css";
-
-
 
 .container {
   composes: container from "./_shared.module.css";
