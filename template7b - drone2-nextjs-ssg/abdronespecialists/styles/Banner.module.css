@@ -1,5 +1,5 @@
 @value header-height-sm, header-height-lg from "./_variables.css";
-@value bp-md, bp-lg from "./_variables.css";
+@value bp-md, bp-lg, bp-xl from "./_variables.css";
 
 .banner {
   composes: captionedMedia from "./_shared.module.css";
@@ -11,7 +11,7 @@
 @media bp-md {
   .banner {
     /* height: 500px; */
-    height: clamp(450px, calc(80vh - header-height-sm), 700px);
+    height: clamp(400px, calc(80vh - header-height-sm), 500px);
   }
   .contentHalf {
     grid-template-columns: repeat(2, 1fr);
@@ -23,6 +23,12 @@
 @media bp-lg {
   .banner,
   .fullHeight {
-    height: clamp(600px, calc(85vh - header-height-lg), 900px);
+    height: clamp(500px, calc(85vh - header-height-lg), 600px);
+  }
+}
+@media bp-xl {
+  .banner,
+  .fullHeight {
+    height: clamp(500px, calc(85vh - header-height-lg), 700px);
   }
 }
