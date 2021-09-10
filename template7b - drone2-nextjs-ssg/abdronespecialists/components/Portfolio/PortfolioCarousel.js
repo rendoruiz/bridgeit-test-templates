@@ -40,7 +40,10 @@ const PortfolioCarousel = ({ className, data }) => {
 
   const getCategories = () => {
     return data.map((category, categoryIndex) => (
-      <div className={classNames(styles.categoryItem, setActive(categoryIndex))}>
+      <div 
+        key={category + categoryIndex}
+        className={classNames(styles.categoryItem, setActive(categoryIndex))}
+      >
         <h3 className={styles.heading}>{ category.title }</h3>
         <Carousel noArrows>
           { [category.primaryMedia, ...category.secondaryMediaList].map((media) => getMediaItem(media)) }
