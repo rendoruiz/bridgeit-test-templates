@@ -43,7 +43,11 @@
     font-size: 28px;
   }
 }
-
+@media bp-lg {
+  .mediaLinks {
+    gap: 25px;
+  }
+}
 
 .container {
   composes: container from "./../_shared.module.css";
