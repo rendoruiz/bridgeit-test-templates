@@ -26,7 +26,7 @@
 .appHeaderNavActive {
   composes: appHeader;
 }
-.appHeaderNavActive .menuButton {
+.appHeaderNavActive .menuButtonIcon {
   color: color-primary;
 }
 .appHeaderNavActive .menuPanel {
@@ -43,8 +43,14 @@
 }
 
 .menuButton {
-  width: auto !important;
-  height: 18px;
+  margin: none;
+  padding: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.menuButtonIcon {
+  font-size: 18px;
   transition: color 200ms ease-out;
 }
 .menuPanel {

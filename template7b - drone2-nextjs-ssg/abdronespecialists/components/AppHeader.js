@@ -36,11 +36,16 @@ const AppHeader = () => {
         <Link href="/">
           <a className={styles.logo}>ADS</a>
         </Link>
-        <FontAwesomeIcon 
-          icon={faBars} 
+        <button 
           className={styles.menuButton} 
-          onClick={toggleNavigation} 
-        />
+          onClick={toggleNavigation}
+        >
+          <FontAwesomeIcon 
+            icon={faBars} 
+            className={styles.menuButtonIcon} 
+          />
+
+        </button>
 
         <nav 
           style={isNavigationOpen !== null ? { animationDuration: '300ms' } : null}

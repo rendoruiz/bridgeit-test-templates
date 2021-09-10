@@ -23,9 +23,14 @@ const ServicesNavigation = ({ className }) => {
 
   return ( 
     <div className={styles.container}>
-      <button className={classNames(styles.toggle, isMenuOpen ? styles.active : null)} onClick={toggleMenu}>Menu</button>
+      <button 
+        className={classNames(styles.toggle, isMenuOpen ? styles.active : null)} 
+        onClick={toggleMenu}
+      >
+        Menu
+      </button>
       
-      <div className={classNames(styles.menu, className, isMenuOpen ? styles.active : null)}>
+      <div className={classNames(styles.menu, className, isMenuOpen ? styles.active : null)} onClick={toggleMenu}>
         <Link href="/services/filmtv">
           <a className={classNames(styles.link, setActive('/services/filmtv'))}>
             <FontAwesomeIcon icon={faPlayCircle} className={styles.icon} />
