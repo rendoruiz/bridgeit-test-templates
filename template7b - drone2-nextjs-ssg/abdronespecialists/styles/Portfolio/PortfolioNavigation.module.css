@@ -1,6 +1,6 @@
 @value box-shadow from "./../_variables.css";
 @value color-light, color-dark, color-primary, color-secondary, color-shade-darker, color-box-shadow-active from "./../_variables.css";
-@value bp-md from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
 
 .menu {
   display: grid;
@@ -35,6 +35,7 @@
   transition: color 200ms ease-out;
 }
 .linkText {
+  composes: textBody from "./../_shared.module.css";
   display: none;
 }
 .svgIcon {
@@ -54,40 +55,27 @@
 
 @media bp-md {
   .menu {
-    padding: 8px 0;
-    width: 250px;
-    background: color-shade-darker;
-    box-shadow: box-shadow color-box-shadow-active;
-    text-transform: uppercase;
-    position: absolute;
-    z-index: 100;
-    right: 0;
-    display: none;
+    display: grid;
     grid-template-columns: unset;
-    justify-items: unset;
+    justify-items: flex-start;
     align-items: unset;
   }
-  .menu.active {
-    display: grid;
+  .icon,
+  .separator {
+    display: none;
   }
   .link {
-    display: grid;
     padding: 8px 10px;
-    transition: background 100ms ease-out;
   }
   .link:hover,
   .link:active {
-    background: color-secondary;
-    color: color-dark;
+    color: color-secondary;
   }
   .link.active {
-    background: color-light;
-    color: color-dark;
-  }
-  .icon {
-    display: none;
+    color: color-primary;
   }
   .linkText {
+    text-transform: uppercase;
     display: inline-block;
   }
 }

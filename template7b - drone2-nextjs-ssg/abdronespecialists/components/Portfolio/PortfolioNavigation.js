@@ -54,7 +54,7 @@ const PortfolioNavigation = ({ className }) => {
       <Link href="/portfolio?id=4" shallow>
         <a className={classNames(styles.link, setActiveMenuItem(4))}>
           <FontAwesomeIcon icon={faCamera} className={styles.icon} />
-          <span className={styles.linkText}>Aerial Photography & Videography</span>
+          <span className={styles.linkText}>Aerial Photography </span>
         </a>
       </Link>
     </div>

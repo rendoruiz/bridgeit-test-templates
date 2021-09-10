@@ -8,6 +8,7 @@ import Carousel from '../components/Carousel'
 
 import styles from '../styles/Portfolio/PortfolioPage.module.css'
 import PortfolioCarousel from '../components/Portfolio/PortfolioCarousel';
+import ExternalMediaLinks from '../components/Contact/ExternalMediaLinks';
 
 const PortfolioPage = () => {
   const portfolioData = [
@@ -68,6 +69,8 @@ const PortfolioPage = () => {
         <Banner className={styles.banner} imagePrefix="equipment-bg-1" isStatic>
           <div className={styles.bannerContent}>
             <h2 className={styles.heading2}>Portfolio</h2>
+            <span className={styles.headingBlurb}>Follow us to see our latest projects.</span>
+            <ExternalMediaLinks className={styles.mediaLinks} />
           </div>
         </Banner>
 

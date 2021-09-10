@@ -17,14 +17,31 @@
 }
 .bannerContent {
   display: grid;
-  place-items: center;
+  justify-items: center;
+  align-content: center;
 }
 .banner .heading2 {
   font-size: 2.5rem;
   letter-spacing: 1px;
 }
+.headingBlurb,
+.mediaLinks {
+  display: none;
+}
+.headingBlurb {
+  composes: textHeading3 from "./../_shared.module.css";
+  font-weight: normal;
+  letter-spacing: 1px;
+}
 @media bp-md {
-
+  .headingBlurb,
+  .mediaLinks {
+    display: inline-flex;
+  }
+  .mediaLinks {
+    margin-top: spacing-sm;
+    font-size: 28px;
+  }
 }
 
 
