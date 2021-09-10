@@ -1,28 +1,6 @@
-@value bp-md, bp-lg from "../_variables.css";
-@value spacing-sm, box-shadow from "./../_variables.css";
+@value box-shadow from "./../_variables.css";
 @value color-light, color-dark, color-primary, color-secondary, color-shade-darker, color-box-shadow-active from "./../_variables.css";
-@value bp-md, bp-lg from "./../_variables.css";
-
-.container {
-  position: relative;
-}
-.toggle {
-  composes: bodyText from "./../_shared.module.css";
-  margin: none;
-  padding: none;
-  border: none;
-  background: none;
-  font-size: 1.4rem;
-  color: color-light;
-  text-transform: uppercase;
-  transition: color 200ms ease-out, transform 200ms ease-out;
-  display: none;
-  cursor: pointer;
-}
-.toggle.active {
-  color: color-secondary;
-  transform: translateX(-5px);
-}
+@value bp-md from "./../_variables.css";
 
 .menu {
   display: grid;
@@ -33,15 +11,14 @@
 
 .link {
   transition: color 200ms ease-out;
-
 }
 .link .icon,
 .link:visited .icon {
-  color: color-light
+  color: color-light;
 }
 .link:hover .icon,
 .link:active .icon {
-  color: color-secondary
+  color: color-secondary;
 }
 .link:hover .svgIcon,
 .link:active .svgIcon {
@@ -76,9 +53,6 @@
 }
 
 @media bp-md {
-  .toggle {
-    display: block;
-  }
   .menu {
     padding: 8px 0;
     width: 250px;

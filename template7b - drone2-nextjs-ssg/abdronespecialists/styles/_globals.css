@@ -96,10 +96,6 @@ img {
 
 
 
-/* .slick-list {
+.slick-list {
   transition: height 200ms ease-out 0s;
-} */
-.slick-track {
-  display: flex;
-  align-items: center;
 }

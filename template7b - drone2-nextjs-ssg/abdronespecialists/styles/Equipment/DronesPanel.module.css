@@ -3,3 +3,8 @@
 .carousel {
   padding: 0 spacing-sm;
 }
+
+.carousel :global(.slick-track) {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,7 @@
+.heading {
+  composes: textHeading3 from "./../_shared.module.css";
+}
+
+.mainCarouselItem {
+  display: grid;
+}
