@@ -57,10 +57,9 @@
   .headingContent {
     display: flex;
     align-items: center;
-    padding: spacing-sm;
+    padding: spacing-md spacing-sm;
     justify-content: space-between;
   }
-  .desktopHeadingContainer,
   .divider.bottomDivider {
     height: 120px;
   }
@@ -71,10 +70,7 @@
     height: clamp(600px, calc(85vh - header-height-lg), 900px);
   } */
   .headingContent {
-    padding: spacing-sm spacing-md;
-  }
-  .desktopHeadingContainer {
-    height: 150px;
+    padding: spacing-lg spacing-md;
   }
   .carousel {
     padding: spacing-md spacing-md spacing-lg;
