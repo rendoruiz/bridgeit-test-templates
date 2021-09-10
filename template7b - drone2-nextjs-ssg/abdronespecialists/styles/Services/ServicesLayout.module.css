@@ -5,8 +5,12 @@
   composes: container from "../_shared.module.css";
 }
 .headingContent,
-.content {
+.content,
+.partnersContent {
   composes: content from "../_shared.module.css";
+}
+.headingContent,
+.content {
   padding: spacing-md spacing-sm;
 }
 .heading2 {
@@ -57,7 +61,6 @@
     display: inline-block;
   }
   .partnersContent {
-    justify-self: stretch;
     padding: 0 spacing-sm spacing-md;
     display: flex;
     align-items: center;
