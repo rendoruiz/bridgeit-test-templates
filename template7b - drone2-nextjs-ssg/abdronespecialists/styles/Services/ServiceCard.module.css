@@ -1,0 +1,65 @@
+@value color-primary, color-secondary from "../_variables.css";
+@value corner-rounding, spacing-sm, spacing-md from "../_variables.css";
+@value bp-lg from "../_variables.css";
+
+.card {
+  composes: themeLight from "../_shared.module.css";
+  composes: textBody from "../_shared.module.css";
+  padding: spacing-sm;
+  border-radius: corner-rounding;
+  display: grid;
+  row-gap: 10px;
+}
+
+.icon {
+  color: color-primary;
+}
+.icon,
+.svgIcon {
+  font-size: 20px;
+}
+.svgIcon {
+  width: 20px;
+  height: 20px;
+  fill: color-primary;
+}
+.heading {
+  composes: textHeading3 from "../_shared.module.css";
+}
+.body {
+  line-height: 1.5;
+}
+.link {
+  justify-self: flex-start;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: color 200ms ease-out;
+}
+.link,
+.link:visited {
+  color: color-secondary;
+}
+.link:hover,
+.link:active {
+  color: color-primary;
+  text-decoration: underline;
+}
+.linkIcon {
+  margin-left: 0.5rem;
+}
+
+@media bp-lg {
+  .card {
+    padding: spacing-md;
+    row-gap: 15px;
+  }
+  .icon,
+  .svgIcon {
+    font-size: 26px;
+  }
+  .svgIcon {
+    width: 26px;
+    height: 26px;
+    fill: color-primary;
+  }
+}

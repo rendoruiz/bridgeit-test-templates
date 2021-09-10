@@ -1,0 +1,56 @@
+@value spacing-sm, spacing-md, spacing-lg from "../_variables.css";
+@value bp-md, bp-lg from "../_variables.css";
+
+.bannerContext {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+.heading2 {
+  composes: textHeading2 from "../_shared.module.css";
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+.subtitle {
+  composes: textBody from "../_shared.module.css";
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.content {
+  display: grid;
+  row-gap: spacing-sm;
+}
+.contentHeading {
+  display: none;
+}
+
+@media bp-md {
+  .bannerContext {
+    display: none;
+  }
+  .content {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(6, 1fr);
+    gap: spacing-md;
+  }
+  .contentHeading {
+    grid-column: span 6;
+    margin-bottom: spacing-sm;
+    display: grid;
+  }
+  .content > .card:nth-child(n+2):nth-child(-n+3) {
+    grid-column: span 3;
+  }
+  .content > .card:nth-child(n+4):nth-child(-n+6) {
+    grid-column: span 2;
+  }
+}
+@media bp-lg {
+  .content {
+    gap: spacing-lg;
+  }
+  .contentHeading {
+    margin-bottom: spacing-sm;
+  }
+}

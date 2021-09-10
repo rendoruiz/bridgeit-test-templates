@@ -1,0 +1,88 @@
+@value spacing-sm, spacing-md, spacing-lg from "../_variables.css";
+@value bp-md, bp-lg from "../_variables.css";
+
+.container {
+  composes: container from "../_shared.module.css";
+}
+.headingContent,
+.content {
+  composes: content from "../_shared.module.css";
+  padding: spacing-md spacing-sm;
+}
+.heading2 {
+  composes: textHeading2 from "../_shared.module.css";
+  letter-spacing: 1px;
+}
+.heading3 {
+  composes: textHeading3 from "../_shared.module.css";
+  letter-spacing: 1px;
+}
+
+.bannerContext {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+.bannerContext .heading2 {
+  font-size: 2.5rem;
+}
+.subtitle {
+  composes: textBody from "../_shared.module.css";
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.headingContent {
+  padding-bottom: 0;
+}
+.headingContent .heading2 {
+  display: none;
+}
+
+.partnersContent {
+  display: none;
+}
+
+@media bp-md {
+  .bannerContext {
+    display: none;
+  }
+
+  .headingContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .headingContent .heading2 {
+    display: inline-block;
+  }
+  .partnersContent {
+    justify-self: stretch;
+    padding: 0 spacing-sm spacing-md;
+    display: flex;
+    align-items: center;
+  }
+  .partners {
+    margin-left: spacing-sm;
+    gap: spacing-sm;
+  }
+}
+
+@media bp-lg {
+  .headingContent,
+  .content {
+    padding: spacing-lg spacing-md;
+  }
+  .headingContent {
+    padding-bottom: 0;
+  }
+  .partnersContent {
+    padding: 0 spacing-md spacing-md;
+  }
+  .partners > * {
+    height: 30px;
+  }
+  .partners > :nth-child(4) {
+    height: 45px;
+  }
+}

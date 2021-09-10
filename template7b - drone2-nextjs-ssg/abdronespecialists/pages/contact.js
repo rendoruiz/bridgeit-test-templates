@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 
-import MainLayout from "../components/layouts/MainLayout";
+import MainLayout from "../components/MainLayout";
 import Banner from '../components/Banner';
 import ContactPanel from '../components/Contact/ContactPanel';
 import Divider from '../components/Divider'

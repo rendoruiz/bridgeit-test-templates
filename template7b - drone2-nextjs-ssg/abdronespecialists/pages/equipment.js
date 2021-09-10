@@ -4,26 +4,27 @@ import DronesPanel from '../components/Equipment/DronesPanel';
 import classNames from 'classnames';
 import { useRouter } from 'next/dist/client/router';
 
-import MainLayout from "../components/layouts/MainLayout";
+import MainLayout from "../components/MainLayout";
 import Carousel from "../components/Carousel";
 import Image from "../components/Image";
 import Divider from '../components/Divider';
 import DroneMenu from '../components/Equipment/DroneMenu';
+import Banner from '../components/Banner';
 
 import styles from '../styles/Equipment/EquipmentPage.module.css'
 
 const EquipmentPage = () => {
   const router = useRouter();
   const droneRef = useRef();
-  const bannerRef = useRef();
-  const [banner, setBanner] = useState(null);
-  const [drone, setDrone] = useState(null)
+  // const bannerRef = useRef();
+  // const [banner, setBanner] = useState(null);
+  // const [drone, setDrone] = useState(null)
 
   // run once
-  useEffect(() => {
-    setBanner(bannerRef.current);
-    setDrone(droneRef.current);
-  }, []);
+  // useEffect(() => {
+  //   setBanner(bannerRef.current);
+  //   setDrone(droneRef.current);
+  // }, []);
 
   //  run on route change
   useEffect(() => {
@@ -41,7 +42,12 @@ const EquipmentPage = () => {
       </Head>
 
       <div>
-        <div className={styles.banner}>
+        <Banner className={styles.banner} imagePrefix="equipment-bg-1" isStatic>
+          <div className={styles.bannerContent}>
+            <h2 className={styles.heading}>Equipment</h2>
+          </div>
+        </Banner>
+        {/* <div className={styles.banner}>
           <Carousel noArrows noDots carouselRef={bannerRef} fade asNavFor={drone} isStatic>
             <div className={styles.bannerImage}>
               <Image prefix="equipment-bg-1" isStatic />
@@ -59,8 +65,7 @@ const EquipmentPage = () => {
               <Image prefix="equipment-bg-2" isStatic />
             </div>
           </Carousel>
-          <h2 className={styles.heading}>Equipment</h2>
-        </div>
+        </div> */}
 
         <Divider isDark className={classNames(styles.divider, styles.topDivider)} />
 
@@ -73,7 +78,7 @@ const EquipmentPage = () => {
         </div>
 
         <div className={styles.carouselContainer}>
-          <DronesPanel carouselClassName={styles.carousel} carouselRef={droneRef} carouselInitialSlide={router.query.id} carouselOnly isLongText carouselAsNavFor={banner} carouselAdaptiveHeight />
+          <DronesPanel carouselClassName={styles.carousel} carouselRef={droneRef} carouselInitialSlide={router.query.id} carouselOnly isLongText carouselAdaptiveHeight />
         </div>
 
         <Divider isDark className={classNames(styles.divider, styles.bottomDivider)} />

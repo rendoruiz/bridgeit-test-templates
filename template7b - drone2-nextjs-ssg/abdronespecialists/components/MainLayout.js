@@ -1,9 +1,9 @@
 import Head from 'next/head'
 
-import AppFooter from "../AppFooter";
-import AppHeader from "../AppHeader";
+import AppFooter from "./AppFooter";
+import AppHeader from "./AppHeader";
 
-import styles from '../../styles/MainLayout.module.css';
+import styles from '../styles/MainLayout.module.css';
 
 const MainLayout = ({ children }) => {
   return ( 

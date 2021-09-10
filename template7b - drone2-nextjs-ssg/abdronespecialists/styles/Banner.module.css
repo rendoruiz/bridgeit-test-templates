@@ -10,7 +10,8 @@
 }
 @media bp-md {
   .banner {
-    height: 500px;
+    /* height: 500px; */
+    height: clamp(450px, calc(80vh - header-height-sm), 700px);
   }
   .contentHalf {
     grid-template-columns: repeat(2, 1fr);

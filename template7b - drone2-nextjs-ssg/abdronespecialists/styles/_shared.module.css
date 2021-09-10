@@ -31,13 +31,15 @@
   box-shadow: box-shadow color-box-shadow-active;
 }
 
-.themeDark {
+.themeDark,
+.themeDark:visited {
   background: color-dark;
   background-color: color-dark;
   color: color-light;
 }
 
-.themeLight {
+.themeLight,
+.themeLight:visited {
   background: color-light;
   background-color: color-light;
   color: color-dark;

@@ -1,0 +1,29 @@
+@value color-secondary, color-primary from "./_variables.css";
+@value spacing-sm, spacing-md from "./_variables.css";
+
+
+
+.container {
+  composes: container from "./_shared.module.css";
+  align-self: center;
+  
+}
+.content {
+  composes: content from "./_shared.module.css";
+  composes: textBody from "./_shared.module.css";
+  padding:  spacing-md;
+  text-align: center;
+}
+.heading {
+  composes: textHeading2 from "./_shared.module.css";
+  margin-bottom: spacing-sm;
+}
+.link,
+.link:visited {
+  color: color-secondary;
+  transition: color 200ms ease-out;
+}
+.link:hover,
+.link:active {
+  color: color-primary;
+}
