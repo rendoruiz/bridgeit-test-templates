@@ -13,7 +13,7 @@
   font-size: 0.65rem;
   text-align: center;
   display: grid;
-  justify-items: center;
+  justify-content: center;
   row-gap: 10px;
 }
 .appFooter a {
@@ -35,6 +35,7 @@
 
 .mediaSection {
   display: grid;
+  justify-items: center;
   row-gap: 8px;
 }
 .mediaBlurb {
