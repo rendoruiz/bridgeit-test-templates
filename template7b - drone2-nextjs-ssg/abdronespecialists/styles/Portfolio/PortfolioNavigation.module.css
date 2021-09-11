@@ -1,6 +1,27 @@
 @value box-shadow from "./../_variables.css";
 @value color-light, color-dark, color-primary, color-secondary, color-shade-darker, color-box-shadow-active from "./../_variables.css";
-@value bp-md from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
+.container {
+  position: relative;
+}
+.toggle {
+  composes: bodyText from "./../_shared.module.css";
+  margin: none;
+  padding: none;
+  border: none;
+  background: none;
+  font-size: 1.4rem;
+  color: color-light;
+  text-transform: uppercase;
+  transition: color 200ms ease-out, transform 200ms ease-out;
+  display: none;
+  cursor: pointer;
+}
+.toggle.active {
+  color: color-secondary;
+  transform: translateX(-5px);
+}
 
 .menu {
   display: grid;
@@ -35,6 +56,7 @@
   transition: color 200ms ease-out;
 }
 .linkText {
+  composes: textBody from "./../_shared.module.css";
   display: none;
 }
 .svgIcon {
@@ -53,6 +75,9 @@
 }
 
 @media bp-md {
+  .toggle {
+    display: block;
+  }
   .menu {
     padding: 8px 0;
     width: 250px;
@@ -89,5 +114,48 @@
   }
   .linkText {
     display: inline-block;
+  }
+}
+
+@media bp-lg {
+  .menu {
+    padding: 0;
+    width: unset;
+    background: none;
+    box-shadow: none;
+    position: static;
+    display: grid;
+    grid-template-columns: unset;
+    align-items: unset;
+  }
+  .toggle,
+  .icon,
+  .separator {
+    display: none;
+  }
+  .link {
+    margin-left: 30px;
+    padding: 8px 10px;
+    transition: color 200ms ease-out;
+  }
+  .link:hover,
+  .link:active {
+    background: none;
+    color: color-secondary;
+  }
+  .link.active {
+    background: none;
+    color: color-primary;
+    position: relative;
+  }
+  .link.active::after {
+    content: ' ';
+    background: url(../../public/images/icon-arrow.svg) no-repeat center / contain;
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    left: -35px;
+    user-select: none;
+    pointer-events: none;
   }
 }

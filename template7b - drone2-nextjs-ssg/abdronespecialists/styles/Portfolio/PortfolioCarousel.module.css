@@ -1,3 +1,7 @@
+@value box-shadow from "./../_variables.css";
+@value color-light, color-dark, color-primary, color-secondary, color-shade-darker, color-box-shadow-active from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
 .content {
   display: grid;
 }
@@ -20,4 +24,13 @@
 }
 .carouselItem {
   margin: 3px;
+}
+
+@media bp-md {
+  .carouselItem {
+    height: 400px;
+  }
+  .content {
+    display: none;
+  }
 }
