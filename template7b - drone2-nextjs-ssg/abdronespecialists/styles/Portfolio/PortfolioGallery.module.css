@@ -1,0 +1,25 @@
+@value header-height-sm, header-height-lg, corner-rounding from "./../_variables.css";
+@value spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 500px 250px;
+  gap: 20px;
+}
+.primary {
+  grid-column: span 3;
+}
+
+.image {
+  border-radius: corner-rounding;
+  overflow: hidden;
+}
+
+@media bp-lg {
+  .content {
+    grid-template-rows: 500px 230px;
+    gap: 20px;
+  }
+}

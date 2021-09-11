@@ -1,3 +1,4 @@
+@value color-light, color-dark from "./../_variables.css";
 @value header-height-sm, header-height-lg from "./../_variables.css";
 @value spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
 @value bp-md, bp-lg from "./../_variables.css";
@@ -12,9 +13,6 @@
 .banner {
   composes: captionedMedia from "./../_shared.module.css";
 }
-.banner {
-  composes: captionedMedia from "./../_shared.module.css";
-}
 .bannerContent {
   display: grid;
   justify-items: center;
@@ -24,6 +22,7 @@
   font-size: 2.5rem;
   letter-spacing: 1px;
 }
+.bottomDivider,
 .headingBlurb,
 .mediaLinks {
   display: none;
@@ -33,6 +32,10 @@
   font-weight: normal;
   letter-spacing: 1px;
 }
+.content .heading2 {
+  display: none;
+}
+
 @media bp-md {
   .headingBlurb,
   .mediaLinks {
@@ -42,6 +45,17 @@
     margin-top: spacing-sm;
     font-size: 28px;
   }
+  .content {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+  .bottomDivider,
+  .content .heading2 {
+    display: block;
+  }
+  .bottomDivider {
+    height: 100%;
+  }
 }
 @media bp-lg {
   .mediaLinks {
@@ -50,11 +64,15 @@
 }
 
 
-.container {
+.container,
+.galleryContainer {
   composes: container from "./../_shared.module.css";
 }
-.content {
+.content,
+.galleryContent {
   composes: content from "./../_shared.module.css";
+}
+.content {
   padding: spacing-md spacing-sm;
   display: grid;
   row-gap: spacing-md;
@@ -63,9 +81,59 @@
   display: grid;
   row-gap: 10px;
 }
+.galleryContainer {
+  composes: themeLight from "./../_shared.module.css";
+  display: none;
+}
+.galleryContainer .navigation {
+  display: none;
+}
 
 @media bp-md {
   .partnerContent {
     display: none;
+  }
+  .galleryContainer {
+    display: grid;
+    background: linear-gradient(color-dark, color-dark 260px, color-light 260px, color-light 620px, color-dark 620px, color-dark)
+  }
+  .galleryContent {
+    padding: 0 spacing-sm 120px;
+  }
+  .galleries {
+    display: grid;
+  }
+  .galleryItem {
+    height: 0;
+    grid-row: 1;
+    grid-column: 1;
+    opacity: 0.5;
+    transition: opacity 300ms ease-in;
+  }
+  .galleryItem.active {
+    height: unset;
+    opacity: 1;
+    position: relative;
+    z-index: 10;
+  }
+}
+@media bp-lg {
+  .container .navigation {
+    display: none;
+  }
+  .content {
+    padding: spacing-lg spacing-md;
+  }
+  .galleryContent {
+    padding: 0 spacing-md 160px;
+    display: grid;
+    grid-template-columns: 6.5fr 3.5fr;
+    align-items: center;
+    column-gap: spacing-sm;
+  }
+  .galleryContainer .navigation {
+    margin-top: 65px;
+    justify-self: center;
+    display: grid;
   }
 }
