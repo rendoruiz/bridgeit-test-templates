@@ -9,7 +9,20 @@
   gap: 20px;
 }
 .primary {
+  grid-row: 1;
   grid-column: span 3;
+}
+.secondary {
+  grid-row: 2;
+}
+.secondary:nth-child(2) {
+  grid-column: 1;
+}
+.secondary:nth-child(3) {
+  grid-column: 2;
+}
+.secondary:nth-child(4) {
+  grid-column: 3;
 }
 
 .image {

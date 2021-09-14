@@ -18,7 +18,8 @@ const PortfolioGallery = ({ className, data }) => {
 
 
   const primaryRef = useRef();
-  const secondaryRef = Array(3).fill(useRef());
+  const secondaryRef = [useRef(),useRef(),useRef()];
+  // secondaryRef =Array(3).fill(useRef());
   const { width: primaryWidth, height: primaryHeight } = useContainerDimensions(primaryRef);
   const { width: secondaryWidth, height: secondaryHeight } = useContainerDimensions(secondaryRef[0]);
   
@@ -31,64 +32,63 @@ const PortfolioGallery = ({ className, data }) => {
       setIsSwitching(true);
 
       // animate switching
-      animateSwitch(fromIndex);
-
-      // switch images
-      const copy = {...images};
-      copy.primary = images.children[fromIndex];
-      copy.children[fromIndex] = images.primary;
-      setImages(copy);
+      animateSwitch(fromIndex).then(() => {
+        // switch images
+        // const copy = {...images};
+        // copy.primary = images.children[fromIndex];
+        // copy.children[fromIndex] = images.primary;
+        // setImages(copy);
+      });
       
       // update status
       setIsSwitching(false);
     }
   }
 
-  const animateSwitch = (itemIndex) => {
+  const animateSwitch = async (itemIndex) => {
     // animate focused item bottom swap
-    primaryRef.current.style = {
-      transition: 'width 100ms ease-out, height 100ms ease-out, transform 200ms ease-out',
-      width: secondaryWidth + 'px',
-      height: secondaryHeight + 'px',
-      transform: `translate(calc(calc(100% + var(--grid-gap)) * ${itemIndex}), calc(200% + var(--grid-gap))) scale(1.05)`
-    }
-    secondaryRef[itemIndex].current.style = {
-      position: 'absolute',
-      transition: 'width 100ms ease-out, height 100ms ease-out, transform 200ms ease-out',
-      width: primaryWidth + 'px',
-      height: primaryHeight + 'px',
-      transform: `translate(calc(calc(-100% - var(--grid-gap)) / 3 * ${itemIndex}), calc(-100% - var(--grid-gap))) scale(1.05)`
-    }
+    const gridGapPx = 20
+    primaryRef.current.style.width = secondaryWidth + 'px';
+    primaryRef.current.style.height = secondaryHeight + 'px';
+    // primaryRef.current.style.transform = `translate(calc(${secondaryWidth + gridGapPx}px * ${itemIndex}), ${primaryHeight + gridGapPx}px) scale(1.05)`;
+    primaryRef.current.style.transform = `translate(${(secondaryWidth + gridGapPx) * itemIndex}px, ${primaryHeight + gridGapPx}px) scale(1.05)`;
+    primaryRef.current.style.transition = 'width 100ms ease-out, height 100ms ease-out, transform 200ms ease-out';
+    
+    secondaryRef[itemIndex].current.style.position = 'absolute';
+    secondaryRef[itemIndex].current.style.width = primaryWidth + 'px';
+    secondaryRef[itemIndex].current.style.height = primaryHeight + 'px';
+    secondaryRef[itemIndex].current.style.transform = `translate(calc(calc(-100% - 20px) / 3 * ${itemIndex}), calc(-100% - 20px)) scale(1.05)`;
+    secondaryRef[itemIndex].current.style.transition = 'width 100ms ease-out, height 100ms ease-out, transform 200ms ease-out';
 
     // post-bobbing animation 
     setTimeout(() => {
-      primaryRef.current.style = {
-        transition: 'transform 100ms ease-out',
-        transform: `translate(calc(calc(100% + var(--grid-gap)) * ${itemIndex}), calc(200% + var(--grid-gap))) scale(1.0)`
-      }
-      secondaryRef[itemIndex].current.style = {
-        transition: 'transform 100ms ease-out',
-        transform: `translate(calc(calc(-100% - var(--grid-gap)) / 3 * ${itemIndex}), calc(-100% - var(--grid-gap))) scale(1.0)`
-      }
+      // primaryRef.current.style.transform = `translate(calc(${secondaryWidth + gridGapPx}px * ${itemIndex}), ${primaryHeight + gridGapPx}px) scale(1.0)`;
+      primaryRef.current.style.transform = `translate(${(secondaryWidth + gridGapPx) * itemIndex}px, ${primaryHeight + gridGapPx}px) scale(1.0)`;
+      primaryRef.current.style.transition = 'transform 100ms ease-out';
+
+      secondaryRef[itemIndex].current.style.transform = `translate(calc(calc(-100% - 0) / 3 * ${itemIndex}), calc(-100% - 0)) scale(1.0)`;
+      secondaryRef[itemIndex].current.style.transition = 'transform 100ms ease-out';
 
       // reset & set
       setTimeout(() => {
         // reset property changes & animation
-        primaryRef.current.style = {
-          transition: 'none',
-          width: '100%',
-          height: '100%',
-          transform: 'unset'
-        }
-        secondaryRef[itemIndex].current.style = {
-          position: 'static',
-          transition: 'none',
-          width: '100%',
-          height: '100%',
-          transform: 'unset'
-        }
-      }, 100);
-    }, 200);
+        primaryRef.current.style.width = '100%';
+        primaryRef.current.style.height = '100%';
+        primaryRef.current.style.transform = 'unset';
+        primaryRef.current.style.transition = 'none';
+
+        secondaryRef[itemIndex].current.style.position = 'static';
+        secondaryRef[itemIndex].current.style.width = '100%';
+        secondaryRef[itemIndex].current.style.height = '100%';
+        secondaryRef[itemIndex].current.style.transform = 'unset';
+        secondaryRef[itemIndex].current.style.transition = 'none';
+
+        const copy = {...images};
+        copy.primary = images.children[itemIndex];
+        copy.children[itemIndex] = images.primary;
+        setImages(copy);
+      }, 200);
+    }, 300);
   }
 
   return ( 
@@ -103,7 +103,7 @@ const PortfolioGallery = ({ className, data }) => {
         <img src={images.primary} alt="" />
       </div>
       <div 
-        className={classNames(styles.image)} 
+        className={classNames(styles.image, styles.secondary)} 
         onClick={() => switchImage(0)} 
         ref={secondaryRef[0]}
       >
@@ -112,13 +112,21 @@ const PortfolioGallery = ({ className, data }) => {
         /> */}
         <img src={images.children[0]} alt="" />
       </div>
-      <div className={classNames(styles.image)} onClick={() => switchImage(1)}>
+      <div 
+        className={classNames(styles.image, styles.secondary)} 
+        onClick={() => switchImage(1)}
+        ref={secondaryRef[1]}
+      >
         {/* <Image 
           prefix={primaryMedia} noMd noLg
         /> */}
         <img src={images.children[1]} alt="" />
       </div>
-      <div className={classNames(styles.image)} onClick={() => switchImage(2)}>
+      <div 
+        className={classNames(styles.image, styles.secondary)} 
+        onClick={() => switchImage(2)}
+        ref={secondaryRef[2]}
+      >
         {/* <Image 
           prefix={primaryMedia} noMd noLg
         /> */}
