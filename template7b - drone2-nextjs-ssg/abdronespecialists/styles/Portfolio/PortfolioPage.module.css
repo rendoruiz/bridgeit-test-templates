@@ -84,6 +84,7 @@
 .galleryContainer {
   composes: themeLight from "./../_shared.module.css";
   display: none;
+  overflow: hidden;
 }
 .galleryContainer .navigation {
   display: none;
@@ -105,7 +106,6 @@
     position: relative;
   }
   .galleryItem {
-    width: 0;
     height: 0;
     grid-row: 1;
     grid-column: 1;
@@ -114,7 +114,6 @@
     overflow: visible;
   }
   .galleryItem.active {
-    width: unset;
     height: unset;
     opacity: 1;
     position: relative;

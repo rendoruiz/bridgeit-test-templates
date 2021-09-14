@@ -16,7 +16,6 @@ const PortfolioGallery = ({ className, data }) => {
   });
   const [isSwitching, setIsSwitching] = useState(false);
 
-
   const primaryRef = useRef();
   const secondaryRef = [useRef(),useRef(),useRef()];
   // secondaryRef =Array(3).fill(useRef());
@@ -31,42 +30,32 @@ const PortfolioGallery = ({ className, data }) => {
       // init status
       setIsSwitching(true);
 
-      // animate switching
-      animateSwitch(fromIndex).then(() => {
-        // switch images
-        // const copy = {...images};
-        // copy.primary = images.children[fromIndex];
-        // copy.children[fromIndex] = images.primary;
-        // setImages(copy);
-      });
-      
-      // update status
-      setIsSwitching(false);
+      // animate switching, then switch images
+      animateSwitch(fromIndex);
     }
   }
 
-  const animateSwitch = async (itemIndex) => {
+  const animateSwitch = (itemIndex) => {
     // animate focused item bottom swap
     const gridGapPx = 20
+    const gridColumns = 3;
     primaryRef.current.style.width = secondaryWidth + 'px';
     primaryRef.current.style.height = secondaryHeight + 'px';
-    // primaryRef.current.style.transform = `translate(calc(${secondaryWidth + gridGapPx}px * ${itemIndex}), ${primaryHeight + gridGapPx}px) scale(1.05)`;
     primaryRef.current.style.transform = `translate(${(secondaryWidth + gridGapPx) * itemIndex}px, ${primaryHeight + gridGapPx}px) scale(1.05)`;
     primaryRef.current.style.transition = 'width 100ms ease-out, height 100ms ease-out, transform 200ms ease-out';
     
     secondaryRef[itemIndex].current.style.position = 'absolute';
     secondaryRef[itemIndex].current.style.width = primaryWidth + 'px';
     secondaryRef[itemIndex].current.style.height = primaryHeight + 'px';
-    secondaryRef[itemIndex].current.style.transform = `translate(calc(calc(-100% - 20px) / 3 * ${itemIndex}), calc(-100% - 20px)) scale(1.05)`;
+    secondaryRef[itemIndex].current.style.transform = `translate(${(((primaryWidth * -1) - 20) / gridColumns) * itemIndex}px, ${(primaryHeight * -1) - gridGapPx}px) scale(1.05)`;
     secondaryRef[itemIndex].current.style.transition = 'width 100ms ease-out, height 100ms ease-out, transform 200ms ease-out';
 
     // post-bobbing animation 
     setTimeout(() => {
-      // primaryRef.current.style.transform = `translate(calc(${secondaryWidth + gridGapPx}px * ${itemIndex}), ${primaryHeight + gridGapPx}px) scale(1.0)`;
       primaryRef.current.style.transform = `translate(${(secondaryWidth + gridGapPx) * itemIndex}px, ${primaryHeight + gridGapPx}px) scale(1.0)`;
       primaryRef.current.style.transition = 'transform 100ms ease-out';
 
-      secondaryRef[itemIndex].current.style.transform = `translate(calc(calc(-100% - 0) / 3 * ${itemIndex}), calc(-100% - 0)) scale(1.0)`;
+      secondaryRef[itemIndex].current.style.transform = `translate(${(((primaryWidth * -1) - 20) / gridColumns) * itemIndex}px, ${(primaryHeight * -1) - gridGapPx}px) scale(1.0)`;
       secondaryRef[itemIndex].current.style.transition = 'transform 100ms ease-out';
 
       // reset & set
@@ -83,10 +72,14 @@ const PortfolioGallery = ({ className, data }) => {
         secondaryRef[itemIndex].current.style.transform = 'unset';
         secondaryRef[itemIndex].current.style.transition = 'none';
 
+        // switch images
         const copy = {...images};
         copy.primary = images.children[itemIndex];
         copy.children[itemIndex] = images.primary;
         setImages(copy);
+
+        // update status
+        setIsSwitching(false);
       }, 200);
     }, 300);
   }

@@ -12,6 +12,7 @@ import ExternalMediaLinks from '../components/Contact/ExternalMediaLinks';
 import { useRouter } from 'next/dist/client/router';
 import PortfolioGallery from '../components/Portfolio/PortfolioGallery';
 import classNames from 'classnames';
+import { useState } from 'react';
 
 const PortfolioPage = () => {
   const router = useRouter();
