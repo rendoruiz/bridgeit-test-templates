@@ -3,6 +3,9 @@
 @value spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
 @value bp-md, bp-lg from "./../_variables.css";
 
+.portfolio {
+  overflow-x: hidden;
+}
 
 .heading2 {
   composes: textHeading2 from "./../_shared.module.css";
@@ -84,7 +87,6 @@
 .galleryContainer {
   composes: themeLight from "./../_shared.module.css";
   display: none;
-  overflow: hidden;
 }
 .galleryContainer .navigation {
   display: none;

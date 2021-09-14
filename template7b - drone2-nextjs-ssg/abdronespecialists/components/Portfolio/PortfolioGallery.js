@@ -47,7 +47,7 @@ const PortfolioGallery = ({ className, data }) => {
     secondaryRef[itemIndex].current.style.position = 'absolute';
     secondaryRef[itemIndex].current.style.width = primaryWidth + 'px';
     secondaryRef[itemIndex].current.style.height = primaryHeight + 'px';
-    secondaryRef[itemIndex].current.style.transform = `translate(${(((primaryWidth * -1) - 20) / gridColumns) * itemIndex}px, ${(primaryHeight * -1) - gridGapPx}px) scale(1.05)`;
+    secondaryRef[itemIndex].current.style.transform = `translate(${(((primaryWidth * -1) - 20) / gridColumns) * itemIndex}px, ${(primaryHeight * -1) - gridGapPx}px) scale(1.02)`;
     secondaryRef[itemIndex].current.style.transition = 'width 100ms ease-out, height 100ms ease-out, transform 200ms ease-out';
 
     // post-bobbing animation 
