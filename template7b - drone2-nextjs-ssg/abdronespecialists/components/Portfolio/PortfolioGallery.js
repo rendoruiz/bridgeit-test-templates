@@ -24,18 +24,26 @@ const PortfolioGallery = ({ className, data }) => {
 
   return isLoading ? null : ( 
     <div className={classNames(styles.content, className)}>
-      <Image 
-        prefix={primaryMedia} noMd noLg className={classNames(styles.image, styles.primary)}
-      />
-      <Image 
-        prefix={primaryMedia} noMd noLg className={classNames(styles.image)}
-      />
-      <Image 
-        prefix={primaryMedia} noMd noLg className={classNames(styles.image)}
-      />
-      <Image 
-        prefix={primaryMedia} noMd noLg className={classNames(styles.image)}
-      />
+      <div className={classNames(styles.image, styles.primary)}>
+        <Image 
+          prefix={primaryMedia} noMd noLg
+        />
+      </div>
+      <div className={classNames(styles.image)}>
+        <Image 
+          prefix={primaryMedia} noMd noLg
+        />
+      </div>
+      <div className={classNames(styles.image)}>
+        <Image 
+          prefix={primaryMedia} noMd noLg
+        />
+      </div>
+      <div className={classNames(styles.image)}>
+        <Image 
+          prefix={primaryMedia} noMd noLg
+        />
+      </div>
     </div>
   ); 
 }
