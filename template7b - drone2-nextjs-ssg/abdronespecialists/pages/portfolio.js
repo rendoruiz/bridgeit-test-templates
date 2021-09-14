@@ -99,7 +99,7 @@ const PortfolioPage = () => {
         <title>Our Portfolio - Alberta Drone Specialists</title>
       </Head>
 
-      <div>
+      <div className={styles.portfolio}>
         <Banner className={styles.banner} imagePrefix="equipment-bg-1" isStatic>
           <div className={styles.bannerContent}>
             <h2 className={styles.heading2}>Portfolio</h2>
