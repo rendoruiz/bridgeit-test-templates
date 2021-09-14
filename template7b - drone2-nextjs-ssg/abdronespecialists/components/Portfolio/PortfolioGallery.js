@@ -14,7 +14,6 @@ const PortfolioGallery = ({ className, data }) => {
     ]
   });
 
-
   const switchImage = (fromIndex) => {
     const copy = {...images};
     copy.primary = images.children[fromIndex];
