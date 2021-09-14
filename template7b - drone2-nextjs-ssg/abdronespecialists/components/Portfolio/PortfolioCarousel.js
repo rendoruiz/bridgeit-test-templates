@@ -11,10 +11,11 @@ import styles from '../../styles/Portfolio/PortfolioCarousel.module.css'
 const PortfolioCarousel = ({ className, data }) => {
   const router = useRouter();
 
-  const getMediaItem= (media) => {
+  const getMediaItem= (media, i) => {
     if (media.type === 'video') {
       return (
         <VideoModal 
+          key={i}
           imagePrefix={media.imagePrefix}
           youtubeEmbedId={media.youtubeEmbedId}
           title={media.title ?? "untitled media"}
@@ -46,7 +47,7 @@ const PortfolioCarousel = ({ className, data }) => {
       >
         <h3 className={styles.heading}>{ category.title }</h3>
         <Carousel noArrows>
-          { [category.primaryMedia, ...category.secondaryMediaList].map((media) => getMediaItem(media)) }
+          { [category.primaryMedia, ...category.secondaryMediaList].map((media, index) => getMediaItem(media, index)) }
         </Carousel>
       </div>
     ))

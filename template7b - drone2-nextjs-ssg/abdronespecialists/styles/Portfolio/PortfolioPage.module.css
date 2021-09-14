@@ -84,6 +84,7 @@
 .galleryContainer {
   composes: themeLight from "./../_shared.module.css";
   display: none;
+  overflow: hidden;
 }
 .galleryContainer .navigation {
   display: none;
@@ -102,13 +103,15 @@
   }
   .galleries {
     display: grid;
+    position: relative;
   }
   .galleryItem {
     height: 0;
     grid-row: 1;
     grid-column: 1;
-    opacity: 0.5;
-    transition: opacity 300ms ease-in;
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+    overflow: visible;
   }
   .galleryItem.active {
     height: unset;
@@ -132,7 +135,7 @@
     column-gap: spacing-sm;
   }
   .galleryContainer .navigation {
-    margin-top: 65px;
+    margin-top: 62px;
     justify-self: center;
     display: grid;
   }
