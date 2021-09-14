@@ -86,7 +86,9 @@
 }
 .galleryContainer {
   composes: themeLight from "./../_shared.module.css";
+  padding: spacing-sm 0;
   display: none;
+  overflow: hidden;
 }
 .galleryContainer .navigation {
   display: none;
@@ -137,7 +139,7 @@
     column-gap: spacing-sm;
   }
   .galleryContainer .navigation {
-    margin-top: 62px;
+    margin-top: 45px;
     justify-self: center;
     display: grid;
   }
