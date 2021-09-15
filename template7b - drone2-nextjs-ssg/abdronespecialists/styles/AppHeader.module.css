@@ -141,6 +141,7 @@
     height: unset;
     background: unset;
     animation: unset;
+    animation-name: unset;
     position: static;
     display: flex;
     gap: spacing-sm;
