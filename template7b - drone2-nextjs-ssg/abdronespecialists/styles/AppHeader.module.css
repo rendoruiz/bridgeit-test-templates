@@ -157,7 +157,7 @@
     text-transform: uppercase;
     transform: unset;
     transition: color 200ms ease-out;
-    animation: unset;
+    animation-name: unset;
     display: inline-block;
   }
   .navigationItem,
