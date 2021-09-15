@@ -2,6 +2,7 @@
 @value font-primary from "./_variables.css";
 @value header-height-sm, header-height-lg, spacing-sm, spacing-md, modal-z-elevation from "./_variables.css";
 @value bp-lg from "./_variables.css";
+@value color-box-shadow, box-shadow from "./_variables.css";
 
 .mobile {
   composes: mobileOnly from "./_shared.module.css";
@@ -10,6 +11,10 @@
 .appHeader {
   composes: themeLight from "./_shared.module.css";
   composes: container from "./_shared.module.css";
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: box-shadow color-box-shadow;
 }
 
 .content {
@@ -31,6 +36,7 @@
 }
 .appHeaderNavActive .menuPanel {
   animation-name: menu-active;
+  height: 100vh;
 }
 .appHeaderNavActive .navigationItem  {
   transform: unset;
@@ -54,8 +60,10 @@
   transition: color 200ms ease-out;
 }
 .menuPanel {
+  height: 0;
   opacity: 0;
   background: color-modal-overlay;
+  transition: height 100ms ease-out;
   overflow: hidden;
   position: absolute;
   top: header-height-sm;
@@ -130,6 +138,7 @@
 
   .menuPanel {
     opacity: unset;
+    height: unset;
     background: unset;
     animation: unset;
     position: static;

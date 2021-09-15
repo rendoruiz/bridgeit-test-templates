@@ -127,6 +127,7 @@
     display: grid;
     grid-template-columns: unset;
     align-items: unset;
+    z-index: unset;
   }
   .toggle,
   .icon,
