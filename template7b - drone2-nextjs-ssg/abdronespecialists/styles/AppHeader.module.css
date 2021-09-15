@@ -188,4 +188,8 @@
     right: 5px;
     border-bottom: 3px solid color-primary;
   }
+  .appHeaderNavActive .menuPanel {
+    animation-name: unset;
+    height: unset;
+  }
 }
