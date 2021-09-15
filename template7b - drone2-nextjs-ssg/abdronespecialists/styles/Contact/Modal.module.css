@@ -1,0 +1,43 @@
+@value color-light, color-dark, color-shade-darker from "./../_variables.css";
+@value corner-rounding from "./../_variables.css";
+@value spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
+
+.modal {
+  display: grid;
+  place-items: center;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.container {
+  composes: themeDark from "./../_shared.module.css";
+  padding: spacing-md spacing-sm;
+  border-radius: corner-rounding;
+  display: grid;
+  justify-items: center;
+  row-gap: spacing-sm;
+  text-align: center;
+}
+
+.heading {
+  composes: textTitle from "./../_shared.module.css";
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+}
+
+.body {
+  composes: textSubtitle from "./../_shared.module.css";
+  display: grid;
+  row-gap: 5px;
+}
+
+.svg {
+  max-width: 90%;
+}
+
+.button {
+  composes: button from "./../Button.module.css";
+  justify-self: stretch;
+  padding: 2px 30px 5px;
+}
