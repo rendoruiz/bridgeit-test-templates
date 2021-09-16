@@ -46,7 +46,7 @@
   composes: link from "./_shared.module.css";
   font-size: 18px;
   font-weight: 900;
-  height: 35px;
+  height: 25px;
   transition: opacity 200ms ease-out;
 }
 .logo:hover,
@@ -138,6 +138,10 @@
     height: header-height-lg;
     padding: 0 spacing-md;
   }
+  .logo {
+    height: 35px;
+  }
+
   .menuButton {
     display: none;
   }
