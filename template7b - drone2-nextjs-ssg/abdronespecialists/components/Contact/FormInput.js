@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from '../../styles/Contact/Form.module.css';
 
-const FormInput = ({ label, type, inputName, icon, placeholder, autoCapitalize, autoComplete="off" }) => {
+const FormInput = ({ label, type, inputName, icon, placeholder, autoCapitalize, autoComplete="off", min, max, required }) => {
   return (!type || !label) ? null : (
     <>
       <label 
@@ -20,6 +20,9 @@ const FormInput = ({ label, type, inputName, icon, placeholder, autoCapitalize, 
             placeholder={placeholder ?? label}
             autoCapitalize={autoCapitalize}
             autoComplete={autoComplete}
+            required={required}
+            minLength={min}
+            maxLength={max}
           />
         ) : (
           <input 
@@ -28,6 +31,9 @@ const FormInput = ({ label, type, inputName, icon, placeholder, autoCapitalize, 
             type={type}
             placeholder={placeholder ?? label}
             autoComplete={autoComplete}
+            required={required}
+            minLength={min}
+            maxLength={max}
           />
         )}
         { !icon ? null : (

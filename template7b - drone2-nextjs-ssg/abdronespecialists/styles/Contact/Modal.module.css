@@ -1,0 +1,80 @@
+@value color-light, color-dark, color-shade-darker from "./../_variables.css";
+@value corner-rounding from "./../_variables.css";
+@value spacing-sm, spacing-md, spacing-lg from "./../_variables.css";
+@value bp-md, bp-lg from "./../_variables.css";
+
+.modal {
+  display: grid;
+  place-items: center;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.container {
+  composes: themeDark from "./../_shared.module.css";
+  padding: spacing-md spacing-sm;
+  border-radius: corner-rounding;
+  display: grid;
+  justify-items: center;
+  row-gap: spacing-sm;
+  text-align: center;
+}
+
+.heading {
+  composes: textTitle from "./../_shared.module.css";
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+}
+
+.subheading {
+  composes: textTitle from "./../_shared.module.css";
+  margin-top: -20px;
+  font-size: 1.75rem;
+  letter-spacing: 1.5px;
+}
+
+.body {
+  composes: textSubtitle from "./../_shared.module.css";
+  display: grid;
+  row-gap: 5px;
+}
+
+.svg {
+  max-width: 90%;
+}
+
+.button {
+  composes: button from "./../Button.module.css";
+  justify-self: stretch;
+  padding: 2px 30px 5px;
+}
+
+@media bp-md {
+  .container {
+    width: 100%;
+    padding: spacing-lg;
+  }
+  .heading {
+    font-size: 2.5rem;
+  }
+  
+  .body {
+    font-size: 1rem;
+  }
+  .svg {
+    margin: spacing-sm 0
+  }
+  .button {
+    justify-self: center;
+    padding: 2px 50px 5px;
+  }
+}
+@media bp-lg {
+  .svg {
+    margin: 30px 0
+  }
+  .button {
+    padding: 2px 70px 5px;
+  }
+}

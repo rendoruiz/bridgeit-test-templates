@@ -141,6 +141,7 @@
     height: unset;
     background: unset;
     animation: unset;
+    animation-name: unset;
     position: static;
     display: flex;
     gap: spacing-sm;
@@ -157,7 +158,7 @@
     text-transform: uppercase;
     transform: unset;
     transition: color 200ms ease-out;
-    animation: unset;
+    animation-name: unset;
     display: inline-block;
   }
   .navigationItem,
@@ -187,5 +188,9 @@
     left: 5px;
     right: 5px;
     border-bottom: 3px solid color-primary;
+  }
+  .appHeaderNavActive .menuPanel {
+    animation-name: unset;
+    height: unset;
   }
 }

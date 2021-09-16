@@ -8,7 +8,7 @@
   /* position: relative; */
   display: grid;
   place-items: center;
-  overflow-y: scroll
+  overflow-y: auto;
 }
 .modal {
   display: grid;
