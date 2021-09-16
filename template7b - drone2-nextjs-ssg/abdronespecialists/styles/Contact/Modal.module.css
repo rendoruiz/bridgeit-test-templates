@@ -27,6 +27,13 @@
   letter-spacing: 1.5px;
 }
 
+.subheading {
+  composes: textTitle from "./../_shared.module.css";
+  margin-top: -20px;
+  font-size: 1.75rem;
+  letter-spacing: 1.5px;
+}
+
 .body {
   composes: textSubtitle from "./../_shared.module.css";
   display: grid;
