@@ -55,28 +55,27 @@ const Form = ({ className }) => {
       api.post('sendemail', formContent)
       .then((response) => {
         if (response.status === 200) {
-          console.log("response:", response)
-          console.log("response.data:", response.data)
-          console.log("response.status:", response.status)
-          console.log("response.headers:", response.headers)
+          // console.log("response:", response)
+          // console.log("response.data:", response.data)
+          // console.log("response.status:", response.status)
+          // console.log("response.headers:", response.headers)
           toggleSuccessModal();
           toggleSpamInterceptor();
-          console.log('message sent')
         } else {
           toggleErrorModal(response.data);
         }
       })
       .catch((error) => {
         if (error.response) {
-          console.log("error.response.data:", error.response.data);
-          console.log("error.response.status:", error.response.status);
-          console.log("error.response.headers:", error.response.headers);
+          console.error("error.response.data:", error.response.data);
+          console.error("error.response.status:", error.response.status);
+          // console.error("error.response.headers:", error.response.headers);
           toggleErrorModal(error.response.data);
         } else if (error.request) {
-          console.log("error.request:", error.request);
+          console.error("error.request:", error.request);
           toggleErrorModal();
         } else {
-          console.log("error", error.message);
+          console.error("error", error.message);
           toggleErrorModal();
         }
       });
