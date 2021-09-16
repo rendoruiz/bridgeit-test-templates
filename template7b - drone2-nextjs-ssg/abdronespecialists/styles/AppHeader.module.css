@@ -46,6 +46,12 @@
   composes: link from "./_shared.module.css";
   font-size: 18px;
   font-weight: 900;
+  height: 35px;
+  transition: opacity 200ms ease-out;
+}
+.logo:hover,
+.logo:active {
+  opacity: 0.7;
 }
 
 .menuButton {

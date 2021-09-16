@@ -7,6 +7,7 @@ import { faBars, faBookmark, faCamera, faEnvelope, faHome, faUserFriends } from 
 import styles from '../styles/AppHeader.module.css';
 import ExternalMediaLinks from './Contact/ExternalMediaLinks';
 import DroneIcon from './DroneIcon';
+import Image from './Image';
 
 const AppHeader = () => { 
   const [isNavigationOpen, setIsNavigationOpen] = useState(null);
@@ -34,7 +35,9 @@ const AppHeader = () => {
     <header className={!isNavigationOpen ? styles.appHeader : styles.appHeaderNavActive}>
       <div className={styles.content}>
         <Link href="/">
-          <a className={styles.logo}>ADS</a>
+          <a className={styles.logo}>
+            <Image title="site logo" isStatic isContained prefix="site-logo" fileExtension="png" />
+          </a>
         </Link>
         <button 
           className={styles.menuButton} 
