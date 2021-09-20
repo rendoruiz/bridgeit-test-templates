@@ -15,7 +15,10 @@ const ContactPage = () => {
   return ( 
     <MainLayout>
       <Head>
-        <title>Contact Us - Alberta Drone Specialists</title>
+        <title>Contact | Alberta Drone Specialists</title>
+        <meta name="description" content="Send us a message to book our professional drone crews."></meta>
+        <meta property="og:title" content="Contact | Alberta Drone Specialists"></meta>
+        <meta property="og:description" content="Send us a message to book our professional drone crews."></meta>
       </Head>
 
       <div>

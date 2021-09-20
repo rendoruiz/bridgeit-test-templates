@@ -24,7 +24,10 @@ const FpvServicePage = () => {
       contentClassName={styles.content}
     >
       <Head>
-        <title>FPV Service - Alberta Drone Specialists</title>
+        <title>Services | FPV| Alberta Drone Specialists</title>
+        <meta name="description" content="Our experienced drone pilots provide exceptional indoor and outdoor FPV drone services that capture cinematic shots like never before."></meta>
+        <meta property="og:title" content="Services | FPV| Alberta Drone Specialists"></meta>
+        <meta property="og:description" content="Our experienced drone pilots provide exceptional indoor and outdoor FPV drone services that capture cinematic shots like never before."></meta>
       </Head>
       
       <VideoModal 

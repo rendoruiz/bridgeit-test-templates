@@ -22,7 +22,10 @@ export default function Home() {
   return (
     <MainLayout>
       <Head>
-        <title>Home - Alberta Drone Specialists</title>
+        <title>Professional Drone Services | Alberta Drone Specialists</title>
+        <meta name="description" content="Alberta Drone Specialists provides professional drone services across Alberta including cinematic for TV/film, FPV,  progress monitoring and aerial photography."></meta>
+        <meta property="og:title" content="Professional Drone Services | Alberta Drone Specialists"></meta>
+        <meta property="og:description" content="Alberta Drone Specialists provides professional drone services across Alberta including cinematic for TV/film, FPV,  progress monitoring and aerial photography."></meta>
       </Head>
 
       <div className={styles.mainBanner}>

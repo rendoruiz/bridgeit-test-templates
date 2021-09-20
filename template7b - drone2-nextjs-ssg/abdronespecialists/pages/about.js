@@ -13,7 +13,10 @@ const AboutPage = () => {
   return ( 
     <MainLayout>
       <Head>
-        <title>About Us - Alberta Drone Specialists</title>
+        <title>About | Alberta Drone Specialists</title>
+        <meta name="description" content="Alberta Drone Specialists is an Alberta based drone services company that provides professional drone services to a wide range of industries."></meta>
+        <meta property="og:title" content="About | Alberta Drone Specialists"></meta>
+        <meta property="og:description" content="Alberta Drone Specialists is an Alberta based drone services company that provides professional drone services to a wide range of industries."></meta>
       </Head>
       
       <div className={styles.about}>

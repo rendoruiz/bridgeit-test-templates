@@ -96,7 +96,10 @@ const PortfolioPage = () => {
   return ( 
     <MainLayout>
       <Head>
-        <title>Our Portfolio - Alberta Drone Specialists</title>
+        <title>Portfolio | Alberta Drone Specialists</title>
+        <meta name="description" content=""></meta>
+        <meta property="og:title" content="Portfolio | Alberta Drone Specialists"></meta>
+        <meta property="og:description" content=""></meta>
       </Head>
 
       <div className={styles.portfolio}>

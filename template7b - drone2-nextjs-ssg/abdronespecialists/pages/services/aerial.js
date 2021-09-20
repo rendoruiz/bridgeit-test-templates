@@ -25,7 +25,10 @@ const AerialServicePage = () => {
       contentClassName={styles.content}
     >
       <Head>
-        <title>Aerial Photography & Videography Service - Alberta Drone Specialists</title>
+        <title>Services | Aerial Photography & Video | Alberta Drone Specialists</title>
+        <meta name="description" content="Our experienced drone pilots provide high quality aerial photography and video perfect for capturing events, marketing and showcasing real estate."></meta>
+        <meta property="og:title" content="Services | Aerial Photography & Video | Alberta Drone Specialists"></meta>
+        <meta property="og:description" content="Our experienced drone pilots provide high quality aerial photography and video perfect for capturing events, marketing and showcasing real estate."></meta>
       </Head>
       
       <VideoModal 

@@ -25,7 +25,10 @@ const ConstructionServicePage = () => {
       contentClassName={styles.content}
     >
       <Head>
-        <title>Construction Service - Alberta Drone Specialists</title>
+        <title>Services | Construction | Alberta Drone Specialists</title>
+        <meta name="description" content="Our experienced drone pilots provide safe, affordable and detail rich inspection/progress monitoring that causes zero disruption to the work site."></meta>
+        <meta property="og:title" content="Services | Construction | Alberta Drone Specialists"></meta>
+        <meta property="og:description" content="Our experienced drone pilots provide safe, affordable and detail rich inspection/progress monitoring that causes zero disruption to the work site."></meta>
       </Head>
       
       <VideoModal 

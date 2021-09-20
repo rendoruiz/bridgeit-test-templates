@@ -64,7 +64,10 @@ const ServicesPage = () => {
   return ( 
     <ServicesLayout contentClassName={styles.content}>
       <Head>
-        <title>Our Services - Alberta Drone Specialists</title>
+        <title>Services | Alberta Drone Specialists</title>
+        <meta name="description" content="Our professional drone crews provide a wide range of services including TV/film, indoor/outdoor FPV, progress monitoring, and aerial photography and video."></meta>
+        <meta property="og:title" content="Services | Alberta Drone Specialists"></meta>
+        <meta property="og:description" content="Our professional drone crews provide a wide range of services including TV/film, indoor/outdoor FPV, progress monitoring, and aerial photography and video."></meta>
       </Head>
 
       <div className={styles.contentHeading}>
