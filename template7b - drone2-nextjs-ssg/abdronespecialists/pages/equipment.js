@@ -38,7 +38,10 @@ const EquipmentPage = () => {
   return ( 
     <MainLayout>
       <Head>
-        <title>Our Equipment - Alberta Drone Specialists</title>
+        <title>Equipment | Alberta Drone Specialists</title>
+        <meta name="description" content=""></meta>
+        <meta property="og:title" content="Equipment | Alberta Drone Specialists"></meta>
+        <meta property="og:description" content=""></meta>
       </Head>
 
       <div>

@@ -26,7 +26,10 @@ const FilmTvServicePage = () => {
       contentClassName={styles.content}
     >
       <Head>
-        <title>Film & TV Service - Alberta Drone Specialists</title>
+        <title>Services | Film & TV | Alberta Drone Specialists</title>
+        <meta name="description" content="Our experienced drone pilots provide professional drone services for film, television and commercials."></meta>
+        <meta property="og:title" content="Services | Film & TV | Alberta Drone Specialists"></meta>
+        <meta property="og:description" content="Our experienced drone pilots provide professional drone services for film, television and commercials."></meta>
       </Head>
       
       <VideoModal 

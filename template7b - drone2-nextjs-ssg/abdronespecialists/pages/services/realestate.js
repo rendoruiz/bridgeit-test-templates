@@ -25,7 +25,10 @@ const RealEstateServicePage = () => {
       contentClassName={styles.content}
     >
       <Head>
-        <title>Commercial Real Estate Service - Alberta Drone Specialists</title>
+        <title>Services | Commercial Real Estate | Alberta Drone Specialists</title>
+        <meta name="description" content="Our experienced drone pilots can showcase your property or commercial development with high-end aerial photos, video and º360 content."></meta>
+        <meta property="og:title" content="Services | Commercial Real Estate | Alberta Drone Specialists"></meta>
+        <meta property="og:description" content="Our experienced drone pilots can showcase your property or commercial development with high-end aerial photos, video and º360 content."></meta>
       </Head>
       
       <VideoModal 
