@@ -41,8 +41,8 @@ const Form = ({ className }) => {
     }, 30000);
   }
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = (event) => {
+    event.preventDefault();
     
     if (!spamInterceptor) {
       const formContent = {
