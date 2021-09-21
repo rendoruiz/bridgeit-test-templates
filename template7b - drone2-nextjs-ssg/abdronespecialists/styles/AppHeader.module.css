@@ -124,8 +124,8 @@
   width: 17.5px;
 }
 .navigationIconDrone svg {
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: inherit;
   fill: color-secondary;
 }
 
