@@ -18,7 +18,7 @@ const ContactPanel = ({ className }) => {
               <span>We're always ready&nbsp;</span>
               <span>to take on new projects.</span>
             </span>
-            <p className={styles.subtitle}>Keep scrolling to send us a quick message and we will get back to you within 24 hours. Thank you for choosing Alberta Drone Specialists.</p>
+            <p className={styles.subtitle}>Send us a quick message and we will get back to you within 24 hours. Thank you for choosing Alberta Drone Specialists!</p>
           </div>
         </div>
       </div>

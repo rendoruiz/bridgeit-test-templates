@@ -38,7 +38,7 @@ const ContactPage = () => {
               <ExternalMediaLinks className={styles.externalIcons} iconClassName={styles.externalIcon} />
             </div>
             <a 
-              href="tel:+1-780-938-3090" 
+              href="tel:+1-780-964-7524" 
               className={styles.phoneCard}
             >
               <h3 className={styles.heading3}>Phone</h3>
@@ -48,7 +48,7 @@ const ContactPage = () => {
                   className={styles.svg} 
                 />
               </div>
-              <span>(780) 938-3090</span>
+              <span>(780) 964-7524</span>
             </a>
             <div className={styles.hoursCard}>
               <h3 className={styles.heading3}>Office Hours</h3>
