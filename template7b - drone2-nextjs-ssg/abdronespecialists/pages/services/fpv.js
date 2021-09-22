@@ -12,7 +12,7 @@ const FpvServicePage = () => {
   const data = {
     title: 'FPV',
     subtitle: 'Exceptional FPV footage.',
-    summaryText: 'Custom-built FPV drones operated by talented our pilots that allow for complete freedom for our cameras. Popular FPV shots include diving buildings, chasing subjects, flying in tight spaces, and anything else you can imagine. Our FPV services open the door for exciting, jaw-dropping shots.',
+    summaryText: 'Custom-built FPV drones operated by our talented pilots that allow for complete freedom for our cameras. Popular FPV shots include diving buildings, chasing subjects, flying in tight spaces, and anything else you can imagine. Our FPV services open the door for exciting, jaw-dropping shots.',
     routeTo: '/services/fpv',
     svgIcon: <DroneIcon />
   }

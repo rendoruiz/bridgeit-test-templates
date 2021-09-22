@@ -12,15 +12,13 @@ const ServicesPage = () => {
     {
       title: 'Film & TV',
       subtitle: 'Professional drone crews for film, television and commercials.',
-      summaryText: 'Professional drone crew services for films, television, and commercials. Our team of drone operators, drone camera operators, and drone technicians have experience working with a wide range of productions from integrating with main units on large productions to splinter units on lower budget productions.',
-      detailText: 'Our team of drone operators, drone camera operators, and drone technicians have experience working with a wide range of productions from integrating with main units on large productions to splinter units on lower budget productions.',
-      routeTo: '/services/filmtv',
+      summaryText: 'Professional drone crew services for films, television, and commercials.  Our team of drone operators, drone camera operators, and drone technicians have experience working with a wide range of productions including integrating with main units on large productions and splinter units on lower budget productions.',
       icon: faPlayCircle
     },
     {
       title: 'FPV',
       subtitle: 'Exceptional FPV footage.',
-      summaryText: 'Custom-built FPV drones operated by talented our pilots that allow for complete freedom for our cameras. Popular FPV shots include diving buildings, chasing subjects, flying in tight spaces, and anything else you can imagine. Our FPV services open the door for exciting, jaw-dropping shots.',
+      summaryText: 'Custom-built FPV drones operated by our talented pilots that allow for complete freedom for our cameras. Popular FPV shots include diving buildings, chasing subjects, flying in tight spaces, and anything else you can imagine. Our FPV services open the door for exciting, jaw-dropping shots.',
       routeTo: '/services/fpv',
       svgIcon: <DroneIcon />
     },
