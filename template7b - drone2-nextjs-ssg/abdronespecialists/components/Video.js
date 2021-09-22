@@ -3,7 +3,7 @@ import styles from '../styles/Video.module.css';
 
 const Video = ({ prefix, placeholderPrefix, className, isBackground, noWebM }) => {
   const [videoResolution, setVideoResolution] = useState(null);
-  const videoAttributes = !isBackground ? { controls: true } : { loop: true, muted: true }
+  const videoAttributes = !isBackground ? { controls: true } : { loop: true, muted: true, playsInline: true }
 
   useEffect(() => {
     const windowWidth = window.innerWidth;
@@ -22,6 +22,7 @@ const Video = ({ prefix, placeholderPrefix, className, isBackground, noWebM }) =
       autoPlay
       poster={`/images/video-placeholders/${placeholderPrefix ?? prefix}-placeholder-${videoResolution}.jpg`}
       className={(isBackground ? styles.backgroundVideo : styles.video) + (!className ? '' : ` ${className}`)}
+      onCanPlayThrough={(e) => e.target.play()}
       {...videoAttributes}
       // onLoadedData={(e) => { console.log(e.target.currentSrc)}}
     >
