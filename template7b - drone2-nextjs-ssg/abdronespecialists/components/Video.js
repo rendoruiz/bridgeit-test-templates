@@ -3,7 +3,7 @@ import styles from '../styles/Video.module.css';
 
 const Video = ({ prefix, placeholderPrefix, className, isBackground, noWebM }) => {
   const [videoResolution, setVideoResolution] = useState(null);
-  const videoAttributes = !isBackground ? { controls: true } : { loop: true, muted: true, playsInline: true }
+  const videoAttributes = !isBackground ? { controls: true } : { loop: true, muted: true, playsInline: true, disablePictureInPicture: true }
 
   useEffect(() => {
     const windowWidth = window.innerWidth;
