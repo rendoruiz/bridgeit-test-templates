@@ -111,11 +111,10 @@ export default function Home() {
                   title="Film & TV service page"
                 />
                 <Image 
-                  prefix="home-accordion-filmtv"
+                  prefix="home-services-accordion-filmtv"
                   title="winter landscape image"
                   className={styles.accordionImage}
-                  noMd
-                  noLg
+                  isStatic
                 />
               </Accordion.Body>
             </Accordion.Item>
@@ -136,11 +135,10 @@ export default function Home() {
                   title="FPV service page"
                 />
                 <Image 
-                  prefix="home-accordion-fpv"
+                  prefix="home-services-accordion-fpv"
                   title="flying drone image"
                   className={styles.accordionImage}
-                  noMd
-                  noLg
+                  isStatic
                 />
               </Accordion.Body>
             </Accordion.Item>
@@ -161,11 +159,10 @@ export default function Home() {
                   title="Construction service page"
                 />
                 <Image 
-                  prefix="home-accordion-construction"
+                  prefix="home-services-accordion-construction"
                   title="bridge construction image"
                   className={styles.accordionImage}
-                  noMd
-                  noLg
+                  isStatic
                 />
               </Accordion.Body>
             </Accordion.Item>
@@ -186,11 +183,10 @@ export default function Home() {
                   title="Commercial Real Estate service page"
                 />
                 <Image 
-                  prefix="home-accordion-realestate"
+                  prefix="home-services-accordion-realestate"
                   title="downtown calgary image"
                   className={styles.accordionImage}
-                  noMd
-                  noLg
+                  isStatic
                 />
               </Accordion.Body>
             </Accordion.Item>
@@ -211,11 +207,10 @@ export default function Home() {
                   title="Aerial Photography & Videography service page"
                 />
                 <Image 
-                  prefix="home-accordion-aerial"
+                  prefix="home-services-accordion-aerial"
                   title="cityscape image"
                   className={styles.accordionImage}
-                  noMd
-                  noLg
+                  isStatic
                 />
               </Accordion.Body>
             </Accordion.Item>
@@ -227,9 +222,9 @@ export default function Home() {
                 title=" service page link"
               >
                 <Image 
-                  prefix="services-filmtv"
+                  prefix="home-services-card-filmtv"
                   title="film/tv service image"
-                  noLg
+                  isStatic
                   className={styles.serviceCardImage}
                 />
                 <div className={styles.cardText}>
@@ -247,9 +242,9 @@ export default function Home() {
                 title=" service page link"
               >
                 <Image 
-                  prefix="services-fpv"
+                  prefix="home-services-card-fpv"
                   title="fpv service image"
-                  noLg
+                  isStatic
                   className={styles.serviceCardImage}
                 />
                 <div className={styles.cardText}>
@@ -267,9 +262,9 @@ export default function Home() {
                 title=" service page link"
               >
                 <Image 
-                  prefix="services-construction"
+                  prefix="home-services-card-construction"
                   title="construction service image"
-                  noLg
+                  isStatic
                   className={styles.serviceCardImage}
                 />
                 <div className={styles.cardText}>
@@ -286,9 +281,9 @@ export default function Home() {
                 title=" service page link"
               >
                 <Image 
-                  prefix="services-realestate"
+                  prefix="home-services-card-realestate"
                   title="commercial real estate service image"
-                  noLg
+                  isStatic
                   className={styles.serviceCardImage}
                 />
                 <div className={styles.cardText}>
@@ -305,9 +300,9 @@ export default function Home() {
                 title=" service page link"
               >
                 <Image 
-                  prefix="services-aerial"
+                  prefix="home-services-card-aerial"
                   title="aerial photography & videography service image"
-                  noLg
+                  isStatic
                   className={styles.serviceCardImage}
                 />
                 <div className={styles.cardText}>
