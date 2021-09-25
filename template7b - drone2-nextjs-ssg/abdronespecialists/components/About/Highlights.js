@@ -30,8 +30,9 @@ const Highlights = ({ className }) => {
           className={styles.carousel}
           noArrows
         >
-          { portfolioData.map((portfolio) => (
+          { portfolioData.map((portfolio, index) => (
             <VideoModal 
+              key={'highlights-carousel-' + index}
               imagePrefix={portfolio.imagePrefix} 
               title={portfolio.title}
               youtubeEmbedId={portfolio.youtubeEmbedId}
@@ -40,8 +41,9 @@ const Highlights = ({ className }) => {
           )) }
         </Carousel>
         <div className={styles.cards}>
-          { portfolioData.map((portfolio) => (
+          { portfolioData.map((portfolio, index) => (
             <VideoModal 
+              key={'highlights-cards-' + index}
               imagePrefix={portfolio.imagePrefix} 
               title={portfolio.title}
               youtubeEmbedId={portfolio.youtubeEmbedId}
