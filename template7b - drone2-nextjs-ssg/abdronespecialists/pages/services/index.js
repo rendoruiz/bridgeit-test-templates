@@ -13,6 +13,7 @@ const ServicesPage = () => {
       title: 'Film & TV',
       subtitle: 'Professional drone crews for film, television and commercials.',
       summaryText: 'Professional drone crew services for films, television, and commercials.  Our team of drone operators, drone camera operators, and drone technicians have experience working with a wide range of productions including integrating with main units on large productions and splinter units on lower budget productions.',
+      routeTo: '/services/filmtv',
       icon: faPlayCircle
     },
     {
