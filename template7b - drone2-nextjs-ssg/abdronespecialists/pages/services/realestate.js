@@ -4,7 +4,6 @@ import { faBuilding } from '@fortawesome/free-solid-svg-icons';
 import ServicesLayout from "../../components/Services/ServicesLayout";
 import ServiceDetailCard from '../../components/Services/ServiceDetailCard';
 import Carousel from '../../components/Carousel'
-import VideoModal from '../../components/VideoModal';
 
 import styles from '../../styles/Services/ServicesDetail.module.css';
 
