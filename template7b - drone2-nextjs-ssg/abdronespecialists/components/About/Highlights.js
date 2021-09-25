@@ -4,6 +4,24 @@ import VideoModal from '../../components/VideoModal'
 import styles from '../../styles/About/Highlights.module.css'
 
 const Highlights = ({ className }) => {
+  const portfolioData = [
+    {
+      imagePrefix: 'highlights-h4h',
+      title: 'Horsepower 4 Hope highlight video',
+      youtubeEmbedId: 'ifO6DECu6-k'
+    },
+    {
+      imagePrefix: 'highlights-dr1',
+      title: 'DR1 racing highlight video',
+      youtubeEmbedId: 'ohsQcJyELi0'
+    },
+    {
+      imagePrefix: 'highlights-az',
+      title: 'Amazon FPV highlight video',
+      youtubeEmbedId: 'Zi_trzln4ss'
+    }
+  ]
+
   return ( 
     <section className={styles.highlights + ` ${className}`}>
       <div className={styles.content}>
@@ -12,41 +30,23 @@ const Highlights = ({ className }) => {
           className={styles.carousel}
           noArrows
         >
-          <VideoModal 
-            imagePrefix="highlights-pv1"
-            title="highlight video"
-            youtubeEmbedId="ifO6DECu6-k"
-            className={styles.carouselItem}
-          />
-          <VideoModal 
-            imagePrefix="highlights-pv2"
-            title="highlight video"
-            youtubeEmbedId="ohsQcJyELi0"
-            className={styles.carouselItem}
-          />
-          <VideoModal 
-            imagePrefix="highlights-pv3"
-            title="highlight video"
-            youtubeEmbedId="Zi_trzln4ss"
-            className={styles.carouselItem}
-          />
+          { portfolioData.map((portfolio) => (
+            <VideoModal 
+              imagePrefix={portfolio.imagePrefix} 
+              title={portfolio.title}
+              youtubeEmbedId={portfolio.youtubeEmbedId}
+              className={styles.carouselItem}
+            />
+          )) }
         </Carousel>
         <div className={styles.cards}>
-          <VideoModal 
-            imagePrefix="highlights-pv1"
-            title="highlight video"
-            youtubeEmbedId="ifO6DECu6-k"
-          />
-          <VideoModal 
-            imagePrefix="highlights-pv2"
-            title="highlight video"
-            youtubeEmbedId="ohsQcJyELi0"
-          />
-          <VideoModal 
-            imagePrefix="highlights-pv3"
-            title="highlight video"
-            youtubeEmbedId="Zi_trzln4ss"
-          />
+          { portfolioData.map((portfolio) => (
+            <VideoModal 
+              imagePrefix={portfolio.imagePrefix} 
+              title={portfolio.title}
+              youtubeEmbedId={portfolio.youtubeEmbedId}
+            />
+          )) }
         </div>
       </div>
     </section>
