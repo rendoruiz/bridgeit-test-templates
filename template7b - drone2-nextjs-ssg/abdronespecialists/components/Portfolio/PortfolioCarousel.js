@@ -1,39 +1,18 @@
 import classNames from 'classnames';
 import { useRouter } from 'next/dist/client/router';
-import { useEffect, useRef } from 'react';
 
 import Carousel from '../../components/Carousel'
-import Image from '../../components/Image'
-import VideoModal from '../../components/VideoModal'
 
 import styles from '../../styles/Portfolio/PortfolioCarousel.module.css'
 
 const PortfolioCarousel = ({ className, data }) => {
   const router = useRouter();
 
-  const getMediaItem= (media, i) => {
-    if (media.type === 'video') {
-      return (
-        <VideoModal 
-          key={i}
-          imagePrefix={media.imagePrefix}
-          youtubeEmbedId={media.youtubeEmbedId}
-          title={media.title ?? "untitled media"}
-          className={styles.carouselItem}
-        />
-      )
-    } else if (media.type === 'image') {
-      
-    } else {
-      console.error('unknown media type');
-    }
-  }
-
   const setActive = (id) => {
     if (!router.query.id && id === 0) {
       return styles.active;
     }
-    else if (router.query.id == id) {
+    else if (router.query.id === id) {
       return styles.active;
     }
     return null;
@@ -47,7 +26,14 @@ const PortfolioCarousel = ({ className, data }) => {
       >
         <h3 className={styles.heading}>{ category.title }</h3>
         <Carousel noArrows>
-          { [category.primaryMedia, ...category.secondaryMediaList].map((media, index) => getMediaItem(media, index)) }
+          { [category.primaryMedia, ...category.secondaryMedia].map((media, index) => (
+            <img
+              key={category.title + '-carousel' + index}
+              src={'/images/' + media.prefix + '-sm.jpg'}
+              alt={media.title}
+              className={styles.carouselItem}
+            />
+          )) }
         </Carousel>
       </div>
     ))
