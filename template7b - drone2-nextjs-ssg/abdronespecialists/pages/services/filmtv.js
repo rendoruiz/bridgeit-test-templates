@@ -4,11 +4,8 @@ import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 import ServicesLayout from "../../components/Services/ServicesLayout";
 import ServiceDetailCard from '../../components/Services/ServiceDetailCard';
 import Carousel from '../../components/Carousel'
-import VideoModal from '../../components/VideoModal';
-import Image from '../../components/Image';
 
 import styles from '../../styles/Services/ServicesDetail.module.css';
-import classNames from 'classnames';
 
 const FilmTvServicePage = () => {
   const data = {
@@ -73,7 +70,7 @@ const FilmTvServicePage = () => {
       <div className={styles.mediaSecondaries}>
         {[...data.secondaryMedia].map((media, index) => (
           <img 
-            key={'service-filmtv-carousel-' + index}
+            key={data.title + index}
             src={'/images/' + media.prefix + '-md.jpg'}
             alt={media.title}
             className={styles.mediaSecondary}
@@ -86,7 +83,7 @@ const FilmTvServicePage = () => {
         <Carousel noArrows>
           {[data.primaryMedia, ...data.secondaryMedia].map((media, index) => (
             <img 
-              key={'service-filmtv-carousel-' + index}
+              key={data.title + '-carousel' + index}
               src={'/images/' + media.prefix + '-sm.jpg'}
               alt={media.title}
               className={styles.carouselImage}
