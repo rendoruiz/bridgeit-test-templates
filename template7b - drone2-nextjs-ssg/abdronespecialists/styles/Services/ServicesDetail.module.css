@@ -28,8 +28,25 @@
   left: -10px;
   border-left: border-line;
 }
+/* DEPRECATED */
 .carouselItem {
   margin: 5px;
+}
+.serviceImage {
+  border-radius: corner-rounding;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+.mediaPrimary,
+.mediaSecondary,
+.carouselImage {
+  composes: serviceImage;
+  width: 100%;
+}
+.carouselImage {
+  padding: 0 3px;
+  height: 320px;
 }
 .blurb {
   composes: textBody from "./../_shared.module.css";
