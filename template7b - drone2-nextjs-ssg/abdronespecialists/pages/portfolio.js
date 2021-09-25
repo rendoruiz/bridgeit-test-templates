@@ -19,47 +19,127 @@ const PortfolioPage = () => {
   const portfolioData = [
     {
       title: 'Film & TV',
-      primaryMedia: {type: 'video', youtubeEmbedId: 'ifO6DECu6-k', imagePrefix: 'highlights-pv1'},
-      secondaryMediaList: [
-        {type: 'video', youtubeEmbedId: 'ifO6DECu6-k', imagePrefix: 'highlights-pv1'},
-        {type: 'video', youtubeEmbedId: 'ifO6DECu6-k', imagePrefix: 'highlights-pv1'},
-        {type: 'video', youtubeEmbedId: 'ifO6DECu6-k', imagePrefix: 'highlights-pv1'}
+      primaryMedia: {
+        prefix: 'services-filmtv-1',
+        title: 'film & tv service photo',
+      },
+      secondaryMedia: [
+        {
+          prefix: 'services-filmtv-2',
+          title: 'film & tv service photo'
+        },
+        {
+          prefix: 'services-filmtv-3',
+          title: 'film & tv service photo'
+        },
+        {
+          prefix: 'services-filmtv-4',
+          title: 'film & tv service photo'
+        },
+        {
+          prefix: 'services-filmtv-5',
+          title: 'film & tv service photo'
+        }
       ]
     },
     {
       title: 'FPV',
-      primaryMedia: {type: 'video', youtubeEmbedId: 'ohsQcJyELi0', imagePrefix: 'highlights-pv2'},
-      secondaryMediaList: [
-        {type: 'video', youtubeEmbedId: 'ohsQcJyELi0', imagePrefix: 'highlights-pv2'},
-        {type: 'video', youtubeEmbedId: 'ohsQcJyELi0', imagePrefix: 'highlights-pv2'},
-        {type: 'video', youtubeEmbedId: 'ohsQcJyELi0', imagePrefix: 'highlights-pv2'}
+      primaryMedia: {
+        prefix: 'services-fpv-1',
+        title: 'fpv service photo',
+      },
+      secondaryMedia: [
+        {
+          prefix: 'services-filmtv-4',
+          title: 'fpv service photo'
+        },
+        {
+          prefix: 'services-filmtv-5',
+          title: 'fpv service photo'
+        },
+        {
+          prefix: 'services-fpv-4',
+          title: 'fpv service photo'
+        },
+        {
+          prefix: 'services-fpv-5',
+          title: 'fpv service photo'
+        }
       ]
     },
     {
       title: 'Construction',
-      primaryMedia: {type: 'video', youtubeEmbedId: 'Zi_trzln4ss', imagePrefix: 'highlights-pv3'},
-      secondaryMediaList: [
-        {type: 'video', youtubeEmbedId: 'Zi_trzln4ss', imagePrefix: 'highlights-pv3'},
-        {type: 'video', youtubeEmbedId: 'Zi_trzln4ss', imagePrefix: 'highlights-pv3'},
-        {type: 'video', youtubeEmbedId: 'Zi_trzln4ss', imagePrefix: 'highlights-pv3'}
+      primaryMedia: {
+        prefix: 'services-construction-1',
+        title: 'construction service photo',
+      },
+      secondaryMedia: [
+        {
+          prefix: 'services-construction-2',
+          title: 'construction service photo'
+        },
+        {
+          prefix: 'services-construction-3',
+          title: 'construction service photo'
+        },
+        {
+          prefix: 'services-construction-4',
+          title: 'construction service photo'
+        },
+        {
+          prefix: 'services-construction-5',
+          title: 'construction service photo'
+        }
       ]
     },
     {
       title: 'Commercial Real Estate',
-      primaryMedia: {type: 'video', youtubeEmbedId: 'ifO6DECu6-k', imagePrefix: 'highlights-pv1'},
-      secondaryMediaList: [
-        {type: 'video', youtubeEmbedId: 'ifO6DECu6-k', imagePrefix: 'highlights-pv1'},
-        {type: 'video', youtubeEmbedId: 'ifO6DECu6-k', imagePrefix: 'highlights-pv1'},
-        {type: 'video', youtubeEmbedId: 'ifO6DECu6-k', imagePrefix: 'highlights-pv1'}
+      primaryMedia: {
+        prefix: 'services-realestate-1',
+        title: 'commercial real estate service photo',
+      },
+      secondaryMedia: [
+        {
+          prefix: 'services-realestate-2',
+          title: 'commercial real estate service photo'
+        },
+        {
+          prefix: 'services-realestate-3',
+          title: 'commercial real estate service photo'
+        },
+        {
+          prefix: 'services-realestate-4',
+          title: 'commercial real estate service photo'
+        },
+        {
+          prefix: 'services-realestate-5',
+          title: 'commercial real estate service photo'
+        }
       ]
     },
     {
       title: 'Aerial Photography & Videography',
-      primaryMedia: {type: 'video', youtubeEmbedId: 'ohsQcJyELi0', imagePrefix: 'highlights-pv2'},
-      secondaryMediaList: [
-        {type: 'video', youtubeEmbedId: 'ohsQcJyELi0', imagePrefix: 'highlights-pv2'},
-        {type: 'video', youtubeEmbedId: 'ohsQcJyELi0', imagePrefix: 'highlights-pv2'},
-        {type: 'video', youtubeEmbedId: 'ohsQcJyELi0', imagePrefix: 'highlights-pv2'}
+      primaryMedia: {
+        prefix: 'services-aerial-1',
+        title: 'Aerial Photography & Videography service photo',
+      },
+      secondaryMedia: [
+        {
+          prefix: 'services-aerial-2',
+          title: 'Aerial Photography & Videography service photo'
+        },
+        {
+          prefix: 'services-aerial-3',
+          title: 'Aerial Photography & Videography service photo'
+        },
+        {
+          prefix: 'services-aerial-4',
+          title: 'Aerial Photography & Videography service photo'
+        },
+        {
+          prefix: 'services-aerial-5',
+          title: 'Aerial Photography & Videography service photo'
+        }
       ]
     }
   ];
